@@ -24,10 +24,11 @@ namespace Autorization
                 hash.Append(theByte.ToString("x2"));
             }
             return hash.ToString();
-        }
+        } //ffgddfggdfgdfg
         public LoginForm1()
         {
-            InitializeComponent();
+            InitializeComponent();// gdgffgfgfgfgfgfg
+
 
             this.passwordName.AutoSize = false;
         }
