@@ -65,9 +65,9 @@ namespace Autorization
             this.buttonLoginPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLoginPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLoginPass.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonLoginPass.Location = new System.Drawing.Point(17, 334);
+            this.buttonLoginPass.Location = new System.Drawing.Point(17, 370);
             this.buttonLoginPass.Name = "buttonLoginPass";
-            this.buttonLoginPass.Size = new System.Drawing.Size(163, 53);
+            this.buttonLoginPass.Size = new System.Drawing.Size(343, 53);
             this.buttonLoginPass.TabIndex = 5;
             this.buttonLoginPass.Text = "ВОЙТИ";
             this.buttonLoginPass.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@ namespace Autorization
             this.passwordName.Multiline = true;
             this.passwordName.Name = "passwordName";
             this.passwordName.PasswordChar = '*';
-            this.passwordName.Size = new System.Drawing.Size(219, 46);
+            this.passwordName.Size = new System.Drawing.Size(343, 46);
             this.passwordName.TabIndex = 4;
             this.passwordName.TextChanged += new System.EventHandler(this.passwordName_TextChanged);
             // 
@@ -90,7 +90,7 @@ namespace Autorization
             this.loginName.Location = new System.Drawing.Point(17, 165);
             this.loginName.Multiline = true;
             this.loginName.Name = "loginName";
-            this.loginName.Size = new System.Drawing.Size(219, 46);
+            this.loginName.Size = new System.Drawing.Size(343, 46);
             this.loginName.TabIndex = 3;
             this.loginName.TextChanged += new System.EventHandler(this.loginName_TextChanged);
             // 

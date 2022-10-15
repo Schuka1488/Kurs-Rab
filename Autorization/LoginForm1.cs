@@ -81,6 +81,7 @@ namespace Autorization
             //Получаем данные о пользователе
             string Userlogin = loginName.Text;
             string Userpassword = sha256(passwordName.Text);
+           
             //Создаем объекты
             DBclass db = new DBclass();
             DataTable table = new DataTable();
@@ -89,6 +90,7 @@ namespace Autorization
             MySqlCommand command = new MySqlCommand("SELECT * FROM `authorization` WHERE `login` = @Login AND `password` = @Password", db.getConnection());
             command.Parameters.Add("@Login", MySqlDbType.VarChar).Value = Userlogin;
             command.Parameters.Add("@Password", MySqlDbType.VarChar).Value = Userpassword;
+
 
             //Выбор данных
             adapter.SelectCommand = command;
