@@ -99,7 +99,22 @@ namespace Autorization
 
             //Проверка на верность данных (логин и пароль)
             if (table.Rows.Count > 0)
-                MessageBox.Show("Успешная авторизация!");
+            {
+
+                int Id = int.Parse(table.Rows[0].ItemArray[0].ToString());
+                db.openConnection();
+                string editAccess = $"SELECT edit_access FROM accounts WHERE {Id}";
+                MySqlCommand cmd2 = new MySqlCommand(editAccess, db.getConnection());
+
+                int Level = int.Parse(cmd2.ExecuteScalar().ToString());
+
+                //запоним кто вошел
+                Username user = new Username(loginName.Text, Level);
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+                db.closeConnection();
+                this.Hide();
+            }
             else
                 MessageBox.Show("Логин или пароль указан неверно.");
         }
