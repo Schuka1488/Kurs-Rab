@@ -67,6 +67,7 @@ namespace Autorization
             this.label4.Size = new System.Drawing.Size(32, 31);
             this.label4.TabIndex = 1;
             this.label4.Text = "X";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // MainForm
             // 
@@ -74,6 +75,7 @@ namespace Autorization
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
