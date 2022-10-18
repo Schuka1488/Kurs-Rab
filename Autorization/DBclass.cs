@@ -9,8 +9,8 @@ namespace Autorization
 {
     class DBclass
     {
-        MySqlConnection connection = new MySqlConnection("server=10.90.12.110;port=33333;username=st_3_20_21;password=15733563;database=is_3_20_st21_KURS"); 
-        // для чюка
+        MySqlConnection connection = new MySqlConnection("server=chuc.caseum.ru;port=33333;username=st_3_20_21;password=15733563;database=is_3_20_st21_KURS");
+        // для чюка 10.90.12.110
         // server=chuc.caseum.ru;port=33333;username=st_3_20_21;password=15733563;database=is_3_20_st21_KURS
         // закоменченное для дома
         public void openConnection()

@@ -103,8 +103,8 @@ namespace Autorization
 
                 int Id = int.Parse(table.Rows[0].ItemArray[0].ToString());
                 db.openConnection();
-                string editAccess = $"SELECT edit_access FROM accounts WHERE {Id}";
-                MySqlCommand cmd2 = new MySqlCommand(editAccess, db.getConnection());
+                string _Role = $"SELECT role FROM `authorization` WHERE {Id}";
+                MySqlCommand cmd2 = new MySqlCommand(_Role, db.getConnection());
 
                 int Level = int.Parse(cmd2.ExecuteScalar().ToString());
 
