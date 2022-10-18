@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Autorization
 {
-    public partial class RegistrationForm1 : Form
+    public partial class MainForm : Form
     {
-        public RegistrationForm1()
+        public MainForm()
         {
             InitializeComponent();
         }
