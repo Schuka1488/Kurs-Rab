@@ -26,7 +26,6 @@ namespace Autorization
             else
                 изменитьДанныеToolStripMenuItem.Visible = false;
         }
-        
         Point lastPoint;
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -68,12 +67,10 @@ namespace Autorization
             LoginForm1 auth = new LoginForm1();
             auth.Show();
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void textBox1_Leave(object sender, EventArgs e)
         {
             if (textBox1.Text == "") 
@@ -82,7 +79,6 @@ namespace Autorization
                 textBox1.ForeColor = Color.DarkGray;
             }
         }
-
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if (textBox1.Text == "ВВЕДИТЕ НАЗВАНИЕ ТАБЛИЦЫ")
@@ -91,10 +87,8 @@ namespace Autorization
                 textBox1.ForeColor = Color.Black;
             }
         }
-
         private void DeleteTable_Click(object sender, EventArgs e)
         {
-            
         }
     }
 }

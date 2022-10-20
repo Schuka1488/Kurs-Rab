@@ -37,7 +37,6 @@ namespace Autorization
         private void loginName_TextChanged(object sender, EventArgs e)
         {
         }
-
         private void passwordName_TextChanged(object sender, EventArgs e)
         {
         }
@@ -54,7 +53,6 @@ namespace Autorization
         {
             lastPoint = new Point(e.X, e.Y);
         }
-
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -104,7 +102,6 @@ namespace Autorization
             }
             else 
                 MessageBox.Show("Логин или пароль указан неверно.");
-
         }
     }
 }
