@@ -8,17 +8,19 @@ namespace Autorization
 {
     class Username
     {
-        
+        string name;
         private int role;
         public static Username user1;
+        
         public int Role
         {
             get => role;
         }
-        public Username(int role)
+        public Username(string name,int role)
         {
             this.role = role;
-            user1 = this; 
+            user1 = this;
+            this.name = name;
         }
     }
 }

@@ -89,9 +89,12 @@ namespace Autorization
             {
                 int Id = int.Parse(table.Rows[0].ItemArray[0].ToString());
                 db.openConnection();
-                string _Role = $"SELECT role FROM `authorization` WHERE AuthorizationID {Id}";
+                string _Role = $"SELECT levelRole FROM `authorization` WHERE AuthorizationID = {Id}";
                 MySqlCommand cmd2 = new MySqlCommand(_Role, db.getConnection());
                 int Level = int.Parse(cmd2.ExecuteScalar().ToString());
+                 _Role = $"SELECT roleTitle FROM `authorization` WHERE AuthorizationID = {Id}";
+                 cmd2 = new MySqlCommand(_Role, db.getConnection());
+                string title = cmd2.ExecuteScalar().ToString();
                 //запоним кто вошел
                 Username user = new Username(loginName.Text, Level);
                 MainForm mainForm = new MainForm();
@@ -101,6 +104,7 @@ namespace Autorization
             }
             else 
                 MessageBox.Show("Логин или пароль указан неверно.");
+
         }
     }
 }
