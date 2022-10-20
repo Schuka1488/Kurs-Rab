@@ -65,9 +65,9 @@ namespace Autorization
             this.buttonLoginPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLoginPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLoginPass.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonLoginPass.Location = new System.Drawing.Point(17, 370);
+            this.buttonLoginPass.Location = new System.Drawing.Point(12, 370);
             this.buttonLoginPass.Name = "buttonLoginPass";
-            this.buttonLoginPass.Size = new System.Drawing.Size(343, 53);
+            this.buttonLoginPass.Size = new System.Drawing.Size(348, 53);
             this.buttonLoginPass.TabIndex = 5;
             this.buttonLoginPass.Text = "ВОЙТИ";
             this.buttonLoginPass.UseVisualStyleBackColor = true;
@@ -135,7 +135,7 @@ namespace Autorization
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(340, 0);
+            this.label4.Location = new System.Drawing.Point(337, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 31);
             this.label4.TabIndex = 1;
@@ -145,13 +145,13 @@ namespace Autorization
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Old English Text MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(66, 46);
+            this.label1.Location = new System.Drawing.Point(42, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 42);
+            this.label1.Size = new System.Drawing.Size(304, 44);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Авторизация";
+            this.label1.Text = "АВТОРИЗАЦИЯ";
             // 
             // LoginForm1
             // 
