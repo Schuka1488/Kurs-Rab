@@ -28,24 +28,18 @@ namespace Autorization
         public LoginForm1()
         {
             InitializeComponent();
-
-
             this.passwordName.AutoSize = false;
         }
-
         private void label4_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void loginName_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void passwordName_TextChanged(object sender, EventArgs e)
         {
-            
         }
         Point lastPoint; // специальный класс для задачи координат
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -56,7 +50,6 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
@@ -70,18 +63,15 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
         }
-
         private void buttonLoginPass_Click(object sender, EventArgs e)
         {
             //Получаем данные о пользователе
             string Userlogin = loginName.Text;
             string Userpassword = sha256(passwordName.Text);
-           
             //Создаем объекты
             DBclass db = new DBclass();
             DataTable table = new DataTable();
@@ -90,24 +80,18 @@ namespace Autorization
             MySqlCommand command = new MySqlCommand("SELECT * FROM `authorization` WHERE `login` = @Login AND `password` = @Password", db.getConnection());
             command.Parameters.Add("@Login", MySqlDbType.VarChar).Value = Userlogin;
             command.Parameters.Add("@Password", MySqlDbType.VarChar).Value = Userpassword;
-
-
             //Выбор данных
             adapter.SelectCommand = command;
             //Помещение их в объект
             adapter.Fill(table);
-
             //Проверка на верность данных (логин и пароль)
             if (table.Rows.Count > 0)
             {
-
                 int Id = int.Parse(table.Rows[0].ItemArray[0].ToString());
                 db.openConnection();
-                string _Role = $"SELECT role FROM `authorization` WHERE {Id}";
+                string _Role = $"SELECT role FROM `authorization` WHERE AuthorizationID {Id}";
                 MySqlCommand cmd2 = new MySqlCommand(_Role, db.getConnection());
-
                 int Level = int.Parse(cmd2.ExecuteScalar().ToString());
-
                 //запоним кто вошел
                 Username user = new Username(loginName.Text, Level);
                 MainForm mainForm = new MainForm();
@@ -115,7 +99,7 @@ namespace Autorization
                 db.closeConnection();
                 this.Hide();
             }
-            else
+            else 
                 MessageBox.Show("Логин или пароль указан неверно.");
         }
     }
