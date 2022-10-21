@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace Autorization
 {
     public partial class MainForm : Form
     {
+        string id_selected_rows = "0";
+        private BindingSource bSource = new BindingSource();
+        DBclass db = new DBclass();
         public MainForm()
         {
             InitializeComponent();
@@ -89,6 +93,83 @@ namespace Autorization
         }
         private void DeleteTable_Click(object sender, EventArgs e)
         {
+        }
+        public void GetSelectedIDString() //Метод получения ID выделенной строки, для последующего вызова его в нужных методах
+        {
+            //Переменная для индекс выбранной строки в гриде
+            string index_selected_rows;
+            //Индекс выбранной строки
+            index_selected_rows = dataGridView1.SelectedCells[0].RowIndex.ToString();
+            //ID конкретной записи в Базе данных, на основании индекса строки
+            id_selected_rows = dataGridView1.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dataGridView1.CurrentCell = dataGridView1[e.ColumnIndex, e.RowIndex];
+            dataGridView1.CurrentRow.Selected = true;
+            //Метод получения ID выделенной строки в глобальную переменную
+            GetSelectedIDString();
+        }
+
+        private void таблицаСотрудниковToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees";
+            MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+            adapter.SelectCommand = cmd;
+            adapter.Fill(table);
+            bSource.DataSource = table;
+            dataGridView1.DataSource = bSource;
+        }
+
+        private void таблицаКлиентовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', MSRN AS 'ОГРН', TIN AS 'ИНН' FROM Customer";
+            MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+            adapter.SelectCommand = cmd;
+            adapter.Fill(table);
+            bSource.DataSource = table;
+            dataGridView1.DataSource = bSource;
+        }
+
+        private void таблицаЗаказовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта', 	projectPrice AS 'Цена', ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder";
+            MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+            adapter.SelectCommand = cmd;
+            adapter.Fill(table);
+            bSource.DataSource = table;
+            dataGridView1.DataSource = bSource;
+        }
+
+        private void таблицаПродажToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales";
+            MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+            adapter.SelectCommand = cmd;
+            adapter.Fill(table);
+            bSource.DataSource = table;
+            dataGridView1.DataSource = bSource;
+        }
+
+        private void таблицаЦенToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц' FROM Sales";
+            MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+            adapter.SelectCommand = cmd;
+            adapter.Fill(table);
+            bSource.DataSource = table;
+            dataGridView1.DataSource = bSource;
         }
     }
 }

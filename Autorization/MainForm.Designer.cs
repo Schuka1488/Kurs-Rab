@@ -31,6 +31,8 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -51,12 +53,10 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTable = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,6 +75,23 @@ namespace Autorization
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 106);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(611, 261);
+            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(502, 373);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
             // 
             // textBox1
             // 
@@ -195,30 +212,35 @@ namespace Autorization
             this.таблицаСотрудниковToolStripMenuItem.Name = "таблицаСотрудниковToolStripMenuItem";
             this.таблицаСотрудниковToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.таблицаСотрудниковToolStripMenuItem.Text = "таблица сотрудников";
+            this.таблицаСотрудниковToolStripMenuItem.Click += new System.EventHandler(this.таблицаСотрудниковToolStripMenuItem_Click);
             // 
             // таблицаКлиентовToolStripMenuItem
             // 
             this.таблицаКлиентовToolStripMenuItem.Name = "таблицаКлиентовToolStripMenuItem";
             this.таблицаКлиентовToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.таблицаКлиентовToolStripMenuItem.Text = "таблица заказчиков";
+            this.таблицаКлиентовToolStripMenuItem.Click += new System.EventHandler(this.таблицаКлиентовToolStripMenuItem_Click);
             // 
             // таблицаЗаказовToolStripMenuItem
             // 
             this.таблицаЗаказовToolStripMenuItem.Name = "таблицаЗаказовToolStripMenuItem";
             this.таблицаЗаказовToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.таблицаЗаказовToolStripMenuItem.Text = "таблица заказов";
+            this.таблицаЗаказовToolStripMenuItem.Click += new System.EventHandler(this.таблицаЗаказовToolStripMenuItem_Click);
             // 
             // таблицаПродажToolStripMenuItem
             // 
             this.таблицаПродажToolStripMenuItem.Name = "таблицаПродажToolStripMenuItem";
             this.таблицаПродажToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.таблицаПродажToolStripMenuItem.Text = "таблица продаж";
+            this.таблицаПродажToolStripMenuItem.Click += new System.EventHandler(this.таблицаПродажToolStripMenuItem_Click);
             // 
             // таблицаЦенToolStripMenuItem
             // 
             this.таблицаЦенToolStripMenuItem.Name = "таблицаЦенToolStripMenuItem";
             this.таблицаЦенToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.таблицаЦенToolStripMenuItem.Text = "таблица цен";
+            this.таблицаЦенToolStripMenuItem.Click += new System.EventHandler(this.таблицаЦенToolStripMenuItem_Click);
             // 
             // DeleteTable
             // 
@@ -240,22 +262,6 @@ namespace Autorization
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(502, 373);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 106);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(611, 261);
-            this.dataGridView1.TabIndex = 5;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,11 +275,11 @@ namespace Autorization
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
