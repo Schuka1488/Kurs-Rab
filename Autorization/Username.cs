@@ -8,8 +8,8 @@ namespace Autorization
 {
     class Username // класс создан для успешной авторизации с ролью
     {
-        string name;
-        private int role;
+        string name; // переменная для названия роли
+        private int role; // переменная которая используется для указания роли аккаунтам, и описывает их функционал
         public static Username user1;
         
         public int Role

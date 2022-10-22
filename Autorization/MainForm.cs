@@ -30,7 +30,7 @@ namespace Autorization
             else
                 изменитьДанныеToolStripMenuItem.Visible = false;
         }
-        Point lastPoint;
+        Point lastPoint; // специальный класс для задачи координат
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
         }
