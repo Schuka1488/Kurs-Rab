@@ -31,6 +31,7 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DarkThemeBox1 = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTable = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.DarkThemeBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -78,6 +78,22 @@ namespace Autorization
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
+            // DarkThemeBox1
+            // 
+            this.DarkThemeBox1.AutoSize = true;
+            this.DarkThemeBox1.BackColor = System.Drawing.Color.Lavender;
+            this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DarkThemeBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DarkThemeBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DarkThemeBox1.Location = new System.Drawing.Point(482, 414);
+            this.DarkThemeBox1.Name = "DarkThemeBox1";
+            this.DarkThemeBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DarkThemeBox1.Size = new System.Drawing.Size(142, 24);
+            this.DarkThemeBox1.TabIndex = 7;
+            this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
+            this.DarkThemeBox1.UseVisualStyleBackColor = false;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Lavender;
@@ -88,6 +104,8 @@ namespace Autorization
             this.dataGridView1.Size = new System.Drawing.Size(611, 261);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
+            this.dataGridView1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseMove);
             // 
             // comboBox1
             // 
@@ -114,7 +132,7 @@ namespace Autorization
             // 
             this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel2.Controls.Add(this.menuStrip1);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -148,14 +166,14 @@ namespace Autorization
             // программуToolStripMenuItem
             // 
             this.программуToolStripMenuItem.Name = "программуToolStripMenuItem";
-            this.программуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.программуToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.программуToolStripMenuItem.Text = "Из программы";
             this.программуToolStripMenuItem.Click += new System.EventHandler(this.программуToolStripMenuItem_Click);
             // 
             // формуToolStripMenuItem
             // 
             this.формуToolStripMenuItem.Name = "формуToolStripMenuItem";
-            this.формуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.формуToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.формуToolStripMenuItem.Text = "Из аккаунта";
             this.формуToolStripMenuItem.Click += new System.EventHandler(this.формуToolStripMenuItem_Click);
             // 
@@ -267,22 +285,6 @@ namespace Autorization
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // DarkThemeBox1
-            // 
-            this.DarkThemeBox1.AutoSize = true;
-            this.DarkThemeBox1.BackColor = System.Drawing.Color.Lavender;
-            this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DarkThemeBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DarkThemeBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DarkThemeBox1.Location = new System.Drawing.Point(482, 414);
-            this.DarkThemeBox1.Name = "DarkThemeBox1";
-            this.DarkThemeBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DarkThemeBox1.Size = new System.Drawing.Size(142, 24);
-            this.DarkThemeBox1.TabIndex = 7;
-            this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
-            this.DarkThemeBox1.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
