@@ -61,7 +61,7 @@ namespace Autorization
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.BackColor = System.Drawing.Color.Lavender;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
@@ -78,7 +78,7 @@ namespace Autorization
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Navy;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Lavender;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 106);
@@ -89,6 +89,7 @@ namespace Autorization
             // 
             // comboBox1
             // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(502, 373);
             this.comboBox1.Name = "comboBox1";
@@ -246,14 +247,14 @@ namespace Autorization
             // 
             // DeleteTable
             // 
-            this.DeleteTable.BackColor = System.Drawing.Color.Navy;
+            this.DeleteTable.BackColor = System.Drawing.Color.Lavender;
             this.DeleteTable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteTable.ForeColor = System.Drawing.SystemColors.Control;
+            this.DeleteTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteTable.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DeleteTable.Location = new System.Drawing.Point(206, 373);
             this.DeleteTable.Name = "DeleteTable";
-            this.DeleteTable.Size = new System.Drawing.Size(205, 67);
+            this.DeleteTable.Size = new System.Drawing.Size(199, 67);
             this.DeleteTable.TabIndex = 1;
             this.DeleteTable.Text = "УДАЛИТЬ ДАННЫЕ ВНУТРИ ТАБЛИЦЫ";
             this.DeleteTable.UseVisualStyleBackColor = false;
