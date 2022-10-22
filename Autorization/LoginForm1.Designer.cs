@@ -38,6 +38,7 @@ namespace Autorization
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.DarkThemeBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -45,6 +46,7 @@ namespace Autorization
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.DarkThemeBox1);
             this.panel1.Controls.Add(this.buttonLoginPass);
             this.panel1.Controls.Add(this.passwordName);
             this.panel1.Controls.Add(this.loginName);
@@ -154,6 +156,21 @@ namespace Autorization
             this.label1.TabIndex = 0;
             this.label1.Text = "АВТОРИЗАЦИЯ";
             // 
+            // DarkThemeBox1
+            // 
+            this.DarkThemeBox1.AutoSize = true;
+            this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DarkThemeBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DarkThemeBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DarkThemeBox1.Location = new System.Drawing.Point(219, 437);
+            this.DarkThemeBox1.Name = "DarkThemeBox1";
+            this.DarkThemeBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DarkThemeBox1.Size = new System.Drawing.Size(141, 24);
+            this.DarkThemeBox1.TabIndex = 6;
+            this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
+            this.DarkThemeBox1.UseVisualStyleBackColor = true;
+            // 
             // LoginForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,5 +199,6 @@ namespace Autorization
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox DarkThemeBox1;
     }
 }

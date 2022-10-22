@@ -53,6 +53,7 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTable = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.DarkThemeBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -62,6 +63,7 @@ namespace Autorization
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.DarkThemeBox1);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
@@ -265,6 +267,21 @@ namespace Autorization
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // DarkThemeBox1
+            // 
+            this.DarkThemeBox1.AutoSize = true;
+            this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DarkThemeBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DarkThemeBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DarkThemeBox1.Location = new System.Drawing.Point(482, 414);
+            this.DarkThemeBox1.Name = "DarkThemeBox1";
+            this.DarkThemeBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DarkThemeBox1.Size = new System.Drawing.Size(141, 24);
+            this.DarkThemeBox1.TabIndex = 7;
+            this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
+            this.DarkThemeBox1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,5 +328,6 @@ namespace Autorization
         private System.Windows.Forms.Button DeleteTable;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox DarkThemeBox1;
     }
 }
