@@ -273,13 +273,13 @@ namespace Autorization
             this.DarkThemeBox1.AutoSize = true;
             this.DarkThemeBox1.BackColor = System.Drawing.Color.Lavender;
             this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DarkThemeBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DarkThemeBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DarkThemeBox1.Location = new System.Drawing.Point(482, 414);
             this.DarkThemeBox1.Name = "DarkThemeBox1";
             this.DarkThemeBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DarkThemeBox1.Size = new System.Drawing.Size(141, 24);
+            this.DarkThemeBox1.Size = new System.Drawing.Size(142, 24);
             this.DarkThemeBox1.TabIndex = 7;
             this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
             this.DarkThemeBox1.UseVisualStyleBackColor = false;
