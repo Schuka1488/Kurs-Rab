@@ -16,7 +16,7 @@ namespace Autorization
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm1());
+            Application.Run(new LoginForm1()); // сначала запускается форма авторизации
         }
     }
 }

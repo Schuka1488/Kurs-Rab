@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Autorization
 {
-    class Username
+    class Username // класс создан для успешной авторизации с ролью
     {
         string name;
         private int role;
@@ -14,7 +14,7 @@ namespace Autorization
         
         public int Role
         {
-            get => role;
+            get => role; // краткая запись свойства
         }
         public Username(string name,int role)
         {
