@@ -91,7 +91,8 @@ namespace Autorization
             // 
             // comboBox1
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(502, 373);
             this.comboBox1.Name = "comboBox1";
@@ -270,6 +271,7 @@ namespace Autorization
             // DarkThemeBox1
             // 
             this.DarkThemeBox1.AutoSize = true;
+            this.DarkThemeBox1.BackColor = System.Drawing.Color.Lavender;
             this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DarkThemeBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -280,7 +282,7 @@ namespace Autorization
             this.DarkThemeBox1.Size = new System.Drawing.Size(141, 24);
             this.DarkThemeBox1.TabIndex = 7;
             this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
-            this.DarkThemeBox1.UseVisualStyleBackColor = true;
+            this.DarkThemeBox1.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
