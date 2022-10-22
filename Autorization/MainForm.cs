@@ -185,5 +185,33 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
+
+        private void DarkThemeBox1_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на чек боксе темной темы
+        {
+            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
+        }
+
+        private void DarkThemeBox1_MouseMove(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на чек боксе темной темы
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void DeleteTable_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на кнопке удаления данных в таблице
+        {
+            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
+        }
+
+        private void DeleteTable_MouseMove(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на кнопке удаления данных в таблице
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
     }
 }

@@ -93,6 +93,8 @@ namespace Autorization
             this.DarkThemeBox1.TabIndex = 7;
             this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
             this.DarkThemeBox1.UseVisualStyleBackColor = false;
+            this.DarkThemeBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DarkThemeBox1_MouseDown);
+            this.DarkThemeBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DarkThemeBox1_MouseMove);
             // 
             // dataGridView1
             // 
@@ -280,6 +282,8 @@ namespace Autorization
             this.DeleteTable.Text = "УДАЛИТЬ ДАННЫЕ ВНУТРИ ТАБЛИЦЫ";
             this.DeleteTable.UseVisualStyleBackColor = false;
             this.DeleteTable.Click += new System.EventHandler(this.DeleteTable_Click);
+            this.DeleteTable.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DeleteTable_MouseDown);
+            this.DeleteTable.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeleteTable_MouseMove);
             // 
             // contextMenuStrip1
             // 
