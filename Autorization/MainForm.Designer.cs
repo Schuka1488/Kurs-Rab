@@ -138,21 +138,21 @@ namespace Autorization
             this.программуToolStripMenuItem,
             this.формуToolStripMenuItem});
             this.закрытьToolStripMenuItem.Name = "закрытьToolStripMenuItem";
-            this.закрытьToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.закрытьToolStripMenuItem.Text = "закрыть ";
+            this.закрытьToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.закрытьToolStripMenuItem.Text = "Выход";
             // 
             // программуToolStripMenuItem
             // 
             this.программуToolStripMenuItem.Name = "программуToolStripMenuItem";
-            this.программуToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.программуToolStripMenuItem.Text = "программу";
+            this.программуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.программуToolStripMenuItem.Text = "Из программы";
             this.программуToolStripMenuItem.Click += new System.EventHandler(this.программуToolStripMenuItem_Click);
             // 
             // формуToolStripMenuItem
             // 
             this.формуToolStripMenuItem.Name = "формуToolStripMenuItem";
-            this.формуToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.формуToolStripMenuItem.Text = "форму";
+            this.формуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.формуToolStripMenuItem.Text = "Из аккаунта";
             this.формуToolStripMenuItem.Click += new System.EventHandler(this.формуToolStripMenuItem_Click);
             // 
             // изменитьДанныеToolStripMenuItem
@@ -164,38 +164,38 @@ namespace Autorization
             this.вТаблицеПродажToolStripMenuItem,
             this.вТаблицеЦенToolStripMenuItem});
             this.изменитьДанныеToolStripMenuItem.Name = "изменитьДанныеToolStripMenuItem";
-            this.изменитьДанныеToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
-            this.изменитьДанныеToolStripMenuItem.Text = "изменить данные";
+            this.изменитьДанныеToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
+            this.изменитьДанныеToolStripMenuItem.Text = "Изменить данные";
             // 
             // вТаблицеСотрудникиToolStripMenuItem
             // 
             this.вТаблицеСотрудникиToolStripMenuItem.Name = "вТаблицеСотрудникиToolStripMenuItem";
-            this.вТаблицеСотрудникиToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.вТаблицеСотрудникиToolStripMenuItem.Text = "в таблице сотрудники";
+            this.вТаблицеСотрудникиToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.вТаблицеСотрудникиToolStripMenuItem.Text = "В таблице сотрудников";
             // 
             // вТаблицеЗаказчиковToolStripMenuItem
             // 
             this.вТаблицеЗаказчиковToolStripMenuItem.Name = "вТаблицеЗаказчиковToolStripMenuItem";
-            this.вТаблицеЗаказчиковToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.вТаблицеЗаказчиковToolStripMenuItem.Text = "в таблице заказчиков";
+            this.вТаблицеЗаказчиковToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.вТаблицеЗаказчиковToolStripMenuItem.Text = "В таблице заказчиков";
             // 
             // вТаблицеЗаказовToolStripMenuItem
             // 
             this.вТаблицеЗаказовToolStripMenuItem.Name = "вТаблицеЗаказовToolStripMenuItem";
-            this.вТаблицеЗаказовToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.вТаблицеЗаказовToolStripMenuItem.Text = "в таблице заказов";
+            this.вТаблицеЗаказовToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.вТаблицеЗаказовToolStripMenuItem.Text = "В таблице заказов";
             // 
             // вТаблицеПродажToolStripMenuItem
             // 
             this.вТаблицеПродажToolStripMenuItem.Name = "вТаблицеПродажToolStripMenuItem";
-            this.вТаблицеПродажToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.вТаблицеПродажToolStripMenuItem.Text = "в таблице продаж";
+            this.вТаблицеПродажToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.вТаблицеПродажToolStripMenuItem.Text = "В таблице продаж";
             // 
             // вТаблицеЦенToolStripMenuItem
             // 
             this.вТаблицеЦенToolStripMenuItem.Name = "вТаблицеЦенToolStripMenuItem";
-            this.вТаблицеЦенToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.вТаблицеЦенToolStripMenuItem.Text = "в таблице цен";
+            this.вТаблицеЦенToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.вТаблицеЦенToolStripMenuItem.Text = "В таблице цен";
             // 
             // показатьДанныеToolStripMenuItem
             // 
@@ -206,42 +206,42 @@ namespace Autorization
             this.таблицаПродажToolStripMenuItem,
             this.таблицаЦенToolStripMenuItem});
             this.показатьДанныеToolStripMenuItem.Name = "показатьДанныеToolStripMenuItem";
-            this.показатьДанныеToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
-            this.показатьДанныеToolStripMenuItem.Text = "показать данные";
+            this.показатьДанныеToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.показатьДанныеToolStripMenuItem.Text = "Показать данные";
             // 
             // таблицаСотрудниковToolStripMenuItem
             // 
             this.таблицаСотрудниковToolStripMenuItem.Name = "таблицаСотрудниковToolStripMenuItem";
-            this.таблицаСотрудниковToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.таблицаСотрудниковToolStripMenuItem.Text = "таблица сотрудников";
+            this.таблицаСотрудниковToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.таблицаСотрудниковToolStripMenuItem.Text = "Таблица сотрудников";
             this.таблицаСотрудниковToolStripMenuItem.Click += new System.EventHandler(this.таблицаСотрудниковToolStripMenuItem_Click);
             // 
             // таблицаКлиентовToolStripMenuItem
             // 
             this.таблицаКлиентовToolStripMenuItem.Name = "таблицаКлиентовToolStripMenuItem";
-            this.таблицаКлиентовToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.таблицаКлиентовToolStripMenuItem.Text = "таблица заказчиков";
+            this.таблицаКлиентовToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.таблицаКлиентовToolStripMenuItem.Text = "Таблица заказчиков";
             this.таблицаКлиентовToolStripMenuItem.Click += new System.EventHandler(this.таблицаКлиентовToolStripMenuItem_Click);
             // 
             // таблицаЗаказовToolStripMenuItem
             // 
             this.таблицаЗаказовToolStripMenuItem.Name = "таблицаЗаказовToolStripMenuItem";
-            this.таблицаЗаказовToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.таблицаЗаказовToolStripMenuItem.Text = "таблица заказов";
+            this.таблицаЗаказовToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.таблицаЗаказовToolStripMenuItem.Text = "Таблица заказов";
             this.таблицаЗаказовToolStripMenuItem.Click += new System.EventHandler(this.таблицаЗаказовToolStripMenuItem_Click);
             // 
             // таблицаПродажToolStripMenuItem
             // 
             this.таблицаПродажToolStripMenuItem.Name = "таблицаПродажToolStripMenuItem";
-            this.таблицаПродажToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.таблицаПродажToolStripMenuItem.Text = "таблица продаж";
+            this.таблицаПродажToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.таблицаПродажToolStripMenuItem.Text = "Таблица продаж";
             this.таблицаПродажToolStripMenuItem.Click += new System.EventHandler(this.таблицаПродажToolStripMenuItem_Click);
             // 
             // таблицаЦенToolStripMenuItem
             // 
             this.таблицаЦенToolStripMenuItem.Name = "таблицаЦенToolStripMenuItem";
-            this.таблицаЦенToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.таблицаЦенToolStripMenuItem.Text = "таблица цен";
+            this.таблицаЦенToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.таблицаЦенToolStripMenuItem.Text = "Таблица цен";
             this.таблицаЦенToolStripMenuItem.Click += new System.EventHandler(this.таблицаЦенToolStripMenuItem_Click);
             // 
             // DeleteTable
