@@ -81,6 +81,7 @@ namespace Autorization
             {
                 textBox1.Text = "ВВЕДИТЕ НАЗВАНИЕ ТАБЛИЦЫ";
                 textBox1.ForeColor = Color.DarkGray;
+                textBox1.UseSystemPasswordChar = false;
             }
         }
         private void textBox1_Enter(object sender, EventArgs e) // когда мы начинаем печатать в текстбоксе тексту задается цвет Black
@@ -89,6 +90,7 @@ namespace Autorization
             {
                 textBox1.Text = "";
                 textBox1.ForeColor = Color.Black;
+                textBox1.UseSystemPasswordChar = true;
             }
         }
         private void DeleteTable_Click(object sender, EventArgs e)
