@@ -29,7 +29,9 @@ namespace Autorization
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DarkThemeBox1 = new System.Windows.Forms.CheckBox();
             this.buttonLoginPass = new System.Windows.Forms.Button();
             this.passwordName = new System.Windows.Forms.TextBox();
             this.loginName = new System.Windows.Forms.TextBox();
@@ -38,7 +40,7 @@ namespace Autorization
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.DarkThemeBox1 = new System.Windows.Forms.CheckBox();
+            this.animateComponent1 = new Autorization.AnimateComponent(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +62,21 @@ namespace Autorization
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // DarkThemeBox1
+            // 
+            this.DarkThemeBox1.AutoSize = true;
+            this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DarkThemeBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DarkThemeBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DarkThemeBox1.Location = new System.Drawing.Point(219, 437);
+            this.DarkThemeBox1.Name = "DarkThemeBox1";
+            this.DarkThemeBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DarkThemeBox1.Size = new System.Drawing.Size(142, 24);
+            this.DarkThemeBox1.TabIndex = 6;
+            this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
+            this.DarkThemeBox1.UseVisualStyleBackColor = true;
             // 
             // buttonLoginPass
             // 
@@ -156,20 +173,11 @@ namespace Autorization
             this.label1.TabIndex = 0;
             this.label1.Text = "АВТОРИЗАЦИЯ";
             // 
-            // DarkThemeBox1
+            // animateComponent1
             // 
-            this.DarkThemeBox1.AutoSize = true;
-            this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DarkThemeBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DarkThemeBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DarkThemeBox1.Location = new System.Drawing.Point(219, 437);
-            this.DarkThemeBox1.Name = "DarkThemeBox1";
-            this.DarkThemeBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DarkThemeBox1.Size = new System.Drawing.Size(142, 24);
-            this.DarkThemeBox1.TabIndex = 6;
-            this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
-            this.DarkThemeBox1.UseVisualStyleBackColor = true;
+            this.animateComponent1.AccriveEffect = Autorization.FormAnimatedEffects.РАСКРЫТИЕ_СКРЫТИЕ;
+            this.animateComponent1.CloseEffect = Autorization.FormAnimatedEffects.ПОЯВЛЕНИЕ_ЗАТУХАНИЕ;
+            this.animateComponent1.SourceForm = this;
             // 
             // LoginForm1
             // 
@@ -200,5 +208,6 @@ namespace Autorization
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox DarkThemeBox1;
+        private AnimateComponent animateComponent1;
     }
 }

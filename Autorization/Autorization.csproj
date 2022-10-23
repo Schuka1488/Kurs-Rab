@@ -93,7 +93,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimateComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AnimateComponent.Designer.cs">
+      <DependentUpon>AnimateComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBclass.cs" />
+    <Compile Include="FormAnimatedEffects.cs" />
     <Compile Include="LoginForm1.cs">
       <SubType>Form</SubType>
     </Compile>

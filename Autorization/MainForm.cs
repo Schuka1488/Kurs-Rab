@@ -19,7 +19,7 @@ namespace Autorization
         public MainForm()
         {
             InitializeComponent();
-
+            
             textBox1.Text = "Введите название таблицы"; // текстбоксу задается текст
             textBox1.ForeColor = Color.Gray; // а так же цвет
         }

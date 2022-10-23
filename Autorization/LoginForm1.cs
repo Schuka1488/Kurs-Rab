@@ -28,11 +28,12 @@ namespace Autorization
         public LoginForm1()
         {
             InitializeComponent();
+            animateComponent1.ShowForm(1000);
             this.passwordName.AutoSize = false; // отключается авторазмер у пароля
         }
         private void label4_Click(object sender, EventArgs e)
         {
-            this.Close(); // лэйбл является кнопкой закрытия формы
+            animateComponent1.CloseForm(2000);
         }
         private void loginName_TextChanged(object sender, EventArgs e)
         {
