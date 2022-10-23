@@ -55,6 +55,7 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTable = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MainMenuLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -143,6 +144,7 @@ namespace Autorization
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel2.Controls.Add(this.MainMenuLabel);
             this.panel2.Controls.Add(this.menuStrip1);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -300,6 +302,17 @@ namespace Autorization
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // MainMenuLabel
+            // 
+            this.MainMenuLabel.AutoSize = true;
+            this.MainMenuLabel.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainMenuLabel.Location = new System.Drawing.Point(124, 37);
+            this.MainMenuLabel.Name = "MainMenuLabel";
+            this.MainMenuLabel.Size = new System.Drawing.Size(378, 50);
+            this.MainMenuLabel.TabIndex = 3;
+            this.MainMenuLabel.Text = "ГЛАВНОЕ МЕНЮ";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,5 +361,6 @@ namespace Autorization
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.CheckBox DarkThemeBox1;
         private System.Windows.Forms.Label LabelDeleteTable;
+        private System.Windows.Forms.Label MainMenuLabel;
     }
 }
