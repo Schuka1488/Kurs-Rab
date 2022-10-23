@@ -35,12 +35,6 @@ namespace Autorization
         {
             animateComponent1.CloseForm(2000);
         }
-        private void loginName_TextChanged(object sender, EventArgs e)
-        {
-        }
-        private void passwordName_TextChanged(object sender, EventArgs e)
-        {
-        }
         Point lastPoint; // специальный класс для задачи координат
         private void panel1_MouseMove(object sender, MouseEventArgs e)  //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
@@ -69,7 +63,7 @@ namespace Autorization
         private void buttonLoginPass_Click(object sender, EventArgs e) // метод при помощи которого осуществляется авторизация и полноценные вход в приложение 
         {
             //Получаем данные о пользователе
-            string Userlogin = loginName.Text;
+            string Userlogin = loginName.Text; // данные о пользователе из текстбокса loginName
             string Userpassword = sha256(passwordName.Text); // кодируем пароль
             //Создаем объекты
             DBclass db = new DBclass();
@@ -86,20 +80,19 @@ namespace Autorization
             //Проверка на верность данных (логин и пароль)
             if (table.Rows.Count > 0)
             {
-                int Id = int.Parse(table.Rows[0].ItemArray[0].ToString());
-                db.openConnection();
+                int Id = int.Parse(table.Rows[0].ItemArray[0].ToString()); // переменные для проверки данных на верность помещаем в метод
+                db.openConnection(); // открываем соединение
                 string _Role = $"SELECT levelRole FROM `authorization` WHERE AuthorizationID = {Id}"; // запрос роли, которая относится к логину
-                MySqlCommand cmd2 = new MySqlCommand(_Role, db.getConnection());
-                int Level = int.Parse(cmd2.ExecuteScalar().ToString());
+                MySqlCommand cmd2 = new MySqlCommand(_Role, db.getConnection()); // осуществляется подключение к БД
+                int Level = int.Parse(cmd2.ExecuteScalar().ToString()); // берутся значения из БД
                  _Role = $"SELECT roleTitle FROM `authorization` WHERE AuthorizationID = {Id}"; // запрос названия роли
-                 cmd2 = new MySqlCommand(_Role, db.getConnection());
-                string title = cmd2.ExecuteScalar().ToString();
-                //запоним кто вошел
-                Username user = new Username(loginName.Text, Level);
+                 cmd2 = new MySqlCommand(_Role, db.getConnection()); // осуществляется подключение к БД
+                string title = cmd2.ExecuteScalar().ToString(); // берутся значения из БД
+                Username user = new Username(loginName.Text, Level); // Запоминаем логин из текстбокса loginName
                 MainForm mainForm = new MainForm(); // после авторизации показывается MainForm
-                mainForm.Show();
-                db.closeConnection();
-                this.Hide();
+                mainForm.Show(); // метод для показа MainForm
+                db.closeConnection(); // Полсе обрубается соединение
+                this.Hide(); // происходит сокрытие
             }
             else 
                 MessageBox.Show("Логин или пароль указан неверно."); // обработка исключения

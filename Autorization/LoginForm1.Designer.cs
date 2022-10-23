@@ -101,7 +101,7 @@ namespace Autorization
             this.passwordName.PasswordChar = '*';
             this.passwordName.Size = new System.Drawing.Size(343, 46);
             this.passwordName.TabIndex = 4;
-            this.passwordName.TextChanged += new System.EventHandler(this.passwordName_TextChanged);
+         
             // 
             // loginName
             // 
@@ -111,7 +111,7 @@ namespace Autorization
             this.loginName.Name = "loginName";
             this.loginName.Size = new System.Drawing.Size(343, 46);
             this.loginName.TabIndex = 3;
-            this.loginName.TextChanged += new System.EventHandler(this.loginName_TextChanged);
+           
             // 
             // label3
             // 

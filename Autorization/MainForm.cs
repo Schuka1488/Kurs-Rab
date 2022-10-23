@@ -15,26 +15,19 @@ namespace Autorization
     {
         string id_selected_rows = "0"; //Переменная для индекс выбранной строки в гриде
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
-        DBclass db = new DBclass();
+        DBclass db = new DBclass(); // переменная класса для БД, и последующей работе с ними
         public MainForm()
         {
             InitializeComponent();
-           
         }
         private void MainForm_Load(object sender, EventArgs e)  // краткое описание ролей и их возможностей
         { 
             if (Username.user1.Role == 1)
-                изменитьДанныеToolStripMenuItem.Visible = true;
+                изменитьДанныеToolStripMenuItem.Visible = true; // если роль = 1 (например как у администратора) то изменить данные можно
             else
-                изменитьДанныеToolStripMenuItem.Visible = false;
+                изменитьДанныеToolStripMenuItem.Visible = false; // иначе, изменить данные нельзя, эти вкладки будут не доступны
         }
         Point lastPoint; // специальный класс для задачи координат
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-        }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        { 
-        }
         private void panel2_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
             lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
@@ -69,11 +62,6 @@ namespace Autorization
             LoginForm1 auth = new LoginForm1();
             auth.Show();
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-       
         private void DeleteTable_Click(object sender, EventArgs e)
         {
         }
@@ -97,62 +85,62 @@ namespace Autorization
 
         private void таблицаСотрудниковToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
-            string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees";
+            string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            DataTable table = new DataTable();
-            adapter.SelectCommand = cmd;
-            adapter.Fill(table);
-            bSource.DataSource = table;
-            dataGridView1.DataSource = bSource;
+            DataTable table = new DataTable(); // класс для таблиц
+            adapter.SelectCommand = cmd; // адаптер берет соединение
+            adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
+            bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
+            dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
         }
 
         private void таблицаКлиентовToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
-            string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', MSRN AS 'ОГРН', TIN AS 'ИНН' FROM Customer";
+            string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', MSRN AS 'ОГРН', TIN AS 'ИНН' FROM Customer"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            DataTable table = new DataTable();
-            adapter.SelectCommand = cmd;
-            adapter.Fill(table);
-            bSource.DataSource = table;
-            dataGridView1.DataSource = bSource;
+            DataTable table = new DataTable(); // класс для таблиц
+            adapter.SelectCommand = cmd; // адаптер берет соединение
+            adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
+            bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
+            dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
         }
 
         private void таблицаЗаказовToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
-            string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта', 	projectPrice AS 'Цена', ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder";
+            string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта', 	projectPrice AS 'Цена', ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            DataTable table = new DataTable();
-            adapter.SelectCommand = cmd;
-            adapter.Fill(table);
-            bSource.DataSource = table;
-            dataGridView1.DataSource = bSource;
+            DataTable table = new DataTable(); // класс для таблиц
+            adapter.SelectCommand = cmd; // адаптер берет соединение
+            adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
+            bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
+            dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
         }
 
         private void таблицаПродажToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
-            string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales";
+            string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            DataTable table = new DataTable();
-            adapter.SelectCommand = cmd;
-            adapter.Fill(table);
-            bSource.DataSource = table;
-            dataGridView1.DataSource = bSource;
+            DataTable table = new DataTable(); // класс для таблиц
+            adapter.SelectCommand = cmd; // адаптер берет соединение
+            adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
+            bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
+            dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
         }
 
         private void таблицаЦенToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
-            string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц' FROM Sales";
+            string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц' FROM Sales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            DataTable table = new DataTable();
-            adapter.SelectCommand = cmd;
-            adapter.Fill(table);
-            bSource.DataSource = table;
-            dataGridView1.DataSource = bSource;
+            DataTable table = new DataTable(); // класс для таблиц
+            adapter.SelectCommand = cmd; // адаптер берет соединение
+            adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
+            bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
+            dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
         }
 
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
@@ -196,7 +184,5 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-
-      
     }
 }

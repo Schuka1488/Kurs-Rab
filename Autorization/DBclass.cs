@@ -11,17 +11,17 @@ namespace Autorization
     {
         MySqlConnection connection = new MySqlConnection("server=chuc.caseum.ru;port=33333;username=st_3_20_21;password=15733563;database=is_3_20_st21_KURS");
         //MySqlConnection connection = new MySqlConnection("server=10.90.12.110;port=33333;username=st_3_20_21;password=15733563;database=is_3_20_st21_KURS");
-        public void openConnection()
+        public void openConnection() // метод для удобства
         {
             if (connection.State == System.Data.ConnectionState.Closed) // открытие соединения
-                connection.Open();
+                connection.Open(); // метод открытия
         }
-        public void closeConnection()
+        public void closeConnection() // метод для удобства
         {
             if (connection.State == System.Data.ConnectionState.Open) // закрытие соединения 
-                connection.Close();
+                connection.Close(); // метод закрытия
         }
-        public MySqlConnection getConnection() // пишем 1 метод там где нужно соединения, вместо того чтобы каждый раз писать connection.Open и connection.Close  
+        public MySqlConnection getConnection() // пишем 1 метод там где нужно соединения, вместо того чтобы каждый раз писать connection.Open и connection.Close и т.д.  
         {
             return connection; // возвращаем соединение 
         }

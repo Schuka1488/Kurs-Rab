@@ -12,7 +12,7 @@ namespace Autorization
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main() // метод для входа в программу
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
