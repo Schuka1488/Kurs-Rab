@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Autorization
+﻿namespace Autorization
 {
-    public enum FormAnimatedEffects
+    public enum FormAnimatedEffects // перечесление анимаций для формы авторизации
     {
-        РАСКРЫТИЕ_СКРЫТИЕ = 0x00000010,
-        ПОЯВЛЕНИЕ_ЗАТУХАНИЕ = 0x0008000
+        РАСКРЫТИЕ_СКРЫТИЕ = 0x00000010, // анимация раскрытия скрытия
+        ПОЯВЛЕНИЕ_ЗАТУХАНИЕ = 0x0008000 // анимация появления затухания
     }
 }
