@@ -19,9 +19,7 @@ namespace Autorization
         public MainForm()
         {
             InitializeComponent();
-            
-            textBox1.Text = "Введите название таблицы"; // текстбоксу задается текст
-            textBox1.ForeColor = Color.Gray; // а так же цвет
+           
         }
         private void MainForm_Load(object sender, EventArgs e)  // краткое описание ролей и их возможностей
         { 
@@ -75,24 +73,7 @@ namespace Autorization
         {
 
         }
-        private void textBox1_Leave(object sender, EventArgs e) // когда мы перестаем использовать текстбокс ему обратно возвращается цвет DarkGray
-        {
-            if (textBox1.Text == "") 
-            {
-                textBox1.Text = "ВВЕДИТЕ НАЗВАНИЕ ТАБЛИЦЫ";
-                textBox1.ForeColor = Color.DarkGray;
-                textBox1.UseSystemPasswordChar = false;
-            }
-        }
-        private void textBox1_Enter(object sender, EventArgs e) // когда мы начинаем печатать в текстбоксе тексту задается цвет Black
-        {
-            if (textBox1.Text == "ВВЕДИТЕ НАЗВАНИЕ ТАБЛИЦЫ")
-            {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.Black;
-                textBox1.UseSystemPasswordChar = true;
-            }
-        }
+       
         private void DeleteTable_Click(object sender, EventArgs e)
         {
         }
@@ -215,5 +196,7 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
+
+      
     }
 }

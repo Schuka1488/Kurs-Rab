@@ -31,6 +31,7 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LabelDeleteTable = new System.Windows.Forms.Label();
             this.DarkThemeBox1 = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -63,6 +64,7 @@ namespace Autorization
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.LabelDeleteTable);
             this.panel1.Controls.Add(this.DarkThemeBox1);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.comboBox1);
@@ -77,6 +79,16 @@ namespace Autorization
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // LabelDeleteTable
+            // 
+            this.LabelDeleteTable.AutoSize = true;
+            this.LabelDeleteTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelDeleteTable.Location = new System.Drawing.Point(12, 400);
+            this.LabelDeleteTable.Name = "LabelDeleteTable";
+            this.LabelDeleteTable.Size = new System.Drawing.Size(193, 16);
+            this.LabelDeleteTable.TabIndex = 8;
+            this.LabelDeleteTable.Text = "Укажите название таблицы:";
             // 
             // DarkThemeBox1
             // 
@@ -103,7 +115,7 @@ namespace Autorization
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 106);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(611, 261);
+            this.dataGridView1.Size = new System.Drawing.Size(611, 275);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
@@ -114,21 +126,19 @@ namespace Autorization
             this.comboBox1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(502, 373);
+            this.comboBox1.Location = new System.Drawing.Point(503, 387);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 4;
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 373);
+            this.textBox1.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(12, 419);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 65);
+            this.textBox1.Size = new System.Drawing.Size(188, 21);
             this.textBox1.TabIndex = 3;
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // panel2
             // 
@@ -273,13 +283,13 @@ namespace Autorization
             this.DeleteTable.BackColor = System.Drawing.Color.Lavender;
             this.DeleteTable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeleteTable.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DeleteTable.Location = new System.Drawing.Point(206, 373);
+            this.DeleteTable.Location = new System.Drawing.Point(206, 400);
             this.DeleteTable.Name = "DeleteTable";
-            this.DeleteTable.Size = new System.Drawing.Size(199, 67);
+            this.DeleteTable.Size = new System.Drawing.Size(170, 40);
             this.DeleteTable.TabIndex = 1;
-            this.DeleteTable.Text = "УДАЛИТЬ ДАННЫЕ ВНУТРИ ТАБЛИЦЫ";
+            this.DeleteTable.Text = "УДАЛИТЬ ТАБЛИЦУ";
             this.DeleteTable.UseVisualStyleBackColor = false;
             this.DeleteTable.Click += new System.EventHandler(this.DeleteTable_Click);
             this.DeleteTable.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DeleteTable_MouseDown);
@@ -337,5 +347,6 @@ namespace Autorization
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.CheckBox DarkThemeBox1;
+        private System.Windows.Forms.Label LabelDeleteTable;
     }
 }
