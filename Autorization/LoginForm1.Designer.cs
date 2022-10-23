@@ -68,12 +68,12 @@ namespace Autorization
             this.DarkThemeBox1.AutoSize = true;
             this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DarkThemeBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DarkThemeBox1.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DarkThemeBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DarkThemeBox1.Location = new System.Drawing.Point(219, 437);
             this.DarkThemeBox1.Name = "DarkThemeBox1";
             this.DarkThemeBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DarkThemeBox1.Size = new System.Drawing.Size(142, 24);
+            this.DarkThemeBox1.Size = new System.Drawing.Size(144, 27);
             this.DarkThemeBox1.TabIndex = 6;
             this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
             this.DarkThemeBox1.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@ namespace Autorization
             // 
             this.buttonLoginPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLoginPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLoginPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLoginPass.Font = new System.Drawing.Font("Mongolian Baiti", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLoginPass.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonLoginPass.Location = new System.Drawing.Point(12, 370);
             this.buttonLoginPass.Name = "buttonLoginPass";
@@ -116,7 +116,7 @@ namespace Autorization
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(12, 229);
             this.label3.Name = "label3";
@@ -127,7 +127,7 @@ namespace Autorization
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(12, 133);
             this.label2.Name = "label2";
@@ -165,11 +165,11 @@ namespace Autorization
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Old English Text MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(42, 40);
+            this.label1.Location = new System.Drawing.Point(12, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 44);
+            this.label1.Size = new System.Drawing.Size(349, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "АВТОРИЗАЦИЯ";
             // 

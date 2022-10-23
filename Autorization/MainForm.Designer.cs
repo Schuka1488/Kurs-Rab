@@ -83,10 +83,10 @@ namespace Autorization
             // LabelDeleteTable
             // 
             this.LabelDeleteTable.AutoSize = true;
-            this.LabelDeleteTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelDeleteTable.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelDeleteTable.Location = new System.Drawing.Point(12, 400);
             this.LabelDeleteTable.Name = "LabelDeleteTable";
-            this.LabelDeleteTable.Size = new System.Drawing.Size(193, 16);
+            this.LabelDeleteTable.Size = new System.Drawing.Size(177, 16);
             this.LabelDeleteTable.TabIndex = 8;
             this.LabelDeleteTable.Text = "Укажите название таблицы:";
             // 
@@ -96,12 +96,12 @@ namespace Autorization
             this.DarkThemeBox1.BackColor = System.Drawing.Color.Lavender;
             this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DarkThemeBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DarkThemeBox1.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DarkThemeBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DarkThemeBox1.Location = new System.Drawing.Point(482, 414);
             this.DarkThemeBox1.Name = "DarkThemeBox1";
             this.DarkThemeBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DarkThemeBox1.Size = new System.Drawing.Size(142, 24);
+            this.DarkThemeBox1.Size = new System.Drawing.Size(144, 27);
             this.DarkThemeBox1.TabIndex = 7;
             this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
             this.DarkThemeBox1.UseVisualStyleBackColor = false;
@@ -283,11 +283,11 @@ namespace Autorization
             this.DeleteTable.BackColor = System.Drawing.Color.Lavender;
             this.DeleteTable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteTable.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteTable.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DeleteTable.Location = new System.Drawing.Point(206, 400);
             this.DeleteTable.Name = "DeleteTable";
-            this.DeleteTable.Size = new System.Drawing.Size(170, 40);
+            this.DeleteTable.Size = new System.Drawing.Size(136, 40);
             this.DeleteTable.TabIndex = 1;
             this.DeleteTable.Text = "УДАЛИТЬ ТАБЛИЦУ";
             this.DeleteTable.UseVisualStyleBackColor = false;
