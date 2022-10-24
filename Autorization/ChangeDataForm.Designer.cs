@@ -121,9 +121,9 @@ namespace Autorization
             this.dataGridViewTransformData2.BackgroundColor = System.Drawing.Color.Lavender;
             this.dataGridViewTransformData2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewTransformData2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTransformData2.Location = new System.Drawing.Point(3, 106);
+            this.dataGridViewTransformData2.Location = new System.Drawing.Point(12, 106);
             this.dataGridViewTransformData2.Name = "dataGridViewTransformData2";
-            this.dataGridViewTransformData2.Size = new System.Drawing.Size(716, 310);
+            this.dataGridViewTransformData2.Size = new System.Drawing.Size(866, 310);
             this.dataGridViewTransformData2.TabIndex = 6;
             // 
             // TransformDataLabel
