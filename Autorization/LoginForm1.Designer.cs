@@ -39,9 +39,9 @@ namespace Autorization
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.animateComponent1 = new Autorization.AnimateComponent(this.components);
             this.WhiteThemeButton = new System.Windows.Forms.Button();
             this.DarkThemeButton = new System.Windows.Forms.Button();
+            this.animateComponent1 = new Autorization.AnimateComponent(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -159,12 +159,6 @@ namespace Autorization
             this.label1.TabIndex = 0;
             this.label1.Text = "АВТОРИЗАЦИЯ";
             // 
-            // animateComponent1
-            // 
-            this.animateComponent1.AccriveEffect = Autorization.FormAnimatedEffects.РАСКРЫТИЕ_СКРЫТИЕ;
-            this.animateComponent1.CloseEffect = Autorization.FormAnimatedEffects.ПОЯВЛЕНИЕ_ЗАТУХАНИЕ;
-            this.animateComponent1.SourceForm = this;
-            // 
             // WhiteThemeButton
             // 
             this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -188,6 +182,12 @@ namespace Autorization
             this.DarkThemeButton.Text = "ТЕМНАЯ ТЕМА";
             this.DarkThemeButton.UseVisualStyleBackColor = true;
             this.DarkThemeButton.Click += new System.EventHandler(this.DarkThemeButton_Click);
+            // 
+            // animateComponent1
+            // 
+            this.animateComponent1.AccriveEffect = Autorization.FormAnimatedEffects.РАСКРЫТИЕ_СКРЫТИЕ;
+            this.animateComponent1.CloseEffect = Autorization.FormAnimatedEffects.ПОЯВЛЕНИЕ_ЗАТУХАНИЕ;
+            this.animateComponent1.SourceForm = this;
             // 
             // LoginForm1
             // 

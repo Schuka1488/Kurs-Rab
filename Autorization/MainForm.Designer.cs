@@ -50,6 +50,7 @@ namespace Autorization
             this.таблицаПродажToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -133,6 +134,7 @@ namespace Autorization
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.MainMenuLabel);
             this.panel2.Controls.Add(this.menuStrip1);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
@@ -250,6 +252,19 @@ namespace Autorization
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(600, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 31);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "X";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,5 +308,6 @@ namespace Autorization
         private System.Windows.Forms.Button DarkThemeButton;
         private System.Windows.Forms.Label ZdravstvoiteLabel;
         private System.Windows.Forms.Label LoginTransferLabel;
+        private System.Windows.Forms.Label label4;
     }
 }

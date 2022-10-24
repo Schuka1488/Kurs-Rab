@@ -16,6 +16,7 @@ namespace Autorization
         string id_selected_rows = "0"; //Переменная для индекс выбранной строки в гриде
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
         DBclass db = new DBclass(); // переменная класса для БД, и последующей работе с ними
+        Point lastPoint; // специальный класс для задачи координат
         public MainForm()
         {
             InitializeComponent();
@@ -27,7 +28,6 @@ namespace Autorization
             else
                 изменитьДанныеToolStripMenuItem.Visible = false; // иначе, изменить данные нельзя, эти вкладки будут не доступны
         }
-        Point lastPoint; // специальный класс для задачи координат
         private void panel2_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
             lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
@@ -189,5 +189,9 @@ namespace Autorization
             changedataForm.Show(); // метод для показа ChangeDataForm
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
