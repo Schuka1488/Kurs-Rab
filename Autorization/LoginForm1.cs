@@ -107,5 +107,18 @@ namespace Autorization
         {
 
         }
+
+        private void LoginForm1_Load(object sender, EventArgs e)
+        {
+            ToolTip toolTip1 = new ToolTip();
+
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+
+            toolTip1.ShowAlways = true;
+
+            toolTip1.SetToolTip(label4, "Закрытие программы");
+        }
     }
 }

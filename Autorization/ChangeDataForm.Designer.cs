@@ -447,6 +447,7 @@ namespace Autorization
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ChangeDataForm";
             this.Text = "ChangeDataForm";
+            this.Load += new System.EventHandler(this.ChangeDataForm_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);

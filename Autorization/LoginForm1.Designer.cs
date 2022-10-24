@@ -198,6 +198,7 @@ namespace Autorization
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm1";
             this.Text = "LoginForm1";
+            this.Load += new System.EventHandler(this.LoginForm1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
