@@ -97,5 +97,15 @@ namespace Autorization
             else 
                 MessageBox.Show("Логин или пароль указан неверно."); // обработка исключения
         }
+
+        private void WhiteThemeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DarkThemeButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,6 +38,8 @@ namespace Autorization
             this.вГлавноеМенюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewTransformData2 = new System.Windows.Forms.DataGridView();
             this.TransformDataLabel = new System.Windows.Forms.Label();
+            this.WhiteThemeButton = new System.Windows.Forms.Button();
+            this.DarkThemeButton = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -47,6 +49,8 @@ namespace Autorization
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Lavender;
+            this.panel4.Controls.Add(this.WhiteThemeButton);
+            this.panel4.Controls.Add(this.DarkThemeButton);
             this.panel4.Controls.Add(this.dataGridViewTransformData2);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -125,13 +129,38 @@ namespace Autorization
             // TransformDataLabel
             // 
             this.TransformDataLabel.AutoSize = true;
+            this.TransformDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.TransformDataLabel.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransformDataLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TransformDataLabel.Location = new System.Drawing.Point(218, 38);
             this.TransformDataLabel.Name = "TransformDataLabel";
-            this.TransformDataLabel.Size = new System.Drawing.Size(677, 50);
+            this.TransformDataLabel.Size = new System.Drawing.Size(679, 52);
             this.TransformDataLabel.TabIndex = 4;
             this.TransformDataLabel.Text = "ФОРМА ИЗМЕНЕНИЯ ДАННЫХ";
+            // 
+            // WhiteThemeButton
+            // 
+            this.WhiteThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhiteThemeButton.Location = new System.Drawing.Point(971, 475);
+            this.WhiteThemeButton.Name = "WhiteThemeButton";
+            this.WhiteThemeButton.Size = new System.Drawing.Size(119, 23);
+            this.WhiteThemeButton.TabIndex = 12;
+            this.WhiteThemeButton.Text = "СВЕТЛАЯ ТЕМА";
+            this.WhiteThemeButton.UseVisualStyleBackColor = true;
+            // 
+            // DarkThemeButton
+            // 
+            this.DarkThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarkThemeButton.Location = new System.Drawing.Point(971, 503);
+            this.DarkThemeButton.Name = "DarkThemeButton";
+            this.DarkThemeButton.Size = new System.Drawing.Size(119, 23);
+            this.DarkThemeButton.TabIndex = 11;
+            this.DarkThemeButton.Text = "ТЕМНАЯ ТЕМА";
+            this.DarkThemeButton.UseVisualStyleBackColor = true;
             // 
             // ChangeDataForm
             // 
@@ -164,5 +193,7 @@ namespace Autorization
         private System.Windows.Forms.ToolStripMenuItem вГлавноеМенюToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridViewTransformData2;
         private System.Windows.Forms.Label TransformDataLabel;
+        private System.Windows.Forms.Button WhiteThemeButton;
+        private System.Windows.Forms.Button DarkThemeButton;
     }
 }

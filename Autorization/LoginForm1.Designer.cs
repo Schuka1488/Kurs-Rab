@@ -40,6 +40,8 @@ namespace Autorization
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.animateComponent1 = new Autorization.AnimateComponent(this.components);
+            this.WhiteThemeButton = new System.Windows.Forms.Button();
+            this.DarkThemeButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +49,8 @@ namespace Autorization
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.WhiteThemeButton);
+            this.panel1.Controls.Add(this.DarkThemeButton);
             this.panel1.Controls.Add(this.buttonLoginPass);
             this.panel1.Controls.Add(this.passwordName);
             this.panel1.Controls.Add(this.loginName);
@@ -146,11 +150,12 @@ namespace Autorization
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(12, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(349, 50);
+            this.label1.Size = new System.Drawing.Size(351, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "АВТОРИЗАЦИЯ";
             // 
@@ -159,6 +164,30 @@ namespace Autorization
             this.animateComponent1.AccriveEffect = Autorization.FormAnimatedEffects.РАСКРЫТИЕ_СКРЫТИЕ;
             this.animateComponent1.CloseEffect = Autorization.FormAnimatedEffects.ПОЯВЛЕНИЕ_ЗАТУХАНИЕ;
             this.animateComponent1.SourceForm = this;
+            // 
+            // WhiteThemeButton
+            // 
+            this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhiteThemeButton.Location = new System.Drawing.Point(121, 438);
+            this.WhiteThemeButton.Name = "WhiteThemeButton";
+            this.WhiteThemeButton.Size = new System.Drawing.Size(119, 23);
+            this.WhiteThemeButton.TabIndex = 12;
+            this.WhiteThemeButton.Text = "СВЕТЛАЯ ТЕМА";
+            this.WhiteThemeButton.UseVisualStyleBackColor = true;
+            this.WhiteThemeButton.Click += new System.EventHandler(this.WhiteThemeButton_Click);
+            // 
+            // DarkThemeButton
+            // 
+            this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarkThemeButton.Location = new System.Drawing.Point(246, 438);
+            this.DarkThemeButton.Name = "DarkThemeButton";
+            this.DarkThemeButton.Size = new System.Drawing.Size(119, 23);
+            this.DarkThemeButton.TabIndex = 11;
+            this.DarkThemeButton.Text = "ТЕМНАЯ ТЕМА";
+            this.DarkThemeButton.UseVisualStyleBackColor = true;
+            this.DarkThemeButton.Click += new System.EventHandler(this.DarkThemeButton_Click);
             // 
             // LoginForm1
             // 
@@ -189,5 +218,7 @@ namespace Autorization
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private AnimateComponent animateComponent1;
+        private System.Windows.Forms.Button WhiteThemeButton;
+        private System.Windows.Forms.Button DarkThemeButton;
     }
 }
