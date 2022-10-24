@@ -30,7 +30,6 @@ namespace Autorization
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
-            this.SaveLineButton = new System.Windows.Forms.Button();
             this.DeleteLineButton = new System.Windows.Forms.Button();
             this.AddLineButton = new System.Windows.Forms.Button();
             this.Column7Label = new System.Windows.Forms.Label();
@@ -78,7 +77,6 @@ namespace Autorization
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Lavender;
-            this.panel4.Controls.Add(this.SaveLineButton);
             this.panel4.Controls.Add(this.DeleteLineButton);
             this.panel4.Controls.Add(this.AddLineButton);
             this.panel4.Controls.Add(this.Column7Label);
@@ -110,19 +108,6 @@ namespace Autorization
             this.panel4.TabIndex = 2;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
-            // 
-            // SaveLineButton
-            // 
-            this.SaveLineButton.BackColor = System.Drawing.Color.Lavender;
-            this.SaveLineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveLineButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveLineButton.Location = new System.Drawing.Point(1021, 203);
-            this.SaveLineButton.Name = "SaveLineButton";
-            this.SaveLineButton.Size = new System.Drawing.Size(220, 60);
-            this.SaveLineButton.TabIndex = 33;
-            this.SaveLineButton.Text = "СОХРАНИТЬ ИЗМЕНЕНИЯ";
-            this.SaveLineButton.UseVisualStyleBackColor = false;
-            this.SaveLineButton.Click += new System.EventHandler(this.SaveLineButton_Click);
             // 
             // DeleteLineButton
             // 
@@ -160,6 +145,7 @@ namespace Autorization
             this.Column7Label.Size = new System.Drawing.Size(79, 18);
             this.Column7Label.TabIndex = 30;
             this.Column7Label.Text = "7 столбец";
+            this.Column7Label.Visible = false;
             // 
             // Column6Label
             // 
@@ -171,6 +157,7 @@ namespace Autorization
             this.Column6Label.Size = new System.Drawing.Size(79, 18);
             this.Column6Label.TabIndex = 29;
             this.Column6Label.Text = "6 столбец";
+            this.Column6Label.Visible = false;
             // 
             // Column5Label
             // 
@@ -182,6 +169,7 @@ namespace Autorization
             this.Column5Label.Size = new System.Drawing.Size(79, 18);
             this.Column5Label.TabIndex = 28;
             this.Column5Label.Text = "5 столбец";
+            this.Column5Label.Visible = false;
             // 
             // Column4Label
             // 
@@ -193,6 +181,7 @@ namespace Autorization
             this.Column4Label.Size = new System.Drawing.Size(79, 18);
             this.Column4Label.TabIndex = 27;
             this.Column4Label.Text = "4 столбец";
+            this.Column4Label.Visible = false;
             // 
             // Column3Label
             // 
@@ -204,6 +193,7 @@ namespace Autorization
             this.Column3Label.Size = new System.Drawing.Size(79, 18);
             this.Column3Label.TabIndex = 26;
             this.Column3Label.Text = "3 столбец";
+            this.Column3Label.Visible = false;
             // 
             // Column2Label
             // 
@@ -215,6 +205,7 @@ namespace Autorization
             this.Column2Label.Size = new System.Drawing.Size(79, 18);
             this.Column2Label.TabIndex = 25;
             this.Column2Label.Text = "2 столбец";
+            this.Column2Label.Visible = false;
             // 
             // Column1Label
             // 
@@ -226,6 +217,7 @@ namespace Autorization
             this.Column1Label.Size = new System.Drawing.Size(79, 18);
             this.Column1Label.TabIndex = 24;
             this.Column1Label.Text = "1 столбец";
+            this.Column1Label.Visible = false;
             // 
             // textBox7
             // 
@@ -234,6 +226,7 @@ namespace Autorization
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 26);
             this.textBox7.TabIndex = 23;
+            this.textBox7.Visible = false;
             // 
             // textBox6
             // 
@@ -242,6 +235,7 @@ namespace Autorization
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 26);
             this.textBox6.TabIndex = 22;
+            this.textBox6.Visible = false;
             // 
             // textBox5
             // 
@@ -250,6 +244,7 @@ namespace Autorization
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 26);
             this.textBox5.TabIndex = 21;
+            this.textBox5.Visible = false;
             // 
             // textBox4
             // 
@@ -258,6 +253,7 @@ namespace Autorization
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 20;
+            this.textBox4.Visible = false;
             // 
             // textBox3
             // 
@@ -266,6 +262,7 @@ namespace Autorization
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 26);
             this.textBox3.TabIndex = 19;
+            this.textBox3.Visible = false;
             // 
             // textBox2
             // 
@@ -274,6 +271,7 @@ namespace Autorization
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 26);
             this.textBox2.TabIndex = 18;
+            this.textBox2.Visible = false;
             // 
             // textBox1
             // 
@@ -282,46 +280,51 @@ namespace Autorization
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 17;
+            this.textBox1.Visible = false;
             // 
             // comboBox4
             // 
             this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(470, 433);
+            this.comboBox4.Location = new System.Drawing.Point(514, 433);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(56, 24);
             this.comboBox4.TabIndex = 16;
+            this.comboBox4.Visible = false;
             // 
             // comboBox3
             // 
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(318, 433);
+            this.comboBox3.Location = new System.Drawing.Point(362, 433);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(56, 24);
             this.comboBox3.TabIndex = 15;
+            this.comboBox3.Visible = false;
             // 
             // comboBox2
             // 
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(165, 433);
+            this.comboBox2.Location = new System.Drawing.Point(209, 433);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(56, 24);
             this.comboBox2.TabIndex = 14;
+            this.comboBox2.Visible = false;
             // 
             // comboBox1
             // 
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(20, 433);
+            this.comboBox1.Location = new System.Drawing.Point(64, 431);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(56, 24);
             this.comboBox1.TabIndex = 13;
+            this.comboBox1.Visible = false;
             // 
             // WhiteThemeButton
             // 
@@ -459,35 +462,35 @@ namespace Autorization
             // вТаблицеСотрудникиToolStripMenuItem
             // 
             this.вТаблицеСотрудникиToolStripMenuItem.Name = "вТаблицеСотрудникиToolStripMenuItem";
-            this.вТаблицеСотрудникиToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.вТаблицеСотрудникиToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.вТаблицеСотрудникиToolStripMenuItem.Text = "В таблице сотрудники";
             this.вТаблицеСотрудникиToolStripMenuItem.Click += new System.EventHandler(this.вТаблицеСотрудникиToolStripMenuItem_Click);
             // 
             // вТаблицеЗаказчикиToolStripMenuItem
             // 
             this.вТаблицеЗаказчикиToolStripMenuItem.Name = "вТаблицеЗаказчикиToolStripMenuItem";
-            this.вТаблицеЗаказчикиToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.вТаблицеЗаказчикиToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.вТаблицеЗаказчикиToolStripMenuItem.Text = "В таблице заказчики";
             this.вТаблицеЗаказчикиToolStripMenuItem.Click += new System.EventHandler(this.вТаблицеЗаказчикиToolStripMenuItem_Click);
             // 
             // заказыToolStripMenuItem
             // 
             this.заказыToolStripMenuItem.Name = "заказыToolStripMenuItem";
-            this.заказыToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.заказыToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.заказыToolStripMenuItem.Text = "В таблице заказы";
             this.заказыToolStripMenuItem.Click += new System.EventHandler(this.заказыToolStripMenuItem_Click);
             // 
             // продажиToolStripMenuItem
             // 
             this.продажиToolStripMenuItem.Name = "продажиToolStripMenuItem";
-            this.продажиToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.продажиToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.продажиToolStripMenuItem.Text = "В таблице продажи";
             this.продажиToolStripMenuItem.Click += new System.EventHandler(this.продажиToolStripMenuItem_Click);
             // 
             // ценаToolStripMenuItem
             // 
             this.ценаToolStripMenuItem.Name = "ценаToolStripMenuItem";
-            this.ценаToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.ценаToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.ценаToolStripMenuItem.Text = "В таблице цена";
             this.ценаToolStripMenuItem.Click += new System.EventHandler(this.ценаToolStripMenuItem_Click);
             // 
@@ -558,7 +561,6 @@ namespace Autorization
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button SaveLineButton;
         private System.Windows.Forms.Button DeleteLineButton;
         private System.Windows.Forms.Button AddLineButton;
         private System.Windows.Forms.ToolStripMenuItem вТаблицеАвторизацииToolStripMenuItem;

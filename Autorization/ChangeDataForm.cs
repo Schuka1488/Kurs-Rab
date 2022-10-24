@@ -121,6 +121,26 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            textBox1.Visible = false;
+            textBox2.Visible = true;
+            comboBox1.Visible = true;
+            comboBox2.Visible = false;
+            comboBox3.Visible = false;
+            comboBox4.Visible = false;
+            textBox3.Visible = true;
+            textBox4.Visible = true;
+            textBox5.Visible = true;
+            textBox6.Visible = true;
+            textBox7.Visible = true;
+
+            Column1Label.Visible = true;
+            Column2Label.Visible = true;
+            Column3Label.Visible = true;
+            Column4Label.Visible = true;
+            Column5Label.Visible = true;
+            Column6Label.Visible = true;
+            Column7Label.Visible = true;
         }
 
         private void вТаблицеЗаказчикиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,11 +158,31 @@ namespace Autorization
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            textBox1.Visible = false;
+            textBox2.Visible = true;
+            comboBox1.Visible = true;
+            comboBox2.Visible = false;
+            comboBox3.Visible = false;
+            comboBox4.Visible = false;
+            textBox3.Visible = true;
+            textBox4.Visible = true;
+            textBox5.Visible = true;
+            textBox6.Visible = false;
+            textBox7.Visible = false;
+
+            Column1Label.Visible = true;
+            Column2Label.Visible = true;
+            Column3Label.Visible = true;
+            Column4Label.Visible = true;
+            Column5Label.Visible = true;
+            Column6Label.Visible = false;
+            Column7Label.Visible = false;
         }
 
         private void заказыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта', 	projectPrice AS 'Цена', ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
+            string commandStr = "SELECT ProjectOrderID AS 'Код заказа', ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента', projectName AS 'Название проекта', projectCategory AS 'Категория проекта' , projectPrice AS 'Цена' FROM ProjectOrder"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
             DataTable table = new DataTable(); // класс для таблиц
@@ -157,6 +197,26 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            textBox1.Visible = false;
+            textBox2.Visible = false;
+            comboBox1.Visible = true;
+            comboBox2.Visible = true;
+            comboBox3.Visible = true;
+            comboBox4.Visible = true;
+            textBox3.Visible = false;
+            textBox4.Visible = false;
+            textBox5.Visible = true;
+            textBox6.Visible = true;
+            textBox7.Visible = true;
+
+            Column1Label.Visible = true;
+            Column2Label.Visible = true;
+            Column3Label.Visible = true;
+            Column4Label.Visible = true;
+            Column5Label.Visible = true;
+            Column6Label.Visible = true;
+            Column7Label.Visible = true;
         }
 
         private void продажиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,6 +232,26 @@ namespace Autorization
             dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            textBox1.Visible = false;
+            textBox2.Visible = false;
+            comboBox1.Visible = true;
+            comboBox2.Visible = true;
+            comboBox3.Visible = false;
+            comboBox4.Visible = false;
+            textBox3.Visible = true;
+            textBox4.Visible = false;
+            textBox5.Visible = false;
+            textBox6.Visible = false;
+            textBox7.Visible = false;
+
+            Column1Label.Visible = true;
+            Column2Label.Visible = true;
+            Column3Label.Visible = true;
+            Column4Label.Visible = false;
+            Column5Label.Visible = false;
+            Column6Label.Visible = false;
+            Column7Label.Visible = false;
         }
 
         private void ценаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -187,6 +267,26 @@ namespace Autorization
             dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            textBox1.Visible = false;
+            textBox2.Visible = true;
+            comboBox1.Visible = true;
+            comboBox2.Visible = false;
+            comboBox3.Visible = false;
+            comboBox4.Visible = false;
+            textBox3.Visible = true;
+            textBox4.Visible = false;
+            textBox5.Visible = false;
+            textBox6.Visible = false;
+            textBox7.Visible = false;
+
+            Column1Label.Visible = true;
+            Column2Label.Visible = true;
+            Column3Label.Visible = true;
+            Column4Label.Visible = false;
+            Column5Label.Visible = false;
+            Column6Label.Visible = false;
+            Column7Label.Visible = false;
         }
         private void вТаблицеАвторизацииToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -205,6 +305,26 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            textBox1.Visible = false;
+            textBox2.Visible = false;
+            comboBox1.Visible = true;
+            comboBox2.Visible = true;
+            comboBox3.Visible = false;
+            comboBox4.Visible = false;
+            textBox3.Visible = true;
+            textBox4.Visible = true;
+            textBox5.Visible = true;
+            textBox6.Visible = true;
+            textBox7.Visible = true;
+
+            Column1Label.Visible = true;
+            Column2Label.Visible = true;
+            Column3Label.Visible = true;
+            Column4Label.Visible = true;
+            Column5Label.Visible = true;
+            Column6Label.Visible = true;
+            Column7Label.Visible = true;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -223,6 +343,7 @@ namespace Autorization
             toolTip1.ShowAlways = true;
 
             toolTip1.SetToolTip(label4, "Закрытие программы");
+
         }
 
         private void AddLineButton_Click(object sender, EventArgs e)
@@ -235,9 +356,5 @@ namespace Autorization
 
         }
 
-        private void SaveLineButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
