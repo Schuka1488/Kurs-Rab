@@ -16,5 +16,33 @@ namespace Autorization
         {
             InitializeComponent();
         }
+        Point lastPoint; // специальный класс для задачи координат
+        private void panel5_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
+        }
+
+        private void panel5_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
+        }
+
+        private void panel4_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
     }
 }

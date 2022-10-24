@@ -190,5 +190,6 @@ namespace Autorization
             ChangeDataForm changedataForm = new ChangeDataForm(); // после авторизации показывается ChangeDataForm
             changedataForm.Show(); // метод для показа ChangeDataForm
         }
+
     }
 }
