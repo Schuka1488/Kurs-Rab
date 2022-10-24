@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeMethodClass.cs" />
     <Compile Include="Username.cs" />
     <EmbeddedResource Include="ChangeDataForm.resx">
       <DependentUpon>ChangeDataForm.cs</DependentUpon>

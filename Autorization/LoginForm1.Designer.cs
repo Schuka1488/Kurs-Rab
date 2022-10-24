@@ -91,6 +91,7 @@ namespace Autorization
             // 
             // loginName
             // 
+            this.loginName.BackColor = System.Drawing.SystemColors.Window;
             this.loginName.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginName.Location = new System.Drawing.Point(17, 165);
             this.loginName.Multiline = true;

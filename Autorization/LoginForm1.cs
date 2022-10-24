@@ -100,12 +100,12 @@ namespace Autorization
 
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
-
+            ThemeMethodClass.ThemeMethodLight(panel1, panel2, label2, label3, buttonLoginPass);
         }
 
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
-
+            ThemeMethodClass.ThemeMethod(panel1, panel2, label2, label3, buttonLoginPass, loginName);
         }
 
         private void LoginForm1_Load(object sender, EventArgs e)
