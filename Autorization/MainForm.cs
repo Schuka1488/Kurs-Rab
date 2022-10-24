@@ -62,9 +62,6 @@ namespace Autorization
             LoginForm1 auth = new LoginForm1();
             auth.Show();
         }
-        private void DeleteTable_Click(object sender, EventArgs e)
-        {
-        }
         public void GetSelectedIDString() //Метод получения ID выделенной строки, для последующего вызова его в нужных методах
         {
             //Переменная для индекс выбранной строки в гриде
@@ -187,6 +184,7 @@ namespace Autorization
 
         private void изменитьДанныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ChangeDataForm changedataForm = new ChangeDataForm(); // после авторизации показывается ChangeDataForm
             changedataForm.Show(); // метод для показа ChangeDataForm
         }

@@ -44,5 +44,24 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
+
+        private void изПрограммыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void изАккаунтаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm1 auth = new LoginForm1();
+            auth.Show();
+        }
+
+        private void вГлавноеМенюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm main = new MainForm();
+            main.Show();
+        }
     }
 }

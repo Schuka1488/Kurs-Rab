@@ -177,14 +177,14 @@ namespace Autorization
             // программуToolStripMenuItem
             // 
             this.программуToolStripMenuItem.Name = "программуToolStripMenuItem";
-            this.программуToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.программуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.программуToolStripMenuItem.Text = "Из программы";
             this.программуToolStripMenuItem.Click += new System.EventHandler(this.программуToolStripMenuItem_Click);
             // 
             // формуToolStripMenuItem
             // 
             this.формуToolStripMenuItem.Name = "формуToolStripMenuItem";
-            this.формуToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.формуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.формуToolStripMenuItem.Text = "Из аккаунта";
             this.формуToolStripMenuItem.Click += new System.EventHandler(this.формуToolStripMenuItem_Click);
             // 
