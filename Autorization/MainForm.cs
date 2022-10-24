@@ -184,5 +184,11 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
+
+        private void изменитьДанныеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeDataForm changedataForm = new ChangeDataForm(); // после авторизации показывается ChangeDataForm
+            changedataForm.Show(); // метод для показа ChangeDataForm
+        }
     }
 }

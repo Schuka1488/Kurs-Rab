@@ -31,9 +31,7 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.LabelDeleteTable = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.MainMenuLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -47,7 +45,6 @@ namespace Autorization
             this.таблицаЗаказовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаПродажToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DeleteTable = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.DarkThemeButton = new System.Windows.Forms.Button();
             this.WhiteThemeButton = new System.Windows.Forms.Button();
@@ -62,11 +59,8 @@ namespace Autorization
             this.panel1.BackColor = System.Drawing.Color.Lavender;
             this.panel1.Controls.Add(this.WhiteThemeButton);
             this.panel1.Controls.Add(this.DarkThemeButton);
-            this.panel1.Controls.Add(this.LabelDeleteTable);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.DeleteTable);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -74,16 +68,6 @@ namespace Autorization
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            // 
-            // LabelDeleteTable
-            // 
-            this.LabelDeleteTable.AutoSize = true;
-            this.LabelDeleteTable.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDeleteTable.Location = new System.Drawing.Point(12, 400);
-            this.LabelDeleteTable.Name = "LabelDeleteTable";
-            this.LabelDeleteTable.Size = new System.Drawing.Size(177, 16);
-            this.LabelDeleteTable.TabIndex = 8;
-            this.LabelDeleteTable.Text = "Укажите название таблицы:";
             // 
             // dataGridView1
             // 
@@ -97,15 +81,6 @@ namespace Autorization
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
             this.dataGridView1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseMove);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 419);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 21);
-            this.textBox1.TabIndex = 3;
             // 
             // panel2
             // 
@@ -172,6 +147,7 @@ namespace Autorization
             this.изменитьДанныеToolStripMenuItem.Name = "изменитьДанныеToolStripMenuItem";
             this.изменитьДанныеToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
             this.изменитьДанныеToolStripMenuItem.Text = "Изменить данные";
+            this.изменитьДанныеToolStripMenuItem.Click += new System.EventHandler(this.изменитьДанныеToolStripMenuItem_Click);
             // 
             // показатьДанныеToolStripMenuItem
             // 
@@ -220,23 +196,6 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem.Text = "Таблица цен";
             this.таблицаЦенToolStripMenuItem.Click += new System.EventHandler(this.таблицаЦенToolStripMenuItem_Click);
             // 
-            // DeleteTable
-            // 
-            this.DeleteTable.BackColor = System.Drawing.Color.Lavender;
-            this.DeleteTable.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteTable.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteTable.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DeleteTable.Location = new System.Drawing.Point(206, 400);
-            this.DeleteTable.Name = "DeleteTable";
-            this.DeleteTable.Size = new System.Drawing.Size(136, 40);
-            this.DeleteTable.TabIndex = 1;
-            this.DeleteTable.Text = "УДАЛИТЬ ТАБЛИЦУ";
-            this.DeleteTable.UseVisualStyleBackColor = false;
-            this.DeleteTable.Click += new System.EventHandler(this.DeleteTable_Click);
-            this.DeleteTable.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DeleteTable_MouseDown);
-            this.DeleteTable.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DeleteTable_MouseMove);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -276,7 +235,6 @@ namespace Autorization
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -301,10 +259,7 @@ namespace Autorization
         private System.Windows.Forms.ToolStripMenuItem таблицаЗаказовToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem таблицаПродажToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem таблицаЦенToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button DeleteTable;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label LabelDeleteTable;
         private System.Windows.Forms.Label MainMenuLabel;
         private System.Windows.Forms.Button WhiteThemeButton;
         private System.Windows.Forms.Button DarkThemeButton;
