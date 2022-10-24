@@ -31,7 +31,6 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DarkThemeBox1 = new System.Windows.Forms.CheckBox();
             this.buttonLoginPass = new System.Windows.Forms.Button();
             this.passwordName = new System.Windows.Forms.TextBox();
             this.loginName = new System.Windows.Forms.TextBox();
@@ -48,7 +47,6 @@ namespace Autorization
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
-            this.panel1.Controls.Add(this.DarkThemeBox1);
             this.panel1.Controls.Add(this.buttonLoginPass);
             this.panel1.Controls.Add(this.passwordName);
             this.panel1.Controls.Add(this.loginName);
@@ -62,21 +60,6 @@ namespace Autorization
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            // 
-            // DarkThemeBox1
-            // 
-            this.DarkThemeBox1.AutoSize = true;
-            this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DarkThemeBox1.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DarkThemeBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DarkThemeBox1.Location = new System.Drawing.Point(219, 437);
-            this.DarkThemeBox1.Name = "DarkThemeBox1";
-            this.DarkThemeBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DarkThemeBox1.Size = new System.Drawing.Size(144, 27);
-            this.DarkThemeBox1.TabIndex = 6;
-            this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
-            this.DarkThemeBox1.UseVisualStyleBackColor = true;
             // 
             // buttonLoginPass
             // 
@@ -101,7 +84,6 @@ namespace Autorization
             this.passwordName.PasswordChar = '*';
             this.passwordName.Size = new System.Drawing.Size(343, 46);
             this.passwordName.TabIndex = 4;
-         
             // 
             // loginName
             // 
@@ -111,7 +93,6 @@ namespace Autorization
             this.loginName.Name = "loginName";
             this.loginName.Size = new System.Drawing.Size(343, 46);
             this.loginName.TabIndex = 3;
-           
             // 
             // label3
             // 
@@ -207,7 +188,6 @@ namespace Autorization
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox DarkThemeBox1;
         private AnimateComponent animateComponent1;
     }
 }

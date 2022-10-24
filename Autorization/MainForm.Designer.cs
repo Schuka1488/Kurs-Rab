@@ -32,21 +32,15 @@ namespace Autorization
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LabelDeleteTable = new System.Windows.Forms.Label();
-            this.DarkThemeBox1 = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.MainMenuLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.закрытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.программуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.формуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьДанныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вТаблицеСотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вТаблицеЗаказчиковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вТаблицеЗаказовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вТаблицеПродажToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вТаблицеЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.показатьДанныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаСотрудниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаКлиентовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +49,8 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteTable = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.MainMenuLabel = new System.Windows.Forms.Label();
+            this.DarkThemeButton = new System.Windows.Forms.Button();
+            this.WhiteThemeButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,10 +60,10 @@ namespace Autorization
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.WhiteThemeButton);
+            this.panel1.Controls.Add(this.DarkThemeButton);
             this.panel1.Controls.Add(this.LabelDeleteTable);
-            this.panel1.Controls.Add(this.DarkThemeBox1);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.DeleteTable);
@@ -77,7 +72,6 @@ namespace Autorization
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(635, 450);
             this.panel1.TabIndex = 1;
-       
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
@@ -91,24 +85,6 @@ namespace Autorization
             this.LabelDeleteTable.TabIndex = 8;
             this.LabelDeleteTable.Text = "Укажите название таблицы:";
             // 
-            // DarkThemeBox1
-            // 
-            this.DarkThemeBox1.AutoSize = true;
-            this.DarkThemeBox1.BackColor = System.Drawing.Color.Lavender;
-            this.DarkThemeBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DarkThemeBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DarkThemeBox1.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DarkThemeBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DarkThemeBox1.Location = new System.Drawing.Point(482, 414);
-            this.DarkThemeBox1.Name = "DarkThemeBox1";
-            this.DarkThemeBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DarkThemeBox1.Size = new System.Drawing.Size(144, 27);
-            this.DarkThemeBox1.TabIndex = 7;
-            this.DarkThemeBox1.Text = "ТЕМНАЯ ТЕМА";
-            this.DarkThemeBox1.UseVisualStyleBackColor = false;
-            this.DarkThemeBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DarkThemeBox1_MouseDown);
-            this.DarkThemeBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DarkThemeBox1_MouseMove);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Lavender;
@@ -121,16 +97,6 @@ namespace Autorization
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
             this.dataGridView1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseMove);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(503, 387);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
             // 
             // textBox1
             // 
@@ -152,9 +118,19 @@ namespace Autorization
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(635, 100);
             this.panel2.TabIndex = 0;
-        
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            // 
+            // MainMenuLabel
+            // 
+            this.MainMenuLabel.AutoSize = true;
+            this.MainMenuLabel.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainMenuLabel.Location = new System.Drawing.Point(124, 37);
+            this.MainMenuLabel.Name = "MainMenuLabel";
+            this.MainMenuLabel.Size = new System.Drawing.Size(378, 50);
+            this.MainMenuLabel.TabIndex = 3;
+            this.MainMenuLabel.Text = "ГЛАВНОЕ МЕНЮ";
             // 
             // menuStrip1
             // 
@@ -193,45 +169,9 @@ namespace Autorization
             // 
             // изменитьДанныеToolStripMenuItem
             // 
-            this.изменитьДанныеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вТаблицеСотрудникиToolStripMenuItem,
-            this.вТаблицеЗаказчиковToolStripMenuItem,
-            this.вТаблицеЗаказовToolStripMenuItem,
-            this.вТаблицеПродажToolStripMenuItem,
-            this.вТаблицеЦенToolStripMenuItem});
             this.изменитьДанныеToolStripMenuItem.Name = "изменитьДанныеToolStripMenuItem";
             this.изменитьДанныеToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
             this.изменитьДанныеToolStripMenuItem.Text = "Изменить данные";
-            // 
-            // вТаблицеСотрудникиToolStripMenuItem
-            // 
-            this.вТаблицеСотрудникиToolStripMenuItem.Name = "вТаблицеСотрудникиToolStripMenuItem";
-            this.вТаблицеСотрудникиToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.вТаблицеСотрудникиToolStripMenuItem.Text = "В таблице сотрудников";
-            // 
-            // вТаблицеЗаказчиковToolStripMenuItem
-            // 
-            this.вТаблицеЗаказчиковToolStripMenuItem.Name = "вТаблицеЗаказчиковToolStripMenuItem";
-            this.вТаблицеЗаказчиковToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.вТаблицеЗаказчиковToolStripMenuItem.Text = "В таблице заказчиков";
-            // 
-            // вТаблицеЗаказовToolStripMenuItem
-            // 
-            this.вТаблицеЗаказовToolStripMenuItem.Name = "вТаблицеЗаказовToolStripMenuItem";
-            this.вТаблицеЗаказовToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.вТаблицеЗаказовToolStripMenuItem.Text = "В таблице заказов";
-            // 
-            // вТаблицеПродажToolStripMenuItem
-            // 
-            this.вТаблицеПродажToolStripMenuItem.Name = "вТаблицеПродажToolStripMenuItem";
-            this.вТаблицеПродажToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.вТаблицеПродажToolStripMenuItem.Text = "В таблице продаж";
-            // 
-            // вТаблицеЦенToolStripMenuItem
-            // 
-            this.вТаблицеЦенToolStripMenuItem.Name = "вТаблицеЦенToolStripMenuItem";
-            this.вТаблицеЦенToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.вТаблицеЦенToolStripMenuItem.Text = "В таблице цен";
             // 
             // показатьДанныеToolStripMenuItem
             // 
@@ -302,16 +242,27 @@ namespace Autorization
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // MainMenuLabel
+            // DarkThemeButton
             // 
-            this.MainMenuLabel.AutoSize = true;
-            this.MainMenuLabel.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenuLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MainMenuLabel.Location = new System.Drawing.Point(124, 37);
-            this.MainMenuLabel.Name = "MainMenuLabel";
-            this.MainMenuLabel.Size = new System.Drawing.Size(378, 50);
-            this.MainMenuLabel.TabIndex = 3;
-            this.MainMenuLabel.Text = "ГЛАВНОЕ МЕНЮ";
+            this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarkThemeButton.Location = new System.Drawing.Point(503, 416);
+            this.DarkThemeButton.Name = "DarkThemeButton";
+            this.DarkThemeButton.Size = new System.Drawing.Size(119, 23);
+            this.DarkThemeButton.TabIndex = 9;
+            this.DarkThemeButton.Text = "ТЕМНАЯ ТЕМА";
+            this.DarkThemeButton.UseVisualStyleBackColor = true;
+            // 
+            // WhiteThemeButton
+            // 
+            this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhiteThemeButton.Location = new System.Drawing.Point(503, 388);
+            this.WhiteThemeButton.Name = "WhiteThemeButton";
+            this.WhiteThemeButton.Size = new System.Drawing.Size(119, 23);
+            this.WhiteThemeButton.TabIndex = 10;
+            this.WhiteThemeButton.Text = "СВЕТЛАЯ ТЕМА";
+            this.WhiteThemeButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -350,17 +301,12 @@ namespace Autorization
         private System.Windows.Forms.ToolStripMenuItem таблицаЗаказовToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem таблицаПродажToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem таблицаЦенToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вТаблицеСотрудникиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вТаблицеЗаказчиковToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вТаблицеЗаказовToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вТаблицеПродажToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вТаблицеЦенToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button DeleteTable;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox DarkThemeBox1;
         private System.Windows.Forms.Label LabelDeleteTable;
         private System.Windows.Forms.Label MainMenuLabel;
+        private System.Windows.Forms.Button WhiteThemeButton;
+        private System.Windows.Forms.Button DarkThemeButton;
     }
 }
