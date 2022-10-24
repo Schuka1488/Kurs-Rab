@@ -68,6 +68,7 @@ namespace Autorization
             this.заказыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.продажиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ценаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вТаблицеАвторизацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -449,7 +450,8 @@ namespace Autorization
             this.вТаблицеЗаказчикиToolStripMenuItem,
             this.заказыToolStripMenuItem,
             this.продажиToolStripMenuItem,
-            this.ценаToolStripMenuItem});
+            this.ценаToolStripMenuItem,
+            this.вТаблицеАвторизацииToolStripMenuItem});
             this.изменитьДанныеToolStripMenuItem.Name = "изменитьДанныеToolStripMenuItem";
             this.изменитьДанныеToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
             this.изменитьДанныеToolStripMenuItem.Text = "Изменить данные";
@@ -488,6 +490,13 @@ namespace Autorization
             this.ценаToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.ценаToolStripMenuItem.Text = "В таблице цена";
             this.ценаToolStripMenuItem.Click += new System.EventHandler(this.ценаToolStripMenuItem_Click);
+            // 
+            // вТаблицеАвторизацииToolStripMenuItem
+            // 
+            this.вТаблицеАвторизацииToolStripMenuItem.Name = "вТаблицеАвторизацииToolStripMenuItem";
+            this.вТаблицеАвторизацииToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.вТаблицеАвторизацииToolStripMenuItem.Text = "В таблице авторизации";
+            this.вТаблицеАвторизацииToolStripMenuItem.Click += new System.EventHandler(this.вТаблицеАвторизацииToolStripMenuItem_Click);
             // 
             // ChangeDataForm
             // 
@@ -552,5 +561,6 @@ namespace Autorization
         private System.Windows.Forms.Button SaveLineButton;
         private System.Windows.Forms.Button DeleteLineButton;
         private System.Windows.Forms.Button AddLineButton;
+        private System.Windows.Forms.ToolStripMenuItem вТаблицеАвторизацииToolStripMenuItem;
     }
 }

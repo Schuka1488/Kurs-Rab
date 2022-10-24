@@ -31,8 +31,6 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.LoginTransferLabel = new System.Windows.Forms.Label();
-            this.ZdravstvoiteLabel = new System.Windows.Forms.Label();
             this.WhiteThemeButton = new System.Windows.Forms.Button();
             this.DarkThemeButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -60,8 +58,6 @@ namespace Autorization
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
-            this.panel1.Controls.Add(this.LoginTransferLabel);
-            this.panel1.Controls.Add(this.ZdravstvoiteLabel);
             this.panel1.Controls.Add(this.WhiteThemeButton);
             this.panel1.Controls.Add(this.DarkThemeButton);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -73,26 +69,6 @@ namespace Autorization
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            // 
-            // LoginTransferLabel
-            // 
-            this.LoginTransferLabel.AutoSize = true;
-            this.LoginTransferLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginTransferLabel.Location = new System.Drawing.Point(107, 419);
-            this.LoginTransferLabel.Name = "LoginTransferLabel";
-            this.LoginTransferLabel.Size = new System.Drawing.Size(46, 16);
-            this.LoginTransferLabel.TabIndex = 12;
-            this.LoginTransferLabel.Text = "label2";
-            // 
-            // ZdravstvoiteLabel
-            // 
-            this.ZdravstvoiteLabel.AutoSize = true;
-            this.ZdravstvoiteLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZdravstvoiteLabel.Location = new System.Drawing.Point(21, 419);
-            this.ZdravstvoiteLabel.Name = "ZdravstvoiteLabel";
-            this.ZdravstvoiteLabel.Size = new System.Drawing.Size(90, 16);
-            this.ZdravstvoiteLabel.TabIndex = 11;
-            this.ZdravstvoiteLabel.Text = "Здравствуйте";
             // 
             // WhiteThemeButton
             // 
@@ -277,7 +253,6 @@ namespace Autorization
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -306,8 +281,6 @@ namespace Autorization
         private System.Windows.Forms.Label MainMenuLabel;
         private System.Windows.Forms.Button WhiteThemeButton;
         private System.Windows.Forms.Button DarkThemeButton;
-        private System.Windows.Forms.Label ZdravstvoiteLabel;
-        private System.Windows.Forms.Label LoginTransferLabel;
         private System.Windows.Forms.Label label4;
     }
 }
