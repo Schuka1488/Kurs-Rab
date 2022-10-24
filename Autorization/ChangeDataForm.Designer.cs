@@ -30,50 +30,56 @@ namespace Autorization
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.SaveLineButton = new System.Windows.Forms.Button();
+            this.DeleteLineButton = new System.Windows.Forms.Button();
+            this.AddLineButton = new System.Windows.Forms.Button();
+            this.Column7Label = new System.Windows.Forms.Label();
+            this.Column6Label = new System.Windows.Forms.Label();
+            this.Column5Label = new System.Windows.Forms.Label();
+            this.Column4Label = new System.Windows.Forms.Label();
+            this.Column3Label = new System.Windows.Forms.Label();
+            this.Column2Label = new System.Windows.Forms.Label();
+            this.Column1Label = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.WhiteThemeButton = new System.Windows.Forms.Button();
+            this.DarkThemeButton = new System.Windows.Forms.Button();
+            this.dataGridViewTransformData2 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TransformDataLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изПрограммыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изАккаунтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вГлавноеМенюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewTransformData2 = new System.Windows.Forms.DataGridView();
-            this.TransformDataLabel = new System.Windows.Forms.Label();
-            this.WhiteThemeButton = new System.Windows.Forms.Button();
-            this.DarkThemeButton = new System.Windows.Forms.Button();
             this.изменитьДанныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вТаблицеСотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вТаблицеЗаказчикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.заказыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.продажиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ценаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.Column1Label = new System.Windows.Forms.Label();
-            this.Column2Label = new System.Windows.Forms.Label();
-            this.Column3Label = new System.Windows.Forms.Label();
-            this.Column4Label = new System.Windows.Forms.Label();
-            this.Column5Label = new System.Windows.Forms.Label();
-            this.Column6Label = new System.Windows.Forms.Label();
-            this.Column7Label = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Lavender;
+            this.panel4.Controls.Add(this.SaveLineButton);
+            this.panel4.Controls.Add(this.DeleteLineButton);
+            this.panel4.Controls.Add(this.AddLineButton);
             this.panel4.Controls.Add(this.Column7Label);
             this.panel4.Controls.Add(this.Column6Label);
             this.panel4.Controls.Add(this.Column5Label);
@@ -104,6 +110,256 @@ namespace Autorization
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
             // 
+            // SaveLineButton
+            // 
+            this.SaveLineButton.BackColor = System.Drawing.Color.Lavender;
+            this.SaveLineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveLineButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveLineButton.Location = new System.Drawing.Point(1021, 203);
+            this.SaveLineButton.Name = "SaveLineButton";
+            this.SaveLineButton.Size = new System.Drawing.Size(220, 60);
+            this.SaveLineButton.TabIndex = 33;
+            this.SaveLineButton.Text = "СОХРАНИТЬ ИЗМЕНЕНИЯ";
+            this.SaveLineButton.UseVisualStyleBackColor = false;
+            this.SaveLineButton.Click += new System.EventHandler(this.SaveLineButton_Click);
+            // 
+            // DeleteLineButton
+            // 
+            this.DeleteLineButton.BackColor = System.Drawing.Color.Lavender;
+            this.DeleteLineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteLineButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteLineButton.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton.Name = "DeleteLineButton";
+            this.DeleteLineButton.Size = new System.Drawing.Size(220, 33);
+            this.DeleteLineButton.TabIndex = 32;
+            this.DeleteLineButton.Text = "УДАЛИТЬ СТРОКУ";
+            this.DeleteLineButton.UseVisualStyleBackColor = false;
+            this.DeleteLineButton.Click += new System.EventHandler(this.DeleteLineButton_Click);
+            // 
+            // AddLineButton
+            // 
+            this.AddLineButton.BackColor = System.Drawing.Color.Lavender;
+            this.AddLineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLineButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddLineButton.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton.Name = "AddLineButton";
+            this.AddLineButton.Size = new System.Drawing.Size(220, 33);
+            this.AddLineButton.TabIndex = 31;
+            this.AddLineButton.Text = "ДОБАВИТЬ СТРОКУ";
+            this.AddLineButton.UseVisualStyleBackColor = false;
+            this.AddLineButton.Click += new System.EventHandler(this.AddLineButton_Click);
+            // 
+            // Column7Label
+            // 
+            this.Column7Label.AutoSize = true;
+            this.Column7Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Column7Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column7Label.Location = new System.Drawing.Point(936, 482);
+            this.Column7Label.Name = "Column7Label";
+            this.Column7Label.Size = new System.Drawing.Size(79, 18);
+            this.Column7Label.TabIndex = 30;
+            this.Column7Label.Text = "7 столбец";
+            // 
+            // Column6Label
+            // 
+            this.Column6Label.AutoSize = true;
+            this.Column6Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Column6Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column6Label.Location = new System.Drawing.Point(788, 482);
+            this.Column6Label.Name = "Column6Label";
+            this.Column6Label.Size = new System.Drawing.Size(79, 18);
+            this.Column6Label.TabIndex = 29;
+            this.Column6Label.Text = "6 столбец";
+            // 
+            // Column5Label
+            // 
+            this.Column5Label.AutoSize = true;
+            this.Column5Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Column5Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column5Label.Location = new System.Drawing.Point(643, 482);
+            this.Column5Label.Name = "Column5Label";
+            this.Column5Label.Size = new System.Drawing.Size(79, 18);
+            this.Column5Label.TabIndex = 28;
+            this.Column5Label.Text = "5 столбец";
+            // 
+            // Column4Label
+            // 
+            this.Column4Label.AutoSize = true;
+            this.Column4Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Column4Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column4Label.Location = new System.Drawing.Point(491, 482);
+            this.Column4Label.Name = "Column4Label";
+            this.Column4Label.Size = new System.Drawing.Size(79, 18);
+            this.Column4Label.TabIndex = 27;
+            this.Column4Label.Text = "4 столбец";
+            // 
+            // Column3Label
+            // 
+            this.Column3Label.AutoSize = true;
+            this.Column3Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Column3Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column3Label.Location = new System.Drawing.Point(339, 482);
+            this.Column3Label.Name = "Column3Label";
+            this.Column3Label.Size = new System.Drawing.Size(79, 18);
+            this.Column3Label.TabIndex = 26;
+            this.Column3Label.Text = "3 столбец";
+            // 
+            // Column2Label
+            // 
+            this.Column2Label.AutoSize = true;
+            this.Column2Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Column2Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column2Label.Location = new System.Drawing.Point(186, 482);
+            this.Column2Label.Name = "Column2Label";
+            this.Column2Label.Size = new System.Drawing.Size(79, 18);
+            this.Column2Label.TabIndex = 25;
+            this.Column2Label.Text = "2 столбец";
+            // 
+            // Column1Label
+            // 
+            this.Column1Label.AutoSize = true;
+            this.Column1Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Column1Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1Label.Location = new System.Drawing.Point(41, 482);
+            this.Column1Label.Name = "Column1Label";
+            this.Column1Label.Size = new System.Drawing.Size(79, 18);
+            this.Column1Label.TabIndex = 24;
+            this.Column1Label.Text = "1 столбец";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(915, 431);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 26);
+            this.textBox7.TabIndex = 23;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(767, 431);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 26);
+            this.textBox6.TabIndex = 22;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(622, 431);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 26);
+            this.textBox5.TabIndex = 21;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(470, 431);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 26);
+            this.textBox4.TabIndex = 20;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(318, 431);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 26);
+            this.textBox3.TabIndex = 19;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(165, 431);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 26);
+            this.textBox2.TabIndex = 18;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(20, 431);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 17;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(470, 433);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(56, 24);
+            this.comboBox4.TabIndex = 16;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(318, 433);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(56, 24);
+            this.comboBox3.TabIndex = 15;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(165, 433);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(56, 24);
+            this.comboBox2.TabIndex = 14;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(20, 433);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(56, 24);
+            this.comboBox1.TabIndex = 13;
+            // 
+            // WhiteThemeButton
+            // 
+            this.WhiteThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhiteThemeButton.Location = new System.Drawing.Point(1129, 509);
+            this.WhiteThemeButton.Name = "WhiteThemeButton";
+            this.WhiteThemeButton.Size = new System.Drawing.Size(126, 23);
+            this.WhiteThemeButton.TabIndex = 12;
+            this.WhiteThemeButton.Text = "СВЕТЛАЯ ТЕМА";
+            this.WhiteThemeButton.UseVisualStyleBackColor = true;
+            this.WhiteThemeButton.Click += new System.EventHandler(this.WhiteThemeButton_Click);
+            // 
+            // DarkThemeButton
+            // 
+            this.DarkThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarkThemeButton.Location = new System.Drawing.Point(1129, 538);
+            this.DarkThemeButton.Name = "DarkThemeButton";
+            this.DarkThemeButton.Size = new System.Drawing.Size(126, 23);
+            this.DarkThemeButton.TabIndex = 11;
+            this.DarkThemeButton.Text = "ТЕМНАЯ ТЕМА";
+            this.DarkThemeButton.UseVisualStyleBackColor = true;
+            this.DarkThemeButton.Click += new System.EventHandler(this.DarkThemeButton_Click);
+            // 
+            // dataGridViewTransformData2
+            // 
+            this.dataGridViewTransformData2.BackgroundColor = System.Drawing.Color.Lavender;
+            this.dataGridViewTransformData2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewTransformData2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTransformData2.Location = new System.Drawing.Point(20, 106);
+            this.dataGridViewTransformData2.Name = "dataGridViewTransformData2";
+            this.dataGridViewTransformData2.Size = new System.Drawing.Size(995, 312);
+            this.dataGridViewTransformData2.TabIndex = 6;
+            this.dataGridViewTransformData2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewTransformData2_MouseDown);
+            this.dataGridViewTransformData2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridViewTransformData2_MouseMove);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -118,6 +374,31 @@ namespace Autorization
             this.panel5.TabIndex = 0;
             this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseDown);
             this.panel5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseMove);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(1232, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 31);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "X";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // TransformDataLabel
+            // 
+            this.TransformDataLabel.AutoSize = true;
+            this.TransformDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.TransformDataLabel.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransformDataLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TransformDataLabel.Location = new System.Drawing.Point(282, 36);
+            this.TransformDataLabel.Name = "TransformDataLabel";
+            this.TransformDataLabel.Size = new System.Drawing.Size(679, 52);
+            this.TransformDataLabel.TabIndex = 4;
+            this.TransformDataLabel.Text = "ФОРМА ИЗМЕНЕНИЯ ДАННЫХ";
             // 
             // menuStrip1
             // 
@@ -143,73 +424,23 @@ namespace Autorization
             // изПрограммыToolStripMenuItem
             // 
             this.изПрограммыToolStripMenuItem.Name = "изПрограммыToolStripMenuItem";
-            this.изПрограммыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.изПрограммыToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.изПрограммыToolStripMenuItem.Text = "Из программы";
             this.изПрограммыToolStripMenuItem.Click += new System.EventHandler(this.изПрограммыToolStripMenuItem_Click);
             // 
             // изАккаунтаToolStripMenuItem
             // 
             this.изАккаунтаToolStripMenuItem.Name = "изАккаунтаToolStripMenuItem";
-            this.изАккаунтаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.изАккаунтаToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.изАккаунтаToolStripMenuItem.Text = "Из аккаунта";
             this.изАккаунтаToolStripMenuItem.Click += new System.EventHandler(this.изАккаунтаToolStripMenuItem_Click);
             // 
             // вГлавноеМенюToolStripMenuItem
             // 
             this.вГлавноеМенюToolStripMenuItem.Name = "вГлавноеМенюToolStripMenuItem";
-            this.вГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.вГлавноеМенюToolStripMenuItem.Text = "В главное меню";
             this.вГлавноеМенюToolStripMenuItem.Click += new System.EventHandler(this.вГлавноеМенюToolStripMenuItem_Click);
-            // 
-            // dataGridViewTransformData2
-            // 
-            this.dataGridViewTransformData2.BackgroundColor = System.Drawing.Color.Lavender;
-            this.dataGridViewTransformData2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewTransformData2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTransformData2.Location = new System.Drawing.Point(20, 106);
-            this.dataGridViewTransformData2.Name = "dataGridViewTransformData2";
-            this.dataGridViewTransformData2.Size = new System.Drawing.Size(995, 312);
-            this.dataGridViewTransformData2.TabIndex = 6;
-            this.dataGridViewTransformData2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewTransformData2_MouseDown);
-            this.dataGridViewTransformData2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridViewTransformData2_MouseMove);
-            // 
-            // TransformDataLabel
-            // 
-            this.TransformDataLabel.AutoSize = true;
-            this.TransformDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.TransformDataLabel.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransformDataLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TransformDataLabel.Location = new System.Drawing.Point(282, 36);
-            this.TransformDataLabel.Name = "TransformDataLabel";
-            this.TransformDataLabel.Size = new System.Drawing.Size(679, 52);
-            this.TransformDataLabel.TabIndex = 4;
-            this.TransformDataLabel.Text = "ФОРМА ИЗМЕНЕНИЯ ДАННЫХ";
-            // 
-            // WhiteThemeButton
-            // 
-            this.WhiteThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WhiteThemeButton.Location = new System.Drawing.Point(1136, 509);
-            this.WhiteThemeButton.Name = "WhiteThemeButton";
-            this.WhiteThemeButton.Size = new System.Drawing.Size(119, 23);
-            this.WhiteThemeButton.TabIndex = 12;
-            this.WhiteThemeButton.Text = "СВЕТЛАЯ ТЕМА";
-            this.WhiteThemeButton.UseVisualStyleBackColor = true;
-            this.WhiteThemeButton.Click += new System.EventHandler(this.WhiteThemeButton_Click);
-            // 
-            // DarkThemeButton
-            // 
-            this.DarkThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DarkThemeButton.Location = new System.Drawing.Point(1136, 538);
-            this.DarkThemeButton.Name = "DarkThemeButton";
-            this.DarkThemeButton.Size = new System.Drawing.Size(119, 23);
-            this.DarkThemeButton.TabIndex = 11;
-            this.DarkThemeButton.Text = "ТЕМНАЯ ТЕМА";
-            this.DarkThemeButton.UseVisualStyleBackColor = true;
-            this.DarkThemeButton.Click += new System.EventHandler(this.DarkThemeButton_Click);
             // 
             // изменитьДанныеToolStripMenuItem
             // 
@@ -258,185 +489,6 @@ namespace Autorization
             this.ценаToolStripMenuItem.Text = "В таблице цена";
             this.ценаToolStripMenuItem.Click += new System.EventHandler(this.ценаToolStripMenuItem_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(20, 433);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(56, 24);
-            this.comboBox1.TabIndex = 13;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(165, 433);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(56, 24);
-            this.comboBox2.TabIndex = 14;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(318, 433);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(56, 24);
-            this.comboBox3.TabIndex = 15;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(470, 433);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(56, 24);
-            this.comboBox4.TabIndex = 16;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(20, 431);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 17;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(165, 431);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 18;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(318, 431);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 19;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(470, 431);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 20;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(622, 431);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
-            this.textBox5.TabIndex = 21;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(767, 431);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 26);
-            this.textBox6.TabIndex = 22;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(915, 431);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 26);
-            this.textBox7.TabIndex = 23;
-            // 
-            // Column1Label
-            // 
-            this.Column1Label.AutoSize = true;
-            this.Column1Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1Label.Location = new System.Drawing.Point(43, 482);
-            this.Column1Label.Name = "Column1Label";
-            this.Column1Label.Size = new System.Drawing.Size(77, 16);
-            this.Column1Label.TabIndex = 24;
-            this.Column1Label.Text = "1 столбец";
-            // 
-            // Column2Label
-            // 
-            this.Column2Label.AutoSize = true;
-            this.Column2Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column2Label.Location = new System.Drawing.Point(188, 482);
-            this.Column2Label.Name = "Column2Label";
-            this.Column2Label.Size = new System.Drawing.Size(77, 16);
-            this.Column2Label.TabIndex = 25;
-            this.Column2Label.Text = "2 столбец";
-            // 
-            // Column3Label
-            // 
-            this.Column3Label.AutoSize = true;
-            this.Column3Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column3Label.Location = new System.Drawing.Point(341, 482);
-            this.Column3Label.Name = "Column3Label";
-            this.Column3Label.Size = new System.Drawing.Size(77, 16);
-            this.Column3Label.TabIndex = 26;
-            this.Column3Label.Text = "3 столбец";
-            // 
-            // Column4Label
-            // 
-            this.Column4Label.AutoSize = true;
-            this.Column4Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column4Label.Location = new System.Drawing.Point(493, 482);
-            this.Column4Label.Name = "Column4Label";
-            this.Column4Label.Size = new System.Drawing.Size(77, 16);
-            this.Column4Label.TabIndex = 27;
-            this.Column4Label.Text = "4 столбец";
-            // 
-            // Column5Label
-            // 
-            this.Column5Label.AutoSize = true;
-            this.Column5Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column5Label.Location = new System.Drawing.Point(645, 482);
-            this.Column5Label.Name = "Column5Label";
-            this.Column5Label.Size = new System.Drawing.Size(77, 16);
-            this.Column5Label.TabIndex = 28;
-            this.Column5Label.Text = "5 столбец";
-            // 
-            // Column6Label
-            // 
-            this.Column6Label.AutoSize = true;
-            this.Column6Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column6Label.Location = new System.Drawing.Point(790, 482);
-            this.Column6Label.Name = "Column6Label";
-            this.Column6Label.Size = new System.Drawing.Size(77, 16);
-            this.Column6Label.TabIndex = 29;
-            this.Column6Label.Text = "6 столбец";
-            // 
-            // Column7Label
-            // 
-            this.Column7Label.AutoSize = true;
-            this.Column7Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column7Label.Location = new System.Drawing.Point(938, 482);
-            this.Column7Label.Name = "Column7Label";
-            this.Column7Label.Size = new System.Drawing.Size(77, 16);
-            this.Column7Label.TabIndex = 30;
-            this.Column7Label.Text = "7 столбец";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(1232, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 31);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "X";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // ChangeDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,11 +502,11 @@ namespace Autorization
             this.Load += new System.EventHandler(this.ChangeDataForm_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,5 +549,8 @@ namespace Autorization
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button SaveLineButton;
+        private System.Windows.Forms.Button DeleteLineButton;
+        private System.Windows.Forms.Button AddLineButton;
     }
 }

@@ -183,5 +183,20 @@ namespace Autorization
 
             toolTip1.SetToolTip(label4, "Закрытие программы");
         }
+
+        private void AddLineButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteLineButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveLineButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
