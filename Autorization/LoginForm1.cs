@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace Autorization
 {
-    public partial class LoginForm1 : Form
+    public partial class LoginForm1 : Form 
     {
         static string sha256(string randomString)
         {
