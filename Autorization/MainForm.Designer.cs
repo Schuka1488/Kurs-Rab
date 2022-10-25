@@ -35,6 +35,7 @@ namespace Autorization
             this.DarkThemeButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.MainMenuLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.закрытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,6 @@ namespace Autorization
             this.таблицаПродажToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -122,6 +122,19 @@ namespace Autorization
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(600, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 31);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "X";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // MainMenuLabel
             // 
             this.MainMenuLabel.AutoSize = true;
@@ -158,14 +171,14 @@ namespace Autorization
             // программуToolStripMenuItem
             // 
             this.программуToolStripMenuItem.Name = "программуToolStripMenuItem";
-            this.программуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.программуToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.программуToolStripMenuItem.Text = "Из программы";
             this.программуToolStripMenuItem.Click += new System.EventHandler(this.программуToolStripMenuItem_Click);
             // 
             // формуToolStripMenuItem
             // 
             this.формуToolStripMenuItem.Name = "формуToolStripMenuItem";
-            this.формуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.формуToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.формуToolStripMenuItem.Text = "Из аккаунта";
             this.формуToolStripMenuItem.Click += new System.EventHandler(this.формуToolStripMenuItem_Click);
             // 
@@ -227,19 +240,6 @@ namespace Autorization
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(600, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 31);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "X";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // MainForm
             // 

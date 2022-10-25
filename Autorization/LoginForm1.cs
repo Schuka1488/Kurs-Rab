@@ -101,11 +101,27 @@ namespace Autorization
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
             ThemeMethodClass.ThemeMethodLight(panel1, panel2, label2, label3, buttonLoginPass, loginName, passwordName, DarkThemeButton, WhiteThemeButton);
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
+            dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
+            dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
+            sign = 2;
+            Timer timer = new Timer();
+            timer.Interval = 100;
+            timer.Tick += timer2_Tick;
+            timer.Start();
         }
 
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
             ThemeMethodClass.ThemeMethod(panel1, panel2, label2, label3, buttonLoginPass, loginName, passwordName, DarkThemeButton, WhiteThemeButton);
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
+            dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
+            dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
+            sign = 1;
+            Timer timer = new Timer();
+            timer.Interval = 100;
+            timer.Tick += timer1_Tick;
+            timer.Start();
         }
 
         private void LoginForm1_Load(object sender, EventArgs e)
@@ -120,6 +136,34 @@ namespace Autorization
 
             toolTip1.SetToolTip(label4, "Закрытие программы");
         }
+        int dR, dG, dB, sign;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+            {
+                sign *= -1;
+                labelTheme.Text = "Темная тема вкл.";
+            }
+            labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
+            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+            {
+                ((Timer)sender).Stop();
+            }
+            
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+            {
+                sign *= -1;
+                labelTheme.Text = "Светлая тема вкл.";
+            }
+            labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
+            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+            {
+                ((Timer)sender).Stop();
+            }
 
+        }
     }
 }

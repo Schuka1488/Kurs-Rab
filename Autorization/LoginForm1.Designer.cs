@@ -31,6 +31,8 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.WhiteThemeButton = new System.Windows.Forms.Button();
+            this.DarkThemeButton = new System.Windows.Forms.Button();
             this.buttonLoginPass = new System.Windows.Forms.Button();
             this.passwordName = new System.Windows.Forms.TextBox();
             this.loginName = new System.Windows.Forms.TextBox();
@@ -39,8 +41,9 @@ namespace Autorization
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.WhiteThemeButton = new System.Windows.Forms.Button();
-            this.DarkThemeButton = new System.Windows.Forms.Button();
+            this.labelTheme = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.animateComponent1 = new Autorization.AnimateComponent(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -49,6 +52,7 @@ namespace Autorization
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.labelTheme);
             this.panel1.Controls.Add(this.WhiteThemeButton);
             this.panel1.Controls.Add(this.DarkThemeButton);
             this.panel1.Controls.Add(this.buttonLoginPass);
@@ -64,6 +68,30 @@ namespace Autorization
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // WhiteThemeButton
+            // 
+            this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhiteThemeButton.Location = new System.Drawing.Point(121, 438);
+            this.WhiteThemeButton.Name = "WhiteThemeButton";
+            this.WhiteThemeButton.Size = new System.Drawing.Size(119, 23);
+            this.WhiteThemeButton.TabIndex = 12;
+            this.WhiteThemeButton.Text = "СВЕТЛАЯ ТЕМА";
+            this.WhiteThemeButton.UseVisualStyleBackColor = true;
+            this.WhiteThemeButton.Click += new System.EventHandler(this.WhiteThemeButton_Click);
+            // 
+            // DarkThemeButton
+            // 
+            this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarkThemeButton.Location = new System.Drawing.Point(246, 438);
+            this.DarkThemeButton.Name = "DarkThemeButton";
+            this.DarkThemeButton.Size = new System.Drawing.Size(119, 23);
+            this.DarkThemeButton.TabIndex = 11;
+            this.DarkThemeButton.Text = "ТЕМНАЯ ТЕМА";
+            this.DarkThemeButton.UseVisualStyleBackColor = true;
+            this.DarkThemeButton.Click += new System.EventHandler(this.DarkThemeButton_Click);
             // 
             // buttonLoginPass
             // 
@@ -160,29 +188,15 @@ namespace Autorization
             this.label1.TabIndex = 0;
             this.label1.Text = "АВТОРИЗАЦИЯ";
             // 
-            // WhiteThemeButton
+            // labelTheme
             // 
-            this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WhiteThemeButton.Location = new System.Drawing.Point(121, 438);
-            this.WhiteThemeButton.Name = "WhiteThemeButton";
-            this.WhiteThemeButton.Size = new System.Drawing.Size(119, 23);
-            this.WhiteThemeButton.TabIndex = 12;
-            this.WhiteThemeButton.Text = "СВЕТЛАЯ ТЕМА";
-            this.WhiteThemeButton.UseVisualStyleBackColor = true;
-            this.WhiteThemeButton.Click += new System.EventHandler(this.WhiteThemeButton_Click);
-            // 
-            // DarkThemeButton
-            // 
-            this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DarkThemeButton.Location = new System.Drawing.Point(246, 438);
-            this.DarkThemeButton.Name = "DarkThemeButton";
-            this.DarkThemeButton.Size = new System.Drawing.Size(119, 23);
-            this.DarkThemeButton.TabIndex = 11;
-            this.DarkThemeButton.Text = "ТЕМНАЯ ТЕМА";
-            this.DarkThemeButton.UseVisualStyleBackColor = true;
-            this.DarkThemeButton.Click += new System.EventHandler(this.DarkThemeButton_Click);
+            this.labelTheme.AutoSize = true;
+            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTheme.Location = new System.Drawing.Point(3, 448);
+            this.labelTheme.Name = "labelTheme";
+            this.labelTheme.Size = new System.Drawing.Size(89, 14);
+            this.labelTheme.TabIndex = 13;
+            this.labelTheme.Text = "Светлая тема вкл.";
             // 
             // animateComponent1
             // 
@@ -222,5 +236,8 @@ namespace Autorization
         private AnimateComponent animateComponent1;
         private System.Windows.Forms.Button WhiteThemeButton;
         private System.Windows.Forms.Button DarkThemeButton;
+        private System.Windows.Forms.Label labelTheme;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
