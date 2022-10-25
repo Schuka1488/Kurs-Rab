@@ -29,6 +29,7 @@ namespace Autorization
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DeleteLineButton = new System.Windows.Forms.Button();
             this.AddLineButton = new System.Windows.Forms.Button();
@@ -68,6 +69,9 @@ namespace Autorization
             this.продажиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ценаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вТаблицеАвторизацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelTheme = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -77,6 +81,7 @@ namespace Autorization
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Lavender;
+            this.panel4.Controls.Add(this.labelTheme);
             this.panel4.Controls.Add(this.DeleteLineButton);
             this.panel4.Controls.Add(this.AddLineButton);
             this.panel4.Controls.Add(this.Column7Label);
@@ -501,6 +506,16 @@ namespace Autorization
             this.вТаблицеАвторизацииToolStripMenuItem.Text = "В таблице авторизации";
             this.вТаблицеАвторизацииToolStripMenuItem.Click += new System.EventHandler(this.вТаблицеАвторизацииToolStripMenuItem_Click);
             // 
+            // labelTheme
+            // 
+            this.labelTheme.AutoSize = true;
+            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTheme.Location = new System.Drawing.Point(1034, 547);
+            this.labelTheme.Name = "labelTheme";
+            this.labelTheme.Size = new System.Drawing.Size(89, 14);
+            this.labelTheme.TabIndex = 33;
+            this.labelTheme.Text = "Светлая тема вкл.";
+            // 
             // ChangeDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,5 +579,8 @@ namespace Autorization
         private System.Windows.Forms.Button DeleteLineButton;
         private System.Windows.Forms.Button AddLineButton;
         private System.Windows.Forms.ToolStripMenuItem вТаблицеАвторизацииToolStripMenuItem;
+        private System.Windows.Forms.Label labelTheme;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }

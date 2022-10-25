@@ -31,6 +31,7 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelTheme = new System.Windows.Forms.Label();
             this.WhiteThemeButton = new System.Windows.Forms.Button();
             this.DarkThemeButton = new System.Windows.Forms.Button();
             this.buttonLoginPass = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@ namespace Autorization
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelTheme = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.animateComponent1 = new Autorization.AnimateComponent(this.components);
@@ -68,6 +68,16 @@ namespace Autorization
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // labelTheme
+            // 
+            this.labelTheme.AutoSize = true;
+            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTheme.Location = new System.Drawing.Point(3, 448);
+            this.labelTheme.Name = "labelTheme";
+            this.labelTheme.Size = new System.Drawing.Size(89, 14);
+            this.labelTheme.TabIndex = 13;
+            this.labelTheme.Text = "Светлая тема вкл.";
             // 
             // WhiteThemeButton
             // 
@@ -187,16 +197,6 @@ namespace Autorization
             this.label1.Size = new System.Drawing.Size(351, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "АВТОРИЗАЦИЯ";
-            // 
-            // labelTheme
-            // 
-            this.labelTheme.AutoSize = true;
-            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTheme.Location = new System.Drawing.Point(3, 448);
-            this.labelTheme.Name = "labelTheme";
-            this.labelTheme.Size = new System.Drawing.Size(89, 14);
-            this.labelTheme.TabIndex = 13;
-            this.labelTheme.Text = "Светлая тема вкл.";
             // 
             // animateComponent1
             // 

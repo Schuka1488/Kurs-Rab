@@ -24,6 +24,26 @@ namespace Autorization
         // {
         //    Panel1BackColor = Color.Lavender;
         // }
+        static public void ThemeMethod3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
+        {
+            panel4.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
+            panel5.BackColor = SystemColors.GrayText;
+            dataGridViewTransformData2.BackgroundColor = SystemColors.WindowFrame;
+            DarkThemeButton.ForeColor = SystemColors.ControlLightLight;
+            WhiteThemeButton.ForeColor = SystemColors.ControlLightLight;
+            labelTheme.ForeColor = SystemColors.ControlLightLight;
+            
+        }
+        static public void ThemeMethodLight3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
+        {
+            panel4.BackColor = Color.Lavender;
+            panel5.BackColor = Color.DeepSkyBlue;
+            dataGridViewTransformData2.BackgroundColor = Color.Lavender;
+            DarkThemeButton.ForeColor = SystemColors.ActiveCaptionText;
+            WhiteThemeButton.ForeColor = SystemColors.ActiveCaptionText;
+            labelTheme.ForeColor = SystemColors.ActiveCaptionText;
+            
+        }
         static public void ThemeMethod2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
         {
             panel1.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
