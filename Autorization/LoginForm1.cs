@@ -120,5 +120,6 @@ namespace Autorization
 
             toolTip1.SetToolTip(label4, "Закрытие программы");
         }
+
     }
 }
