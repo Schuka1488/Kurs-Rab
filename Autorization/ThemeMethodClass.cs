@@ -13,19 +13,36 @@ namespace Autorization
 {
     class ThemeMethodClass
     {
-      //  static Color Panel1BackColor;
+        //  static Color Panel1BackColor;
 
         //static public void EnableDarkTheme()
-       // {
+        // {
         //    Panel1BackColor = SystemColors.WindowFrame;
-       // }
+        // }
 
-       // static public void EnableWhiteTheme()
-       // {
+        // static public void EnableWhiteTheme()
+        // {
         //    Panel1BackColor = Color.Lavender;
-       // }
-
-        static public void ThemeMethod(Panel panel1, Panel panel2, Label label2, Label label3, Button buttonLoginPass, TextBox loginName, TextBox passwordName, Button DarkThemeButton, Button WhiteThemeButton)
+        // }
+        static public void ThemeMethod2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
+        {
+            panel1.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
+            panel2.BackColor = SystemColors.GrayText;
+            dataGridView1.BackgroundColor = SystemColors.WindowFrame;
+            DarkThemeButton.ForeColor = SystemColors.ControlLightLight;
+            WhiteThemeButton.ForeColor = SystemColors.ControlLightLight;
+            labelTheme.ForeColor = SystemColors.ControlLightLight;
+        }
+        static public void ThemeMethodLight2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
+        {
+            panel1.BackColor = Color.Lavender;
+            panel2.BackColor = Color.DeepSkyBlue;
+            dataGridView1.BackgroundColor = Color.Lavender;
+            DarkThemeButton.ForeColor = SystemColors.ActiveCaptionText;
+            WhiteThemeButton.ForeColor = SystemColors.ActiveCaptionText;
+            labelTheme.ForeColor = SystemColors.ActiveCaptionText;
+        }
+        static public void ThemeMethod(Panel panel1, Panel panel2, Label label2, Label label3, Button buttonLoginPass, TextBox loginName, TextBox passwordName, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
         {
             panel1.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel2.BackColor = SystemColors.GrayText;
@@ -36,9 +53,10 @@ namespace Autorization
             passwordName.BackColor = SystemColors.ScrollBar;
             DarkThemeButton.ForeColor = SystemColors.ControlLightLight;
             WhiteThemeButton.ForeColor = SystemColors.ControlLightLight;
+            labelTheme.ForeColor = SystemColors.ControlLightLight;
         }
 
-        static public void ThemeMethodLight(Panel panel1, Panel panel2, Label label2, Label label3, Button buttonLoginPass, TextBox loginName, TextBox passwordName, Button DarkThemeButton, Button WhiteThemeButton)
+        static public void ThemeMethodLight(Panel panel1, Panel panel2, Label label2, Label label3, Button buttonLoginPass, TextBox loginName, TextBox passwordName, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
         {
             panel1.BackColor = Color.Lavender;
             panel2.BackColor = Color.DeepSkyBlue;
@@ -49,6 +67,7 @@ namespace Autorization
             passwordName.BackColor = SystemColors.Window;
             DarkThemeButton.ForeColor = SystemColors.ActiveCaptionText;
             WhiteThemeButton.ForeColor = SystemColors.ActiveCaptionText;
+            labelTheme.ForeColor = SystemColors.ActiveCaptionText;
         }
     }
 }

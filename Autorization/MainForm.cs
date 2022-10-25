@@ -203,6 +203,61 @@ namespace Autorization
         {
             Application.Exit();
         }
+
+        private void WhiteThemeButton_Click(object sender, EventArgs e)
+        {
+            ThemeMethodClass.ThemeMethodLight2(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme);
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
+            dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
+            dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
+            sign = 2;
+            Timer timer = new Timer();
+            timer.Interval = 100;
+            timer.Tick += timer2_Tick;
+            timer.Start();
+        }
+
+        private void DarkThemeButton_Click(object sender, EventArgs e)
+        {
+            ThemeMethodClass.ThemeMethod2(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme);
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
+            dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
+            dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
+            sign = 1;
+            Timer timer = new Timer();
+            timer.Interval = 100;
+            timer.Tick += timer1_Tick;
+            timer.Start();
+        }
+        int dR, dG, dB, sign;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+            {
+                sign *= -1;
+                labelTheme.Text = "Темная тема вкл.";
+            }
+            labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
+            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+            {
+                ((Timer)sender).Stop();
+            }
+
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+            {
+                sign *= -1;
+                labelTheme.Text = "Светлая тема вкл.";
+            }
+            labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
+            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+            {
+                ((Timer)sender).Stop();
+            }
+
+        }
         //private void dataGridView1_CellPainting(object sender,System.Windows.Forms.DataGridViewCellPaintingEventArgs e)
         // {
         // if (this.dataGridView1.Columns["ContactName"].Index ==

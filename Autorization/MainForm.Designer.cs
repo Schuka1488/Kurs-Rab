@@ -49,6 +49,9 @@ namespace Autorization
             this.таблицаПродажToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.labelTheme = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -58,6 +61,7 @@ namespace Autorization
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.labelTheme);
             this.panel1.Controls.Add(this.WhiteThemeButton);
             this.panel1.Controls.Add(this.DarkThemeButton);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -81,6 +85,7 @@ namespace Autorization
             this.WhiteThemeButton.TabIndex = 10;
             this.WhiteThemeButton.Text = "СВЕТЛАЯ ТЕМА";
             this.WhiteThemeButton.UseVisualStyleBackColor = true;
+            this.WhiteThemeButton.Click += new System.EventHandler(this.WhiteThemeButton_Click);
             // 
             // DarkThemeButton
             // 
@@ -93,6 +98,7 @@ namespace Autorization
             this.DarkThemeButton.TabIndex = 9;
             this.DarkThemeButton.Text = "ТЕМНАЯ ТЕМА";
             this.DarkThemeButton.UseVisualStyleBackColor = true;
+            this.DarkThemeButton.Click += new System.EventHandler(this.DarkThemeButton_Click);
             // 
             // dataGridView1
             // 
@@ -241,6 +247,16 @@ namespace Autorization
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // labelTheme
+            // 
+            this.labelTheme.AutoSize = true;
+            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTheme.Location = new System.Drawing.Point(408, 421);
+            this.labelTheme.Name = "labelTheme";
+            this.labelTheme.Size = new System.Drawing.Size(89, 14);
+            this.labelTheme.TabIndex = 14;
+            this.labelTheme.Text = "Светлая тема вкл.";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,6 +269,7 @@ namespace Autorization
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -282,5 +299,8 @@ namespace Autorization
         private System.Windows.Forms.Button WhiteThemeButton;
         private System.Windows.Forms.Button DarkThemeButton;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label labelTheme;
     }
 }
