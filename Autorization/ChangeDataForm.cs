@@ -21,18 +21,6 @@ namespace Autorization
         Point lastPoint; // специальный класс для задачи координат
         DBclass db = new DBclass();
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
-        static string sha256(string randomString)
-        {
-            //Тут происходит криптографическая магия. Смысл данного метода заключается в том, что строка залетает в метод
-            var crypt = new System.Security.Cryptography.SHA256Managed();
-            var hash = new System.Text.StringBuilder();
-            byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(randomString));
-            foreach (byte theByte in crypto)
-            {
-                hash.Append(theByte.ToString("x2"));
-            }
-            return hash.ToString();
-        }
         private void panel5_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
@@ -167,12 +155,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
 
-            textBox1.Visible = false;
             textBox2.Visible = true;
-            comboBox1.Visible = true;
-            comboBox2.Visible = false;
-            comboBox3.Visible = false;
-            comboBox4.Visible = false;
             textBox3.Visible = true;
             textBox4.Visible = true;
             textBox5.Visible = true;
@@ -186,6 +169,16 @@ namespace Autorization
             Column5Label.Visible = true;
             Column6Label.Visible = true;
             Column7Label.Visible = true;
+
+        }
+        private void SupplemenEmloyee()
+        {
+            db.openConnection();
+
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+
+            db.closeConnection();
         }
 
         private void вТаблицеЗаказчикиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -393,7 +386,7 @@ namespace Autorization
 
         private void AddLineButton_Click(object sender, EventArgs e)
         {
-
+            SupplemenEmloyee();
         }
 
         private void DeleteLineButton_Click(object sender, EventArgs e)
