@@ -24,7 +24,9 @@ namespace Autorization
         // {
         //    Panel1BackColor = Color.Lavender;
         // }
-        static public void ThemeMethod3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Button AddLineButton, Button AddLineButton2, Button AddLineButton3, Button AddLineButton4, Button AddLineButton5, Button AddLineButton6, Label label1, Label label2, Label Column1Label, Label Column2Label, Label Column3Label, Label Column4Label, Label Column5Label, Label Column6Label, Label Column7Label)
+
+        // так же нужны кнопки удаления для 3 методов, в форме изменений таблиц
+        static public void ThemeMethod3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Button AddLineButton, Button AddLineButton2, Button AddLineButton3, Button AddLineButton4, Button AddLineButton5, Button AddLineButton6, Label label1, Label label2, Label Column1Label, Label Column2Label, Label Column3Label, Label Column4Label, Label Column5Label, Label Column6Label, Label Column7Label, TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5, TextBox textBox6, TextBox textBox7)
         {
             panel4.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel5.BackColor = SystemColors.GrayText;
@@ -53,8 +55,15 @@ namespace Autorization
             Column5Label.ForeColor = SystemColors.ControlLightLight;
             Column6Label.ForeColor = SystemColors.ControlLightLight;
             Column7Label.ForeColor = SystemColors.ControlLightLight;
+            textBox1.BackColor = SystemColors.ScrollBar;
+            textBox2.BackColor = SystemColors.ScrollBar;
+            textBox3.BackColor = SystemColors.ScrollBar;
+            textBox4.BackColor = SystemColors.ScrollBar;
+            textBox5.BackColor = SystemColors.ScrollBar;
+            textBox6.BackColor = SystemColors.ScrollBar;
+            textBox7.BackColor = SystemColors.ScrollBar;
         }
-        static public void ThemeMethodLight3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Button AddLineButton, Button AddLineButton2, Button AddLineButton3, Button AddLineButton4, Button AddLineButton5, Button AddLineButton6, Label label1, Label label2, Label Column1Label, Label Column2Label, Label Column3Label, Label Column4Label, Label Column5Label, Label Column6Label, Label Column7Label)
+        static public void ThemeMethodLight3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Button AddLineButton, Button AddLineButton2, Button AddLineButton3, Button AddLineButton4, Button AddLineButton5, Button AddLineButton6, Label label1, Label label2, Label Column1Label, Label Column2Label, Label Column3Label, Label Column4Label, Label Column5Label, Label Column6Label, Label Column7Label, TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5, TextBox textBox6, TextBox textBox7)
         {
             panel4.BackColor = Color.Lavender;
             panel5.BackColor = Color.DeepSkyBlue;
@@ -83,6 +92,13 @@ namespace Autorization
             Column5Label.ForeColor = SystemColors.ActiveCaptionText;
             Column6Label.ForeColor = SystemColors.ActiveCaptionText;
             Column7Label.ForeColor = SystemColors.ActiveCaptionText;
+            textBox1.BackColor = SystemColors.Window;
+            textBox2.BackColor = SystemColors.Window;
+            textBox3.BackColor = SystemColors.Window;
+            textBox4.BackColor = SystemColors.Window;
+            textBox5.BackColor = SystemColors.Window;
+            textBox6.BackColor = SystemColors.Window;
+            textBox7.BackColor = SystemColors.Window;
 
         }
         static public void ThemeMethod2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)

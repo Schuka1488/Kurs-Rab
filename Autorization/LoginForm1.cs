@@ -145,7 +145,6 @@ namespace Autorization
             {
                 ((Timer)sender).Stop();
             }
-            
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -159,7 +158,6 @@ namespace Autorization
             {
                 ((Timer)sender).Stop();
             }
-
         }
     }
 }

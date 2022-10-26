@@ -84,7 +84,7 @@ namespace Autorization
         #region [ Кнопки тем ]
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.ThemeMethodLight3(panel4, panel5, dataGridViewTransformData2, DarkThemeButton, WhiteThemeButton, labelTheme, AddLineButton, AddLineButton2, AddLineButton3, AddLineButton4, AddLineButton5, AddLineButton6, label1, label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label);
+            ThemeMethodClass.ThemeMethodLight3(panel4, panel5, dataGridViewTransformData2, DarkThemeButton, WhiteThemeButton, labelTheme, AddLineButton, AddLineButton2, AddLineButton3, AddLineButton4, AddLineButton5, AddLineButton6, label1, label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7);
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -97,7 +97,7 @@ namespace Autorization
 
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.ThemeMethod3(panel4, panel5, dataGridViewTransformData2, DarkThemeButton, WhiteThemeButton, labelTheme, AddLineButton, AddLineButton2, AddLineButton3, AddLineButton4, AddLineButton5, AddLineButton6, label1, label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label);
+            ThemeMethodClass.ThemeMethod3(panel4, panel5, dataGridViewTransformData2, DarkThemeButton, WhiteThemeButton, labelTheme, AddLineButton, AddLineButton2, AddLineButton3, AddLineButton4, AddLineButton5, AddLineButton6, label1, label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7);
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
