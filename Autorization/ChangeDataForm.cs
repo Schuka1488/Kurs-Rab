@@ -172,6 +172,18 @@ namespace Autorization
                         AddLineButton4.Visible = false;
                         AddLineButton5.Visible = false;
                         AddLineButton6.Visible = false;
+                                 ResetButton.Visible = true;
+                                 ResetButton2.Visible = false;
+                                 ResetButton3.Visible = false;
+                                 ResetButton4.Visible = false;
+                                 ResetButton5.Visible = false;
+                                 ResetButton6.Visible = false;
+            DeleteLineButton.Visible = true;
+            DeleteLineButton2.Visible = false;
+            DeleteLineButton3.Visible = false;
+            DeleteLineButton4.Visible = false;
+            DeleteLineButton5.Visible = false;
+            DeleteLineButton6.Visible = false;
         }
         private void SupplemenEmloyee()
         {
@@ -216,6 +228,18 @@ namespace Autorization
                         AddLineButton4.Visible = false;
                         AddLineButton5.Visible = false;
                         AddLineButton6.Visible = false;
+                                 ResetButton.Visible = false;
+                                 ResetButton2.Visible = true;
+                                 ResetButton3.Visible = false;
+                                 ResetButton4.Visible = false;
+                                 ResetButton5.Visible = false;
+                                 ResetButton6.Visible = false;
+            DeleteLineButton.Visible = false;
+            DeleteLineButton2.Visible = true;
+            DeleteLineButton3.Visible = false;
+            DeleteLineButton4.Visible = false;
+            DeleteLineButton5.Visible = false;
+            DeleteLineButton6.Visible = false;
         }
         private void SupplemenEmloyee2()
         {
@@ -261,6 +285,18 @@ namespace Autorization
                         AddLineButton4.Visible = false;
                         AddLineButton5.Visible = false;
                         AddLineButton6.Visible = false;
+                                 ResetButton.Visible = false;
+                                 ResetButton2.Visible = false;
+                                 ResetButton3.Visible = true;
+                                 ResetButton4.Visible = false;
+                                 ResetButton5.Visible = false;
+                                 ResetButton6.Visible = false;
+            DeleteLineButton.Visible = false;
+            DeleteLineButton2.Visible = false;
+            DeleteLineButton3.Visible = true;
+            DeleteLineButton4.Visible = false;
+            DeleteLineButton5.Visible = false;
+            DeleteLineButton6.Visible = false;
         }
         private void SupplemenEmloyee3()
         {
@@ -303,6 +339,18 @@ namespace Autorization
                         AddLineButton4.Visible = true;
                         AddLineButton5.Visible = false;
                         AddLineButton6.Visible = false;
+                                 ResetButton.Visible = false;
+                                 ResetButton2.Visible = false;
+                                 ResetButton3.Visible = false;
+                                 ResetButton4.Visible = true;
+                                 ResetButton5.Visible = false;
+                                 ResetButton6.Visible = false;
+            DeleteLineButton.Visible = false;
+            DeleteLineButton2.Visible = false;
+            DeleteLineButton3.Visible = false;
+            DeleteLineButton4.Visible = true;
+            DeleteLineButton5.Visible = false;
+            DeleteLineButton6.Visible = false;
         }
         private void SupplemenEmloyee4()
         {
@@ -345,7 +393,18 @@ namespace Autorization
                         AddLineButton4.Visible = false;
                         AddLineButton5.Visible = true;
                         AddLineButton6.Visible = false;
-
+                                 ResetButton.Visible = false;
+                                 ResetButton2.Visible = false;
+                                 ResetButton3.Visible = false;
+                                 ResetButton4.Visible = false;
+                                 ResetButton5.Visible = true;
+                                 ResetButton6.Visible = false;
+            DeleteLineButton.Visible = false;
+            DeleteLineButton2.Visible = false;
+            DeleteLineButton3.Visible = false;
+            DeleteLineButton4.Visible = false;
+            DeleteLineButton5.Visible = true;
+            DeleteLineButton6.Visible = false;
         }
         private void SupplemenEmloyee5()
         {
@@ -391,6 +450,18 @@ namespace Autorization
                         AddLineButton4.Visible = false;
                         AddLineButton5.Visible = false;
                         AddLineButton6.Visible = true;
+                                 ResetButton.Visible = false;
+                                 ResetButton2.Visible = false;
+                                 ResetButton3.Visible = false;
+                                 ResetButton4.Visible = false;
+                                 ResetButton5.Visible = false;
+                                 ResetButton6.Visible = true;
+            DeleteLineButton.Visible = false;
+            DeleteLineButton2.Visible = false;
+            DeleteLineButton3.Visible = false;
+            DeleteLineButton4.Visible = false;
+            DeleteLineButton5.Visible = false;
+            DeleteLineButton6.Visible = true;
         }
         private void SupplemenEmloyee6()
         {
@@ -423,6 +494,54 @@ namespace Autorization
         {
             SupplemenEmloyee6();
         }
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ResetButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ResetButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ResetButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ResetButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ResetButton6_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void DeleteLineButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void DeleteLineButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void DeleteLineButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void DeleteLineButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void DeleteLineButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void DeleteLineButton6_Click(object sender, EventArgs e)
+        {
+
+        }
         private void ChangeDataForm_Load(object sender, EventArgs e)
         {
             ToolTip toolTip1 = new ToolTip();
@@ -441,10 +560,6 @@ namespace Autorization
         private void AddLineButton_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee();
-        }
-        private void DeleteLineButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
