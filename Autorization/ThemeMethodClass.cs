@@ -99,7 +99,6 @@ namespace Autorization
             textBox5.BackColor = SystemColors.Window;
             textBox6.BackColor = SystemColors.Window;
             textBox7.BackColor = SystemColors.Window;
-
         }
         static public void ThemeMethod2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
         {

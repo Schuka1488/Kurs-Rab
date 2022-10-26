@@ -29,13 +29,10 @@ namespace Autorization
                 изменитьДанныеToolStripMenuItem.Visible = false; // иначе, изменить данные нельзя, эти вкладки будут не доступны
 
             ToolTip toolTip1 = new ToolTip();
-
             toolTip1.AutoPopDelay = 5000;
             toolTip1.InitialDelay = 1000;
             toolTip1.ReshowDelay = 500;
-
             toolTip1.ShowAlways = true;
-
             toolTip1.SetToolTip(label4, "Закрытие программы");
         }
         private void panel2_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
@@ -81,7 +78,6 @@ namespace Autorization
             //ID конкретной записи в Базе данных, на основании индекса строки
             id_selected_rows = dataGridView1.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();
         }
-
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             dataGridView1.CurrentCell = dataGridView1[e.ColumnIndex, e.RowIndex];
@@ -89,7 +85,6 @@ namespace Autorization
             //Метод получения ID выделенной строки в глобальную переменную
             GetSelectedIDString();
         }
-
         private void таблицаСотрудниковToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
             string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees"; // SQL запрос данных из БД
@@ -101,7 +96,6 @@ namespace Autorization
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
         }
-
         private void таблицаКлиентовToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
             string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', MSRN AS 'ОГРН', TIN AS 'ИНН' FROM Customer"; // SQL запрос данных из БД
@@ -113,7 +107,6 @@ namespace Autorization
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
         }
-
         private void таблицаЗаказовToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
             string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта', 	projectPrice AS 'Цена', ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
@@ -125,7 +118,6 @@ namespace Autorization
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
         }
-
         private void таблицаПродажToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
             string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales"; // SQL запрос данных из БД
@@ -137,7 +129,6 @@ namespace Autorization
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
         }
-
         private void таблицаЦенToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
             string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц' FROM Sales"; // SQL запрос данных из БД
@@ -149,12 +140,10 @@ namespace Autorization
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
         }
-
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
             lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
         }
-
         private void dataGridView1_MouseMove(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
             if (e.Button == MouseButtons.Left)
@@ -163,12 +152,10 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-
         private void DarkThemeBox1_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на чек боксе темной темы
         {
             lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
         }
-
         private void DarkThemeBox1_MouseMove(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на чек боксе темной темы
         {
             if (e.Button == MouseButtons.Left)
@@ -177,12 +164,10 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-
         private void DeleteTable_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на кнопке удаления данных в таблице
         {
             lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
         }
-
         private void DeleteTable_MouseMove(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на кнопке удаления данных в таблице
         {
             if (e.Button == MouseButtons.Left)
@@ -191,19 +176,16 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-
         private void изменитьДанныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             ChangeDataForm changedataForm = new ChangeDataForm(); // после авторизации показывается ChangeDataForm
             changedataForm.Show(); // метод для показа ChangeDataForm
         }
-
         private void label4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
             ThemeMethodClass.ThemeMethodLight2(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme);
@@ -216,7 +198,6 @@ namespace Autorization
             timer.Tick += timer2_Tick;
             timer.Start();
         }
-
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
             ThemeMethodClass.ThemeMethod2(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme);
@@ -242,7 +223,6 @@ namespace Autorization
             {
                 ((Timer)sender).Stop();
             }
-
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -256,50 +236,6 @@ namespace Autorization
             {
                 ((Timer)sender).Stop();
             }
-
         }
-        //private void dataGridView1_CellPainting(object sender,System.Windows.Forms.DataGridViewCellPaintingEventArgs e)
-        // {
-        // if (this.dataGridView1.Columns["ContactName"].Index ==
-        // e.ColumnIndex && e.RowIndex >= 0)
-        // {
-        // Rectangle newRect = new Rectangle(e.CellBounds.X + 1,
-        // e.CellBounds.Y + 1, e.CellBounds.Width - 4,
-        //e.CellBounds.Height - 4);
-
-        // using (
-        // Brush gridBrush = new SolidBrush(this.dataGridView1.GridColor),
-        // backColorBrush = new SolidBrush(e.CellStyle.BackColor))
-        // {
-        // using (Pen gridLinePen = new Pen(gridBrush))
-        //{
-        // Erase the cell.
-        // e.Graphics.FillRectangle(backColorBrush, e.CellBounds);
-
-        // Draw the grid lines (only the right and bottom lines;
-        // DataGridView takes care of the others).
-        // e.Graphics.DrawLine(gridLinePen, e.CellBounds.Left,
-        //   e.CellBounds.Bottom - 1, e.CellBounds.Right - 1,
-        //  e.CellBounds.Bottom - 1);
-        // e.Graphics.DrawLine(gridLinePen, e.CellBounds.Right - 1,
-        // e.CellBounds.Top, e.CellBounds.Right - 1,
-        // e.CellBounds.Bottom);
-
-        // Draw the inset highlight box.
-        //e.Graphics.DrawRectangle(Pens.Blue, newRect);
-
-        // Draw the text content of the cell, ignoring alignment.
-        // if (e.Value != null)
-        //{
-        // e.Graphics.DrawString((String)e.Value, e.CellStyle.Font,
-        //  Brushes.Crimson, e.CellBounds.X + 2,
-        //   e.CellBounds.Y + 2, StringFormat.GenericDefault);
-        // }
-        // e.Handled = true;
-        // }
-        //}
-        //}
-        //}
-
     }
 }
