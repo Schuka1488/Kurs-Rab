@@ -34,6 +34,12 @@ namespace Autorization
             toolTip1.ReshowDelay = 500;
             toolTip1.ShowAlways = true;
             toolTip1.SetToolTip(label4, "Закрытие программы");
+            ToolTip toolTip2 = new ToolTip();
+            toolTip2.AutoPopDelay = 5000;
+            toolTip2.InitialDelay = 1000;
+            toolTip2.ReshowDelay = 500;
+            toolTip2.ShowAlways = true;
+            toolTip2.SetToolTip(label2, "Главное меню создано для просмотра таблиц. \nИзменять данные в таблицах может только сотрудник с ролью admin.");
         }
         private void panel2_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
@@ -152,30 +158,6 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-        private void DarkThemeBox1_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на чек боксе темной темы
-        {
-            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
-        }
-        private void DarkThemeBox1_MouseMove(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на чек боксе темной темы
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoint.X;
-                this.Top += e.Y - lastPoint.Y;
-            }
-        }
-        private void DeleteTable_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на кнопке удаления данных в таблице
-        {
-            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
-        }
-        private void DeleteTable_MouseMove(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на кнопке удаления данных в таблице
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoint.X;
-                this.Top += e.Y - lastPoint.Y;
-            }
-        }
         private void изменитьДанныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -188,7 +170,7 @@ namespace Autorization
         }
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.ThemeMethodLight2(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme);
+            ThemeMethodClass.ThemeMethodLight2(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2);
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -200,7 +182,7 @@ namespace Autorization
         }
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.ThemeMethod2(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme);
+            ThemeMethodClass.ThemeMethod2(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2);
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;

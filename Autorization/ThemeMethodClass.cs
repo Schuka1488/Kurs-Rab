@@ -100,7 +100,7 @@ namespace Autorization
             textBox6.BackColor = SystemColors.Window;
             textBox7.BackColor = SystemColors.Window;
         }
-        static public void ThemeMethod2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
+        static public void ThemeMethod2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Label label1, Label label2)
         {
             panel1.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel2.BackColor = SystemColors.GrayText;
@@ -108,8 +108,10 @@ namespace Autorization
             DarkThemeButton.ForeColor = SystemColors.ControlLightLight;
             WhiteThemeButton.ForeColor = SystemColors.ControlLightLight;
             labelTheme.ForeColor = SystemColors.ControlLightLight;
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label2.ForeColor = SystemColors.ControlLightLight;
         }
-        static public void ThemeMethodLight2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
+        static public void ThemeMethodLight2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Label label1, Label label2)
         {
             panel1.BackColor = Color.Lavender;
             panel2.BackColor = Color.DeepSkyBlue;
@@ -117,6 +119,8 @@ namespace Autorization
             DarkThemeButton.ForeColor = SystemColors.ActiveCaptionText;
             WhiteThemeButton.ForeColor = SystemColors.ActiveCaptionText;
             labelTheme.ForeColor = SystemColors.ActiveCaptionText;
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label2.ForeColor = SystemColors.ActiveCaptionText;
         }
         static public void ThemeMethod(Panel panel1, Panel panel2, Label label2, Label label3, Button buttonLoginPass, TextBox loginName, TextBox passwordName, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
         {

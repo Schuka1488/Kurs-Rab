@@ -31,6 +31,7 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelTheme = new System.Windows.Forms.Label();
             this.WhiteThemeButton = new System.Windows.Forms.Button();
             this.DarkThemeButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -51,7 +52,9 @@ namespace Autorization
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.labelTheme = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,6 +64,8 @@ namespace Autorization
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.labelTheme);
             this.panel1.Controls.Add(this.WhiteThemeButton);
             this.panel1.Controls.Add(this.DarkThemeButton);
@@ -73,6 +78,16 @@ namespace Autorization
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // labelTheme
+            // 
+            this.labelTheme.AutoSize = true;
+            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTheme.Location = new System.Drawing.Point(408, 421);
+            this.labelTheme.Name = "labelTheme";
+            this.labelTheme.Size = new System.Drawing.Size(89, 14);
+            this.labelTheme.TabIndex = 14;
+            this.labelTheme.Text = "Светлая тема вкл.";
             // 
             // WhiteThemeButton
             // 
@@ -247,15 +262,25 @@ namespace Autorization
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // labelTheme
+            // label1
             // 
-            this.labelTheme.AutoSize = true;
-            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTheme.Location = new System.Drawing.Point(408, 421);
-            this.labelTheme.Name = "labelTheme";
-            this.labelTheme.Size = new System.Drawing.Size(89, 14);
-            this.labelTheme.TabIndex = 14;
-            this.labelTheme.Text = "Светлая тема вкл.";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(8, 416);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 19);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Обязательная памятка";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(162, 403);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 32);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "?";
             // 
             // MainForm
             // 
@@ -302,5 +327,8 @@ namespace Autorization
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label labelTheme;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }
