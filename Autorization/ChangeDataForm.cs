@@ -120,7 +120,6 @@ namespace Autorization
             {
                 ((Timer)sender).Stop();
             }
-
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -134,7 +133,6 @@ namespace Autorization
             {
                 ((Timer)sender).Stop();
             }
-
         }
         #endregion
         private void вТаблицеСотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -154,7 +152,6 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
             textBox1.Visible = true;
             textBox2.Visible = true;
             textBox3.Visible = true;
@@ -162,30 +159,25 @@ namespace Autorization
             textBox5.Visible = true;
             textBox6.Visible = true;
             textBox7.Visible = true;
-
-            Column1Label.Visible = true;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = true;
-            Column5Label.Visible = true;
-            Column6Label.Visible = true;
-            Column7Label.Visible = true;
-
-            AddLineButton.Visible = true;
-            AddLineButton2.Visible = false;
-            AddLineButton3.Visible = false;
-            AddLineButton4.Visible = false;
-            AddLineButton5.Visible = false;
-            AddLineButton6.Visible = false;
-
+                Column1Label.Visible = true;
+                Column2Label.Visible = true;
+                Column3Label.Visible = true;
+                Column4Label.Visible = true;
+                Column5Label.Visible = true;
+                Column6Label.Visible = true;
+                Column7Label.Visible = true;
+                        AddLineButton.Visible = true;
+                        AddLineButton2.Visible = false;
+                        AddLineButton3.Visible = false;
+                        AddLineButton4.Visible = false;
+                        AddLineButton5.Visible = false;
+                        AddLineButton6.Visible = false;
         }
         private void SupplemenEmloyee()
         {
             db.openConnection();
-
             MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
-
             db.closeConnection();
         }
 
@@ -204,7 +196,6 @@ namespace Autorization
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
             textBox1.Visible = false;
             textBox2.Visible = true;
             textBox3.Visible = true;
@@ -212,30 +203,25 @@ namespace Autorization
             textBox5.Visible = true;
             textBox6.Visible = false;
             textBox7.Visible = false;
-
-            Column1Label.Visible = true;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = true;
-            Column5Label.Visible = true;
-            Column6Label.Visible = false;
-            Column7Label.Visible = false;
-
-            AddLineButton.Visible = false;
-            AddLineButton2.Visible = true;
-            AddLineButton3.Visible = false;
-            AddLineButton4.Visible = false;
-            AddLineButton5.Visible = false;
-            AddLineButton6.Visible = false;
-
+                Column1Label.Visible = true;
+                Column2Label.Visible = true;
+                Column3Label.Visible = true;
+                Column4Label.Visible = true;
+                Column5Label.Visible = true;
+                Column6Label.Visible = false;
+                Column7Label.Visible = false;
+                        AddLineButton.Visible = false;
+                        AddLineButton2.Visible = true;
+                        AddLineButton3.Visible = false;
+                        AddLineButton4.Visible = false;
+                        AddLineButton5.Visible = false;
+                        AddLineButton6.Visible = false;
         }
         private void SupplemenEmloyee2()
         {
             db.openConnection();
-
             MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
-
             db.closeConnection();
         }
         private void заказыToolStripMenuItem_Click(object sender, EventArgs e)
@@ -255,7 +241,6 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
             textBox1.Visible = false;
             textBox2.Visible = false;
             textBox3.Visible = false;
@@ -263,30 +248,25 @@ namespace Autorization
             textBox5.Visible = true;
             textBox6.Visible = true;
             textBox7.Visible = true;
-
-            Column1Label.Visible = true;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = true;
-            Column5Label.Visible = true;
-            Column6Label.Visible = true;
-            Column7Label.Visible = true;
-
-            AddLineButton.Visible = false;
-            AddLineButton2.Visible = false;
-            AddLineButton3.Visible = true;
-            AddLineButton4.Visible = false;
-            AddLineButton5.Visible = false;
-            AddLineButton6.Visible = false;
-
+                Column1Label.Visible = true;
+                Column2Label.Visible = true;
+                Column3Label.Visible = true;
+                Column4Label.Visible = true;
+                Column5Label.Visible = true;
+                Column6Label.Visible = true;
+                Column7Label.Visible = true;
+                        AddLineButton.Visible = false;
+                        AddLineButton2.Visible = false;
+                        AddLineButton3.Visible = true;
+                        AddLineButton4.Visible = false;
+                        AddLineButton5.Visible = false;
+                        AddLineButton6.Visible = false;
         }
         private void SupplemenEmloyee3()
         {
             db.openConnection();
-
             MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
-
             db.closeConnection();
         }
 
@@ -303,7 +283,6 @@ namespace Autorization
             dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
             textBox1.Visible = false;
             textBox2.Visible = false;
             textBox3.Visible = true;
@@ -311,30 +290,25 @@ namespace Autorization
             textBox5.Visible = false;
             textBox6.Visible = false;
             textBox7.Visible = false;
-
-            Column1Label.Visible = true;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = false;
-            Column5Label.Visible = false;
-            Column6Label.Visible = false;
-            Column7Label.Visible = false;
-
-            AddLineButton.Visible = false;
-            AddLineButton2.Visible = false;
-            AddLineButton3.Visible = false;
-            AddLineButton4.Visible = true;
-            AddLineButton5.Visible = false;
-            AddLineButton6.Visible = false;
-
+                Column1Label.Visible = true;
+                Column2Label.Visible = true;
+                Column3Label.Visible = true;
+                Column4Label.Visible = false;
+                Column5Label.Visible = false;
+                Column6Label.Visible = false;
+                Column7Label.Visible = false;
+                        AddLineButton.Visible = false;
+                        AddLineButton2.Visible = false;
+                        AddLineButton3.Visible = false;
+                        AddLineButton4.Visible = true;
+                        AddLineButton5.Visible = false;
+                        AddLineButton6.Visible = false;
         }
         private void SupplemenEmloyee4()
         {
             db.openConnection();
-
             MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
-
             db.closeConnection();
         }
 
@@ -351,7 +325,6 @@ namespace Autorization
             dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
             textBox1.Visible = false;
             textBox2.Visible = true;
             textBox3.Visible = true;
@@ -359,30 +332,26 @@ namespace Autorization
             textBox5.Visible = false;
             textBox6.Visible = false;
             textBox7.Visible = false;
-
-            Column1Label.Visible = true;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = false;
-            Column5Label.Visible = false;
-            Column6Label.Visible = false;
-            Column7Label.Visible = false;
-
-            AddLineButton.Visible = false;
-            AddLineButton2.Visible = false;
-            AddLineButton3.Visible = false;
-            AddLineButton4.Visible = false;
-            AddLineButton5.Visible = true;
-            AddLineButton6.Visible = false;
+                Column1Label.Visible = true;
+                Column2Label.Visible = true;
+                Column3Label.Visible = true;
+                Column4Label.Visible = false;
+                Column5Label.Visible = false;
+                Column6Label.Visible = false;
+                Column7Label.Visible = false;
+                        AddLineButton.Visible = false;
+                        AddLineButton2.Visible = false;
+                        AddLineButton3.Visible = false;
+                        AddLineButton4.Visible = false;
+                        AddLineButton5.Visible = true;
+                        AddLineButton6.Visible = false;
 
         }
         private void SupplemenEmloyee5()
         {
             db.openConnection();
-
             MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
-
             db.closeConnection();
         }
         private void вТаблицеАвторизацииToolStripMenuItem_Click(object sender, EventArgs e)
@@ -402,7 +371,6 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
             textBox1.Visible = false;
             textBox2.Visible = false;
             textBox3.Visible = true;
@@ -410,62 +378,51 @@ namespace Autorization
             textBox5.Visible = true;
             textBox6.Visible = true;
             textBox7.Visible = true;
-
-            Column1Label.Visible = true;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = true;
-            Column5Label.Visible = true;
-            Column6Label.Visible = true;
-            Column7Label.Visible = true;
-
-            AddLineButton.Visible = false;
-            AddLineButton2.Visible = false;
-            AddLineButton3.Visible = false;
-            AddLineButton4.Visible = false;
-            AddLineButton5.Visible = false;
-            AddLineButton6.Visible = true;
-
+                Column1Label.Visible = true;
+                Column2Label.Visible = true;
+                Column3Label.Visible = true;
+                Column4Label.Visible = true;
+                Column5Label.Visible = true;
+                Column6Label.Visible = true;
+                Column7Label.Visible = true;
+                        AddLineButton.Visible = false;
+                        AddLineButton2.Visible = false;
+                        AddLineButton3.Visible = false;
+                        AddLineButton4.Visible = false;
+                        AddLineButton5.Visible = false;
+                        AddLineButton6.Visible = true;
         }
         private void SupplemenEmloyee6()
         {
             db.openConnection();
-
             MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
-
             db.closeConnection();
         }
         private void label4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void AddLineButton2_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee2();
         }
-
         private void AddLineButton3_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee3();
         }
-
         private void AddLineButton4_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee4();
         }
-
         private void AddLineButton5_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee5();
         }
-
         private void AddLineButton6_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee6();
         }
-
         private void ChangeDataForm_Load(object sender, EventArgs e)
         {
             ToolTip toolTip1 = new ToolTip();
@@ -474,25 +431,20 @@ namespace Autorization
             toolTip1.ReshowDelay = 500;
             toolTip1.ShowAlways = true;
             toolTip1.SetToolTip(label4, "Закрытие программы");
-
             ToolTip toolTip2 = new ToolTip();
             toolTip2.AutoPopDelay = 5000;
             toolTip2.InitialDelay = 1000;
             toolTip2.ReshowDelay = 500;
             toolTip2.ShowAlways = true;
             toolTip2.SetToolTip(label2, "Коды (ID поля) не обязательно заполнять, они заполняются автоматически! \n Даты пишутся в формате 2004-12-12\n Первое число - год, Второе - месяц, Третье - день.");
-
         }
-
         private void AddLineButton_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee();
         }
-
         private void DeleteLineButton_Click(object sender, EventArgs e)
         {
 
         }
-
     }
 }
