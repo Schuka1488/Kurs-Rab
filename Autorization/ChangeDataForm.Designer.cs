@@ -31,6 +31,7 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.labelTheme = new System.Windows.Forms.Label();
             this.DeleteLineButton = new System.Windows.Forms.Button();
             this.AddLineButton = new System.Windows.Forms.Button();
             this.Column7Label = new System.Windows.Forms.Label();
@@ -47,10 +48,6 @@ namespace Autorization
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.WhiteThemeButton = new System.Windows.Forms.Button();
             this.DarkThemeButton = new System.Windows.Forms.Button();
             this.dataGridViewTransformData2 = new System.Windows.Forms.DataGridView();
@@ -69,9 +66,16 @@ namespace Autorization
             this.продажиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ценаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вТаблицеАвторизацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelTheme = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.AddLineButton2 = new System.Windows.Forms.Button();
+            this.AddLineButton3 = new System.Windows.Forms.Button();
+            this.AddLineButton4 = new System.Windows.Forms.Button();
+            this.AddLineButton5 = new System.Windows.Forms.Button();
+            this.AddLineButton6 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -81,6 +85,13 @@ namespace Autorization
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Lavender;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.AddLineButton6);
+            this.panel4.Controls.Add(this.AddLineButton5);
+            this.panel4.Controls.Add(this.AddLineButton4);
+            this.panel4.Controls.Add(this.AddLineButton3);
+            this.panel4.Controls.Add(this.AddLineButton2);
             this.panel4.Controls.Add(this.labelTheme);
             this.panel4.Controls.Add(this.DeleteLineButton);
             this.panel4.Controls.Add(this.AddLineButton);
@@ -98,10 +109,6 @@ namespace Autorization
             this.panel4.Controls.Add(this.textBox3);
             this.panel4.Controls.Add(this.textBox2);
             this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.comboBox4);
-            this.panel4.Controls.Add(this.comboBox3);
-            this.panel4.Controls.Add(this.comboBox2);
-            this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.WhiteThemeButton);
             this.panel4.Controls.Add(this.DarkThemeButton);
             this.panel4.Controls.Add(this.dataGridViewTransformData2);
@@ -113,6 +120,16 @@ namespace Autorization
             this.panel4.TabIndex = 2;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
+            // 
+            // labelTheme
+            // 
+            this.labelTheme.AutoSize = true;
+            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTheme.Location = new System.Drawing.Point(1034, 547);
+            this.labelTheme.Name = "labelTheme";
+            this.labelTheme.Size = new System.Drawing.Size(89, 14);
+            this.labelTheme.TabIndex = 33;
+            this.labelTheme.Text = "Светлая тема вкл.";
             // 
             // DeleteLineButton
             // 
@@ -286,50 +303,6 @@ namespace Autorization
             this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 17;
             this.textBox1.Visible = false;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(514, 433);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(56, 24);
-            this.comboBox4.TabIndex = 16;
-            this.comboBox4.Visible = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(362, 433);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(56, 24);
-            this.comboBox3.TabIndex = 15;
-            this.comboBox3.Visible = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(209, 433);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(56, 24);
-            this.comboBox2.TabIndex = 14;
-            this.comboBox2.Visible = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(64, 431);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(56, 24);
-            this.comboBox1.TabIndex = 13;
-            this.comboBox1.Visible = false;
             // 
             // WhiteThemeButton
             // 
@@ -506,15 +479,94 @@ namespace Autorization
             this.вТаблицеАвторизацииToolStripMenuItem.Text = "В таблице авторизации";
             this.вТаблицеАвторизацииToolStripMenuItem.Click += new System.EventHandler(this.вТаблицеАвторизацииToolStripMenuItem_Click);
             // 
-            // labelTheme
+            // AddLineButton2
             // 
-            this.labelTheme.AutoSize = true;
-            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTheme.Location = new System.Drawing.Point(1034, 547);
-            this.labelTheme.Name = "labelTheme";
-            this.labelTheme.Size = new System.Drawing.Size(89, 14);
-            this.labelTheme.TabIndex = 33;
-            this.labelTheme.Text = "Светлая тема вкл.";
+            this.AddLineButton2.BackColor = System.Drawing.Color.Lavender;
+            this.AddLineButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLineButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddLineButton2.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton2.Name = "AddLineButton2";
+            this.AddLineButton2.Size = new System.Drawing.Size(220, 33);
+            this.AddLineButton2.TabIndex = 34;
+            this.AddLineButton2.Text = "ДОБАВИТЬ СТРОКУ";
+            this.AddLineButton2.UseVisualStyleBackColor = false;
+            this.AddLineButton2.Click += new System.EventHandler(this.AddLineButton2_Click);
+            // 
+            // AddLineButton3
+            // 
+            this.AddLineButton3.BackColor = System.Drawing.Color.Lavender;
+            this.AddLineButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLineButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddLineButton3.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton3.Name = "AddLineButton3";
+            this.AddLineButton3.Size = new System.Drawing.Size(220, 33);
+            this.AddLineButton3.TabIndex = 35;
+            this.AddLineButton3.Text = "ДОБАВИТЬ СТРОКУ";
+            this.AddLineButton3.UseVisualStyleBackColor = false;
+            this.AddLineButton3.Click += new System.EventHandler(this.AddLineButton3_Click);
+            // 
+            // AddLineButton4
+            // 
+            this.AddLineButton4.BackColor = System.Drawing.Color.Lavender;
+            this.AddLineButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLineButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddLineButton4.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton4.Name = "AddLineButton4";
+            this.AddLineButton4.Size = new System.Drawing.Size(220, 33);
+            this.AddLineButton4.TabIndex = 36;
+            this.AddLineButton4.Text = "ДОБАВИТЬ СТРОКУ";
+            this.AddLineButton4.UseVisualStyleBackColor = false;
+            this.AddLineButton4.Click += new System.EventHandler(this.AddLineButton4_Click);
+            // 
+            // AddLineButton5
+            // 
+            this.AddLineButton5.BackColor = System.Drawing.Color.Lavender;
+            this.AddLineButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLineButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddLineButton5.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton5.Name = "AddLineButton5";
+            this.AddLineButton5.Size = new System.Drawing.Size(220, 33);
+            this.AddLineButton5.TabIndex = 37;
+            this.AddLineButton5.Text = "ДОБАВИТЬ СТРОКУ";
+            this.AddLineButton5.UseVisualStyleBackColor = false;
+            this.AddLineButton5.Click += new System.EventHandler(this.AddLineButton5_Click);
+            // 
+            // AddLineButton6
+            // 
+            this.AddLineButton6.BackColor = System.Drawing.Color.Lavender;
+            this.AddLineButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLineButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddLineButton6.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton6.Name = "AddLineButton6";
+            this.AddLineButton6.Size = new System.Drawing.Size(220, 33);
+            this.AddLineButton6.TabIndex = 38;
+            this.AddLineButton6.Text = "ДОБАВИТЬ СТРОКУ";
+            this.AddLineButton6.UseVisualStyleBackColor = false;
+            this.AddLineButton6.Click += new System.EventHandler(this.AddLineButton6_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(16, 539);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 19);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Обязательная памятка";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(171, 527);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 32);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "?";
+            // 
+            // toolTip2
+            // 
+            this.toolTip2.ShowAlways = true;
             // 
             // ChangeDataForm
             // 
@@ -571,10 +623,6 @@ namespace Autorization
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button DeleteLineButton;
         private System.Windows.Forms.Button AddLineButton;
@@ -582,5 +630,13 @@ namespace Autorization
         private System.Windows.Forms.Label labelTheme;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Button AddLineButton2;
+        private System.Windows.Forms.Button AddLineButton3;
+        private System.Windows.Forms.Button AddLineButton4;
+        private System.Windows.Forms.Button AddLineButton5;
+        private System.Windows.Forms.Button AddLineButton6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

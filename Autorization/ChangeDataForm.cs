@@ -155,6 +155,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
 
+            textBox1.Visible = true;
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
@@ -169,6 +170,13 @@ namespace Autorization
             Column5Label.Visible = true;
             Column6Label.Visible = true;
             Column7Label.Visible = true;
+
+            AddLineButton.Visible = true;
+            AddLineButton2.Visible = false;
+            AddLineButton3.Visible = false;
+            AddLineButton4.Visible = false;
+            AddLineButton5.Visible = false;
+            AddLineButton6.Visible = false;
 
         }
         private void SupplemenEmloyee()
@@ -199,10 +207,6 @@ namespace Autorization
 
             textBox1.Visible = false;
             textBox2.Visible = true;
-            comboBox1.Visible = true;
-            comboBox2.Visible = false;
-            comboBox3.Visible = false;
-            comboBox4.Visible = false;
             textBox3.Visible = true;
             textBox4.Visible = true;
             textBox5.Visible = true;
@@ -216,8 +220,24 @@ namespace Autorization
             Column5Label.Visible = true;
             Column6Label.Visible = false;
             Column7Label.Visible = false;
-        }
 
+            AddLineButton.Visible = false;
+            AddLineButton2.Visible = true;
+            AddLineButton3.Visible = false;
+            AddLineButton4.Visible = false;
+            AddLineButton5.Visible = false;
+            AddLineButton6.Visible = false;
+
+        }
+        private void SupplemenEmloyee2()
+        {
+            db.openConnection();
+
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+
+            db.closeConnection();
+        }
         private void заказыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string commandStr = "SELECT ProjectOrderID AS 'Код заказа', ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента', projectName AS 'Название проекта', projectCategory AS 'Категория проекта' , projectPrice AS 'Цена' FROM ProjectOrder"; // SQL запрос данных из БД
@@ -238,10 +258,6 @@ namespace Autorization
 
             textBox1.Visible = false;
             textBox2.Visible = false;
-            comboBox1.Visible = true;
-            comboBox2.Visible = true;
-            comboBox3.Visible = true;
-            comboBox4.Visible = true;
             textBox3.Visible = false;
             textBox4.Visible = false;
             textBox5.Visible = true;
@@ -255,6 +271,23 @@ namespace Autorization
             Column5Label.Visible = true;
             Column6Label.Visible = true;
             Column7Label.Visible = true;
+
+            AddLineButton.Visible = false;
+            AddLineButton2.Visible = false;
+            AddLineButton3.Visible = true;
+            AddLineButton4.Visible = false;
+            AddLineButton5.Visible = false;
+            AddLineButton6.Visible = false;
+
+        }
+        private void SupplemenEmloyee3()
+        {
+            db.openConnection();
+
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+
+            db.closeConnection();
         }
 
         private void продажиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -273,10 +306,6 @@ namespace Autorization
 
             textBox1.Visible = false;
             textBox2.Visible = false;
-            comboBox1.Visible = true;
-            comboBox2.Visible = true;
-            comboBox3.Visible = false;
-            comboBox4.Visible = false;
             textBox3.Visible = true;
             textBox4.Visible = false;
             textBox5.Visible = false;
@@ -290,6 +319,23 @@ namespace Autorization
             Column5Label.Visible = false;
             Column6Label.Visible = false;
             Column7Label.Visible = false;
+
+            AddLineButton.Visible = false;
+            AddLineButton2.Visible = false;
+            AddLineButton3.Visible = false;
+            AddLineButton4.Visible = true;
+            AddLineButton5.Visible = false;
+            AddLineButton6.Visible = false;
+
+        }
+        private void SupplemenEmloyee4()
+        {
+            db.openConnection();
+
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+
+            db.closeConnection();
         }
 
         private void ценаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -308,10 +354,6 @@ namespace Autorization
 
             textBox1.Visible = false;
             textBox2.Visible = true;
-            comboBox1.Visible = true;
-            comboBox2.Visible = false;
-            comboBox3.Visible = false;
-            comboBox4.Visible = false;
             textBox3.Visible = true;
             textBox4.Visible = false;
             textBox5.Visible = false;
@@ -325,6 +367,23 @@ namespace Autorization
             Column5Label.Visible = false;
             Column6Label.Visible = false;
             Column7Label.Visible = false;
+
+            AddLineButton.Visible = false;
+            AddLineButton2.Visible = false;
+            AddLineButton3.Visible = false;
+            AddLineButton4.Visible = false;
+            AddLineButton5.Visible = true;
+            AddLineButton6.Visible = false;
+
+        }
+        private void SupplemenEmloyee5()
+        {
+            db.openConnection();
+
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+
+            db.closeConnection();
         }
         private void вТаблицеАвторизацииToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -346,10 +405,6 @@ namespace Autorization
 
             textBox1.Visible = false;
             textBox2.Visible = false;
-            comboBox1.Visible = true;
-            comboBox2.Visible = true;
-            comboBox3.Visible = false;
-            comboBox4.Visible = false;
             textBox3.Visible = true;
             textBox4.Visible = true;
             textBox5.Visible = true;
@@ -363,24 +418,69 @@ namespace Autorization
             Column5Label.Visible = true;
             Column6Label.Visible = true;
             Column7Label.Visible = true;
-        }
 
+            AddLineButton.Visible = false;
+            AddLineButton2.Visible = false;
+            AddLineButton3.Visible = false;
+            AddLineButton4.Visible = false;
+            AddLineButton5.Visible = false;
+            AddLineButton6.Visible = true;
+
+        }
+        private void SupplemenEmloyee6()
+        {
+            db.openConnection();
+
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+
+            db.closeConnection();
+        }
         private void label4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        private void AddLineButton2_Click(object sender, EventArgs e)
+        {
+            SupplemenEmloyee2();
+        }
+
+        private void AddLineButton3_Click(object sender, EventArgs e)
+        {
+            SupplemenEmloyee3();
+        }
+
+        private void AddLineButton4_Click(object sender, EventArgs e)
+        {
+            SupplemenEmloyee4();
+        }
+
+        private void AddLineButton5_Click(object sender, EventArgs e)
+        {
+            SupplemenEmloyee5();
+        }
+
+        private void AddLineButton6_Click(object sender, EventArgs e)
+        {
+            SupplemenEmloyee6();
+        }
+
         private void ChangeDataForm_Load(object sender, EventArgs e)
         {
             ToolTip toolTip1 = new ToolTip();
-
             toolTip1.AutoPopDelay = 5000;
             toolTip1.InitialDelay = 1000;
             toolTip1.ReshowDelay = 500;
-
             toolTip1.ShowAlways = true;
-
             toolTip1.SetToolTip(label4, "Закрытие программы");
+
+            ToolTip toolTip2 = new ToolTip();
+            toolTip2.AutoPopDelay = 5000;
+            toolTip2.InitialDelay = 1000;
+            toolTip2.ReshowDelay = 500;
+            toolTip2.ShowAlways = true;
+            toolTip2.SetToolTip(label2, "Коды (ID поля) не обязательно заполнять, они заполняются автоматически! \n Даты пишутся в формате 2004-12-12\n Первое число - год, Второе - месяц, Третье - день.");
 
         }
 
