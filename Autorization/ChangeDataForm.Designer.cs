@@ -31,6 +31,17 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.DeleteLineButton6 = new System.Windows.Forms.Button();
+            this.DeleteLineButton5 = new System.Windows.Forms.Button();
+            this.DeleteLineButton4 = new System.Windows.Forms.Button();
+            this.DeleteLineButton3 = new System.Windows.Forms.Button();
+            this.DeleteLineButton2 = new System.Windows.Forms.Button();
+            this.ResetButton6 = new System.Windows.Forms.Button();
+            this.ResetButton5 = new System.Windows.Forms.Button();
+            this.ResetButton4 = new System.Windows.Forms.Button();
+            this.ResetButton3 = new System.Windows.Forms.Button();
+            this.ResetButton2 = new System.Windows.Forms.Button();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.AddLineButton6 = new System.Windows.Forms.Button();
@@ -76,17 +87,6 @@ namespace Autorization
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.ResetButton = new System.Windows.Forms.Button();
-            this.ResetButton2 = new System.Windows.Forms.Button();
-            this.ResetButton3 = new System.Windows.Forms.Button();
-            this.ResetButton4 = new System.Windows.Forms.Button();
-            this.ResetButton5 = new System.Windows.Forms.Button();
-            this.ResetButton6 = new System.Windows.Forms.Button();
-            this.DeleteLineButton2 = new System.Windows.Forms.Button();
-            this.DeleteLineButton3 = new System.Windows.Forms.Button();
-            this.DeleteLineButton4 = new System.Windows.Forms.Button();
-            this.DeleteLineButton5 = new System.Windows.Forms.Button();
-            this.DeleteLineButton6 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -142,6 +142,149 @@ namespace Autorization
             this.panel4.TabIndex = 2;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
+            // 
+            // DeleteLineButton6
+            // 
+            this.DeleteLineButton6.BackColor = System.Drawing.Color.Lavender;
+            this.DeleteLineButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteLineButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteLineButton6.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton6.Name = "DeleteLineButton6";
+            this.DeleteLineButton6.Size = new System.Drawing.Size(220, 33);
+            this.DeleteLineButton6.TabIndex = 52;
+            this.DeleteLineButton6.Text = "УДАЛИТЬ СТРОКУ";
+            this.DeleteLineButton6.UseVisualStyleBackColor = false;
+            this.DeleteLineButton6.Click += new System.EventHandler(this.DeleteLineButton6_Click);
+            // 
+            // DeleteLineButton5
+            // 
+            this.DeleteLineButton5.BackColor = System.Drawing.Color.Lavender;
+            this.DeleteLineButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteLineButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteLineButton5.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton5.Name = "DeleteLineButton5";
+            this.DeleteLineButton5.Size = new System.Drawing.Size(220, 33);
+            this.DeleteLineButton5.TabIndex = 51;
+            this.DeleteLineButton5.Text = "УДАЛИТЬ СТРОКУ";
+            this.DeleteLineButton5.UseVisualStyleBackColor = false;
+            this.DeleteLineButton5.Click += new System.EventHandler(this.DeleteLineButton5_Click);
+            // 
+            // DeleteLineButton4
+            // 
+            this.DeleteLineButton4.BackColor = System.Drawing.Color.Lavender;
+            this.DeleteLineButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteLineButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteLineButton4.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton4.Name = "DeleteLineButton4";
+            this.DeleteLineButton4.Size = new System.Drawing.Size(220, 33);
+            this.DeleteLineButton4.TabIndex = 50;
+            this.DeleteLineButton4.Text = "УДАЛИТЬ СТРОКУ";
+            this.DeleteLineButton4.UseVisualStyleBackColor = false;
+            this.DeleteLineButton4.Click += new System.EventHandler(this.DeleteLineButton4_Click);
+            // 
+            // DeleteLineButton3
+            // 
+            this.DeleteLineButton3.BackColor = System.Drawing.Color.Lavender;
+            this.DeleteLineButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteLineButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteLineButton3.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton3.Name = "DeleteLineButton3";
+            this.DeleteLineButton3.Size = new System.Drawing.Size(220, 33);
+            this.DeleteLineButton3.TabIndex = 49;
+            this.DeleteLineButton3.Text = "УДАЛИТЬ СТРОКУ";
+            this.DeleteLineButton3.UseVisualStyleBackColor = false;
+            this.DeleteLineButton3.Click += new System.EventHandler(this.DeleteLineButton3_Click);
+            // 
+            // DeleteLineButton2
+            // 
+            this.DeleteLineButton2.BackColor = System.Drawing.Color.Lavender;
+            this.DeleteLineButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteLineButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteLineButton2.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton2.Name = "DeleteLineButton2";
+            this.DeleteLineButton2.Size = new System.Drawing.Size(220, 33);
+            this.DeleteLineButton2.TabIndex = 48;
+            this.DeleteLineButton2.Text = "УДАЛИТЬ СТРОКУ";
+            this.DeleteLineButton2.UseVisualStyleBackColor = false;
+            this.DeleteLineButton2.Click += new System.EventHandler(this.DeleteLineButton2_Click);
+            // 
+            // ResetButton6
+            // 
+            this.ResetButton6.BackColor = System.Drawing.Color.Lavender;
+            this.ResetButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton6.Location = new System.Drawing.Point(1021, 203);
+            this.ResetButton6.Name = "ResetButton6";
+            this.ResetButton6.Size = new System.Drawing.Size(220, 33);
+            this.ResetButton6.TabIndex = 47;
+            this.ResetButton6.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.ResetButton6.UseVisualStyleBackColor = false;
+            this.ResetButton6.Click += new System.EventHandler(this.ResetButton6_Click);
+            // 
+            // ResetButton5
+            // 
+            this.ResetButton5.BackColor = System.Drawing.Color.Lavender;
+            this.ResetButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton5.Location = new System.Drawing.Point(1021, 203);
+            this.ResetButton5.Name = "ResetButton5";
+            this.ResetButton5.Size = new System.Drawing.Size(220, 33);
+            this.ResetButton5.TabIndex = 46;
+            this.ResetButton5.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.ResetButton5.UseVisualStyleBackColor = false;
+            this.ResetButton5.Click += new System.EventHandler(this.ResetButton5_Click);
+            // 
+            // ResetButton4
+            // 
+            this.ResetButton4.BackColor = System.Drawing.Color.Lavender;
+            this.ResetButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton4.Location = new System.Drawing.Point(1021, 203);
+            this.ResetButton4.Name = "ResetButton4";
+            this.ResetButton4.Size = new System.Drawing.Size(220, 33);
+            this.ResetButton4.TabIndex = 45;
+            this.ResetButton4.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.ResetButton4.UseVisualStyleBackColor = false;
+            this.ResetButton4.Click += new System.EventHandler(this.ResetButton4_Click);
+            // 
+            // ResetButton3
+            // 
+            this.ResetButton3.BackColor = System.Drawing.Color.Lavender;
+            this.ResetButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton3.Location = new System.Drawing.Point(1021, 203);
+            this.ResetButton3.Name = "ResetButton3";
+            this.ResetButton3.Size = new System.Drawing.Size(220, 33);
+            this.ResetButton3.TabIndex = 44;
+            this.ResetButton3.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.ResetButton3.UseVisualStyleBackColor = false;
+            this.ResetButton3.Click += new System.EventHandler(this.ResetButton3_Click);
+            // 
+            // ResetButton2
+            // 
+            this.ResetButton2.BackColor = System.Drawing.Color.Lavender;
+            this.ResetButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton2.Location = new System.Drawing.Point(1021, 203);
+            this.ResetButton2.Name = "ResetButton2";
+            this.ResetButton2.Size = new System.Drawing.Size(220, 33);
+            this.ResetButton2.TabIndex = 43;
+            this.ResetButton2.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.ResetButton2.UseVisualStyleBackColor = false;
+            this.ResetButton2.Click += new System.EventHandler(this.ResetButton2_Click);
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.BackColor = System.Drawing.Color.Lavender;
+            this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.Location = new System.Drawing.Point(1021, 203);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(220, 33);
+            this.ResetButton.TabIndex = 42;
+            this.ResetButton.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.ResetButton.UseVisualStyleBackColor = false;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // label2
             // 
@@ -582,149 +725,6 @@ namespace Autorization
             // toolTip2
             // 
             this.toolTip2.ShowAlways = true;
-            // 
-            // ResetButton
-            // 
-            this.ResetButton.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton.TabIndex = 42;
-            this.ResetButton.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton.UseVisualStyleBackColor = false;
-            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
-            // 
-            // ResetButton2
-            // 
-            this.ResetButton2.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton2.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton2.Name = "ResetButton2";
-            this.ResetButton2.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton2.TabIndex = 43;
-            this.ResetButton2.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton2.UseVisualStyleBackColor = false;
-            this.ResetButton2.Click += new System.EventHandler(this.ResetButton2_Click);
-            // 
-            // ResetButton3
-            // 
-            this.ResetButton3.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton3.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton3.Name = "ResetButton3";
-            this.ResetButton3.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton3.TabIndex = 44;
-            this.ResetButton3.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton3.UseVisualStyleBackColor = false;
-            this.ResetButton3.Click += new System.EventHandler(this.ResetButton3_Click);
-            // 
-            // ResetButton4
-            // 
-            this.ResetButton4.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton4.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton4.Name = "ResetButton4";
-            this.ResetButton4.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton4.TabIndex = 45;
-            this.ResetButton4.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton4.UseVisualStyleBackColor = false;
-            this.ResetButton4.Click += new System.EventHandler(this.ResetButton4_Click);
-            // 
-            // ResetButton5
-            // 
-            this.ResetButton5.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton5.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton5.Name = "ResetButton5";
-            this.ResetButton5.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton5.TabIndex = 46;
-            this.ResetButton5.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton5.UseVisualStyleBackColor = false;
-            this.ResetButton5.Click += new System.EventHandler(this.ResetButton5_Click);
-            // 
-            // ResetButton6
-            // 
-            this.ResetButton6.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton6.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton6.Name = "ResetButton6";
-            this.ResetButton6.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton6.TabIndex = 47;
-            this.ResetButton6.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton6.UseVisualStyleBackColor = false;
-            this.ResetButton6.Click += new System.EventHandler(this.ResetButton6_Click);
-            // 
-            // DeleteLineButton2
-            // 
-            this.DeleteLineButton2.BackColor = System.Drawing.Color.Lavender;
-            this.DeleteLineButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteLineButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLineButton2.Location = new System.Drawing.Point(1021, 164);
-            this.DeleteLineButton2.Name = "DeleteLineButton2";
-            this.DeleteLineButton2.Size = new System.Drawing.Size(220, 33);
-            this.DeleteLineButton2.TabIndex = 48;
-            this.DeleteLineButton2.Text = "УДАЛИТЬ СТРОКУ";
-            this.DeleteLineButton2.UseVisualStyleBackColor = false;
-            this.DeleteLineButton2.Click += new System.EventHandler(this.DeleteLineButton2_Click);
-            // 
-            // DeleteLineButton3
-            // 
-            this.DeleteLineButton3.BackColor = System.Drawing.Color.Lavender;
-            this.DeleteLineButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteLineButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLineButton3.Location = new System.Drawing.Point(1021, 164);
-            this.DeleteLineButton3.Name = "DeleteLineButton3";
-            this.DeleteLineButton3.Size = new System.Drawing.Size(220, 33);
-            this.DeleteLineButton3.TabIndex = 49;
-            this.DeleteLineButton3.Text = "УДАЛИТЬ СТРОКУ";
-            this.DeleteLineButton3.UseVisualStyleBackColor = false;
-            this.DeleteLineButton3.Click += new System.EventHandler(this.DeleteLineButton3_Click);
-            // 
-            // DeleteLineButton4
-            // 
-            this.DeleteLineButton4.BackColor = System.Drawing.Color.Lavender;
-            this.DeleteLineButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteLineButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLineButton4.Location = new System.Drawing.Point(1021, 164);
-            this.DeleteLineButton4.Name = "DeleteLineButton4";
-            this.DeleteLineButton4.Size = new System.Drawing.Size(220, 33);
-            this.DeleteLineButton4.TabIndex = 50;
-            this.DeleteLineButton4.Text = "УДАЛИТЬ СТРОКУ";
-            this.DeleteLineButton4.UseVisualStyleBackColor = false;
-            this.DeleteLineButton4.Click += new System.EventHandler(this.DeleteLineButton4_Click);
-            // 
-            // DeleteLineButton5
-            // 
-            this.DeleteLineButton5.BackColor = System.Drawing.Color.Lavender;
-            this.DeleteLineButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteLineButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLineButton5.Location = new System.Drawing.Point(1021, 164);
-            this.DeleteLineButton5.Name = "DeleteLineButton5";
-            this.DeleteLineButton5.Size = new System.Drawing.Size(220, 33);
-            this.DeleteLineButton5.TabIndex = 51;
-            this.DeleteLineButton5.Text = "УДАЛИТЬ СТРОКУ";
-            this.DeleteLineButton5.UseVisualStyleBackColor = false;
-            this.DeleteLineButton5.Click += new System.EventHandler(this.DeleteLineButton5_Click);
-            // 
-            // DeleteLineButton6
-            // 
-            this.DeleteLineButton6.BackColor = System.Drawing.Color.Lavender;
-            this.DeleteLineButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteLineButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLineButton6.Location = new System.Drawing.Point(1021, 164);
-            this.DeleteLineButton6.Name = "DeleteLineButton6";
-            this.DeleteLineButton6.Size = new System.Drawing.Size(220, 33);
-            this.DeleteLineButton6.TabIndex = 52;
-            this.DeleteLineButton6.Text = "УДАЛИТЬ СТРОКУ";
-            this.DeleteLineButton6.UseVisualStyleBackColor = false;
-            this.DeleteLineButton6.Click += new System.EventHandler(this.DeleteLineButton6_Click);
             // 
             // ChangeDataForm
             // 
