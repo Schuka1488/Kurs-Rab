@@ -24,7 +24,7 @@ namespace Autorization
         // {
         //    Panel1BackColor = Color.Lavender;
         // }
-        static public void ThemeMethod3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
+        static public void ThemeMethod3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Button AddLineButton, Button AddLineButton2, Button AddLineButton3, Button AddLineButton4, Button AddLineButton5, Button AddLineButton6, Label label1, Label label2, Label Column1Label, Label Column2Label, Label Column3Label, Label Column4Label, Label Column5Label, Label Column6Label, Label Column7Label)
         {
             panel4.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel5.BackColor = SystemColors.GrayText;
@@ -32,9 +32,29 @@ namespace Autorization
             DarkThemeButton.ForeColor = SystemColors.ControlLightLight;
             WhiteThemeButton.ForeColor = SystemColors.ControlLightLight;
             labelTheme.ForeColor = SystemColors.ControlLightLight;
-            
+            AddLineButton.ForeColor = SystemColors.ControlLightLight;
+            AddLineButton.BackColor = SystemColors.WindowFrame;
+            AddLineButton2.ForeColor = SystemColors.ControlLightLight;
+            AddLineButton2.BackColor = SystemColors.WindowFrame;
+            AddLineButton3.ForeColor = SystemColors.ControlLightLight;
+            AddLineButton3.BackColor = SystemColors.WindowFrame;
+            AddLineButton4.ForeColor = SystemColors.ControlLightLight;
+            AddLineButton4.BackColor = SystemColors.WindowFrame;
+            AddLineButton5.ForeColor = SystemColors.ControlLightLight;
+            AddLineButton5.BackColor = SystemColors.WindowFrame;
+            AddLineButton6.ForeColor = SystemColors.ControlLightLight;
+            AddLineButton6.BackColor = SystemColors.WindowFrame;
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label2.ForeColor = SystemColors.ControlLightLight;
+            Column1Label.ForeColor = SystemColors.ControlLightLight;
+            Column2Label.ForeColor = SystemColors.ControlLightLight;
+            Column3Label.ForeColor = SystemColors.ControlLightLight;
+            Column4Label.ForeColor = SystemColors.ControlLightLight;
+            Column5Label.ForeColor = SystemColors.ControlLightLight;
+            Column6Label.ForeColor = SystemColors.ControlLightLight;
+            Column7Label.ForeColor = SystemColors.ControlLightLight;
         }
-        static public void ThemeMethodLight3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
+        static public void ThemeMethodLight3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Button AddLineButton, Button AddLineButton2, Button AddLineButton3, Button AddLineButton4, Button AddLineButton5, Button AddLineButton6, Label label1, Label label2, Label Column1Label, Label Column2Label, Label Column3Label, Label Column4Label, Label Column5Label, Label Column6Label, Label Column7Label)
         {
             panel4.BackColor = Color.Lavender;
             panel5.BackColor = Color.DeepSkyBlue;
@@ -42,7 +62,28 @@ namespace Autorization
             DarkThemeButton.ForeColor = SystemColors.ActiveCaptionText;
             WhiteThemeButton.ForeColor = SystemColors.ActiveCaptionText;
             labelTheme.ForeColor = SystemColors.ActiveCaptionText;
-            
+            AddLineButton.ForeColor = SystemColors.ActiveCaptionText;
+            AddLineButton.BackColor = Color.Lavender; ;
+            AddLineButton2.ForeColor = SystemColors.ActiveCaptionText;
+            AddLineButton2.BackColor = Color.Lavender;
+            AddLineButton3.ForeColor = SystemColors.ActiveCaptionText;
+            AddLineButton3.BackColor = Color.Lavender;
+            AddLineButton4.ForeColor = SystemColors.ActiveCaptionText;
+            AddLineButton4.BackColor = Color.Lavender;
+            AddLineButton5.ForeColor = SystemColors.ActiveCaptionText;
+            AddLineButton5.BackColor = Color.Lavender;
+            AddLineButton6.ForeColor = SystemColors.ActiveCaptionText;
+            AddLineButton6.BackColor = Color.Lavender;
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label2.ForeColor = SystemColors.ActiveCaptionText;
+            Column1Label.ForeColor = SystemColors.ActiveCaptionText;
+            Column2Label.ForeColor = SystemColors.ActiveCaptionText;
+            Column3Label.ForeColor = SystemColors.ActiveCaptionText;
+            Column4Label.ForeColor = SystemColors.ActiveCaptionText;
+            Column5Label.ForeColor = SystemColors.ActiveCaptionText;
+            Column6Label.ForeColor = SystemColors.ActiveCaptionText;
+            Column7Label.ForeColor = SystemColors.ActiveCaptionText;
+
         }
         static public void ThemeMethod2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
         {

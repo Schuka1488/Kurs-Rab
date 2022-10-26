@@ -97,7 +97,6 @@ namespace Autorization
             else 
                 MessageBox.Show("Логин или пароль указан неверно."); // обработка исключения
         }
-
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
             ThemeMethodClass.ThemeMethodLight(panel1, panel2, label2, label3, buttonLoginPass, loginName, passwordName, DarkThemeButton, WhiteThemeButton, labelTheme);
@@ -127,13 +126,10 @@ namespace Autorization
         private void LoginForm1_Load(object sender, EventArgs e)
         {
             ToolTip toolTip1 = new ToolTip();
-
             toolTip1.AutoPopDelay = 5000;
             toolTip1.InitialDelay = 1000;
             toolTip1.ReshowDelay = 500;
-
             toolTip1.ShowAlways = true;
-
             toolTip1.SetToolTip(label4, "Закрытие программы");
         }
         int dR, dG, dB, sign;
