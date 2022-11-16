@@ -133,6 +133,7 @@ namespace Autorization
             toolTip1.SetToolTip(label4, "Закрытие программы");
         }
         int dR, dG, dB, sign;
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))

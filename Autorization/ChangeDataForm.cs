@@ -84,7 +84,16 @@ namespace Autorization
         #region [ Кнопки тем ]
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.LightThemeMethodChangeDataForm(panel4, panel5, dataGridViewTransformData2, DarkThemeButton, WhiteThemeButton, labelTheme, AddLineButton, AddLineButton2, AddLineButton3, AddLineButton4, AddLineButton5, AddLineButton6, label1, label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton,  ResetButton2, ResetButton3,  ResetButton4,  ResetButton5, ResetButton6);
+            ThemeMethodClass.LightThemeMethodChangeDataForm(panel4, panel5, dataGridViewTransformData2, DarkThemeButton, WhiteThemeButton, 
+
+                labelTheme, AddLineButton, AddLineButton2, AddLineButton3, AddLineButton4, AddLineButton5, AddLineButton6, label1, 
+
+                label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1,
+                
+                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton,  ResetButton2, ResetButton3,  ResetButton4,  ResetButton5, ResetButton6,
+
+                DeleteLineButton, DeleteLineButton2, DeleteLineButton3, DeleteLineButton4, DeleteLineButton5, DeleteLineButton6);
+
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -97,7 +106,16 @@ namespace Autorization
 
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.DarkThemeMethodChangeDataForm(panel4, panel5, dataGridViewTransformData2, DarkThemeButton, WhiteThemeButton, labelTheme, AddLineButton, AddLineButton2, AddLineButton3, AddLineButton4, AddLineButton5, AddLineButton6, label1, label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton, ResetButton2, ResetButton3, ResetButton4, ResetButton5, ResetButton6);
+            ThemeMethodClass.DarkThemeMethodChangeDataForm(panel4, panel5, dataGridViewTransformData2, DarkThemeButton, WhiteThemeButton, 
+
+                labelTheme, AddLineButton, AddLineButton2, AddLineButton3, AddLineButton4, AddLineButton5, AddLineButton6, label1, 
+
+                label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1,
+                
+                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton, ResetButton2, ResetButton3, ResetButton4, ResetButton5, ResetButton6,
+
+                DeleteLineButton, DeleteLineButton2, DeleteLineButton3, DeleteLineButton4, DeleteLineButton5, DeleteLineButton6);
+
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;

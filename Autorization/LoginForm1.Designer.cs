@@ -72,20 +72,20 @@ namespace Autorization
             // labelTheme
             // 
             this.labelTheme.AutoSize = true;
-            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTheme.Location = new System.Drawing.Point(3, 448);
+            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTheme.Location = new System.Drawing.Point(123, 443);
             this.labelTheme.Name = "labelTheme";
-            this.labelTheme.Size = new System.Drawing.Size(89, 14);
+            this.labelTheme.Size = new System.Drawing.Size(106, 14);
             this.labelTheme.TabIndex = 13;
             this.labelTheme.Text = "Светлая тема вкл.";
             // 
             // WhiteThemeButton
             // 
             this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WhiteThemeButton.Location = new System.Drawing.Point(121, 438);
+            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhiteThemeButton.Location = new System.Drawing.Point(235, 409);
             this.WhiteThemeButton.Name = "WhiteThemeButton";
-            this.WhiteThemeButton.Size = new System.Drawing.Size(119, 23);
+            this.WhiteThemeButton.Size = new System.Drawing.Size(130, 23);
             this.WhiteThemeButton.TabIndex = 12;
             this.WhiteThemeButton.Text = "СВЕТЛАЯ ТЕМА";
             this.WhiteThemeButton.UseVisualStyleBackColor = true;
@@ -94,10 +94,10 @@ namespace Autorization
             // DarkThemeButton
             // 
             this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DarkThemeButton.Location = new System.Drawing.Point(246, 438);
+            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarkThemeButton.Location = new System.Drawing.Point(235, 438);
             this.DarkThemeButton.Name = "DarkThemeButton";
-            this.DarkThemeButton.Size = new System.Drawing.Size(119, 23);
+            this.DarkThemeButton.Size = new System.Drawing.Size(130, 23);
             this.DarkThemeButton.TabIndex = 11;
             this.DarkThemeButton.Text = "ТЕМНАЯ ТЕМА";
             this.DarkThemeButton.UseVisualStyleBackColor = true;
@@ -109,9 +109,9 @@ namespace Autorization
             this.buttonLoginPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLoginPass.Font = new System.Drawing.Font("Mongolian Baiti", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLoginPass.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonLoginPass.Location = new System.Drawing.Point(12, 370);
+            this.buttonLoginPass.Location = new System.Drawing.Point(17, 332);
             this.buttonLoginPass.Name = "buttonLoginPass";
-            this.buttonLoginPass.Size = new System.Drawing.Size(348, 53);
+            this.buttonLoginPass.Size = new System.Drawing.Size(343, 48);
             this.buttonLoginPass.TabIndex = 5;
             this.buttonLoginPass.Text = "ВОЙТИ";
             this.buttonLoginPass.UseVisualStyleBackColor = true;
@@ -120,7 +120,7 @@ namespace Autorization
             // passwordName
             // 
             this.passwordName.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passwordName.Location = new System.Drawing.Point(17, 261);
+            this.passwordName.Location = new System.Drawing.Point(17, 243);
             this.passwordName.Multiline = true;
             this.passwordName.Name = "passwordName";
             this.passwordName.PasswordChar = '*';
@@ -131,7 +131,7 @@ namespace Autorization
             // 
             this.loginName.BackColor = System.Drawing.SystemColors.Window;
             this.loginName.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginName.Location = new System.Drawing.Point(17, 165);
+            this.loginName.Location = new System.Drawing.Point(17, 146);
             this.loginName.Multiline = true;
             this.loginName.Name = "loginName";
             this.loginName.Size = new System.Drawing.Size(343, 46);
@@ -142,7 +142,7 @@ namespace Autorization
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(12, 229);
+            this.label3.Location = new System.Drawing.Point(12, 211);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 29);
             this.label3.TabIndex = 2;
@@ -153,7 +153,7 @@ namespace Autorization
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(12, 133);
+            this.label2.Location = new System.Drawing.Point(12, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 29);
             this.label2.TabIndex = 1;

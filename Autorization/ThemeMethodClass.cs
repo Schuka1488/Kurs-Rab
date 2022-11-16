@@ -36,14 +36,20 @@ namespace Autorization
 
             TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5, 
 
-            TextBox textBox6, TextBox textBox7, Button ResetButton, Button ResetButton2, Button ResetButton3, Button ResetButton4, Button ResetButton5, Button ResetButton6)
+            TextBox textBox6, TextBox textBox7, Button ResetButton, Button ResetButton2, Button ResetButton3, Button ResetButton4, Button ResetButton5, Button ResetButton6,
+
+            Button DeleteLineButton, Button DeleteLineButton2, Button DeleteLineButton3, Button DeleteLineButton4, Button DeleteLineButton5, Button DeleteLineButton6)
         {
             panel4.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel5.BackColor = SystemColors.GrayText;
+
             dataGridViewTransformData2.BackgroundColor = SystemColors.WindowFrame;
+
             DarkThemeButton.ForeColor = SystemColors.ControlLightLight;
             WhiteThemeButton.ForeColor = SystemColors.ControlLightLight;
+
             labelTheme.ForeColor = SystemColors.ControlLightLight;
+
             AddLineButton.ForeColor = SystemColors.ControlLightLight;
             AddLineButton.BackColor = SystemColors.WindowFrame;
             AddLineButton2.ForeColor = SystemColors.ControlLightLight;
@@ -56,8 +62,10 @@ namespace Autorization
             AddLineButton5.BackColor = SystemColors.WindowFrame;
             AddLineButton6.ForeColor = SystemColors.ControlLightLight;
             AddLineButton6.BackColor = SystemColors.WindowFrame;
+
             label1.ForeColor = SystemColors.ControlLightLight;
             label2.ForeColor = SystemColors.ControlLightLight;
+
             Column1Label.ForeColor = SystemColors.ControlLightLight;
             Column2Label.ForeColor = SystemColors.ControlLightLight;
             Column3Label.ForeColor = SystemColors.ControlLightLight;
@@ -65,6 +73,7 @@ namespace Autorization
             Column5Label.ForeColor = SystemColors.ControlLightLight;
             Column6Label.ForeColor = SystemColors.ControlLightLight;
             Column7Label.ForeColor = SystemColors.ControlLightLight;
+
             textBox1.BackColor = SystemColors.ScrollBar;
             textBox2.BackColor = SystemColors.ScrollBar;
             textBox3.BackColor = SystemColors.ScrollBar;
@@ -72,6 +81,7 @@ namespace Autorization
             textBox5.BackColor = SystemColors.ScrollBar;
             textBox6.BackColor = SystemColors.ScrollBar;
             textBox7.BackColor = SystemColors.ScrollBar;
+
             ResetButton.ForeColor = SystemColors.ControlLightLight;
             ResetButton.BackColor = SystemColors.WindowFrame;
             ResetButton2.ForeColor = SystemColors.ControlLightLight;
@@ -84,6 +94,19 @@ namespace Autorization
             ResetButton5.BackColor = SystemColors.WindowFrame;
             ResetButton6.ForeColor = SystemColors.ControlLightLight;
             ResetButton6.BackColor = SystemColors.WindowFrame;
+
+            DeleteLineButton.ForeColor = SystemColors.ControlLightLight;
+            DeleteLineButton.BackColor = SystemColors.WindowFrame;
+            DeleteLineButton2.ForeColor = SystemColors.ControlLightLight;
+            DeleteLineButton2.BackColor = SystemColors.WindowFrame;
+            DeleteLineButton3.ForeColor = SystemColors.ControlLightLight;
+            DeleteLineButton3.BackColor = SystemColors.WindowFrame;
+            DeleteLineButton4.ForeColor = SystemColors.ControlLightLight;
+            DeleteLineButton4.BackColor = SystemColors.WindowFrame;
+            DeleteLineButton5.ForeColor = SystemColors.ControlLightLight;
+            DeleteLineButton5.BackColor = SystemColors.WindowFrame;
+            DeleteLineButton6.ForeColor = SystemColors.ControlLightLight;
+            DeleteLineButton6.BackColor = SystemColors.WindowFrame;
         }
         static public void LightThemeMethodChangeDataForm(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, 
 
@@ -95,14 +118,20 @@ namespace Autorization
 
             TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5, 
 
-            TextBox textBox6, TextBox textBox7, Button ResetButton, Button ResetButton2, Button ResetButton3, Button ResetButton4 ,Button ResetButton5, Button ResetButton6)
+            TextBox textBox6, TextBox textBox7, Button ResetButton, Button ResetButton2, Button ResetButton3, Button ResetButton4 ,Button ResetButton5, Button ResetButton6,
+
+            Button DeleteLineButton, Button DeleteLineButton2, Button DeleteLineButton3, Button DeleteLineButton4, Button DeleteLineButton5, Button DeleteLineButton6)
         {
             panel4.BackColor = Color.Lavender;
             panel5.BackColor = Color.DeepSkyBlue;
+
             dataGridViewTransformData2.BackgroundColor = Color.Lavender;
+
             DarkThemeButton.ForeColor = SystemColors.ActiveCaptionText;
             WhiteThemeButton.ForeColor = SystemColors.ActiveCaptionText;
+
             labelTheme.ForeColor = SystemColors.ActiveCaptionText;
+
             AddLineButton.ForeColor = SystemColors.ActiveCaptionText;
             AddLineButton.BackColor = Color.Lavender; 
             AddLineButton2.ForeColor = SystemColors.ActiveCaptionText;
@@ -115,8 +144,10 @@ namespace Autorization
             AddLineButton5.BackColor = Color.Lavender;
             AddLineButton6.ForeColor = SystemColors.ActiveCaptionText;
             AddLineButton6.BackColor = Color.Lavender;
+
             label1.ForeColor = SystemColors.ActiveCaptionText;
             label2.ForeColor = SystemColors.ActiveCaptionText;
+
             Column1Label.ForeColor = SystemColors.ActiveCaptionText;
             Column2Label.ForeColor = SystemColors.ActiveCaptionText;
             Column3Label.ForeColor = SystemColors.ActiveCaptionText;
@@ -124,6 +155,7 @@ namespace Autorization
             Column5Label.ForeColor = SystemColors.ActiveCaptionText;
             Column6Label.ForeColor = SystemColors.ActiveCaptionText;
             Column7Label.ForeColor = SystemColors.ActiveCaptionText;
+
             textBox1.BackColor = SystemColors.Window;
             textBox2.BackColor = SystemColors.Window;
             textBox3.BackColor = SystemColors.Window;
@@ -131,6 +163,7 @@ namespace Autorization
             textBox5.BackColor = SystemColors.Window;
             textBox6.BackColor = SystemColors.Window;
             textBox7.BackColor = SystemColors.Window;
+
             ResetButton.ForeColor = SystemColors.ActiveCaptionText;
             ResetButton.BackColor = Color.Lavender;
             ResetButton2.ForeColor = SystemColors.ActiveCaptionText;
@@ -143,6 +176,19 @@ namespace Autorization
             ResetButton5.BackColor = Color.Lavender;
             ResetButton6.ForeColor = SystemColors.ActiveCaptionText;
             ResetButton6.BackColor = Color.Lavender;
+
+            DeleteLineButton.ForeColor = SystemColors.ActiveCaptionText;
+            DeleteLineButton.BackColor = Color.Lavender;
+            DeleteLineButton2.ForeColor = SystemColors.ActiveCaptionText;
+            DeleteLineButton2.BackColor = Color.Lavender;
+            DeleteLineButton3.ForeColor = SystemColors.ActiveCaptionText;
+            DeleteLineButton3.BackColor = Color.Lavender;
+            DeleteLineButton4.ForeColor = SystemColors.ActiveCaptionText;
+            DeleteLineButton4.BackColor = Color.Lavender;
+            DeleteLineButton5.ForeColor = SystemColors.ActiveCaptionText;
+            DeleteLineButton5.BackColor = Color.Lavender;
+            DeleteLineButton6.ForeColor = SystemColors.ActiveCaptionText;
+            DeleteLineButton6.BackColor = Color.Lavender;
         }
         static public void DarkThemeMethodMainForm(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, 
 
@@ -150,10 +196,14 @@ namespace Autorization
         {
             panel1.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel2.BackColor = SystemColors.GrayText;
+
             dataGridView1.BackgroundColor = SystemColors.WindowFrame;
+
             DarkThemeButton.ForeColor = SystemColors.ControlLightLight;
             WhiteThemeButton.ForeColor = SystemColors.ControlLightLight;
+
             labelTheme.ForeColor = SystemColors.ControlLightLight;
+
             label1.ForeColor = SystemColors.ControlLightLight;
             label2.ForeColor = SystemColors.ControlLightLight;
         }
@@ -163,10 +213,14 @@ namespace Autorization
         {
             panel1.BackColor = Color.Lavender;
             panel2.BackColor = Color.DeepSkyBlue;
+
             dataGridView1.BackgroundColor = Color.Lavender;
+
             DarkThemeButton.ForeColor = SystemColors.ActiveCaptionText;
             WhiteThemeButton.ForeColor = SystemColors.ActiveCaptionText;
+
             labelTheme.ForeColor = SystemColors.ActiveCaptionText;
+
             label1.ForeColor = SystemColors.ActiveCaptionText;
             label2.ForeColor = SystemColors.ActiveCaptionText;
         }
@@ -176,13 +230,18 @@ namespace Autorization
         {
             panel1.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel2.BackColor = SystemColors.GrayText;
+
             label2.ForeColor = SystemColors.ControlLightLight;
             label3.ForeColor = SystemColors.ControlLightLight;
+
             buttonLoginPass.ForeColor = SystemColors.ControlLightLight;
+
             loginName.BackColor= SystemColors.ScrollBar;
             passwordName.BackColor = SystemColors.ScrollBar;
+
             DarkThemeButton.ForeColor = SystemColors.ControlLightLight;
             WhiteThemeButton.ForeColor = SystemColors.ControlLightLight;
+
             labelTheme.ForeColor = SystemColors.ControlLightLight;
         }
 
@@ -192,13 +251,18 @@ namespace Autorization
         {
             panel1.BackColor = Color.Lavender;
             panel2.BackColor = Color.DeepSkyBlue;
+
             label2.ForeColor = SystemColors.ActiveCaptionText;
             label3.ForeColor = SystemColors.ActiveCaptionText;
+
             buttonLoginPass.ForeColor = SystemColors.ActiveCaptionText;
+
             loginName.BackColor = SystemColors.Window;
             passwordName.BackColor = SystemColors.Window;
+
             DarkThemeButton.ForeColor = SystemColors.ActiveCaptionText;
             WhiteThemeButton.ForeColor = SystemColors.ActiveCaptionText;
+
             labelTheme.ForeColor = SystemColors.ActiveCaptionText;
         }
     }
