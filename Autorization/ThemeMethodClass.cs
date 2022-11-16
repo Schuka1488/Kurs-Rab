@@ -26,7 +26,17 @@ namespace Autorization
         // }
 
         // так же нужны кнопки удаления для 3 методов, в форме изменений таблиц
-        static public void ThemeMethod3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Button AddLineButton, Button AddLineButton2, Button AddLineButton3, Button AddLineButton4, Button AddLineButton5, Button AddLineButton6, Label label1, Label label2, Label Column1Label, Label Column2Label, Label Column3Label, Label Column4Label, Label Column5Label, Label Column6Label, Label Column7Label, TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5, TextBox textBox6, TextBox textBox7)
+        static public void DarkThemeMethodChangeDataForm(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton,
+            
+            Button WhiteThemeButton, Label labelTheme, Button AddLineButton, Button AddLineButton2, Button AddLineButton3, Button AddLineButton4,
+            
+            Button AddLineButton5, Button AddLineButton6, Label label1, Label label2, Label Column1Label, Label Column2Label, 
+
+            Label Column3Label, Label Column4Label, Label Column5Label, Label Column6Label, Label Column7Label, 
+
+            TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5, 
+
+            TextBox textBox6, TextBox textBox7, Button ResetButton, Button ResetButton2, Button ResetButton3, Button ResetButton4, Button ResetButton5, Button ResetButton6)
         {
             panel4.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel5.BackColor = SystemColors.GrayText;
@@ -62,8 +72,30 @@ namespace Autorization
             textBox5.BackColor = SystemColors.ScrollBar;
             textBox6.BackColor = SystemColors.ScrollBar;
             textBox7.BackColor = SystemColors.ScrollBar;
+            ResetButton.ForeColor = SystemColors.ControlLightLight;
+            ResetButton.BackColor = SystemColors.WindowFrame;
+            ResetButton2.ForeColor = SystemColors.ControlLightLight;
+            ResetButton2.BackColor = SystemColors.WindowFrame;
+            ResetButton3.ForeColor = SystemColors.ControlLightLight;
+            ResetButton3.BackColor = SystemColors.WindowFrame;
+            ResetButton4.ForeColor = SystemColors.ControlLightLight;
+            ResetButton4.BackColor = SystemColors.WindowFrame;
+            ResetButton5.ForeColor = SystemColors.ControlLightLight;
+            ResetButton5.BackColor = SystemColors.WindowFrame;
+            ResetButton6.ForeColor = SystemColors.ControlLightLight;
+            ResetButton6.BackColor = SystemColors.WindowFrame;
         }
-        static public void ThemeMethodLight3(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Button AddLineButton, Button AddLineButton2, Button AddLineButton3, Button AddLineButton4, Button AddLineButton5, Button AddLineButton6, Label label1, Label label2, Label Column1Label, Label Column2Label, Label Column3Label, Label Column4Label, Label Column5Label, Label Column6Label, Label Column7Label, TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5, TextBox textBox6, TextBox textBox7)
+        static public void LightThemeMethodChangeDataForm(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton, 
+
+            Button WhiteThemeButton, Label labelTheme, Button AddLineButton, Button AddLineButton2, Button AddLineButton3, Button AddLineButton4, 
+
+            Button AddLineButton5, Button AddLineButton6, Label label1, Label label2, Label Column1Label, Label Column2Label, 
+
+            Label Column3Label, Label Column4Label, Label Column5Label, Label Column6Label, Label Column7Label, 
+
+            TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5, 
+
+            TextBox textBox6, TextBox textBox7, Button ResetButton, Button ResetButton2, Button ResetButton3, Button ResetButton4 ,Button ResetButton5, Button ResetButton6)
         {
             panel4.BackColor = Color.Lavender;
             panel5.BackColor = Color.DeepSkyBlue;
@@ -72,7 +104,7 @@ namespace Autorization
             WhiteThemeButton.ForeColor = SystemColors.ActiveCaptionText;
             labelTheme.ForeColor = SystemColors.ActiveCaptionText;
             AddLineButton.ForeColor = SystemColors.ActiveCaptionText;
-            AddLineButton.BackColor = Color.Lavender; ;
+            AddLineButton.BackColor = Color.Lavender; 
             AddLineButton2.ForeColor = SystemColors.ActiveCaptionText;
             AddLineButton2.BackColor = Color.Lavender;
             AddLineButton3.ForeColor = SystemColors.ActiveCaptionText;
@@ -99,8 +131,22 @@ namespace Autorization
             textBox5.BackColor = SystemColors.Window;
             textBox6.BackColor = SystemColors.Window;
             textBox7.BackColor = SystemColors.Window;
+            ResetButton.ForeColor = SystemColors.ActiveCaptionText;
+            ResetButton.BackColor = Color.Lavender;
+            ResetButton2.ForeColor = SystemColors.ActiveCaptionText;
+            ResetButton2.BackColor = Color.Lavender;
+            ResetButton3.ForeColor = SystemColors.ActiveCaptionText;
+            ResetButton3.BackColor = Color.Lavender;
+            ResetButton4.ForeColor = SystemColors.ActiveCaptionText;
+            ResetButton4.BackColor = Color.Lavender;
+            ResetButton5.ForeColor = SystemColors.ActiveCaptionText;
+            ResetButton5.BackColor = Color.Lavender;
+            ResetButton6.ForeColor = SystemColors.ActiveCaptionText;
+            ResetButton6.BackColor = Color.Lavender;
         }
-        static public void ThemeMethod2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Label label1, Label label2)
+        static public void DarkThemeMethodMainForm(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, 
+
+            Button WhiteThemeButton, Label labelTheme, Label label1, Label label2)
         {
             panel1.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel2.BackColor = SystemColors.GrayText;
@@ -111,7 +157,9 @@ namespace Autorization
             label1.ForeColor = SystemColors.ControlLightLight;
             label2.ForeColor = SystemColors.ControlLightLight;
         }
-        static public void ThemeMethodLight2(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme, Label label1, Label label2)
+        static public void LightThemeMethodMainForm(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, 
+
+            Button WhiteThemeButton, Label labelTheme, Label label1, Label label2)
         {
             panel1.BackColor = Color.Lavender;
             panel2.BackColor = Color.DeepSkyBlue;
@@ -122,7 +170,9 @@ namespace Autorization
             label1.ForeColor = SystemColors.ActiveCaptionText;
             label2.ForeColor = SystemColors.ActiveCaptionText;
         }
-        static public void ThemeMethod(Panel panel1, Panel panel2, Label label2, Label label3, Button buttonLoginPass, TextBox loginName, TextBox passwordName, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
+        static public void DarkThemeMethodLoginForm(Panel panel1, Panel panel2, Label label2, Label label3, Button buttonLoginPass, 
+
+            TextBox loginName, TextBox passwordName, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
         {
             panel1.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel2.BackColor = SystemColors.GrayText;
@@ -136,7 +186,9 @@ namespace Autorization
             labelTheme.ForeColor = SystemColors.ControlLightLight;
         }
 
-        static public void ThemeMethodLight(Panel panel1, Panel panel2, Label label2, Label label3, Button buttonLoginPass, TextBox loginName, TextBox passwordName, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
+        static public void LightThemeMethodLoginForm(Panel panel1, Panel panel2, Label label2, Label label3, Button buttonLoginPass, 
+
+            TextBox loginName, TextBox passwordName, Button DarkThemeButton, Button WhiteThemeButton, Label labelTheme)
         {
             panel1.BackColor = Color.Lavender;
             panel2.BackColor = Color.DeepSkyBlue;
