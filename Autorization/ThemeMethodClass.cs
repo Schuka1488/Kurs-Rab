@@ -13,19 +13,6 @@ namespace Autorization
 {
     class ThemeMethodClass
     {
-        //  static Color Panel1BackColor;
-
-        //static public void EnableDarkTheme()
-        // {
-        //    Panel1BackColor = SystemColors.WindowFrame;
-        // }
-
-        // static public void EnableWhiteTheme()
-        // {
-        //    Panel1BackColor = Color.Lavender;
-        // }
-
-        // так же нужны кнопки удаления для 3 методов, в форме изменений таблиц
         static public void DarkThemeMethodChangeDataForm(Panel panel4, Panel panel5, DataGridView dataGridViewTransformData2, Button DarkThemeButton,
             
             Button WhiteThemeButton, Label labelTheme, Button AddLineButton, Button AddLineButton2, Button AddLineButton3, Button AddLineButton4,
