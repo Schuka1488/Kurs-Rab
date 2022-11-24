@@ -196,6 +196,28 @@ namespace Autorization
             timer.Start();
         }
         int dR, dG, dB, sign;
+
+        private void таблицаСотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void таблицаЗаказчикиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void таблицаЗаказовToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void таблицаПродажToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void таблицаЦенToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
