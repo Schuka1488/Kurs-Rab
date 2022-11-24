@@ -179,7 +179,7 @@ namespace Autorization
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 2;
             Timer timer = new Timer();
-            timer.Interval = 100;
+            timer.Interval = 10;
             timer.Tick += timer2_Tick;
             timer.Start();
         }
@@ -191,7 +191,7 @@ namespace Autorization
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 1;
             Timer timer = new Timer();
-            timer.Interval = 100;
+            timer.Interval = 10;
             timer.Tick += timer1_Tick;
             timer.Start();
         }

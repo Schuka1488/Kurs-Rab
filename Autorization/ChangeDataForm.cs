@@ -17,7 +17,6 @@ namespace Autorization
         {
             InitializeComponent();
         }
-        // string id_selected_rows = "0";
         Point lastPoint; // специальный класс для задачи координат
         DBclass db = new DBclass();
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
@@ -28,7 +27,7 @@ namespace Autorization
 
         private void panel5_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение
             {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
@@ -42,7 +41,20 @@ namespace Autorization
 
         private void panel4_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        private void dataGridViewTransformData2_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
+        }
+
+        private void dataGridViewTransformData2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение
             {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
@@ -51,35 +63,21 @@ namespace Autorization
 
         private void изПрограммыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); // метод выхода из программы
         }
 
         private void изАккаунтаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Hide(); // сокрытие открытой формы
             LoginForm1 auth = new LoginForm1();
-            auth.Show();
+            auth.Show(); // открытие формы аунтефикации 
         }
 
         private void вГлавноеМенюToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Hide(); // сокрытие открытой формы
             MainForm main = new MainForm();
-            main.Show();
-        }
-
-        private void dataGridViewTransformData2_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
-        }
-
-        private void dataGridViewTransformData2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoint.X;
-                this.Top += e.Y - lastPoint.Y;
-            }
+            main.Show(); // открытие главной формы
         }
         #region [ Кнопки тем ]
         private void WhiteThemeButton_Click(object sender, EventArgs e)
@@ -99,7 +97,7 @@ namespace Autorization
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 2;
             Timer timer = new Timer();
-            timer.Interval = 100;
+            timer.Interval = 10;
             timer.Tick += timer2_Tick;
             timer.Start();
         }
@@ -121,7 +119,7 @@ namespace Autorization
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 1;
             Timer timer = new Timer();
-            timer.Interval = 100;
+            timer.Interval = 10;
             timer.Tick += timer1_Tick;
             timer.Start();
         }
@@ -170,7 +168,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
@@ -220,7 +218,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
@@ -283,7 +281,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
@@ -331,7 +329,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
@@ -395,7 +393,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
@@ -445,7 +443,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
@@ -505,7 +503,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = false;
@@ -551,7 +549,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = false;
@@ -611,7 +609,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = false;
@@ -657,7 +655,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = false;
@@ -721,7 +719,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
@@ -771,7 +769,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            textBox1.Visible = false;
+            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
