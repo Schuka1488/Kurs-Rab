@@ -905,7 +905,6 @@ namespace Autorization
                 GetSelectedIDString();
             }
         }
-
         private void dataGridViewTransformData2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             dataGridViewTransformData2.CurrentCell = dataGridViewTransformData2[e.ColumnIndex, e.RowIndex];
@@ -940,6 +939,25 @@ namespace Autorization
             toolTip2.ShowAlways = true;
             toolTip2.SetToolTip(label2, "Коды (ID поля) не нужно заполнять, они заполняются автоматически! \n Даты пишутся в формате 2004-12-12\n Первое число - год, Второе - месяц, Третье - день.");
         }
+        private void таблицаСотрудниковToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
+        private void таблицаЗаказчиковToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void таблицаЗаказовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void таблицаПродажToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void таблицаЦенToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
