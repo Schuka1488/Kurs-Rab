@@ -776,6 +776,13 @@ namespace Autorization
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
             db.closeConnection();
         }
+        private void DeleteTable6()
+        {
+            db.openConnection();
+            MySqlCommand cmd = new MySqlCommand($"DELETE FROM authorization WHERE AuthorizationID = {id_selected_rows}", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
+            db.closeConnection();
+        }
         private void label4_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -850,8 +857,41 @@ namespace Autorization
         }
         private void DeleteLineButton6_Click(object sender, EventArgs e)
         {
+            DeleteTable6();
+        }
+        private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Right))
+            {
+                dataGridViewTransformData2.CurrentCell = dataGridViewTransformData2[e.ColumnIndex, e.RowIndex];
+                //dataGridView1.CurrentRow.Selected = true;
+                dataGridViewTransformData2.CurrentCell.Selected = true;
+                //Метод получения ID выделенной строки в глобальную переменную
+                GetSelectedIDString();
+            }
 
         }
+
+        private void dataGridViewTransformData2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dataGridViewTransformData2.CurrentCell = dataGridViewTransformData2[e.ColumnIndex, e.RowIndex];
+            dataGridViewTransformData2.CurrentRow.Selected = true;
+            //Метод получения ID выделенной строки в глобальную переменную
+            GetSelectedIDString();
+        }
+
+        public void GetSelectedIDString()
+        {
+            //Переменная для индекс выбранной строки в гриде
+            string index_selected_rows;
+            //Индекс выбранной строки
+            index_selected_rows = dataGridViewTransformData2.SelectedCells[0].RowIndex.ToString();
+            //ID конкретной записи в Базе данных, на основании индекса строки
+            id_selected_rows = dataGridViewTransformData2.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();
+            //Указываем ID выделенной строки в метке
+        }
+        string id_selected_rows;
+
         private void ChangeDataForm_Load(object sender, EventArgs e)
         {
             ToolTip toolTip1 = new ToolTip();

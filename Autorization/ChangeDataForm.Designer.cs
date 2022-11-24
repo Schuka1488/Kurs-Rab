@@ -582,6 +582,8 @@ namespace Autorization
             this.dataGridViewTransformData2.Name = "dataGridViewTransformData2";
             this.dataGridViewTransformData2.Size = new System.Drawing.Size(995, 312);
             this.dataGridViewTransformData2.TabIndex = 6;
+            this.dataGridViewTransformData2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTransformData2_CellMouseClick);
+            this.dataGridViewTransformData2.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTransformData2_CellMouseDown);
             this.dataGridViewTransformData2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewTransformData2_MouseDown);
             this.dataGridViewTransformData2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridViewTransformData2_MouseMove);
             // 
