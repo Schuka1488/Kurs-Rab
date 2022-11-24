@@ -72,10 +72,10 @@ namespace Autorization
             // labelTheme
             // 
             this.labelTheme.AutoSize = true;
-            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTheme.Location = new System.Drawing.Point(123, 443);
+            this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTheme.Location = new System.Drawing.Point(107, 445);
             this.labelTheme.Name = "labelTheme";
-            this.labelTheme.Size = new System.Drawing.Size(106, 14);
+            this.labelTheme.Size = new System.Drawing.Size(122, 16);
             this.labelTheme.TabIndex = 13;
             this.labelTheme.Text = "Светлая тема вкл.";
             // 
