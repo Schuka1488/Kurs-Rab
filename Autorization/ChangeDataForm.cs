@@ -261,6 +261,13 @@ namespace Autorization
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
             db.closeConnection();
         }
+        private void DeleteTable()
+        {
+            db.openConnection();
+            MySqlCommand cmd = new MySqlCommand($"DELETE FROM Employees WHERE EmployeesID = {id_selected_rows}", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
+            db.closeConnection();
+        }
         private void CustomerTableReset()
         {
             string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', MSRN AS 'ОГРН', TIN AS 'ИНН' FROM Customer"; // SQL запрос данных из БД
@@ -362,6 +369,13 @@ namespace Autorization
             db.openConnection();
             MySqlCommand cmd = new MySqlCommand($"INSERT INTO Customer(customerCompanyName, customerAddress, MSRN, TIN) VALUES( '{textBox2.Text}', '{textBox3.Text}',{textBox4.Text},{textBox5.Text})", db.getConnection());
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+            db.closeConnection();
+        }
+        private void DeleteTable2()
+        {
+            db.openConnection();
+            MySqlCommand cmd = new MySqlCommand($"DELETE FROM Customer WHERE CustomerID = {id_selected_rows}", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
             db.closeConnection();
         }
         private void ProjectOrderTableReset()
@@ -471,6 +485,13 @@ namespace Autorization
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
             db.closeConnection();
         }
+        private void DeleteTable3()
+        {
+            db.openConnection();
+            MySqlCommand cmd = new MySqlCommand($"DELETE FROM ProjectOrder WHERE ProjectOrderID = {id_selected_rows}", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
+            db.closeConnection();
+        }
         private void ProjectIDTableReset()
         {
             string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales"; // SQL запрос данных из БД
@@ -570,6 +591,13 @@ namespace Autorization
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
             db.closeConnection();
         }
+        private void DeleteTable4()
+        {
+            db.openConnection();
+            MySqlCommand cmd = new MySqlCommand($"DELETE FROM ProjectSales WHERE ProjectID = {id_selected_rows}", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
+            db.closeConnection();
+        }
         private void SaleIDTableReset()
         {
             string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц' FROM Sales"; // SQL запрос данных из БД
@@ -667,6 +695,13 @@ namespace Autorization
             db.openConnection();
             MySqlCommand cmd = new MySqlCommand($"INSERT INTO Sales(saleDate, saleNotes) VALUES( \"{textBox2.Text}\", {textBox3.Text})", db.getConnection());
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+            db.closeConnection();
+        }
+        private void DeleteTable5()
+        {
+            db.openConnection();
+            MySqlCommand cmd = new MySqlCommand($"DELETE FROM Sales WHERE SaleID = {id_selected_rows}", db.getConnection());
+            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
             db.closeConnection();
         }
         private void AutorizationIDTableReset()
@@ -837,23 +872,23 @@ namespace Autorization
         }
         private void DeleteLineButton_Click(object sender, EventArgs e)
         {
-
+            DeleteTable();
         }
         private void DeleteLineButton2_Click(object sender, EventArgs e)
         {
-
+            DeleteTable2();
         }
         private void DeleteLineButton3_Click(object sender, EventArgs e)
         {
-
+            DeleteTable3();
         }
         private void DeleteLineButton4_Click(object sender, EventArgs e)
         {
-
+            DeleteTable4();
         }
         private void DeleteLineButton5_Click(object sender, EventArgs e)
         {
-
+            DeleteTable5();
         }
         private void DeleteLineButton6_Click(object sender, EventArgs e)
         {
@@ -869,7 +904,6 @@ namespace Autorization
                 //Метод получения ID выделенной строки в глобальную переменную
                 GetSelectedIDString();
             }
-
         }
 
         private void dataGridViewTransformData2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -880,6 +914,7 @@ namespace Autorization
             GetSelectedIDString();
         }
 
+        string id_selected_rows;
         public void GetSelectedIDString()
         {
             //Переменная для индекс выбранной строки в гриде
@@ -890,8 +925,6 @@ namespace Autorization
             id_selected_rows = dataGridViewTransformData2.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();
             //Указываем ID выделенной строки в метке
         }
-        string id_selected_rows;
-
         private void ChangeDataForm_Load(object sender, EventArgs e)
         {
             ToolTip toolTip1 = new ToolTip();
