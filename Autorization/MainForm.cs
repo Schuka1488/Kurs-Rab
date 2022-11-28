@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Microsoft.Office.Interop.Word;
 
 namespace Autorization
 {
@@ -17,7 +18,7 @@ namespace Autorization
         string id_selected_rows = "0"; //Переменная для индекс выбранной строки в гриде
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
         DBclass db = new DBclass(); // переменная класса для БД, и последующей работе с ними
-        Point lastPoint; // специальный класс для задачи координат
+        System.Drawing.Point lastPoint; // специальный класс для задачи координат
         public MainForm()
         {
             InitializeComponent();
@@ -46,7 +47,7 @@ namespace Autorization
         }
         private void panel2_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
-            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
+            lastPoint = new System.Drawing.Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
         }
         private void panel2_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
@@ -58,7 +59,7 @@ namespace Autorization
         }
         private void panel1_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
-            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
+            lastPoint = new System.Drawing.Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
         }
         private void panel1_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
@@ -70,7 +71,7 @@ namespace Autorization
         }
         private void программуToolStripMenuItem_Click(object sender, EventArgs e) // краткий метод для выхода из программы
         {
-            Application.Exit(); 
+            System.Windows.Forms.Application.Exit(); 
         }
         private void формуToolStripMenuItem_Click(object sender, EventArgs e) // выход из главной формы и возвращение к авторизации, без потери производительности
         {
@@ -99,7 +100,7 @@ namespace Autorization
             string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            DataTable table = new DataTable(); // создание элемента таблицы
+            System.Data.DataTable table = new System.Data.DataTable(); // создание элемента таблицы
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -110,7 +111,7 @@ namespace Autorization
             string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', MSRN AS 'ОГРН', TIN AS 'ИНН' FROM Customer"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            DataTable table = new DataTable(); // создание элемента таблицы
+            System.Data.DataTable table = new System.Data.DataTable(); // создание элемента таблицы
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -121,7 +122,7 @@ namespace Autorization
             string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта', 	projectPrice AS 'Цена', ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            DataTable table = new DataTable(); // создание элемента таблицы
+            System.Data.DataTable table = new System.Data.DataTable(); // создание элемента таблицы
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -132,7 +133,7 @@ namespace Autorization
             string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            DataTable table = new DataTable(); // создание элемента таблицы
+            System.Data.DataTable table = new System.Data.DataTable(); // создание элемента таблицы
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -143,7 +144,7 @@ namespace Autorization
             string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц' FROM Sales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            DataTable table = new DataTable(); // создание элемента таблицы
+            System.Data.DataTable table = new System.Data.DataTable(); // создание элемента таблицы
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -151,7 +152,7 @@ namespace Autorization
         }
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
-            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
+            lastPoint = new System.Drawing.Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
         }
         private void dataGridView1_MouseMove(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
@@ -169,7 +170,7 @@ namespace Autorization
         }
         private void label4_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {

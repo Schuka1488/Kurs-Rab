@@ -9,8 +9,8 @@ namespace Autorization
 {
     class DBclass // класс создан для удобства, чтобы можнно было вызывать 1 метод, который отвечает за открытия соединения с БД и за закрытие
     {
-        MySqlConnection connection = new MySqlConnection("server=chuc.caseum.ru;port=33333;username=st_3_20_21;password=15733563;database=is_3_20_st21_KURS");
-        //MySqlConnection connection = new MySqlConnection("server=10.90.12.110;port=33333;username=st_3_20_21;password=15733563;database=is_3_20_st21_KURS");
+        //MySqlConnection connection = new MySqlConnection("server=chuc.caseum.ru;port=33333;username=st_3_20_21;password=15733563;database=is_3_20_st21_KURS");
+        MySqlConnection connection = new MySqlConnection("server=10.90.12.110;port=33333;username=st_3_20_21;password=15733563;database=is_3_20_st21_KURS");
         public void openConnection() // метод для удобства
         {
             if (connection.State == System.Data.ConnectionState.Closed) // открытие соединения

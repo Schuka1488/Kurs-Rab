@@ -113,6 +113,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Office.Interop.Word">
+      <Version>15.0.4797.1004</Version>
+    </PackageReference>
     <PackageReference Include="MySql.Data">
       <Version>8.0.31</Version>
     </PackageReference>
