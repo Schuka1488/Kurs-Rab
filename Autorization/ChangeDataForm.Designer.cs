@@ -84,9 +84,6 @@ namespace Autorization
             this.продажиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ценаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вТаблицеАвторизацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаСотрудниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,6 +91,9 @@ namespace Autorization
             this.таблицаЗаказовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаПродажToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -587,6 +587,7 @@ namespace Autorization
             this.dataGridViewTransformData2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTransformData2.Location = new System.Drawing.Point(20, 106);
             this.dataGridViewTransformData2.Name = "dataGridViewTransformData2";
+            this.dataGridViewTransformData2.RowHeadersVisible = false;
             this.dataGridViewTransformData2.Size = new System.Drawing.Size(995, 312);
             this.dataGridViewTransformData2.TabIndex = 6;
             this.dataGridViewTransformData2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTransformData2_CellMouseClick);
@@ -659,21 +660,21 @@ namespace Autorization
             // изПрограммыToolStripMenuItem
             // 
             this.изПрограммыToolStripMenuItem.Name = "изПрограммыToolStripMenuItem";
-            this.изПрограммыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.изПрограммыToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.изПрограммыToolStripMenuItem.Text = "Из программы";
             this.изПрограммыToolStripMenuItem.Click += new System.EventHandler(this.изПрограммыToolStripMenuItem_Click);
             // 
             // изАккаунтаToolStripMenuItem
             // 
             this.изАккаунтаToolStripMenuItem.Name = "изАккаунтаToolStripMenuItem";
-            this.изАккаунтаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.изАккаунтаToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.изАккаунтаToolStripMenuItem.Text = "Из аккаунта";
             this.изАккаунтаToolStripMenuItem.Click += new System.EventHandler(this.изАккаунтаToolStripMenuItem_Click);
             // 
             // вГлавноеМенюToolStripMenuItem
             // 
             this.вГлавноеМенюToolStripMenuItem.Name = "вГлавноеМенюToolStripMenuItem";
-            this.вГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.вГлавноеМенюToolStripMenuItem.Text = "В главное меню";
             this.вГлавноеМенюToolStripMenuItem.Click += new System.EventHandler(this.вГлавноеМенюToolStripMenuItem_Click);
             // 
@@ -732,10 +733,6 @@ namespace Autorization
             this.вТаблицеАвторизацииToolStripMenuItem.Text = "В таблице авторизации";
             this.вТаблицеАвторизацииToolStripMenuItem.Click += new System.EventHandler(this.вТаблицеАвторизацииToolStripMenuItem_Click);
             // 
-            // toolTip2
-            // 
-            this.toolTip2.ShowAlways = true;
-            // 
             // настройкиToolStripMenuItem
             // 
             this.настройкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -753,7 +750,7 @@ namespace Autorization
             this.таблицаПродажToolStripMenuItem,
             this.таблицаЦенToolStripMenuItem});
             this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
-            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.печатьToolStripMenuItem.Text = "Печать";
             // 
             // таблицаСотрудниковToolStripMenuItem
@@ -790,6 +787,10 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.таблицаЦенToolStripMenuItem.Text = "Таблица цен";
             this.таблицаЦенToolStripMenuItem.Click += new System.EventHandler(this.таблицаЦенToolStripMenuItem_Click);
+            // 
+            // toolTip2
+            // 
+            this.toolTip2.ShowAlways = true;
             // 
             // ChangeDataForm
             // 

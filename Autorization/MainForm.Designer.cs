@@ -51,10 +51,6 @@ namespace Autorization
             this.таблицаЗаказовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаПродажToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаСотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,6 +58,10 @@ namespace Autorization
             this.таблицаЗаказовToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаПродажToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.таблицаЦенToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -149,6 +149,7 @@ namespace Autorization
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 106);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(611, 275);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
@@ -285,11 +286,6 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem.Text = "Таблица цен";
             this.таблицаЦенToolStripMenuItem.Click += new System.EventHandler(this.таблицаЦенToolStripMenuItem_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // печатьToolStripMenuItem
             // 
             this.печатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -307,7 +303,7 @@ namespace Autorization
             this.таблицаПродажToolStripMenuItem1,
             this.таблицаЦенToolStripMenuItem1});
             this.печатьToolStripMenuItem1.Name = "печатьToolStripMenuItem1";
-            this.печатьToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.печатьToolStripMenuItem1.Size = new System.Drawing.Size(113, 22);
             this.печатьToolStripMenuItem1.Text = "Печать";
             // 
             // таблицаСотрудникиToolStripMenuItem
@@ -344,6 +340,11 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem1.Size = new System.Drawing.Size(193, 22);
             this.таблицаЦенToolStripMenuItem1.Text = "Таблица цен";
             this.таблицаЦенToolStripMenuItem1.Click += new System.EventHandler(this.таблицаЦенToolStripMenuItem1_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // MainForm
             // 
