@@ -28,12 +28,12 @@ namespace Autorization
         public LoginForm1()
         {
             InitializeComponent();
-            animateComponent1.ShowForm(1000);
+            animateComponent1.ShowForm(750);
             this.passwordName.AutoSize = false; // отключается авторазмер у пароля
         }
         private void label4_Click(object sender, EventArgs e)
         {
-            animateComponent1.CloseForm(2000);
+            animateComponent1.CloseForm(750);
         }
         Point lastPoint; // специальный класс для задачи координат
         private void panel1_MouseMove(object sender, MouseEventArgs e)  //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
