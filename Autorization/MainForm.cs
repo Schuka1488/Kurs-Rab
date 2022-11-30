@@ -11,14 +11,14 @@ using System.Windows.Forms;
 using System.IO;
 using Microsoft.Office.Interop.Word;
 using Microsoft.Office.Interop.Excel;
-using Application = Microsoft.Office.Interop.Word.Application;
+using Application = Microsoft.Office.Interop.Word.Application; // передаем application ворду интероп для работы с пакетом 
 
 namespace Autorization
 {
     public partial class MainForm : Form
     {
 
-        System.Data.DataTable table;
+        System.Data.DataTable table; // глобальная переменная для простоты вывода в Microsoft Word
         string id_selected_rows = "0"; //Переменная для индекс выбранной строки в гриде
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
         DBclass db = new DBclass(); // переменная класса для БД, и последующей работе с ними
@@ -29,25 +29,26 @@ namespace Autorization
         }
         private void MainForm_Load(object sender, EventArgs e)  // краткое описание ролей и их возможностей
         { 
-            if (Username.user1.Role == 1)
+            if (Username.user1.Role == 1) // чтоб обладать полными полномочиями нужно иметь роль 1, это мы передаем в параметры
                 изменитьДанныеToolStripMenuItem.Visible = true; // если роль = 1 (например как у администратора) то изменить данные можно
             else
                 изменитьДанныеToolStripMenuItem.Visible = false; // иначе, изменить данные нельзя, эти вкладки будут не доступны
 
-            ToolTip toolTip1 = new ToolTip();
-            toolTip1.AutoPopDelay = 5000;
-            toolTip1.InitialDelay = 1000;
-            toolTip1.ReshowDelay = 500;
-            toolTip1.ShowAlways = true;
+            ToolTip toolTip1 = new ToolTip(); // тул тип для подсказок
+            toolTip1.AutoPopDelay = 5000; // параметры показа подсказки, в течении какого времени будет видна подсказка
+            toolTip1.InitialDelay = 100; // в течении какого кол-ва времени после наведения курсора будет показываться подсказка
+            toolTip1.ReshowDelay = 500; // возвращает или задает интервал времени, который должен пройти перед появлением окна очередной всплывающей подсказки при перемещении указателя мыши с одного элемента управления на другой.
+            toolTip1.ShowAlways = true; // статус видимости
             toolTip1.SetToolTip(label4, "Закрытие программы");
-            ToolTip toolTip2 = new ToolTip();
-            toolTip2.AutoPopDelay = 5000;
-            toolTip2.InitialDelay = 1000;
-            toolTip2.ReshowDelay = 500;
-            toolTip2.ShowAlways = true;
-            toolTip2.SetToolTip(label2, "Главное меню создано для просмотра таблиц. \nИзменять данные в таблицах может только сотрудник с ролью admin.");
+            ToolTip toolTip2 = new ToolTip(); // тул тип для подсказок
+            toolTip2.AutoPopDelay = 5000; // параметры показа подсказки, в течении какого времени будет видна подсказка
+            toolTip2.InitialDelay = 100; // в течении какого кол-ва времени после наведения курсора будет показываться подсказка
+            toolTip2.ReshowDelay = 500; // возвращает или задает интервал времени, который должен пройти перед появлением окна очередной всплывающей подсказки при перемещении указателя мыши с одного элемента управления на другой.
+            toolTip2.ShowAlways = true; // статус видимости
+            toolTip2.SetToolTip(label2, "Главное меню создано для просмотра таблиц. \nИзменять данные в таблицах может только сотрудник с ролью admin.\nДля вывода в Microsoft Word необходимо выбрать таблицу в меню сверху (вкладка показать данные)");
 
-            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToAddRows = false; // изначально дата грид не показывается, показывается только тогда, когда мы выбираем таблицу для просмотра
+            // в ChangeDataForm я реализовал скрытие дата гридера на форме через свойства, то также это можно сделать и в коде при помощи параметра добавления строк AllowUserToAddRows
         }
         private void panel2_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
@@ -75,7 +76,7 @@ namespace Autorization
         }
         private void программуToolStripMenuItem_Click(object sender, EventArgs e) // краткий метод для выхода из программы
         {
-            System.Windows.Forms.Application.Exit(); 
+            System.Windows.Forms.Application.Exit(); // выход из программы
         }
         private void формуToolStripMenuItem_Click(object sender, EventArgs e) // выход из главной формы и возвращение к авторизации, без потери производительности
         {
@@ -172,35 +173,35 @@ namespace Autorization
             ChangeDataForm changedataForm = new ChangeDataForm(); // после авторизации показывается ChangeDataForm
             changedataForm.Show(); // метод для показа ChangeDataForm
         }
-        private void label4_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e) // осуществил выход при помощи тейбла поставив X
         {
-            System.Windows.Forms.Application.Exit();
+            System.Windows.Forms.Application.Exit(); // выход с программы
         }
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.LightThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2);
-            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
+            ThemeMethodClass.LightThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2); //передаем все что хоти изменить
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
-            sign = 2;
-            Timer timer = new Timer();
-            timer.Interval = 10;
-            timer.Tick += timer2_Tick;
-            timer.Start();
+            sign = 2; // знак таймера
+            Timer timer = new Timer(); // создаем таймер
+            timer.Interval = 10; // интервал с которым будет осуществляться переход 0,1 секунды = значение 10
+            timer.Tick += timer2_Tick; // считываем нажатие
+            timer.Start(); // таймер срабатывает 
         }
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.DarkThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2);
-            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
+            ThemeMethodClass.DarkThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2); //передаем все что хоти изменить
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
-            sign = 1;
-            Timer timer = new Timer();
-            timer.Interval = 10;
-            timer.Tick += timer1_Tick;
-            timer.Start();
+            sign = 1; // знак таймера
+            Timer timer = new Timer(); // создаем таймер
+            timer.Interval = 10; // интервал с которым будет осуществляться переход 0,1 секунды = значение 10
+            timer.Tick += timer1_Tick; // считываем нажатие
+            timer.Start(); // таймер срабатывает 
         }
-        int dR, dG, dB, sign;
+        int dR, dG, dB, sign; // переменные для rgb и индекса таймера
         private void печатьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application app = new Application();
@@ -253,26 +254,26 @@ namespace Autorization
         {
             if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
             {
-                sign *= -1;
-                labelTheme.Text = "Темная тема вкл.";
+                sign *= -1;// знак таймера
+                labelTheme.Text = "Темная тема вкл."; // указваем какой текст хоти видеть в лейбле
             }
             labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
-            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
             {
-                ((Timer)sender).Stop();
+                ((Timer)sender).Stop(); // таймер останавливается
             }
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
             {
-                sign *= -1;
-                labelTheme.Text = "Светлая тема вкл.";
+                sign *= -1; // знак таймера
+                labelTheme.Text = "Светлая тема вкл."; // указваем какой текст хоти видеть в лейбле
             }
             labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
-            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
             {
-                ((Timer)sender).Stop();
+                ((Timer)sender).Stop(); // таймер останавливается
             }
         }
     }

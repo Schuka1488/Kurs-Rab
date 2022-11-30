@@ -53,12 +53,13 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -296,14 +297,9 @@ namespace Autorization
             // печатьToolStripMenuItem1
             // 
             this.печатьToolStripMenuItem1.Name = "печатьToolStripMenuItem1";
-            this.печатьToolStripMenuItem1.Size = new System.Drawing.Size(321, 22);
+            this.печатьToolStripMenuItem1.Size = new System.Drawing.Size(373, 22);
             this.печатьToolStripMenuItem1.Text = "Вывод в Microsoft Word выбранной таблицы";
             this.печатьToolStripMenuItem1.Click += new System.EventHandler(this.печатьToolStripMenuItem1_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // выводПрибылиИРасходовЗаМесяцToolStripMenuItem
             // 
@@ -318,6 +314,11 @@ namespace Autorization
             this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Size = new System.Drawing.Size(373, 22);
             this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Text = "Вывод прибыли и расходов за месяц в Microsoft Word";
             this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Click += new System.EventHandler(this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // MainForm
             // 
@@ -371,5 +372,6 @@ namespace Autorization
         private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem выводПрибылиИРасходовЗаМесяцToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

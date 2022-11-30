@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Autorization
+﻿namespace Autorization
 {
-    class Username // класс создан для успешной авторизации с ролью
+    class Username // класс создан для успешной авторизации и проверки на роль пользователя
     {
         string name; // переменная для названия роли
         private int role; // переменная которая используется для указания роли аккаунтам, и описывает их функционал
@@ -18,7 +12,7 @@ namespace Autorization
         public Username(string name,int role) // конструктор с передачей значений
         {
             this.role = role;
-            user1 = this;
+            user1 = this; // переданные значения передаем пользователю и проверем его роль
             this.name = name;
         }
     }

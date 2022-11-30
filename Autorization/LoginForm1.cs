@@ -125,11 +125,11 @@ namespace Autorization
 
         private void LoginForm1_Load(object sender, EventArgs e)
         {
-            ToolTip toolTip1 = new ToolTip();
-            toolTip1.AutoPopDelay = 5000;
-            toolTip1.InitialDelay = 1000;
-            toolTip1.ReshowDelay = 500;
-            toolTip1.ShowAlways = true;
+            ToolTip toolTip1 = new ToolTip(); // тул тип для подсказок
+            toolTip1.AutoPopDelay = 5000; // параметры показа подсказки, в течении какого времени будет видна подсказка
+            toolTip1.InitialDelay = 100; // в течении какого кол-ва времени после наведения курсора будет показываться подсказка
+            toolTip1.ReshowDelay = 500; // возвращает или задает интервал времени, который должен пройти перед появлением окна очередной всплывающей подсказки при перемещении указателя мыши с одного элемента управления на другой.
+            toolTip1.ShowAlways = true; // статус видимости
             toolTip1.SetToolTip(label4, "Закрытие программы");
         }
 
