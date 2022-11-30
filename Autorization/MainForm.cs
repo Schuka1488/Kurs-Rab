@@ -11,11 +11,14 @@ using System.Windows.Forms;
 using System.IO;
 using Microsoft.Office.Interop.Word;
 using Microsoft.Office.Interop.Excel;
+using Application = Microsoft.Office.Interop.Word.Application;
 
 namespace Autorization
 {
     public partial class MainForm : Form
     {
+
+        System.Data.DataTable table;
         string id_selected_rows = "0"; //Переменная для индекс выбранной строки в гриде
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
         DBclass db = new DBclass(); // переменная класса для БД, и последующей работе с ними
@@ -101,7 +104,7 @@ namespace Autorization
             string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // создание элемента таблицы
+            table = new System.Data.DataTable(); // создание элемента таблицы
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -112,7 +115,7 @@ namespace Autorization
             string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', MSRN AS 'ОГРН', TIN AS 'ИНН' FROM Customer"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // создание элемента таблицы
+            table = new System.Data.DataTable(); // создание элемента таблицы
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -123,7 +126,7 @@ namespace Autorization
             string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта', 	projectPrice AS 'Цена', ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // создание элемента таблицы
+            table = new System.Data.DataTable(); // создание элемента таблицы
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -134,7 +137,7 @@ namespace Autorization
             string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // создание элемента таблицы
+            table = new System.Data.DataTable(); // создание элемента таблицы
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -145,7 +148,7 @@ namespace Autorization
             string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц' FROM Sales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // создание элемента таблицы
+            table = new System.Data.DataTable(); // создание элемента таблицы
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -198,125 +201,50 @@ namespace Autorization
             timer.Start();
         }
         int dR, dG, dB, sign;
-        public void Export_Data_To_Word(DataGridView DGV, string filename)
+        private void печатьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (DGV.Rows.Count != 0)
+            Application app = new Application();
+            Document doc = app.Documents.Add(Visible: true);
+            Microsoft.Office.Interop.Word.Range r = doc.Range();
+            Table t = doc.Tables.Add(r, dataGridView1.Rows.Count + 1, dataGridView1.Columns.Count);
+            int bdRow = 0;
+            bool IsColumnReady = false;
+
+            t.Borders.Enable = 1;
+            foreach (Row row in t.Rows)
             {
-                int RowCount = DGV.Rows.Count;
-                int ColumnCount = DGV.Columns.Count;
-                Object[,] DataArray = new object[RowCount + 1, ColumnCount + 1];
-
-                //add rows
-                int r = 0;
-                for (int c = 0; c <= ColumnCount - 1; c++)
+                if (!IsColumnReady && bdRow == 0)
                 {
-                    for (r = 0; r <= RowCount - 1; r++)
+                    int tableCounter = 0;
+                    foreach (Cell cell in row.Cells)
                     {
-                        DataArray[r, c] = DGV.Rows[r].Cells[c].Value;
-                    } //end row loop
-                } //end column loop
-
-                Microsoft.Office.Interop.Word.Document oDoc = new Microsoft.Office.Interop.Word.Document();
-                oDoc.Application.Visible = true;
-
-                //page orintation
-                oDoc.PageSetup.Orientation = Microsoft.Office.Interop.Word.WdOrientation.wdOrientLandscape;
-
-
-                dynamic oRange = oDoc.Content.Application.Selection.Range;
-                string oTemp = "";
-                for (r = 0; r <= RowCount - 1; r++)
-                {
-                    for (int c = 0; c <= ColumnCount - 1; c++)
-                    {
-                        oTemp = oTemp + DataArray[r, c] + "\t";
-
+                        cell.Range.Text = table.Columns[tableCounter].ColumnName;
+                        tableCounter++;
                     }
+
+                    IsColumnReady = true;
+                    continue;
                 }
 
-                //table format
-                oRange.Text = oTemp;
-
-                object Separator = Microsoft.Office.Interop.Word.WdTableFieldSeparator.wdSeparateByTabs;
-                object ApplyBorders = true;
-                object AutoFit = true;
-                object AutoFitBehavior = Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitContent;
-
-                oRange.ConvertToTable(ref Separator, ref RowCount, ref ColumnCount,
-                                      Type.Missing, Type.Missing, ref ApplyBorders,
-                                      Type.Missing, Type.Missing, Type.Missing,
-                                      Type.Missing, Type.Missing, Type.Missing,
-                                      Type.Missing, ref AutoFit, ref AutoFitBehavior, Type.Missing);
-
-                oRange.Select();
-
-                oDoc.Application.Selection.Tables[1].Select();
-                oDoc.Application.Selection.Tables[1].Rows.AllowBreakAcrossPages = 0;
-                oDoc.Application.Selection.Tables[1].Rows.Alignment = 0;
-                oDoc.Application.Selection.Tables[1].Rows[1].Select();
-                oDoc.Application.Selection.InsertRowsAbove(1);
-                oDoc.Application.Selection.Tables[1].Rows[1].Select();
-
-                //header row style
-                oDoc.Application.Selection.Tables[1].Rows[1].Range.Bold = 1;
-                oDoc.Application.Selection.Tables[1].Rows[1].Range.Font.Name = "Tahoma";
-                oDoc.Application.Selection.Tables[1].Rows[1].Range.Font.Size = 14;
-
-                //add header row manually
-                for (int c = 0; c <= ColumnCount - 1; c++)
+                object[] collection = table.Rows[bdRow].ItemArray;
+                int cellCount = 0;
+                foreach (Cell cell in row.Cells)
                 {
-                    oDoc.Application.Selection.Tables[1].Cell(1, c + 1).Range.Text = DGV.Columns[c].HeaderText;
+                    cell.Range.Text = collection[cellCount].ToString();
+
+                    cellCount++;
                 }
 
-                //table style 
-                oDoc.Application.Selection.Tables[1].set_Style("Grid Table 4 - Accent 5");
-                oDoc.Application.Selection.Tables[1].Rows[1].Select();
-                oDoc.Application.Selection.Cells.VerticalAlignment = Microsoft.Office.Interop.Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
-
-                //header text
-                foreach (Microsoft.Office.Interop.Word.Section section in oDoc.Application.ActiveDocument.Sections)
-                {
-                    Microsoft.Office.Interop.Word.Range headerRange = section.Headers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
-                    headerRange.Fields.Add(headerRange, Microsoft.Office.Interop.Word.WdFieldType.wdFieldPage);
-                    headerRange.Text = "your header text";
-                    headerRange.Font.Size = 16;
-                    headerRange.ParagraphFormat.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphCenter;
-                }
-
-                //save the file
-                oDoc.SaveAs2(filename);
-
-                //NASSIM LOUCHANI
+                bdRow++;
             }
+
+            doc.Save();
         }
-        private void таблицаСотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //string filename = @"D:\AllEmployees.doc";
-            //ToCsV(dataGridView1, filename);
-            SaveFileDialog sfd = new SaveFileDialog();
-
-            sfd.Filter = "Word Documents (*.docx)|*.docx";
-
-            sfd.FileName = "AllEmployees";
-
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                Export_Data_To_Word(dataGridView1, sfd.FileName);
-            }
-        }
-        private void таблицаЗаказчикиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void выводПрибылиИРасходовЗаМесяцToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-        private void таблицаЗаказовToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void таблицаПродажToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void таблицаЦенToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

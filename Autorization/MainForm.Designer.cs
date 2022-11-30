@@ -53,15 +53,12 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.таблицаСотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.таблицаЗаказчикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.таблицаЗаказовToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.таблицаПродажToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.таблицаЦенToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -289,62 +286,38 @@ namespace Autorization
             // печатьToolStripMenuItem
             // 
             this.печатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.печатьToolStripMenuItem1});
+            this.печатьToolStripMenuItem1,
+            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem,
+            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem});
             this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
             this.печатьToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.печатьToolStripMenuItem.Text = "Настройки";
             // 
             // печатьToolStripMenuItem1
             // 
-            this.печатьToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.таблицаСотрудникиToolStripMenuItem,
-            this.таблицаЗаказчикиToolStripMenuItem,
-            this.таблицаЗаказовToolStripMenuItem1,
-            this.таблицаПродажToolStripMenuItem1,
-            this.таблицаЦенToolStripMenuItem1});
             this.печатьToolStripMenuItem1.Name = "печатьToolStripMenuItem1";
-            this.печатьToolStripMenuItem1.Size = new System.Drawing.Size(113, 22);
-            this.печатьToolStripMenuItem1.Text = "Печать";
-            // 
-            // таблицаСотрудникиToolStripMenuItem
-            // 
-            this.таблицаСотрудникиToolStripMenuItem.Name = "таблицаСотрудникиToolStripMenuItem";
-            this.таблицаСотрудникиToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.таблицаСотрудникиToolStripMenuItem.Text = "Таблица сотрудников";
-            this.таблицаСотрудникиToolStripMenuItem.Click += new System.EventHandler(this.таблицаСотрудникиToolStripMenuItem_Click);
-            // 
-            // таблицаЗаказчикиToolStripMenuItem
-            // 
-            this.таблицаЗаказчикиToolStripMenuItem.Name = "таблицаЗаказчикиToolStripMenuItem";
-            this.таблицаЗаказчикиToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.таблицаЗаказчикиToolStripMenuItem.Text = "Таблица заказчиков";
-            this.таблицаЗаказчикиToolStripMenuItem.Click += new System.EventHandler(this.таблицаЗаказчикиToolStripMenuItem_Click);
-            // 
-            // таблицаЗаказовToolStripMenuItem1
-            // 
-            this.таблицаЗаказовToolStripMenuItem1.Name = "таблицаЗаказовToolStripMenuItem1";
-            this.таблицаЗаказовToolStripMenuItem1.Size = new System.Drawing.Size(193, 22);
-            this.таблицаЗаказовToolStripMenuItem1.Text = "Таблица заказов";
-            this.таблицаЗаказовToolStripMenuItem1.Click += new System.EventHandler(this.таблицаЗаказовToolStripMenuItem1_Click);
-            // 
-            // таблицаПродажToolStripMenuItem1
-            // 
-            this.таблицаПродажToolStripMenuItem1.Name = "таблицаПродажToolStripMenuItem1";
-            this.таблицаПродажToolStripMenuItem1.Size = new System.Drawing.Size(193, 22);
-            this.таблицаПродажToolStripMenuItem1.Text = "Таблица продаж";
-            this.таблицаПродажToolStripMenuItem1.Click += new System.EventHandler(this.таблицаПродажToolStripMenuItem1_Click);
-            // 
-            // таблицаЦенToolStripMenuItem1
-            // 
-            this.таблицаЦенToolStripMenuItem1.Name = "таблицаЦенToolStripMenuItem1";
-            this.таблицаЦенToolStripMenuItem1.Size = new System.Drawing.Size(193, 22);
-            this.таблицаЦенToolStripMenuItem1.Text = "Таблица цен";
-            this.таблицаЦенToolStripMenuItem1.Click += new System.EventHandler(this.таблицаЦенToolStripMenuItem1_Click);
+            this.печатьToolStripMenuItem1.Size = new System.Drawing.Size(321, 22);
+            this.печатьToolStripMenuItem1.Text = "Вывод в Microsoft Word выбранной таблицы";
+            this.печатьToolStripMenuItem1.Click += new System.EventHandler(this.печатьToolStripMenuItem1_Click);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // выводПрибылиИРасходовЗаМесяцToolStripMenuItem
+            // 
+            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Name = "выводПрибылиИРасходовЗаМесяцToolStripMenuItem";
+            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Size = new System.Drawing.Size(373, 22);
+            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Text = "Вывод прибыли и расходов за месяц";
+            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Click += new System.EventHandler(this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem_Click);
+            // 
+            // выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem
+            // 
+            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Name = "выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem";
+            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Size = new System.Drawing.Size(373, 22);
+            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Text = "Вывод прибыли и расходов за месяц в Microsoft Word";
+            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Click += new System.EventHandler(this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -396,10 +369,7 @@ namespace Autorization
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem таблицаСотрудникиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem таблицаЗаказчикиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem таблицаЗаказовToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem таблицаПродажToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem таблицаЦенToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem выводПрибылиИРасходовЗаМесяцToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem;
     }
 }

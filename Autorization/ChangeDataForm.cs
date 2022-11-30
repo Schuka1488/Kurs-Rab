@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using Microsoft.Office.Interop.Word;
+using Application = Microsoft.Office.Interop.Word.Application;
 
 namespace Autorization
 {
     public partial class ChangeDataForm : Form
     {
+        System.Data.DataTable table;
         public ChangeDataForm()
         {
             InitializeComponent();
@@ -157,7 +159,7 @@ namespace Autorization
             string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -207,7 +209,7 @@ namespace Autorization
             string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -272,7 +274,7 @@ namespace Autorization
             string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', MSRN AS 'ОГРН', TIN AS 'ИНН' FROM Customer"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -320,7 +322,7 @@ namespace Autorization
             string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', MSRN AS 'ОГРН', TIN AS 'ИНН' FROM Customer"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -382,7 +384,7 @@ namespace Autorization
             string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта' , projectPrice AS 'Цена',  ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -432,7 +434,7 @@ namespace Autorization
             string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта' , projectPrice AS 'Цена',  ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -496,7 +498,7 @@ namespace Autorization
             string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -542,7 +544,7 @@ namespace Autorization
             string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -602,7 +604,7 @@ namespace Autorization
             string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц' FROM Sales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -648,7 +650,7 @@ namespace Autorization
             string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц' FROM Sales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -708,7 +710,7 @@ namespace Autorization
             string commandStr = "SELECT AuthorizationID AS 'Код авторизации', EmployeesID AS 'Код сотрудника', employeesJobTitle AS 'Профессия', login AS 'Логин', password AS 'Пароль', roleTitle AS 'Название роли', levelRole AS 'Уровень роли' FROM authorization"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -758,7 +760,7 @@ namespace Autorization
             string commandStr = "SELECT AuthorizationID AS 'Код авторизации', EmployeesID AS 'Код сотрудника', employeesJobTitle AS 'Профессия', login AS 'Логин', password AS 'Пароль', roleTitle AS 'Название роли', levelRole AS 'Уровень роли' FROM authorization"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            System.Data.DataTable table = new System.Data.DataTable(); // класс для таблиц
+            table = new System.Data.DataTable(); // класс для таблиц
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
@@ -911,7 +913,6 @@ namespace Autorization
             //Метод получения ID выделенной строки в глобальную переменную
             GetSelectedIDString();
         }
-
         string id_selected_rows;
         public void GetSelectedIDString()
         {
@@ -937,26 +938,6 @@ namespace Autorization
             toolTip2.ReshowDelay = 500;
             toolTip2.ShowAlways = true;
             toolTip2.SetToolTip(label2, "Коды (ID поля) не нужно заполнять, они заполняются автоматически! \n Даты пишутся в формате 2004-12-12\n Первое число - год, Второе - месяц, Третье - день.");
-        }
-        private void таблицаСотрудниковToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void таблицаЗаказчиковToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void таблицаЗаказовToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void таблицаПродажToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void таблицаЦенToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
