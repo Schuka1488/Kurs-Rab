@@ -269,7 +269,7 @@ namespace Autorization
         }
         private void CustomerTableReset()
         {
-            string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', MSRN AS 'ОГРН', TIN AS 'ИНН' FROM Customer"; // SQL запрос данных из БД
+            string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', PSRN AS 'ОГРН', ITN AS 'ИНН', TRRC AS 'КПП' FROM Customer"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
             table = new DataTable(); // класс для таблиц
@@ -287,27 +287,31 @@ namespace Autorization
             textBox3.Visible = true;
             textBox4.Visible = true;
             textBox5.Visible = true;
-            textBox6.Visible = false;
+            textBox6.Visible = true;
             textBox7.Visible = false;
+
             Column1Label.Visible = false;
             Column2Label.Visible = true;
             Column3Label.Visible = true;
             Column4Label.Visible = true;
             Column5Label.Visible = true;
-            Column6Label.Visible = false;
+            Column6Label.Visible = true;
             Column7Label.Visible = false;
+
             AddLineButton.Visible = false;
             AddLineButton2.Visible = true;
             AddLineButton3.Visible = false;
             AddLineButton4.Visible = false;
             AddLineButton5.Visible = false;
             AddLineButton6.Visible = false;
+
             ResetButton.Visible = false;
             ResetButton2.Visible = true;
             ResetButton3.Visible = false;
             ResetButton4.Visible = false;
             ResetButton5.Visible = false;
             ResetButton6.Visible = false;
+
             DeleteLineButton.Visible = false;
             DeleteLineButton2.Visible = true;
             DeleteLineButton3.Visible = false;
@@ -317,7 +321,7 @@ namespace Autorization
         }
         private void вТаблицеЗаказчикиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', MSRN AS 'ОГРН', TIN AS 'ИНН' FROM Customer"; // SQL запрос данных из БД
+            string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', PSRN AS 'ОГРН', ITN AS 'ИНН', TRRC AS 'КПП' FROM Customer"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
             table = new DataTable(); // класс для таблиц
@@ -330,19 +334,20 @@ namespace Autorization
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+            dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
             textBox5.Visible = true;
-            textBox6.Visible = false;
+            textBox6.Visible = true;
             textBox7.Visible = false;
                 Column1Label.Visible = false;
                 Column2Label.Visible = true;
                 Column3Label.Visible = true;
                 Column4Label.Visible = true;
                 Column5Label.Visible = true;
-                Column6Label.Visible = false;
+                Column6Label.Visible = true;
                 Column7Label.Visible = false;
                         AddLineButton.Visible = false;
                         AddLineButton2.Visible = true;
@@ -366,7 +371,7 @@ namespace Autorization
         private void SupplemenEmloyee2()
         {
             db.openConnection();
-            MySqlCommand cmd = new MySqlCommand($"INSERT INTO Customer(customerCompanyName, customerAddress, MSRN, TIN) VALUES( '{textBox2.Text}', '{textBox3.Text}',{textBox4.Text},{textBox5.Text})", db.getConnection());
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO Customer(customerCompanyName, customerAddress, PSRN, ITN) VALUES( '{textBox2.Text}', '{textBox3.Text}',{textBox4.Text},{textBox5.Text},{textBox6.Text})", db.getConnection());
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
             db.closeConnection();
         }
@@ -379,7 +384,7 @@ namespace Autorization
         }
         private void ProjectOrderTableReset()
         {
-            string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта' , projectPrice AS 'Цена',  ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
+            string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта' , projectPrice AS 'Цена в рублях',  ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
             table = new DataTable(); // класс для таблиц
@@ -429,7 +434,7 @@ namespace Autorization
         }
         private void заказыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта' , projectPrice AS 'Цена',  ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
+            string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта' , projectPrice AS 'Цена в рублях',  ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
             table = new DataTable(); // класс для таблиц
