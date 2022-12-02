@@ -274,14 +274,14 @@ namespace Autorization
             // 
             this.таблицаПродажToolStripMenuItem.Name = "таблицаПродажToolStripMenuItem";
             this.таблицаПродажToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.таблицаПродажToolStripMenuItem.Text = "Таблица продаж";
+            this.таблицаПродажToolStripMenuItem.Text = "Таблица покупок";
             this.таблицаПродажToolStripMenuItem.Click += new System.EventHandler(this.таблицаПродажToolStripMenuItem_Click);
             // 
             // таблицаЦенToolStripMenuItem
             // 
             this.таблицаЦенToolStripMenuItem.Name = "таблицаЦенToolStripMenuItem";
             this.таблицаЦенToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.таблицаЦенToolStripMenuItem.Text = "Таблица цен";
+            this.таблицаЦенToolStripMenuItem.Text = "Таблица продаж";
             this.таблицаЦенToolStripMenuItem.Click += new System.EventHandler(this.таблицаЦенToolStripMenuItem_Click);
             // 
             // печатьToolStripMenuItem

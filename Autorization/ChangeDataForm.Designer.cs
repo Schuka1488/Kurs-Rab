@@ -708,14 +708,14 @@ namespace Autorization
             // 
             this.продажиToolStripMenuItem.Name = "продажиToolStripMenuItem";
             this.продажиToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.продажиToolStripMenuItem.Text = "В таблице продажи";
+            this.продажиToolStripMenuItem.Text = "В таблице покупок";
             this.продажиToolStripMenuItem.Click += new System.EventHandler(this.продажиToolStripMenuItem_Click);
             // 
             // ценаToolStripMenuItem
             // 
             this.ценаToolStripMenuItem.Name = "ценаToolStripMenuItem";
             this.ценаToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.ценаToolStripMenuItem.Text = "В таблице цена";
+            this.ценаToolStripMenuItem.Text = "В таблице продаж";
             this.ценаToolStripMenuItem.Click += new System.EventHandler(this.ценаToolStripMenuItem_Click);
             // 
             // вТаблицеАвторизацииToolStripMenuItem
