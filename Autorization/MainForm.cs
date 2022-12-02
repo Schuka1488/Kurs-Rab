@@ -143,6 +143,9 @@ namespace Autorization
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
+            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
         }
         private void таблицаЦенToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
@@ -154,6 +157,9 @@ namespace Autorization
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
+            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
         }
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
@@ -245,6 +251,7 @@ namespace Autorization
         {
 
         }
+
         private void выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
