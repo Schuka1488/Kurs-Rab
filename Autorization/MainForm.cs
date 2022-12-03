@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Microsoft.Office.Interop.Word;
-using Microsoft.Office.Interop.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
 using Application = Microsoft.Office.Interop.Word.Application; // передаем application ворду интероп для работы с пакетом 
 
 namespace Autorization
@@ -261,7 +261,27 @@ namespace Autorization
         {
 
         }
+        private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Excel.Application exApp = new Excel.Application();
 
+            exApp.Workbooks.Add();
+            Excel.Worksheet wsh = (Excel.Worksheet)exApp.ActiveSheet;
+            wsh.Cells[1, 1] = dataGridView1.Columns.ToString();
+
+            int i, j;
+            for(i=0; i<=dataGridView1.RowCount-1;i++)
+            {
+
+                for (j=0;j<=dataGridView1.ColumnCount-1;j++)
+                {
+                    wsh.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText.ToString();
+                    wsh.Cells[i+2, j+1] = dataGridView1[j, i].Value.ToString();
+                }
+            }
+
+            exApp.Visible = true;
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
