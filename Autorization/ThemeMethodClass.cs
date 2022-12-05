@@ -179,7 +179,9 @@ namespace Autorization
         }
         static public void DarkThemeMethodMainForm(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, 
 
-            Button WhiteThemeButton, Label labelTheme, Label label1, Label label2)
+            Button WhiteThemeButton, Label labelTheme, Label label1, Label label2 , Label labelITN, Label labelNameProject, Label labelJob,
+
+            TextBox textBoxITN, TextBox textBoxNameProject, TextBox textBoxJob)
         {
             panel1.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel2.BackColor = SystemColors.GrayText;
@@ -193,10 +195,21 @@ namespace Autorization
 
             label1.ForeColor = SystemColors.ControlLightLight;
             label2.ForeColor = SystemColors.ControlLightLight;
+            labelITN.ForeColor = SystemColors.ControlLightLight;
+            labelNameProject.ForeColor = SystemColors.ControlLightLight;
+            labelJob.ForeColor = SystemColors.ControlLightLight;
+
+            textBoxITN.BackColor = SystemColors.ScrollBar;
+            textBoxNameProject.BackColor = SystemColors.ScrollBar;
+            textBoxJob.BackColor = SystemColors.ScrollBar;
+
+
         }
         static public void LightThemeMethodMainForm(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, 
 
-            Button WhiteThemeButton, Label labelTheme, Label label1, Label label2)
+            Button WhiteThemeButton, Label labelTheme, Label label1, Label label2, Label labelITN, Label labelNameProject, Label labelJob,
+
+            TextBox textBoxITN, TextBox textBoxNameProject, TextBox textBoxJob)
         {
             panel1.BackColor = Color.Lavender;
             panel2.BackColor = Color.DeepSkyBlue;
@@ -210,6 +223,13 @@ namespace Autorization
 
             label1.ForeColor = SystemColors.ActiveCaptionText;
             label2.ForeColor = SystemColors.ActiveCaptionText;
+            labelITN.ForeColor = SystemColors.ActiveCaptionText;
+            labelNameProject.ForeColor = SystemColors.ActiveCaptionText;
+            labelJob.ForeColor = SystemColors.ActiveCaptionText;
+
+            textBoxITN.BackColor = SystemColors.Window;
+            textBoxNameProject.BackColor = SystemColors.Window;
+            textBoxJob.BackColor = SystemColors.Window;
         }
         static public void DarkThemeMethodLoginForm(Panel panel1, Panel panel2, Label label2, Label label3, Button buttonLoginPass, 
 

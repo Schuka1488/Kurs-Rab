@@ -55,12 +55,18 @@ namespace Autorization
             this.печатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxJob = new System.Windows.Forms.TextBox();
+            this.labelJob = new System.Windows.Forms.Label();
+            this.labelITN = new System.Windows.Forms.Label();
+            this.labelNameProject = new System.Windows.Forms.Label();
+            this.textBoxITN = new System.Windows.Forms.TextBox();
+            this.textBoxNameProject = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,6 +76,12 @@ namespace Autorization
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.textBoxNameProject);
+            this.panel1.Controls.Add(this.textBoxITN);
+            this.panel1.Controls.Add(this.labelNameProject);
+            this.panel1.Controls.Add(this.labelITN);
+            this.panel1.Controls.Add(this.labelJob);
+            this.panel1.Controls.Add(this.textBoxJob);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.labelTheme);
@@ -317,17 +329,77 @@ namespace Autorization
             this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Text = "Вывод прибыли и расходов за месяц в Microsoft Word";
             this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Click += new System.EventHandler(this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem
             // 
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem.Name = "выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem";
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem.Size = new System.Drawing.Size(373, 22);
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem.Text = "Вывод в Microsoft Excel выбранной таблицы";
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem.Click += new System.EventHandler(this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // textBoxJob
+            // 
+            this.textBoxJob.Location = new System.Drawing.Point(291, 451);
+            this.textBoxJob.Name = "textBoxJob";
+            this.textBoxJob.Size = new System.Drawing.Size(100, 20);
+            this.textBoxJob.TabIndex = 43;
+            this.textBoxJob.Visible = false;
+            this.textBoxJob.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // labelJob
+            // 
+            this.labelJob.AutoSize = true;
+            this.labelJob.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJob.Location = new System.Drawing.Point(8, 449);
+            this.labelJob.Name = "labelJob";
+            this.labelJob.Size = new System.Drawing.Size(239, 20);
+            this.labelJob.TabIndex = 44;
+            this.labelJob.Text = "Введите название должности:";
+            this.labelJob.Visible = false;
+            // 
+            // labelITN
+            // 
+            this.labelITN.AutoSize = true;
+            this.labelITN.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelITN.Location = new System.Drawing.Point(8, 451);
+            this.labelITN.Name = "labelITN";
+            this.labelITN.Size = new System.Drawing.Size(277, 20);
+            this.labelITN.TabIndex = 45;
+            this.labelITN.Text = "Введите ИНН компании заказчика:";
+            this.labelITN.Visible = false;
+            // 
+            // labelNameProject
+            // 
+            this.labelNameProject.AutoSize = true;
+            this.labelNameProject.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNameProject.Location = new System.Drawing.Point(12, 451);
+            this.labelNameProject.Name = "labelNameProject";
+            this.labelNameProject.Size = new System.Drawing.Size(220, 20);
+            this.labelNameProject.TabIndex = 46;
+            this.labelNameProject.Text = "Введите название проекта:";
+            this.labelNameProject.Visible = false;
+            // 
+            // textBoxITN
+            // 
+            this.textBoxITN.Location = new System.Drawing.Point(291, 451);
+            this.textBoxITN.Name = "textBoxITN";
+            this.textBoxITN.Size = new System.Drawing.Size(100, 20);
+            this.textBoxITN.TabIndex = 47;
+            this.textBoxITN.Visible = false;
+            this.textBoxITN.TextChanged += new System.EventHandler(this.textBoxITN_TextChanged);
+            // 
+            // textBoxNameProject
+            // 
+            this.textBoxNameProject.Location = new System.Drawing.Point(291, 451);
+            this.textBoxNameProject.Name = "textBoxNameProject";
+            this.textBoxNameProject.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNameProject.TabIndex = 48;
+            this.textBoxNameProject.Visible = false;
+            this.textBoxNameProject.TextChanged += new System.EventHandler(this.textBoxNameProject_TextChanged);
             // 
             // MainForm
             // 
@@ -383,5 +455,11 @@ namespace Autorization
         private System.Windows.Forms.ToolStripMenuItem выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripMenuItem выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBoxJob;
+        private System.Windows.Forms.Label labelITN;
+        private System.Windows.Forms.Label labelJob;
+        private System.Windows.Forms.Label labelNameProject;
+        private System.Windows.Forms.TextBox textBoxNameProject;
+        private System.Windows.Forms.TextBox textBoxITN;
     }
 }

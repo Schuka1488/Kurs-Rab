@@ -112,6 +112,15 @@ namespace Autorization
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
             dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            labelJob.Visible = true;
+            textBoxJob.Visible = true;
+
+            labelITN.Visible = false;
+            textBoxITN.Visible = false;
+
+            labelNameProject.Visible = false;
+            textBoxNameProject.Visible = false;
         }
         private void таблицаКлиентовToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
@@ -125,6 +134,15 @@ namespace Autorization
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            labelJob.Visible = false;
+            textBoxJob.Visible = false;
+
+            labelITN.Visible = true;
+            textBoxITN.Visible = true;
+
+            labelNameProject.Visible = false;
+            textBoxNameProject.Visible = false;
         }
         private void таблицаЗаказовToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
@@ -137,6 +155,15 @@ namespace Autorization
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            labelJob.Visible = false;
+            textBoxJob.Visible = false;
+
+            labelITN.Visible = false;
+            textBoxITN.Visible = false;
+
+            labelNameProject.Visible = true;
+            textBoxNameProject.Visible = true;
         }
         private void таблицаПродажToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
@@ -151,6 +178,15 @@ namespace Autorization
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            labelJob.Visible = false;
+            textBoxJob.Visible = false;
+
+            labelITN.Visible = false;
+            textBoxITN.Visible = false;
+
+            labelNameProject.Visible = false;
+            textBoxNameProject.Visible = false;
         }
         private void таблицаЦенToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
@@ -165,6 +201,15 @@ namespace Autorization
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            labelJob.Visible = false;
+            textBoxJob.Visible = false;
+
+            labelITN.Visible = false;
+            textBoxITN.Visible = false;
+
+            labelNameProject.Visible = false;
+            textBoxNameProject.Visible = false;
         }
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
@@ -190,7 +235,7 @@ namespace Autorization
         }
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.LightThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2); //передаем все что хоти изменить
+            ThemeMethodClass.LightThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2, labelITN,labelNameProject,labelJob,textBoxITN,textBoxNameProject,textBoxJob); //передаем все что хоти изменить
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -202,7 +247,7 @@ namespace Autorization
         }
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.DarkThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2); //передаем все что хоти изменить
+            ThemeMethodClass.DarkThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2, labelITN, labelNameProject, labelJob, textBoxITN, textBoxNameProject, textBoxJob); //передаем все что хоти изменить
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -261,6 +306,7 @@ namespace Autorization
         {
 
         }
+
         private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Excel.Application exApp = new Excel.Application();
@@ -268,7 +314,7 @@ namespace Autorization
             exApp.Workbooks.Add();
             Excel.Worksheet wsh = (Excel.Worksheet)exApp.ActiveSheet;
             wsh.Cells[1, 1] = dataGridView1.Columns.ToString();
-
+            
             int i, j;
             for(i=0; i<=dataGridView1.RowCount-1;i++)
             {
@@ -282,6 +328,29 @@ namespace Autorization
 
             exApp.Visible = true;
         }
+
+
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            table.DefaultView.RowFilter = $"Профессия LIKE '%{textBoxJob.Text}%'";
+        }
+
+        private void textBoxITN_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxITN.Text.Length < 0) return;
+            table.DefaultView.RowFilter = $"Convert(ИНН, System.String) LIKE '%{textBoxITN.Text}%'";
+        }
+
+        private void textBoxNameProject_TextChanged(object sender, EventArgs e)
+        {
+            table.DefaultView.RowFilter = $"`Название проекта` LIKE '%{textBoxNameProject.Text}%'";
+        }
+
+
+
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
