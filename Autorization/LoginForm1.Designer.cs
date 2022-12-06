@@ -64,7 +64,7 @@ namespace Autorization
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(372, 473);
+            this.panel1.Size = new System.Drawing.Size(416, 468);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -73,7 +73,7 @@ namespace Autorization
             // 
             this.labelTheme.AutoSize = true;
             this.labelTheme.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTheme.Location = new System.Drawing.Point(107, 445);
+            this.labelTheme.Location = new System.Drawing.Point(155, 444);
             this.labelTheme.Name = "labelTheme";
             this.labelTheme.Size = new System.Drawing.Size(122, 16);
             this.labelTheme.TabIndex = 13;
@@ -83,7 +83,7 @@ namespace Autorization
             // 
             this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WhiteThemeButton.Location = new System.Drawing.Point(235, 409);
+            this.WhiteThemeButton.Location = new System.Drawing.Point(283, 408);
             this.WhiteThemeButton.Name = "WhiteThemeButton";
             this.WhiteThemeButton.Size = new System.Drawing.Size(130, 23);
             this.WhiteThemeButton.TabIndex = 12;
@@ -95,7 +95,7 @@ namespace Autorization
             // 
             this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DarkThemeButton.Location = new System.Drawing.Point(235, 438);
+            this.DarkThemeButton.Location = new System.Drawing.Point(283, 437);
             this.DarkThemeButton.Name = "DarkThemeButton";
             this.DarkThemeButton.Size = new System.Drawing.Size(130, 23);
             this.DarkThemeButton.TabIndex = 11;
@@ -107,11 +107,11 @@ namespace Autorization
             // 
             this.buttonLoginPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLoginPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLoginPass.Font = new System.Drawing.Font("Mongolian Baiti", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoginPass.Font = new System.Drawing.Font("Mongolian Baiti", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLoginPass.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonLoginPass.Location = new System.Drawing.Point(17, 332);
             this.buttonLoginPass.Name = "buttonLoginPass";
-            this.buttonLoginPass.Size = new System.Drawing.Size(343, 48);
+            this.buttonLoginPass.Size = new System.Drawing.Size(387, 48);
             this.buttonLoginPass.TabIndex = 5;
             this.buttonLoginPass.Text = "ВОЙТИ";
             this.buttonLoginPass.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@ namespace Autorization
             this.passwordName.Multiline = true;
             this.passwordName.Name = "passwordName";
             this.passwordName.PasswordChar = '*';
-            this.passwordName.Size = new System.Drawing.Size(343, 46);
+            this.passwordName.Size = new System.Drawing.Size(387, 46);
             this.passwordName.TabIndex = 4;
             // 
             // loginName
@@ -134,28 +134,28 @@ namespace Autorization
             this.loginName.Location = new System.Drawing.Point(17, 146);
             this.loginName.Multiline = true;
             this.loginName.Name = "loginName";
-            this.loginName.Size = new System.Drawing.Size(343, 46);
+            this.loginName.Size = new System.Drawing.Size(387, 46);
             this.loginName.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(12, 211);
+            this.label3.Location = new System.Drawing.Point(12, 210);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 29);
+            this.label3.Size = new System.Drawing.Size(110, 30);
             this.label3.TabIndex = 2;
             this.label3.Text = "ПАРОЛЬ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(12, 114);
+            this.label2.Location = new System.Drawing.Point(12, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 29);
+            this.label2.Size = new System.Drawing.Size(96, 30);
             this.label2.TabIndex = 1;
             this.label2.Text = "ЛОГИН";
             // 
@@ -168,7 +168,7 @@ namespace Autorization
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(372, 100);
+            this.panel2.Size = new System.Drawing.Size(416, 100);
             this.panel2.TabIndex = 0;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -179,7 +179,7 @@ namespace Autorization
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(337, 9);
+            this.label4.Location = new System.Drawing.Point(381, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 31);
             this.label4.TabIndex = 1;
@@ -192,11 +192,11 @@ namespace Autorization
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(12, 40);
+            this.label1.Location = new System.Drawing.Point(7, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 52);
+            this.label1.Size = new System.Drawing.Size(399, 52);
             this.label1.TabIndex = 0;
-            this.label1.Text = "АВТОРИЗАЦИЯ";
+            this.label1.Text = "ИНТЭКС-СЕРВИС";
             // 
             // animateComponent1
             // 
@@ -208,7 +208,7 @@ namespace Autorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 473);
+            this.ClientSize = new System.Drawing.Size(416, 468);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm1";
