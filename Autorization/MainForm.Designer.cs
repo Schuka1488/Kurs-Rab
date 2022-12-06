@@ -44,6 +44,7 @@ namespace Autorization
             this.DarkThemeButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.richTextBoxTime = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.MainMenuLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -60,14 +61,12 @@ namespace Autorization
             this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.richTextBoxTime = new System.Windows.Forms.RichTextBox();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -246,6 +245,19 @@ namespace Autorization
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
+            // richTextBoxTime
+            // 
+            this.richTextBoxTime.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.richTextBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxTime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.richTextBoxTime.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBoxTime.Location = new System.Drawing.Point(12, 37);
+            this.richTextBoxTime.Name = "richTextBoxTime";
+            this.richTextBoxTime.Size = new System.Drawing.Size(157, 28);
+            this.richTextBoxTime.TabIndex = 33;
+            this.richTextBoxTime.Text = "";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -296,14 +308,14 @@ namespace Autorization
             // программуToolStripMenuItem
             // 
             this.программуToolStripMenuItem.Name = "программуToolStripMenuItem";
-            this.программуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.программуToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.программуToolStripMenuItem.Text = "Из программы";
             this.программуToolStripMenuItem.Click += new System.EventHandler(this.программуToolStripMenuItem_Click);
             // 
             // формуToolStripMenuItem
             // 
             this.формуToolStripMenuItem.Name = "формуToolStripMenuItem";
-            this.формуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.формуToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.формуToolStripMenuItem.Text = "Из аккаунта";
             this.формуToolStripMenuItem.Click += new System.EventHandler(this.формуToolStripMenuItem_Click);
             // 
@@ -366,7 +378,6 @@ namespace Autorization
             this.печатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.печатьToolStripMenuItem1,
             this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem,
-            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem,
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem});
             this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
             this.печатьToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
@@ -375,28 +386,21 @@ namespace Autorization
             // печатьToolStripMenuItem1
             // 
             this.печатьToolStripMenuItem1.Name = "печатьToolStripMenuItem1";
-            this.печатьToolStripMenuItem1.Size = new System.Drawing.Size(373, 22);
+            this.печатьToolStripMenuItem1.Size = new System.Drawing.Size(321, 22);
             this.печатьToolStripMenuItem1.Text = "Вывод в Microsoft Word выбранной таблицы";
             this.печатьToolStripMenuItem1.Click += new System.EventHandler(this.печатьToolStripMenuItem1_Click);
             // 
             // выводПрибылиИРасходовЗаМесяцToolStripMenuItem
             // 
             this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Name = "выводПрибылиИРасходовЗаМесяцToolStripMenuItem";
-            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Size = new System.Drawing.Size(373, 22);
-            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Text = "Вывод прибыли и расходов за месяц";
+            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Size = new System.Drawing.Size(321, 22);
+            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Text = "Вывод прибыли за всё время";
             this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Click += new System.EventHandler(this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem_Click);
-            // 
-            // выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem
-            // 
-            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Name = "выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem";
-            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Size = new System.Drawing.Size(373, 22);
-            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Text = "Вывод прибыли и расходов за месяц в Microsoft Word";
-            this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem.Click += new System.EventHandler(this.выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem_Click);
             // 
             // выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem
             // 
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem.Name = "выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem";
-            this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem.Size = new System.Drawing.Size(373, 22);
+            this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem.Size = new System.Drawing.Size(321, 22);
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem.Text = "Вывод в Microsoft Excel выбранной таблицы";
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem.Click += new System.EventHandler(this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click);
             // 
@@ -404,19 +408,6 @@ namespace Autorization
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // richTextBoxTime
-            // 
-            this.richTextBoxTime.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.richTextBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxTime.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.richTextBoxTime.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBoxTime.Location = new System.Drawing.Point(12, 37);
-            this.richTextBoxTime.Name = "richTextBoxTime";
-            this.richTextBoxTime.Size = new System.Drawing.Size(157, 28);
-            this.richTextBoxTime.TabIndex = 33;
-            this.richTextBoxTime.Text = "";
             // 
             // timer3
             // 
@@ -475,7 +466,6 @@ namespace Autorization
         private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem выводПрибылиИРасходовЗаМесяцToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem выводПрибылиИРасходовЗаМесяцВMicrosoftWordToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripMenuItem выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem;
         private System.Windows.Forms.TextBox textBoxJob;
