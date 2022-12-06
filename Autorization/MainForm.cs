@@ -86,6 +86,7 @@ namespace Autorization
             { 
                 return; 
             }
+            
         }
         private void формуToolStripMenuItem_Click(object sender, EventArgs e) // выход из главной формы и возвращение к авторизации, без потери производительности
         {
@@ -316,14 +317,6 @@ namespace Autorization
 
             doc.Save();
         }
-
-
-        private void выводПрибылиИРасходовЗаМесяцToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
 
         private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
         {

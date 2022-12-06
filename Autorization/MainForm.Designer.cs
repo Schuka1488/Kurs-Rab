@@ -60,7 +60,6 @@ namespace Autorization
             this.таблицаЦенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -377,7 +376,6 @@ namespace Autorization
             // 
             this.печатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.печатьToolStripMenuItem1,
-            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem,
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem});
             this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
             this.печатьToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
@@ -389,13 +387,6 @@ namespace Autorization
             this.печатьToolStripMenuItem1.Size = new System.Drawing.Size(321, 22);
             this.печатьToolStripMenuItem1.Text = "Вывод в Microsoft Word выбранной таблицы";
             this.печатьToolStripMenuItem1.Click += new System.EventHandler(this.печатьToolStripMenuItem1_Click);
-            // 
-            // выводПрибылиИРасходовЗаМесяцToolStripMenuItem
-            // 
-            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Name = "выводПрибылиИРасходовЗаМесяцToolStripMenuItem";
-            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Size = new System.Drawing.Size(321, 22);
-            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Text = "Вывод прибыли за всё время";
-            this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem.Click += new System.EventHandler(this.выводПрибылиИРасходовЗаМесяцToolStripMenuItem_Click);
             // 
             // выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem
             // 
@@ -465,7 +456,6 @@ namespace Autorization
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem печатьToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem выводПрибылиИРасходовЗаМесяцToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripMenuItem выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem;
         private System.Windows.Forms.TextBox textBoxJob;
