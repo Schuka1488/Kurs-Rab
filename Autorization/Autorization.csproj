@@ -113,6 +113,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LiveCharts.WinForms">
+      <Version>0.9.7.1</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.Office.Interop.Excel">
       <Version>15.0.4795.1001</Version>
     </PackageReference>

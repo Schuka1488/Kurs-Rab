@@ -317,10 +317,12 @@ namespace Autorization
             doc.Save();
         }
 
+
         private void выводПрибылиИРасходовЗаМесяцToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
+
 
 
         private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
