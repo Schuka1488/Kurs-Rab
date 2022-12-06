@@ -618,7 +618,7 @@ namespace Autorization
         }
         private void SaleIDTableReset()
         {
-            string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц' FROM Sales"; // SQL запрос данных из БД
+            string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц', saleCost AS 'Цена в рублях' FROM Sales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
             table = new DataTable(); // класс для таблиц
@@ -629,17 +629,18 @@ namespace Autorization
             dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+            dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
-            textBox4.Visible = false;
+            textBox4.Visible = true;
             textBox5.Visible = false;
             textBox6.Visible = false;
             textBox7.Visible = false;
             Column1Label.Visible = false;
             Column2Label.Visible = true;
             Column3Label.Visible = true;
-            Column4Label.Visible = false;
+            Column4Label.Visible = true;
             Column5Label.Visible = false;
             Column6Label.Visible = false;
             Column7Label.Visible = false;
@@ -664,7 +665,7 @@ namespace Autorization
         }
         private void ценаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц' FROM Sales"; // SQL запрос данных из БД
+            string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц', saleCost AS 'Цена в рублях' FROM Sales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
             table = new DataTable(); // класс для таблиц
@@ -675,17 +676,18 @@ namespace Autorization
             dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+            dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
             textBox2.Visible = true;
             textBox3.Visible = true;
-            textBox4.Visible = false;
+            textBox4.Visible = true;
             textBox5.Visible = false;
             textBox6.Visible = false;
             textBox7.Visible = false;
                 Column1Label.Visible = false;
                 Column2Label.Visible = true;
                 Column3Label.Visible = true;
-                Column4Label.Visible = false;
+                Column4Label.Visible = true;
                 Column5Label.Visible = false;
                 Column6Label.Visible = false;
                 Column7Label.Visible = false;
@@ -711,7 +713,7 @@ namespace Autorization
         private void SupplemenEmloyee5()
         {
             db.openConnection();
-            MySqlCommand cmd = new MySqlCommand($"INSERT INTO Sales(saleDate, saleNotes) VALUES( \"{textBox2.Text}\", {textBox3.Text})", db.getConnection());
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO Sales(saleDate, saleNotes) VALUES( \"{textBox2.Text}\", {textBox3.Text}, {textBox4.Text})", db.getConnection());
             MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
             db.closeConnection();
         }
