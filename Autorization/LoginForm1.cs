@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Tulpep.NotificationWindow;
 
 namespace Autorization
 {
@@ -95,17 +96,31 @@ namespace Autorization
                 string _Role = $"SELECT levelRole FROM `authorization` WHERE AuthorizationID = {Id}"; // запрос роли, которая относится к логину
                 MySqlCommand cmd2 = new MySqlCommand(_Role, db.getConnection()); // осуществляется подключение к БД
                 int Level = int.Parse(cmd2.ExecuteScalar().ToString()); // берутся значения из БД
-                 _Role = $"SELECT roleTitle FROM `authorization` WHERE AuthorizationID = {Id}"; // запрос названия роли
-                 cmd2 = new MySqlCommand(_Role, db.getConnection()); // осуществляется подключение к БД
+                _Role = $"SELECT roleTitle FROM `authorization` WHERE AuthorizationID = {Id}"; // запрос названия роли
+                cmd2 = new MySqlCommand(_Role, db.getConnection()); // осуществляется подключение к БД
                 string title = cmd2.ExecuteScalar().ToString(); // берутся значения из БД
                 Username user = new Username(loginName.Text, Level); // Запоминаем логин из текстбокса loginName
                 MainForm mainForm = new MainForm(); // после авторизации показывается MainForm
                 mainForm.Show(); // метод для показа MainForm
                 db.closeConnection(); // Полсе обрубается соединение
                 this.Hide(); // происходит сокрытие
+
+                PopupNotifier popup = new PopupNotifier();
+                popup.Image = Properties.Resources.pngres;
+                popup.ImageSize = new Size(96, 96);
+                popup.HeaderColor = Color.DeepSkyBlue;
+                popup.BodyColor = Color.Lavender;
+                popup.TitleColor = Color.LightSlateGray;
+                popup.ShowCloseButton = false;
+                popup.TitleText = "ИНТЭКС-СЕРВИС";
+                popup.ContentText = $"Добро пожаловать {loginName.Text}!";
+                popup.Popup();
             }
-            else 
+            else
+            {
                 MessageBox.Show("Логин или пароль указан неверно."); // обработка исключения
+            }
+
         }
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
