@@ -25,7 +25,9 @@ namespace Autorization
 
             TextBox textBox6, TextBox textBox7, Button ResetButton, Button ResetButton2, Button ResetButton3, Button ResetButton4, Button ResetButton5, Button ResetButton6,
 
-            Button DeleteLineButton, Button DeleteLineButton2, Button DeleteLineButton3, Button DeleteLineButton4, Button DeleteLineButton5, Button DeleteLineButton6)
+            Button DeleteLineButton, Button DeleteLineButton2, Button DeleteLineButton3, Button DeleteLineButton4, Button DeleteLineButton5, Button DeleteLineButton6,
+
+            RichTextBox richTextBoxTime)
         {
             panel4.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel5.BackColor = SystemColors.GrayText;
@@ -69,6 +71,8 @@ namespace Autorization
             textBox6.BackColor = SystemColors.ScrollBar;
             textBox7.BackColor = SystemColors.ScrollBar;
 
+            richTextBoxTime.BackColor = SystemColors.GrayText;
+
             ResetButton.ForeColor = SystemColors.ControlLightLight;
             ResetButton.BackColor = SystemColors.WindowFrame;
             ResetButton2.ForeColor = SystemColors.ControlLightLight;
@@ -107,7 +111,9 @@ namespace Autorization
 
             TextBox textBox6, TextBox textBox7, Button ResetButton, Button ResetButton2, Button ResetButton3, Button ResetButton4 ,Button ResetButton5, Button ResetButton6,
 
-            Button DeleteLineButton, Button DeleteLineButton2, Button DeleteLineButton3, Button DeleteLineButton4, Button DeleteLineButton5, Button DeleteLineButton6)
+            Button DeleteLineButton, Button DeleteLineButton2, Button DeleteLineButton3, Button DeleteLineButton4, Button DeleteLineButton5, Button DeleteLineButton6,
+
+            RichTextBox richTextBoxTime)
         {
             panel4.BackColor = Color.Lavender;
             panel5.BackColor = Color.DeepSkyBlue;
@@ -151,6 +157,8 @@ namespace Autorization
             textBox6.BackColor = SystemColors.Window;
             textBox7.BackColor = SystemColors.Window;
 
+            richTextBoxTime.BackColor = Color.DeepSkyBlue;
+
             ResetButton.ForeColor = SystemColors.ActiveCaptionText;
             ResetButton.BackColor = Color.Lavender;
             ResetButton2.ForeColor = SystemColors.ActiveCaptionText;
@@ -181,7 +189,7 @@ namespace Autorization
 
             Button WhiteThemeButton, Label labelTheme, Label label1, Label label2 , Label labelITN, Label labelNameProject, Label labelJob,
 
-            TextBox textBoxITN, TextBox textBoxNameProject, TextBox textBoxJob)
+            TextBox textBoxITN, TextBox textBoxNameProject, TextBox textBoxJob, RichTextBox richTextBoxTime)
         {
             panel1.BackColor = SystemColors.WindowFrame; // Panel1BackColor вместо цвета и класса цветов
             panel2.BackColor = SystemColors.GrayText;
@@ -203,13 +211,14 @@ namespace Autorization
             textBoxNameProject.BackColor = SystemColors.ScrollBar;
             textBoxJob.BackColor = SystemColors.ScrollBar;
 
+            richTextBoxTime.BackColor = SystemColors.GrayText;
 
         }
         static public void LightThemeMethodMainForm(Panel panel1, Panel panel2, DataGridView dataGridView1, Button DarkThemeButton, 
 
             Button WhiteThemeButton, Label labelTheme, Label label1, Label label2, Label labelITN, Label labelNameProject, Label labelJob,
 
-            TextBox textBoxITN, TextBox textBoxNameProject, TextBox textBoxJob)
+            TextBox textBoxITN, TextBox textBoxNameProject, TextBox textBoxJob, RichTextBox richTextBoxTime)
         {
             panel1.BackColor = Color.Lavender;
             panel2.BackColor = Color.DeepSkyBlue;
@@ -230,6 +239,8 @@ namespace Autorization
             textBoxITN.BackColor = SystemColors.Window;
             textBoxNameProject.BackColor = SystemColors.Window;
             textBoxJob.BackColor = SystemColors.Window;
+
+            richTextBoxTime.BackColor = Color.DeepSkyBlue;
         }
         static public void DarkThemeMethodLoginForm(Panel panel1, Panel panel2, Label label2, Label label3, Button buttonLoginPass, 
 

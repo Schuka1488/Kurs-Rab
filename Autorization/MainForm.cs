@@ -76,7 +76,16 @@ namespace Autorization
         }
         private void программуToolStripMenuItem_Click(object sender, EventArgs e) // краткий метод для выхода из программы
         {
-            System.Windows.Forms.Application.Exit(); // выход из программы
+            DialogResult res = new DialogResult();
+            res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            { 
+                System.Windows.Forms.Application.Exit(); 
+            }
+            else
+            { 
+                return; 
+            }
         }
         private void формуToolStripMenuItem_Click(object sender, EventArgs e) // выход из главной формы и возвращение к авторизации, без потери производительности
         {
@@ -231,11 +240,20 @@ namespace Autorization
         }
         private void label4_Click(object sender, EventArgs e) // осуществил выход при помощи тейбла поставив X
         {
-            System.Windows.Forms.Application.Exit(); // выход с программы
+            DialogResult res = new DialogResult();
+            res = MessageBox.Show("Вы действительно хотите выйти?","Выход из программы",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            { 
+                System.Windows.Forms.Application.Exit(); 
+            }
+            else
+            { 
+                return;
+            }
         }
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.LightThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2, labelITN,labelNameProject,labelJob,textBoxITN,textBoxNameProject,textBoxJob); //передаем все что хоти изменить
+            ThemeMethodClass.LightThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2, labelITN,labelNameProject,labelJob,textBoxITN,textBoxNameProject,textBoxJob, richTextBoxTime); //передаем все что хоти изменить
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -247,7 +265,7 @@ namespace Autorization
         }
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.DarkThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2, labelITN, labelNameProject, labelJob, textBoxITN, textBoxNameProject, textBoxJob); //передаем все что хоти изменить
+            ThemeMethodClass.DarkThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2, labelITN, labelNameProject, labelJob, textBoxITN, textBoxNameProject, textBoxJob, richTextBoxTime); //передаем все что хоти изменить
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -376,6 +394,12 @@ namespace Autorization
             {
                 ((Timer)sender).Stop(); // таймер останавливается
             }
+
+        }
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            string dateandtime = DateTime.Now.ToString();
+            richTextBoxTime.Text = dateandtime;
         }
     }
 }

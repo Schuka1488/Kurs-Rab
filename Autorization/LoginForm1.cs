@@ -33,6 +33,16 @@ namespace Autorization
         }
         private void label4_Click(object sender, EventArgs e)
         {
+            DialogResult res = new DialogResult();
+            res = MessageBox.Show("Вы действительно хотите выйти?","Выход из программы",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Application.Exit(); 
+            }
+            else
+            { 
+                return; 
+            }
             animateComponent1.CloseForm(750);
         }
         Point lastPoint; // специальный класс для задачи координат

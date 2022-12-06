@@ -31,6 +31,12 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxNameProject = new System.Windows.Forms.TextBox();
+            this.textBoxITN = new System.Windows.Forms.TextBox();
+            this.labelNameProject = new System.Windows.Forms.Label();
+            this.labelITN = new System.Windows.Forms.Label();
+            this.labelJob = new System.Windows.Forms.Label();
+            this.textBoxJob = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelTheme = new System.Windows.Forms.Label();
@@ -61,12 +67,8 @@ namespace Autorization
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBoxJob = new System.Windows.Forms.TextBox();
-            this.labelJob = new System.Windows.Forms.Label();
-            this.labelITN = new System.Windows.Forms.Label();
-            this.labelNameProject = new System.Windows.Forms.Label();
-            this.textBoxITN = new System.Windows.Forms.TextBox();
-            this.textBoxNameProject = new System.Windows.Forms.TextBox();
+            this.richTextBoxTime = new System.Windows.Forms.RichTextBox();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -96,6 +98,66 @@ namespace Autorization
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // textBoxNameProject
+            // 
+            this.textBoxNameProject.Location = new System.Drawing.Point(291, 451);
+            this.textBoxNameProject.Name = "textBoxNameProject";
+            this.textBoxNameProject.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNameProject.TabIndex = 48;
+            this.textBoxNameProject.Visible = false;
+            this.textBoxNameProject.TextChanged += new System.EventHandler(this.textBoxNameProject_TextChanged);
+            // 
+            // textBoxITN
+            // 
+            this.textBoxITN.Location = new System.Drawing.Point(291, 451);
+            this.textBoxITN.Name = "textBoxITN";
+            this.textBoxITN.Size = new System.Drawing.Size(100, 20);
+            this.textBoxITN.TabIndex = 47;
+            this.textBoxITN.Visible = false;
+            this.textBoxITN.TextChanged += new System.EventHandler(this.textBoxITN_TextChanged);
+            // 
+            // labelNameProject
+            // 
+            this.labelNameProject.AutoSize = true;
+            this.labelNameProject.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNameProject.Location = new System.Drawing.Point(12, 451);
+            this.labelNameProject.Name = "labelNameProject";
+            this.labelNameProject.Size = new System.Drawing.Size(220, 20);
+            this.labelNameProject.TabIndex = 46;
+            this.labelNameProject.Text = "Введите название проекта:";
+            this.labelNameProject.Visible = false;
+            // 
+            // labelITN
+            // 
+            this.labelITN.AutoSize = true;
+            this.labelITN.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelITN.Location = new System.Drawing.Point(8, 451);
+            this.labelITN.Name = "labelITN";
+            this.labelITN.Size = new System.Drawing.Size(277, 20);
+            this.labelITN.TabIndex = 45;
+            this.labelITN.Text = "Введите ИНН компании заказчика:";
+            this.labelITN.Visible = false;
+            // 
+            // labelJob
+            // 
+            this.labelJob.AutoSize = true;
+            this.labelJob.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJob.Location = new System.Drawing.Point(8, 449);
+            this.labelJob.Name = "labelJob";
+            this.labelJob.Size = new System.Drawing.Size(239, 20);
+            this.labelJob.TabIndex = 44;
+            this.labelJob.Text = "Введите название должности:";
+            this.labelJob.Visible = false;
+            // 
+            // textBoxJob
+            // 
+            this.textBoxJob.Location = new System.Drawing.Point(291, 451);
+            this.textBoxJob.Name = "textBoxJob";
+            this.textBoxJob.Size = new System.Drawing.Size(100, 20);
+            this.textBoxJob.TabIndex = 43;
+            this.textBoxJob.Visible = false;
+            this.textBoxJob.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -170,6 +232,8 @@ namespace Autorization
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.richTextBoxTime);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.MainMenuLabel);
             this.panel2.Controls.Add(this.menuStrip1);
@@ -216,7 +280,7 @@ namespace Autorization
             this.печатьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(958, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(956, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -232,14 +296,14 @@ namespace Autorization
             // программуToolStripMenuItem
             // 
             this.программуToolStripMenuItem.Name = "программуToolStripMenuItem";
-            this.программуToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.программуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.программуToolStripMenuItem.Text = "Из программы";
             this.программуToolStripMenuItem.Click += new System.EventHandler(this.программуToolStripMenuItem_Click);
             // 
             // формуToolStripMenuItem
             // 
             this.формуToolStripMenuItem.Name = "формуToolStripMenuItem";
-            this.формуToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.формуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.формуToolStripMenuItem.Text = "Из аккаунта";
             this.формуToolStripMenuItem.Click += new System.EventHandler(this.формуToolStripMenuItem_Click);
             // 
@@ -341,65 +405,24 @@ namespace Autorization
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // textBoxJob
+            // richTextBoxTime
             // 
-            this.textBoxJob.Location = new System.Drawing.Point(291, 451);
-            this.textBoxJob.Name = "textBoxJob";
-            this.textBoxJob.Size = new System.Drawing.Size(100, 20);
-            this.textBoxJob.TabIndex = 43;
-            this.textBoxJob.Visible = false;
-            this.textBoxJob.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.richTextBoxTime.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.richTextBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxTime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.richTextBoxTime.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBoxTime.Location = new System.Drawing.Point(12, 37);
+            this.richTextBoxTime.Name = "richTextBoxTime";
+            this.richTextBoxTime.Size = new System.Drawing.Size(157, 28);
+            this.richTextBoxTime.TabIndex = 33;
+            this.richTextBoxTime.Text = "";
             // 
-            // labelJob
+            // timer3
             // 
-            this.labelJob.AutoSize = true;
-            this.labelJob.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJob.Location = new System.Drawing.Point(8, 449);
-            this.labelJob.Name = "labelJob";
-            this.labelJob.Size = new System.Drawing.Size(239, 20);
-            this.labelJob.TabIndex = 44;
-            this.labelJob.Text = "Введите название должности:";
-            this.labelJob.Visible = false;
-            // 
-            // labelITN
-            // 
-            this.labelITN.AutoSize = true;
-            this.labelITN.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelITN.Location = new System.Drawing.Point(8, 451);
-            this.labelITN.Name = "labelITN";
-            this.labelITN.Size = new System.Drawing.Size(277, 20);
-            this.labelITN.TabIndex = 45;
-            this.labelITN.Text = "Введите ИНН компании заказчика:";
-            this.labelITN.Visible = false;
-            // 
-            // labelNameProject
-            // 
-            this.labelNameProject.AutoSize = true;
-            this.labelNameProject.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameProject.Location = new System.Drawing.Point(12, 451);
-            this.labelNameProject.Name = "labelNameProject";
-            this.labelNameProject.Size = new System.Drawing.Size(220, 20);
-            this.labelNameProject.TabIndex = 46;
-            this.labelNameProject.Text = "Введите название проекта:";
-            this.labelNameProject.Visible = false;
-            // 
-            // textBoxITN
-            // 
-            this.textBoxITN.Location = new System.Drawing.Point(291, 451);
-            this.textBoxITN.Name = "textBoxITN";
-            this.textBoxITN.Size = new System.Drawing.Size(100, 20);
-            this.textBoxITN.TabIndex = 47;
-            this.textBoxITN.Visible = false;
-            this.textBoxITN.TextChanged += new System.EventHandler(this.textBoxITN_TextChanged);
-            // 
-            // textBoxNameProject
-            // 
-            this.textBoxNameProject.Location = new System.Drawing.Point(291, 451);
-            this.textBoxNameProject.Name = "textBoxNameProject";
-            this.textBoxNameProject.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNameProject.TabIndex = 48;
-            this.textBoxNameProject.Visible = false;
-            this.textBoxNameProject.TextChanged += new System.EventHandler(this.textBoxNameProject_TextChanged);
+            this.timer3.Enabled = true;
+            this.timer3.Interval = 1000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // MainForm
             // 
@@ -461,5 +484,7 @@ namespace Autorization
         private System.Windows.Forms.Label labelNameProject;
         private System.Windows.Forms.TextBox textBoxNameProject;
         private System.Windows.Forms.TextBox textBoxITN;
+        private System.Windows.Forms.RichTextBox richTextBoxTime;
+        private System.Windows.Forms.Timer timer3;
     }
 }

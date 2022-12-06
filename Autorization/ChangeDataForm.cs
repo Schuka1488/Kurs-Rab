@@ -64,7 +64,16 @@ namespace Autorization
 
         private void изПрограммыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit(); // метод выхода из программы
+            DialogResult res = new DialogResult();
+            res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void изАккаунтаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,7 +100,9 @@ namespace Autorization
                 
                 textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton,  ResetButton2, ResetButton3,  ResetButton4,  ResetButton5, ResetButton6,
 
-                DeleteLineButton, DeleteLineButton2, DeleteLineButton3, DeleteLineButton4, DeleteLineButton5, DeleteLineButton6);
+                DeleteLineButton, DeleteLineButton2, DeleteLineButton3, DeleteLineButton4, DeleteLineButton5, DeleteLineButton6,
+
+                richTextBoxTime);
 
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
@@ -113,7 +124,9 @@ namespace Autorization
                 
                 textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton, ResetButton2, ResetButton3, ResetButton4, ResetButton5, ResetButton6,
 
-                DeleteLineButton, DeleteLineButton2, DeleteLineButton3, DeleteLineButton4, DeleteLineButton5, DeleteLineButton6);
+                DeleteLineButton, DeleteLineButton2, DeleteLineButton3, DeleteLineButton4, DeleteLineButton5, DeleteLineButton6,
+
+                richTextBoxTime);
 
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
@@ -825,7 +838,16 @@ namespace Autorization
         }
         private void label4_Click(object sender, EventArgs e)
         {
-            Application.Exit(); // метод выхода из программы
+            DialogResult res = new DialogResult();
+            res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            { 
+                Application.Exit(); 
+            }
+            else
+            { 
+                return; 
+            }
         }
         private void AddLineButton_Click(object sender, EventArgs e)
         {
@@ -899,6 +921,18 @@ namespace Autorization
         {
             DeleteTable6();
         }
+
+
+
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            string dateandtime = DateTime.Now.ToString();
+            richTextBoxTime.Text = dateandtime;
+        }
+
+
+
         private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Right))
@@ -917,6 +951,8 @@ namespace Autorization
             //Метод получения ID выделенной строки в глобальную переменную
             GetSelectedIDString();
         }
+
+
         string id_selected_rows;
         public void GetSelectedIDString()
         {

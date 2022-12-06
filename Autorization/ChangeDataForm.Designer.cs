@@ -87,6 +87,8 @@ namespace Autorization
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.richTextBoxTime = new System.Windows.Forms.RichTextBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -591,6 +593,7 @@ namespace Autorization
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel5.Controls.Add(this.richTextBoxTime);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.TransformDataLabel);
             this.panel5.Controls.Add(this.menuStrip1);
@@ -652,21 +655,21 @@ namespace Autorization
             // изПрограммыToolStripMenuItem
             // 
             this.изПрограммыToolStripMenuItem.Name = "изПрограммыToolStripMenuItem";
-            this.изПрограммыToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.изПрограммыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.изПрограммыToolStripMenuItem.Text = "Из программы";
             this.изПрограммыToolStripMenuItem.Click += new System.EventHandler(this.изПрограммыToolStripMenuItem_Click);
             // 
             // изАккаунтаToolStripMenuItem
             // 
             this.изАккаунтаToolStripMenuItem.Name = "изАккаунтаToolStripMenuItem";
-            this.изАккаунтаToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.изАккаунтаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.изАккаунтаToolStripMenuItem.Text = "Из аккаунта";
             this.изАккаунтаToolStripMenuItem.Click += new System.EventHandler(this.изАккаунтаToolStripMenuItem_Click);
             // 
             // вГлавноеМенюToolStripMenuItem
             // 
             this.вГлавноеМенюToolStripMenuItem.Name = "вГлавноеМенюToolStripMenuItem";
-            this.вГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.вГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.вГлавноеМенюToolStripMenuItem.Text = "В главное меню";
             this.вГлавноеМенюToolStripMenuItem.Click += new System.EventHandler(this.вГлавноеМенюToolStripMenuItem_Click);
             // 
@@ -728,6 +731,25 @@ namespace Autorization
             // toolTip2
             // 
             this.toolTip2.ShowAlways = true;
+            // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Interval = 1000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // richTextBoxTime
+            // 
+            this.richTextBoxTime.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.richTextBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxTime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.richTextBoxTime.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBoxTime.Location = new System.Drawing.Point(12, 36);
+            this.richTextBoxTime.Name = "richTextBoxTime";
+            this.richTextBoxTime.Size = new System.Drawing.Size(163, 29);
+            this.richTextBoxTime.TabIndex = 32;
+            this.richTextBoxTime.Text = "";
             // 
             // ChangeDataForm
             // 
@@ -810,5 +832,7 @@ namespace Autorization
         private System.Windows.Forms.Button DeleteLineButton4;
         private System.Windows.Forms.Button DeleteLineButton5;
         private System.Windows.Forms.Button DeleteLineButton6;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.RichTextBox richTextBoxTime;
     }
 }
