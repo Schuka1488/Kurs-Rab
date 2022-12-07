@@ -260,7 +260,7 @@ namespace Autorization
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 2; // знак таймера
             Timer timer = new Timer(); // создаем таймер
-            timer.Interval = 10; // интервал с которым будет осуществляться переход 0,1 секунды = значение 10
+            timer.Interval = 4; // интервал с которым будет осуществляться переход 0,1 секунды = значение 10
             timer.Tick += timer2_Tick; // считываем нажатие
             timer.Start(); // таймер срабатывает 
         }
@@ -272,7 +272,7 @@ namespace Autorization
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 1; // знак таймера
             Timer timer = new Timer(); // создаем таймер
-            timer.Interval = 10; // интервал с которым будет осуществляться переход 0,1 секунды = значение 10
+            timer.Interval = 4; // интервал с которым будет осуществляться переход 0,1 секунды = значение 10
             timer.Tick += timer1_Tick; // считываем нажатие
             timer.Start(); // таймер срабатывает 
         }
