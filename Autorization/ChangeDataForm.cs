@@ -282,10 +282,18 @@ namespace Autorization
         }
         private void DeleteTable()
         {
-            db.openConnection();
-            MySqlCommand cmd = new MySqlCommand($"DELETE FROM Employees WHERE EmployeesID = {id_selected_rows}", db.getConnection());
-            MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
-            db.closeConnection();
+            try
+            {
+                db.openConnection();
+                MySqlCommand cmd = new MySqlCommand($"DELETE FROM Employees WHERE EmployeesID = {id_selected_rows}", db.getConnection());
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
+                db.closeConnection();
+            }
+            catch
+            {
+                MessageBox.Show("Данные не удалены!");
+                db.closeConnection();
+            }
         }
         private void CustomerTableReset()
         {
