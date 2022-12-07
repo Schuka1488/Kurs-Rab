@@ -338,7 +338,7 @@ namespace Autorization
             exApp.Visible = true;
         }
 
-
+        // fggffg
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             table.DefaultView.RowFilter = $"Профессия LIKE '%{textBoxJob.Text}%'";
