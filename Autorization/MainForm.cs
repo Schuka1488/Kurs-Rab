@@ -84,8 +84,20 @@ namespace Autorization
             else
             { 
                 return; 
+            } 
+        }
+        private void label4_Click(object sender, EventArgs e) // осуществил выход при помощи тейбла поставив X
+        {
+            DialogResult res = new DialogResult();
+            res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                System.Windows.Forms.Application.Exit();
             }
-            
+            else
+            {
+                return;
+            }
         }
         private void формуToolStripMenuItem_Click(object sender, EventArgs e) // выход из главной формы и возвращение к авторизации, без потери производительности
         {
@@ -239,19 +251,6 @@ namespace Autorization
             ChangeDataForm changedataForm = new ChangeDataForm(); // после авторизации показывается ChangeDataForm
             changedataForm.Show(); // метод для показа ChangeDataForm
         }
-        private void label4_Click(object sender, EventArgs e) // осуществил выход при помощи тейбла поставив X
-        {
-            DialogResult res = new DialogResult();
-            res = MessageBox.Show("Вы действительно хотите выйти?","Выход из программы",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
-            { 
-                System.Windows.Forms.Application.Exit(); 
-            }
-            else
-            { 
-                return;
-            }
-        }
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
             ThemeMethodClass.LightThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2, labelITN,labelNameProject,labelJob,textBoxITN,textBoxNameProject,textBoxJob, richTextBoxTime); //передаем все что хоти изменить
@@ -316,7 +315,6 @@ namespace Autorization
 
             doc.Save();
         }
-        //ffgfggf
 
         private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -339,8 +337,6 @@ namespace Autorization
 
             exApp.Visible = true;
         }
-
-
 
 
         private void textBox1_TextChanged(object sender, EventArgs e)
