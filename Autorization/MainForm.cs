@@ -18,7 +18,7 @@ namespace Autorization
     {
 
         System.Data.DataTable table; // глобальная переменная для простоты вывода в Microsoft Word
-        string id_selected_rows = "0"; //Переменная для индекс выбранной строки в гриде
+        string id_selected_rows = "0"; //Переменная для индекс выбранной строки в гриде, по умолчанию в гридере стоит индекс -1
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
         DBclass db = new DBclass(); // переменная класса для БД, и последующей работе с ними
         System.Drawing.Point lastPoint; // специальный класс для задачи координат
@@ -104,6 +104,12 @@ namespace Autorization
             this.Hide();
             LoginForm1 auth = new LoginForm1();
             auth.Show();
+        }
+        private void изменитьДанныеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChangeDataForm changedataForm = new ChangeDataForm(); // после авторизации показывается ChangeDataForm
+            changedataForm.Show(); // метод для показа ChangeDataForm
         }
         public void GetSelectedIDString() //Метод получения ID выделенной строки, для последующего вызова его в нужных методах
         {
@@ -245,12 +251,7 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-        private void изменитьДанныеToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ChangeDataForm changedataForm = new ChangeDataForm(); // после авторизации показывается ChangeDataForm
-            changedataForm.Show(); // метод для показа ChangeDataForm
-        }
+
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
             ThemeMethodClass.LightThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2, labelITN,labelNameProject,labelJob,textBoxITN,textBoxNameProject,textBoxJob, richTextBoxTime); //передаем все что хоти изменить
@@ -278,42 +279,50 @@ namespace Autorization
         int dR, dG, dB, sign; // переменные для rgb и индекса таймера
         private void печатьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Application app = new Application();
-            Document doc = app.Documents.Add(Visible: true);
-            Microsoft.Office.Interop.Word.Range r = doc.Range();
-            Table t = doc.Tables.Add(r, dataGridView1.Rows.Count + 1, dataGridView1.Columns.Count);
-            int bdRow = 0;
-            bool IsColumnReady = false;
-
-            t.Borders.Enable = 1;
-            foreach (Row row in t.Rows)
+            try
             {
-                if (!IsColumnReady && bdRow == 0)
+                Application app = new Application();
+                Document doc = app.Documents.Add(Visible: true);
+                Microsoft.Office.Interop.Word.Range r = doc.Range();
+                Table t = doc.Tables.Add(r, dataGridView1.Rows.Count + 1, dataGridView1.Columns.Count);
+                int bdRow = 0;
+                bool IsColumnReady = false;
+
+                t.Borders.Enable = 1;
+                foreach (Row row in t.Rows)
                 {
-                    int tableCounter = 0;
-                    foreach (Cell cell in row.Cells)
+                    if (!IsColumnReady && bdRow == 0)
                     {
-                        cell.Range.Text = table.Columns[tableCounter].ColumnName;
-                        tableCounter++;
+                        int tableCounter = 0;
+                        foreach (Cell cell in row.Cells)
+                        {
+                            cell.Range.Text = table.Columns[tableCounter].ColumnName;
+                            tableCounter++;
+                        }
+
+                        IsColumnReady = true;
+                        continue;
                     }
 
-                    IsColumnReady = true;
-                    continue;
+                    object[] collection = table.Rows[bdRow].ItemArray;
+                    int cellCount = 0;
+                    foreach (Cell cell in row.Cells)
+                    {
+                        cell.Range.Text = collection[cellCount].ToString();
+
+                        cellCount++;
+                    }
+
+                    bdRow++;
                 }
 
-                object[] collection = table.Rows[bdRow].ItemArray;
-                int cellCount = 0;
-                foreach (Cell cell in row.Cells)
-                {
-                    cell.Range.Text = collection[cellCount].ToString();
-
-                    cellCount++;
-                }
-
-                bdRow++;
+                doc.Save();
+                doc.Close();
             }
-
-            doc.Save();
+            catch
+            {
+                MessageBox.Show("Необходимо выбрать или сохранить таблицу", "Ошибка вывода", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
+            }
         }
 
         private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
@@ -336,9 +345,10 @@ namespace Autorization
             }
 
             exApp.Visible = true;
+            
         }
 
-        // fggffg
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             table.DefaultView.RowFilter = $"Профессия LIKE '%{textBoxJob.Text}%'";
