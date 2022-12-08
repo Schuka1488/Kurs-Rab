@@ -130,9 +130,9 @@ namespace Autorization
 
                 label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1,
 
-                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton, ResetButton2, ResetButton3, ResetButton4, ResetButton5, ResetButton6,
-
-                DeleteLineButton, DeleteLineButton2, DeleteLineButton3, DeleteLineButton4, DeleteLineButton5, DeleteLineButton6,
+                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton, DeleteLineButton, DeleteLineButton2, DeleteLineButton3,
+                
+                DeleteLineButton4, DeleteLineButton5, DeleteLineButton6,
 
                 richTextBoxTime);
 
@@ -154,9 +154,9 @@ namespace Autorization
 
                 label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1,
 
-                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton, ResetButton2, ResetButton3, ResetButton4, ResetButton5, ResetButton6,
-
-                DeleteLineButton, DeleteLineButton2, DeleteLineButton3, DeleteLineButton4, DeleteLineButton5, DeleteLineButton6,
+                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton, DeleteLineButton, DeleteLineButton2, DeleteLineButton3,
+                
+                DeleteLineButton4, DeleteLineButton5, DeleteLineButton6,
 
                 richTextBoxTime);
 
@@ -201,61 +201,7 @@ namespace Autorization
             richTextBoxTime.Text = dateandtime;
         }
         #endregion
-        private void EmployeesTableReset()
-        {
-            string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees"; // SQL запрос данных из БД
-            MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
-            MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            table = new DataTable(); // класс для таблиц
-            adapter.SelectCommand = cmd; // адаптер берет соединение
-            adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
-            bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
-            dataGridViewTransformData2.DataSource = bSource; // показывается таблица при выборе вкладки
-            dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
-            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
-            textBox2.Visible = true;
-            textBox3.Visible = true;
-            textBox4.Visible = true;
-            textBox5.Visible = true;
-            textBox6.Visible = true;
-            textBox7.Visible = true;
-
-            Column1Label.Visible = false;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = true;
-            Column5Label.Visible = true;
-            Column6Label.Visible = true;
-            Column7Label.Visible = true;
-
-            AddLineButton.Visible = true;
-            AddLineButton2.Visible = false;
-            AddLineButton3.Visible = false;
-            AddLineButton4.Visible = false;
-            AddLineButton5.Visible = false;
-            AddLineButton6.Visible = false;
-
-            ResetButton.Visible = true;
-            ResetButton2.Visible = false;
-            ResetButton3.Visible = false;
-            ResetButton4.Visible = false;
-            ResetButton5.Visible = false;
-            ResetButton6.Visible = false;
-
-            DeleteLineButton.Visible = true;
-            DeleteLineButton2.Visible = false;
-            DeleteLineButton3.Visible = false;
-            DeleteLineButton4.Visible = false;
-            DeleteLineButton5.Visible = false;
-            DeleteLineButton6.Visible = false;
-        }
+        
         private void вТаблицеСотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees"; // SQL запрос данных из БД
@@ -281,6 +227,7 @@ namespace Autorization
             textBox5.Visible = true;
             textBox6.Visible = true;
             textBox7.Visible = true;
+
             Column1Label.Visible = false;
             Column2Label.Visible = true;
             Column3Label.Visible = true;
@@ -289,17 +236,13 @@ namespace Autorization
             Column6Label.Visible = true;
             Column7Label.Visible = true;
             AddLineButton.Visible = true;
+
             AddLineButton2.Visible = false;
             AddLineButton3.Visible = false;
             AddLineButton4.Visible = false;
             AddLineButton5.Visible = false;
             AddLineButton6.Visible = false;
-            ResetButton.Visible = true;
-            ResetButton2.Visible = false;
-            ResetButton3.Visible = false;
-            ResetButton4.Visible = false;
-            ResetButton5.Visible = false;
-            ResetButton6.Visible = false;
+
             DeleteLineButton.Visible = true;
             DeleteLineButton2.Visible = false;
             DeleteLineButton3.Visible = false;
@@ -337,60 +280,7 @@ namespace Autorization
                 db.closeConnection();
             }
         }
-        private void CustomerTableReset()
-        {
-            string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', PSRN AS 'ОГРН', ITN AS 'ИНН', TRRC AS 'КПП' FROM Customer"; // SQL запрос данных из БД
-            MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
-            MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            table = new DataTable(); // класс для таблиц
-            adapter.SelectCommand = cmd; // адаптер берет соединение
-            adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
-            bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
-            dataGridViewTransformData2.DataSource = bSource; // показывается таблица при выборе вкладки
-            dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
-            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
-            textBox2.Visible = true;
-            textBox3.Visible = true;
-            textBox4.Visible = true;
-            textBox5.Visible = true;
-            textBox6.Visible = true;
-            textBox7.Visible = false;
-
-            Column1Label.Visible = false;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = true;
-            Column5Label.Visible = true;
-            Column6Label.Visible = true;
-            Column7Label.Visible = false;
-
-            AddLineButton.Visible = false;
-            AddLineButton2.Visible = true;
-            AddLineButton3.Visible = false;
-            AddLineButton4.Visible = false;
-            AddLineButton5.Visible = false;
-            AddLineButton6.Visible = false;
-
-            ResetButton.Visible = false;
-            ResetButton2.Visible = true;
-            ResetButton3.Visible = false;
-            ResetButton4.Visible = false;
-            ResetButton5.Visible = false;
-            ResetButton6.Visible = false;
-
-            DeleteLineButton.Visible = false;
-            DeleteLineButton2.Visible = true;
-            DeleteLineButton3.Visible = false;
-            DeleteLineButton4.Visible = false;
-            DeleteLineButton5.Visible = false;
-            DeleteLineButton6.Visible = false;
-        }
+        
         private void вТаблицеЗаказчикиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', PSRN AS 'ОГРН', ITN AS 'ИНН', TRRC AS 'КПП' FROM Customer"; // SQL запрос данных из БД
@@ -415,6 +305,7 @@ namespace Autorization
             textBox5.Visible = true;
             textBox6.Visible = true;
             textBox7.Visible = false;
+
             Column1Label.Visible = false;
             Column2Label.Visible = true;
             Column3Label.Visible = true;
@@ -422,18 +313,14 @@ namespace Autorization
             Column5Label.Visible = true;
             Column6Label.Visible = true;
             Column7Label.Visible = false;
+
             AddLineButton.Visible = false;
             AddLineButton2.Visible = true;
             AddLineButton3.Visible = false;
             AddLineButton4.Visible = false;
             AddLineButton5.Visible = false;
             AddLineButton6.Visible = false;
-            ResetButton.Visible = false;
-            ResetButton2.Visible = true;
-            ResetButton3.Visible = false;
-            ResetButton4.Visible = false;
-            ResetButton5.Visible = false;
-            ResetButton6.Visible = false;
+
             DeleteLineButton.Visible = false;
             DeleteLineButton2.Visible = true;
             DeleteLineButton3.Visible = false;
@@ -471,61 +358,7 @@ namespace Autorization
                 db.closeConnection();
             }
         }
-        private void ProjectOrderTableReset()
-        {
-            string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта' , projectPrice AS 'Цена в рублях',  ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
-            MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
-            MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            table = new DataTable(); // класс для таблиц
-            adapter.SelectCommand = cmd; // адаптер берет соединение
-            adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
-            bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
-            dataGridViewTransformData2.DataSource = bSource; // показывается таблица при выборе вкладки
-            dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
-            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
-            textBox2.Visible = true;
-            textBox3.Visible = true;
-            textBox4.Visible = true;
-            textBox5.Visible = true;
-            textBox6.Visible = true;
-            textBox7.Visible = true;
-
-            Column1Label.Visible = false;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = true;
-            Column5Label.Visible = true;
-            Column6Label.Visible = true;
-            Column7Label.Visible = true;
-
-            AddLineButton.Visible = false;
-            AddLineButton2.Visible = false;
-            AddLineButton3.Visible = true;
-            AddLineButton4.Visible = false;
-            AddLineButton5.Visible = false;
-            AddLineButton6.Visible = false;
-
-            ResetButton.Visible = false;
-            ResetButton2.Visible = false;
-            ResetButton3.Visible = true;
-            ResetButton4.Visible = false;
-            ResetButton5.Visible = false;
-            ResetButton6.Visible = false;
-
-            DeleteLineButton.Visible = false;
-            DeleteLineButton2.Visible = false;
-            DeleteLineButton3.Visible = true;
-            DeleteLineButton4.Visible = false;
-            DeleteLineButton5.Visible = false;
-            DeleteLineButton6.Visible = false;
-        }
+        
         private void заказыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта' , projectPrice AS 'Цена в рублях',  ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
@@ -551,6 +384,7 @@ namespace Autorization
             textBox5.Visible = true;
             textBox6.Visible = true;
             textBox7.Visible = true;
+
             Column1Label.Visible = false;
             Column2Label.Visible = true;
             Column3Label.Visible = true;
@@ -558,18 +392,14 @@ namespace Autorization
             Column5Label.Visible = true;
             Column6Label.Visible = true;
             Column7Label.Visible = true;
+
             AddLineButton.Visible = false;
             AddLineButton2.Visible = false;
             AddLineButton3.Visible = true;
             AddLineButton4.Visible = false;
             AddLineButton5.Visible = false;
             AddLineButton6.Visible = false;
-            ResetButton.Visible = false;
-            ResetButton2.Visible = false;
-            ResetButton3.Visible = true;
-            ResetButton4.Visible = false;
-            ResetButton5.Visible = false;
-            ResetButton6.Visible = false;
+
             DeleteLineButton.Visible = false;
             DeleteLineButton2.Visible = false;
             DeleteLineButton3.Visible = true;
@@ -607,57 +437,7 @@ namespace Autorization
                 db.closeConnection();
             }
         }
-        private void ProjectIDTableReset()
-        {
-            string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales"; // SQL запрос данных из БД
-            MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
-            MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            table = new DataTable(); // класс для таблиц
-            adapter.SelectCommand = cmd; // адаптер берет соединение
-            adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
-            bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
-            dataGridViewTransformData2.DataSource = bSource; // показывается таблица при выборе вкладки
-            dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
-            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
-            textBox2.Visible = true;
-            textBox3.Visible = true;
-            textBox4.Visible = false;
-            textBox5.Visible = false;
-            textBox6.Visible = false;
-            textBox7.Visible = false;
-
-            Column1Label.Visible = false;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = false;
-            Column5Label.Visible = false;
-            Column6Label.Visible = false;
-            Column7Label.Visible = false;
-
-            AddLineButton.Visible = false;
-            AddLineButton2.Visible = false;
-            AddLineButton3.Visible = false;
-            AddLineButton4.Visible = true;
-            AddLineButton5.Visible = false;
-            AddLineButton6.Visible = false;
-
-            ResetButton.Visible = false;
-            ResetButton2.Visible = false;
-            ResetButton3.Visible = false;
-            ResetButton4.Visible = true;
-            ResetButton5.Visible = false;
-            ResetButton6.Visible = false;
-
-            DeleteLineButton.Visible = false;
-            DeleteLineButton2.Visible = false;
-            DeleteLineButton3.Visible = false;
-            DeleteLineButton4.Visible = true;
-            DeleteLineButton5.Visible = false;
-            DeleteLineButton6.Visible = false;
-        }
+       
         private void продажиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales"; // SQL запрос данных из БД
@@ -679,6 +459,7 @@ namespace Autorization
             textBox5.Visible = false;
             textBox6.Visible = false;
             textBox7.Visible = false;
+
             Column1Label.Visible = false;
             Column2Label.Visible = true;
             Column3Label.Visible = true;
@@ -686,18 +467,14 @@ namespace Autorization
             Column5Label.Visible = false;
             Column6Label.Visible = false;
             Column7Label.Visible = false;
+
             AddLineButton.Visible = false;
             AddLineButton2.Visible = false;
             AddLineButton3.Visible = false;
             AddLineButton4.Visible = true;
             AddLineButton5.Visible = false;
             AddLineButton6.Visible = false;
-            ResetButton.Visible = false;
-            ResetButton2.Visible = false;
-            ResetButton3.Visible = false;
-            ResetButton4.Visible = true;
-            ResetButton5.Visible = false;
-            ResetButton6.Visible = false;
+
             DeleteLineButton.Visible = false;
             DeleteLineButton2.Visible = false;
             DeleteLineButton3.Visible = false;
@@ -735,58 +512,7 @@ namespace Autorization
                 db.closeConnection();
             }
         }
-        private void SaleIDTableReset()
-        {
-            string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц', saleCost AS 'Цена в рублях' FROM Sales"; // SQL запрос данных из БД
-            MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
-            MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            table = new DataTable(); // класс для таблиц
-            adapter.SelectCommand = cmd; // адаптер берет соединение
-            adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
-            bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
-            dataGridViewTransformData2.DataSource = bSource; // показывается таблица при выборе вкладки
-            dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
-            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
-            textBox2.Visible = true;
-            textBox3.Visible = true;
-            textBox4.Visible = true;
-            textBox5.Visible = false;
-            textBox6.Visible = false;
-            textBox7.Visible = false;
-
-            Column1Label.Visible = false;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = true;
-            Column5Label.Visible = false;
-            Column6Label.Visible = false;
-            Column7Label.Visible = false;
-
-            AddLineButton.Visible = false;
-            AddLineButton2.Visible = false;
-            AddLineButton3.Visible = false;
-            AddLineButton4.Visible = false;
-            AddLineButton5.Visible = true;
-            AddLineButton6.Visible = false;
-
-            ResetButton.Visible = false;
-            ResetButton2.Visible = false;
-            ResetButton3.Visible = false;
-            ResetButton4.Visible = false;
-            ResetButton5.Visible = true;
-            ResetButton6.Visible = false;
-
-            DeleteLineButton.Visible = false;
-            DeleteLineButton2.Visible = false;
-            DeleteLineButton3.Visible = false;
-            DeleteLineButton4.Visible = false;
-            DeleteLineButton5.Visible = true;
-            DeleteLineButton6.Visible = false;
-        }
+        
         private void ценаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц', saleCost AS 'Цена в рублях' FROM Sales"; // SQL запрос данных из БД
@@ -809,6 +535,7 @@ namespace Autorization
             textBox5.Visible = false;
             textBox6.Visible = false;
             textBox7.Visible = false;
+
             Column1Label.Visible = false;
             Column2Label.Visible = true;
             Column3Label.Visible = true;
@@ -816,18 +543,14 @@ namespace Autorization
             Column5Label.Visible = false;
             Column6Label.Visible = false;
             Column7Label.Visible = false;
+
             AddLineButton.Visible = false;
             AddLineButton2.Visible = false;
             AddLineButton3.Visible = false;
             AddLineButton4.Visible = false;
             AddLineButton5.Visible = true;
             AddLineButton6.Visible = false;
-            ResetButton.Visible = false;
-            ResetButton2.Visible = false;
-            ResetButton3.Visible = false;
-            ResetButton4.Visible = false;
-            ResetButton5.Visible = true;
-            ResetButton6.Visible = false;
+
             DeleteLineButton.Visible = false;
             DeleteLineButton2.Visible = false;
             DeleteLineButton3.Visible = false;
@@ -865,61 +588,7 @@ namespace Autorization
                 db.closeConnection();
             }
         }
-        private void AutorizationIDTableReset()
-        {
-            string commandStr = "SELECT AuthorizationID AS 'Код авторизации', EmployeesID AS 'Код сотрудника', employeesJobTitle AS 'Профессия', login AS 'Логин', password AS 'Пароль', roleTitle AS 'Название роли', levelRole AS 'Уровень роли' FROM authorization"; // SQL запрос данных из БД
-            MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
-            MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
-            table = new DataTable(); // класс для таблиц
-            adapter.SelectCommand = cmd; // адаптер берет соединение
-            adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
-            bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
-            dataGridViewTransformData2.DataSource = bSource; // показывается таблица при выборе вкладки
-            dataGridViewTransformData2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
-            textBox1.Visible = false; // сокрытие и показ всех необходимых элементов формы
-            textBox2.Visible = true;
-            textBox3.Visible = true;
-            textBox4.Visible = true;
-            textBox5.Visible = true;
-            textBox6.Visible = true;
-            textBox7.Visible = true;
-
-            Column1Label.Visible = false;
-            Column2Label.Visible = true;
-            Column3Label.Visible = true;
-            Column4Label.Visible = true;
-            Column5Label.Visible = true;
-            Column6Label.Visible = true;
-            Column7Label.Visible = true;
-
-            AddLineButton.Visible = false;
-            AddLineButton2.Visible = false;
-            AddLineButton3.Visible = false;
-            AddLineButton4.Visible = false;
-            AddLineButton5.Visible = false;
-            AddLineButton6.Visible = true;
-
-            ResetButton.Visible = false;
-            ResetButton2.Visible = false;
-            ResetButton3.Visible = false;
-            ResetButton4.Visible = false;
-            ResetButton5.Visible = false;
-            ResetButton6.Visible = true;
-
-            DeleteLineButton.Visible = false;
-            DeleteLineButton2.Visible = false;
-            DeleteLineButton3.Visible = false;
-            DeleteLineButton4.Visible = false;
-            DeleteLineButton5.Visible = false;
-            DeleteLineButton6.Visible = true;
-        }
+        
         private void вТаблицеАвторизацииToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string commandStr = "SELECT AuthorizationID AS 'Код авторизации', EmployeesID AS 'Код сотрудника', employeesJobTitle AS 'Профессия', login AS 'Логин', password AS 'Пароль', roleTitle AS 'Название роли', levelRole AS 'Уровень роли' FROM authorization"; // SQL запрос данных из БД
@@ -945,6 +614,7 @@ namespace Autorization
             textBox5.Visible = true;
             textBox6.Visible = true;
             textBox7.Visible = true;
+
             Column1Label.Visible = false;
             Column2Label.Visible = true;
             Column3Label.Visible = true;
@@ -952,18 +622,14 @@ namespace Autorization
             Column5Label.Visible = true;
             Column6Label.Visible = true;
             Column7Label.Visible = true;
+
             AddLineButton.Visible = false;
             AddLineButton2.Visible = false;
             AddLineButton3.Visible = false;
             AddLineButton4.Visible = false;
             AddLineButton5.Visible = false;
             AddLineButton6.Visible = true;
-            ResetButton.Visible = false;
-            ResetButton2.Visible = false;
-            ResetButton3.Visible = false;
-            ResetButton4.Visible = false;
-            ResetButton5.Visible = false;
-            ResetButton6.Visible = true;
+
             DeleteLineButton.Visible = false;
             DeleteLineButton2.Visible = false;
             DeleteLineButton3.Visible = false;
@@ -1025,30 +691,6 @@ namespace Autorization
         {
             SupplemenEmloyee6();
         }
-        private void ResetButton_Click(object sender, EventArgs e)
-        {
-            EmployeesTableReset();
-        }
-        private void ResetButton2_Click(object sender, EventArgs e)
-        {
-            CustomerTableReset();
-        }
-        private void ResetButton3_Click(object sender, EventArgs e)
-        {
-            ProjectOrderTableReset();
-        }
-        private void ResetButton4_Click(object sender, EventArgs e)
-        {
-            ProjectIDTableReset();
-        }
-        private void ResetButton5_Click(object sender, EventArgs e)
-        {
-            SaleIDTableReset();
-        }
-        private void ResetButton6_Click(object sender, EventArgs e)
-        {
-            AutorizationIDTableReset();
-        }
         private void DeleteLineButton_Click(object sender, EventArgs e)
         {
             DeleteTable();
@@ -1072,6 +714,11 @@ namespace Autorization
         private void DeleteLineButton6_Click(object sender, EventArgs e)
         {
             DeleteTable6();
+        }
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)

@@ -75,28 +75,28 @@ namespace Autorization
         }
         private void программуToolStripMenuItem_Click(object sender, EventArgs e) // краткий метод для выхода из программы
         {
-            DialogResult res = new DialogResult();
-            res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
+            DialogResult res = new DialogResult(); // переменная для обработки выбранных кнопок в MessageBox
+            res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //Настройка MessageBox
+            if (res == DialogResult.Yes) // если мы нажимаем кнопку Да
             { 
-                System.Windows.Forms.Application.Exit(); 
+                System.Windows.Forms.Application.Exit(); // выход из программы
             }
             else
             { 
-                return; 
+                return;  // возвращаемся на форму
             } 
         }
-        private void label4_Click(object sender, EventArgs e) // осуществил выход при помощи тейбла поставив X
+        private void label4_Click(object sender, EventArgs e) // осуществил выход при помощи лейбла поставив X
         {
-            DialogResult res = new DialogResult();
-            res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
+            DialogResult res = new DialogResult(); // переменная для обработки выбранных кнопок в MessageBox
+            res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //Настройка MessageBox
+            if (res == DialogResult.Yes) // если мы нажимаем кнопку Да
             {
-                System.Windows.Forms.Application.Exit();
+                System.Windows.Forms.Application.Exit(); // выход из программы 
             }
             else
             {
-                return;
+                return; // возвращаемся на форму
             }
         }
         private void формуToolStripMenuItem_Click(object sender, EventArgs e) // выход из главной формы и возвращение к авторизации, без потери производительности
@@ -281,10 +281,10 @@ namespace Autorization
         {
             try
             {
-                Application app = new Application();
-                Document doc = app.Documents.Add(Visible: true);
-                Microsoft.Office.Interop.Word.Range r = doc.Range();
-                Table t = doc.Tables.Add(r, dataGridView1.Rows.Count + 1, dataGridView1.Columns.Count);
+                Application app = new Application(); // новая переменная для application
+                Document doc = app.Documents.Add(Visible: true); // переменная для того чтобы появилась возможность отображения документа
+                Microsoft.Office.Interop.Word.Range r = doc.Range(); // задаем размер Word файлу
+                Table t = doc.Tables.Add(r, dataGridView1.Rows.Count + 1, dataGridView1.Columns.Count); // добавляем в ворд файл строки и колонки
                 int bdRow = 0;
                 bool IsColumnReady = false;
 
@@ -316,8 +316,8 @@ namespace Autorization
                     bdRow++;
                 }
 
-                doc.Save();
-                doc.Close();
+                doc.Save(); // документ сохраняется 
+                doc.Close(); // документ закрывается программой и дальнейшее его использование программой прекращается
             }
             catch
             {
@@ -327,42 +327,42 @@ namespace Autorization
 
         private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Excel.Application exApp = new Excel.Application();
+            Excel.Application exApp = new Excel.Application(); // создаем переменную класса Excel
 
-            exApp.Workbooks.Add();
-            Excel.Worksheet wsh = (Excel.Worksheet)exApp.ActiveSheet;
-            wsh.Cells[1, 1] = dataGridView1.Columns.ToString();
+            exApp.Workbooks.Add(); // добавляем рабочую область
+            Excel.Worksheet wsh = (Excel.Worksheet)exApp.ActiveSheet; // создаем переменную для работы с Excel.Worksheet
+            wsh.Cells[1, 1] = dataGridView1.Columns.ToString(); // начинаем переносить данные в Excel с 1 строки 1 столбца
             
-            int i, j;
-            for(i=0; i<=dataGridView1.RowCount-1;i++)
+            int i, j; // переменные для столбцов и строк
+            for(i=0; i<=dataGridView1.RowCount-1;i++) // учитываем все строки
             {
 
-                for (j=0;j<=dataGridView1.ColumnCount-1;j++)
+                for (j=0;j<=dataGridView1.ColumnCount-1;j++) // учитываем все стобцы
                 {
-                    wsh.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText.ToString();
-                    wsh.Cells[i+2, j+1] = dataGridView1[j, i].Value.ToString();
+                    wsh.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText.ToString(); // учитываются наименования столбцов и переносятся в Excel 
+                    wsh.Cells[i+2, j+1] = dataGridView1[j, i].Value.ToString();  // учитываются все столбцы и строки (включая первый столбец и последний, поэтому i+2), и переносятся в Excel
                 }
             }
 
-            exApp.Visible = true;
+            exApp.Visible = true; // показывается созданный excel документ
             
         }
 
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            table.DefaultView.RowFilter = $"Профессия LIKE '%{textBoxJob.Text}%'";
+            table.DefaultView.RowFilter = $"Профессия LIKE '%{textBoxJob.Text}%'"; // фильтр сотрудникво по названию профессии
         }
 
         private void textBoxITN_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxITN.Text.Length < 0) return;
-            table.DefaultView.RowFilter = $"Convert(ИНН, System.String) LIKE '%{textBoxITN.Text}%'";
+            if (textBoxITN.Text.Length < 0) return; // данные не могут быть равны 0
+            table.DefaultView.RowFilter = $"Convert(ИНН, System.String) LIKE '%{textBoxITN.Text}%'"; // фильтр компаний по ИНН
         }
 
         private void textBoxNameProject_TextChanged(object sender, EventArgs e)
         {
-            table.DefaultView.RowFilter = $"`Название проекта` LIKE '%{textBoxNameProject.Text}%'";
+            table.DefaultView.RowFilter = $"`Название проекта` LIKE '%{textBoxNameProject.Text}%'"; // фильтр проектов по названию проекта
         }
 
 
@@ -370,7 +370,7 @@ namespace Autorization
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // использование математических функций 
             {
                 sign *= -1;// знак таймера
                 labelTheme.Text = "Темная тема вкл."; // указваем какой текст хоти видеть в лейбле
@@ -383,7 +383,7 @@ namespace Autorization
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
-            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // использование математических функций 
             {
                 sign *= -1; // знак таймера
                 labelTheme.Text = "Светлая тема вкл."; // указваем какой текст хоти видеть в лейбле
@@ -397,8 +397,8 @@ namespace Autorization
         }
         private void timer3_Tick(object sender, EventArgs e)
         {
-            string dateandtime = DateTime.Now.ToString();
-            richTextBoxTime.Text = dateandtime;
+            string dateandtime = DateTime.Now.ToString(); // перевод вывода даты и времени в строку
+            richTextBoxTime.Text = dateandtime; // вывод данных в рич текстбокс
         }
     }
 }

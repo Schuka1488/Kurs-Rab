@@ -31,7 +31,7 @@ namespace Autorization
         public LoginForm1()
         {
             InitializeComponent();
-            animateComponent1.ShowForm(750);
+            animateComponent1.ShowForm(750); //компонент для плавного показа формы
             this.passwordName.AutoSize = false; // отключается авторазмер у пароля
         }
         private void LoginForm1_Load(object sender, EventArgs e)
@@ -166,16 +166,16 @@ namespace Autorization
                 db.closeConnection(); // Полсе обрубается соединение
                 this.Hide(); // происходит сокрытие
 
-                PopupNotifier popup = new PopupNotifier();
-                popup.Image = Properties.Resources.pngres;
-                popup.ImageSize = new Size(96, 96);
-                popup.HeaderColor = Color.DeepSkyBlue;
+                PopupNotifier popup = new PopupNotifier(); //создание новой переменной класса PopupNotifier NuGet компонента Tulpep
+                popup.Image = Properties.Resources.pngres; // берем иконку из ресурсов проекта
+                popup.ImageSize = new Size(96, 96); // задаем размер
+                popup.HeaderColor = Color.DeepSkyBlue; // задаем цвета для элементов всплвающего окна 
                 popup.BodyColor = Color.Lavender;
                 popup.TitleColor = Color.LightSlateGray;
-                popup.ShowCloseButton = false;
-                popup.TitleText = "ИНТЭКС-СЕРВИС";
-                popup.ContentText = $"Добро пожаловать {loginName.Text}!";
-                popup.Popup();
+                popup.ShowCloseButton = false; // убираем кнопку закрытия
+                popup.TitleText = "ИНТЭКС-СЕРВИС"; // задаем текст
+                popup.ContentText = $"Добро пожаловать {loginName.Text}!"; // выводим сообщение и логин вошедшего пользователя
+                popup.Popup(); // после нажатия на кнопку высвечивается уведомление
             }
             else
             {

@@ -36,11 +36,6 @@ namespace Autorization
             this.DeleteLineButton4 = new System.Windows.Forms.Button();
             this.DeleteLineButton3 = new System.Windows.Forms.Button();
             this.DeleteLineButton2 = new System.Windows.Forms.Button();
-            this.ResetButton6 = new System.Windows.Forms.Button();
-            this.ResetButton5 = new System.Windows.Forms.Button();
-            this.ResetButton4 = new System.Windows.Forms.Button();
-            this.ResetButton3 = new System.Windows.Forms.Button();
-            this.ResetButton2 = new System.Windows.Forms.Button();
             this.ResetButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -103,11 +98,6 @@ namespace Autorization
             this.panel4.Controls.Add(this.DeleteLineButton4);
             this.panel4.Controls.Add(this.DeleteLineButton3);
             this.panel4.Controls.Add(this.DeleteLineButton2);
-            this.panel4.Controls.Add(this.ResetButton6);
-            this.panel4.Controls.Add(this.ResetButton5);
-            this.panel4.Controls.Add(this.ResetButton4);
-            this.panel4.Controls.Add(this.ResetButton3);
-            this.panel4.Controls.Add(this.ResetButton2);
             this.panel4.Controls.Add(this.ResetButton);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
@@ -209,71 +199,6 @@ namespace Autorization
             this.DeleteLineButton2.Text = "УДАЛИТЬ СТРОКУ";
             this.DeleteLineButton2.UseVisualStyleBackColor = false;
             this.DeleteLineButton2.Click += new System.EventHandler(this.DeleteLineButton2_Click);
-            // 
-            // ResetButton6
-            // 
-            this.ResetButton6.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton6.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton6.Name = "ResetButton6";
-            this.ResetButton6.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton6.TabIndex = 47;
-            this.ResetButton6.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton6.UseVisualStyleBackColor = false;
-            this.ResetButton6.Click += new System.EventHandler(this.ResetButton6_Click);
-            // 
-            // ResetButton5
-            // 
-            this.ResetButton5.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton5.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton5.Name = "ResetButton5";
-            this.ResetButton5.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton5.TabIndex = 46;
-            this.ResetButton5.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton5.UseVisualStyleBackColor = false;
-            this.ResetButton5.Click += new System.EventHandler(this.ResetButton5_Click);
-            // 
-            // ResetButton4
-            // 
-            this.ResetButton4.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton4.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton4.Name = "ResetButton4";
-            this.ResetButton4.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton4.TabIndex = 45;
-            this.ResetButton4.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton4.UseVisualStyleBackColor = false;
-            this.ResetButton4.Click += new System.EventHandler(this.ResetButton4_Click);
-            // 
-            // ResetButton3
-            // 
-            this.ResetButton3.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton3.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton3.Name = "ResetButton3";
-            this.ResetButton3.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton3.TabIndex = 44;
-            this.ResetButton3.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton3.UseVisualStyleBackColor = false;
-            this.ResetButton3.Click += new System.EventHandler(this.ResetButton3_Click);
-            // 
-            // ResetButton2
-            // 
-            this.ResetButton2.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton2.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton2.Name = "ResetButton2";
-            this.ResetButton2.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton2.TabIndex = 43;
-            this.ResetButton2.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton2.UseVisualStyleBackColor = false;
-            this.ResetButton2.Click += new System.EventHandler(this.ResetButton2_Click);
             // 
             // ResetButton
             // 
@@ -821,11 +746,6 @@ namespace Autorization
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip2;
-        private System.Windows.Forms.Button ResetButton6;
-        private System.Windows.Forms.Button ResetButton5;
-        private System.Windows.Forms.Button ResetButton4;
-        private System.Windows.Forms.Button ResetButton3;
-        private System.Windows.Forms.Button ResetButton2;
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.Button DeleteLineButton2;
         private System.Windows.Forms.Button DeleteLineButton3;
