@@ -412,78 +412,78 @@ namespace Autorization
             // Column7Label
             // 
             this.Column7Label.AutoSize = true;
-            this.Column7Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column7Label.Location = new System.Drawing.Point(936, 482);
+            this.Column7Label.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column7Label.Location = new System.Drawing.Point(915, 482);
             this.Column7Label.Name = "Column7Label";
-            this.Column7Label.Size = new System.Drawing.Size(77, 16);
+            this.Column7Label.Size = new System.Drawing.Size(123, 22);
             this.Column7Label.TabIndex = 30;
-            this.Column7Label.Text = "7 столбец";
+            this.Column7Label.Text = "СТОЛБЕЦ №7";
             this.Column7Label.Visible = false;
             // 
             // Column6Label
             // 
             this.Column6Label.AutoSize = true;
-            this.Column6Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column6Label.Location = new System.Drawing.Point(788, 482);
+            this.Column6Label.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column6Label.Location = new System.Drawing.Point(767, 482);
             this.Column6Label.Name = "Column6Label";
-            this.Column6Label.Size = new System.Drawing.Size(77, 16);
+            this.Column6Label.Size = new System.Drawing.Size(123, 22);
             this.Column6Label.TabIndex = 29;
-            this.Column6Label.Text = "6 столбец";
+            this.Column6Label.Text = "СТОЛБЕЦ №6";
             this.Column6Label.Visible = false;
             // 
             // Column5Label
             // 
             this.Column5Label.AutoSize = true;
-            this.Column5Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column5Label.Location = new System.Drawing.Point(643, 482);
+            this.Column5Label.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column5Label.Location = new System.Drawing.Point(618, 482);
             this.Column5Label.Name = "Column5Label";
-            this.Column5Label.Size = new System.Drawing.Size(77, 16);
+            this.Column5Label.Size = new System.Drawing.Size(123, 22);
             this.Column5Label.TabIndex = 28;
-            this.Column5Label.Text = "5 столбец";
+            this.Column5Label.Text = "СТОЛБЕЦ №5";
             this.Column5Label.Visible = false;
             // 
             // Column4Label
             // 
             this.Column4Label.AutoSize = true;
-            this.Column4Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column4Label.Location = new System.Drawing.Point(491, 482);
+            this.Column4Label.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column4Label.Location = new System.Drawing.Point(466, 482);
             this.Column4Label.Name = "Column4Label";
-            this.Column4Label.Size = new System.Drawing.Size(77, 16);
+            this.Column4Label.Size = new System.Drawing.Size(123, 22);
             this.Column4Label.TabIndex = 27;
-            this.Column4Label.Text = "4 столбец";
+            this.Column4Label.Text = "СТОЛБЕЦ №4";
             this.Column4Label.Visible = false;
             // 
             // Column3Label
             // 
             this.Column3Label.AutoSize = true;
-            this.Column3Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column3Label.Location = new System.Drawing.Point(339, 482);
+            this.Column3Label.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column3Label.Location = new System.Drawing.Point(314, 482);
             this.Column3Label.Name = "Column3Label";
-            this.Column3Label.Size = new System.Drawing.Size(77, 16);
+            this.Column3Label.Size = new System.Drawing.Size(123, 22);
             this.Column3Label.TabIndex = 26;
-            this.Column3Label.Text = "3 столбец";
+            this.Column3Label.Text = "СТОЛБЕЦ №3";
             this.Column3Label.Visible = false;
             // 
             // Column2Label
             // 
             this.Column2Label.AutoSize = true;
-            this.Column2Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column2Label.Location = new System.Drawing.Point(186, 482);
+            this.Column2Label.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column2Label.Location = new System.Drawing.Point(161, 482);
             this.Column2Label.Name = "Column2Label";
-            this.Column2Label.Size = new System.Drawing.Size(77, 16);
+            this.Column2Label.Size = new System.Drawing.Size(123, 22);
             this.Column2Label.TabIndex = 25;
-            this.Column2Label.Text = "2 столбец";
+            this.Column2Label.Text = "СТОЛБЕЦ №2";
             this.Column2Label.Visible = false;
             // 
             // Column1Label
             // 
             this.Column1Label.AutoSize = true;
-            this.Column1Label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1Label.Location = new System.Drawing.Point(41, 482);
+            this.Column1Label.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Column1Label.Location = new System.Drawing.Point(16, 482);
             this.Column1Label.Name = "Column1Label";
-            this.Column1Label.Size = new System.Drawing.Size(77, 16);
+            this.Column1Label.Size = new System.Drawing.Size(123, 22);
             this.Column1Label.TabIndex = 24;
-            this.Column1Label.Text = "1 столбец";
+            this.Column1Label.Text = "СТОЛБЕЦ №1";
             this.Column1Label.Visible = false;
             // 
             // textBox7
@@ -553,7 +553,7 @@ namespace Autorization
             // 
             this.WhiteThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WhiteThemeButton.Location = new System.Drawing.Point(1129, 509);
             this.WhiteThemeButton.Name = "WhiteThemeButton";
             this.WhiteThemeButton.Size = new System.Drawing.Size(126, 23);
@@ -566,7 +566,7 @@ namespace Autorization
             // 
             this.DarkThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DarkThemeButton.Location = new System.Drawing.Point(1129, 538);
             this.DarkThemeButton.Name = "DarkThemeButton";
             this.DarkThemeButton.Size = new System.Drawing.Size(126, 23);
@@ -635,14 +635,13 @@ namespace Autorization
             // TransformDataLabel
             // 
             this.TransformDataLabel.AutoSize = true;
-            this.TransformDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.TransformDataLabel.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransformDataLabel.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransformDataLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TransformDataLabel.Location = new System.Drawing.Point(282, 36);
+            this.TransformDataLabel.Location = new System.Drawing.Point(267, 24);
             this.TransformDataLabel.Name = "TransformDataLabel";
-            this.TransformDataLabel.Size = new System.Drawing.Size(679, 52);
+            this.TransformDataLabel.Size = new System.Drawing.Size(769, 64);
             this.TransformDataLabel.TabIndex = 4;
-            this.TransformDataLabel.Text = "ФОРМА ИЗМЕНЕНИЯ ДАННЫХ";
+            this.TransformDataLabel.Text = "МЕНЮ ИЗМЕНЕНИЯ ДАННЫХ";
             // 
             // menuStrip1
             // 

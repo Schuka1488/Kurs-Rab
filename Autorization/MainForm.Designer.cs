@@ -191,7 +191,7 @@ namespace Autorization
             // 
             this.WhiteThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WhiteThemeButton.Location = new System.Drawing.Point(816, 499);
             this.WhiteThemeButton.Name = "WhiteThemeButton";
             this.WhiteThemeButton.Size = new System.Drawing.Size(130, 23);
@@ -204,7 +204,7 @@ namespace Autorization
             // 
             this.DarkThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DarkThemeButton.Location = new System.Drawing.Point(816, 528);
             this.DarkThemeButton.Name = "DarkThemeButton";
             this.DarkThemeButton.Size = new System.Drawing.Size(130, 23);
@@ -273,12 +273,11 @@ namespace Autorization
             // MainMenuLabel
             // 
             this.MainMenuLabel.AutoSize = true;
-            this.MainMenuLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.MainMenuLabel.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuLabel.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MainMenuLabel.Location = new System.Drawing.Point(297, 37);
+            this.MainMenuLabel.Location = new System.Drawing.Point(279, 34);
             this.MainMenuLabel.Name = "MainMenuLabel";
-            this.MainMenuLabel.Size = new System.Drawing.Size(380, 52);
+            this.MainMenuLabel.Size = new System.Drawing.Size(440, 64);
             this.MainMenuLabel.TabIndex = 3;
             this.MainMenuLabel.Text = "ГЛАВНОЕ МЕНЮ";
             // 

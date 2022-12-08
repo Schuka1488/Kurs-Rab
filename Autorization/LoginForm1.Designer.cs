@@ -82,7 +82,7 @@ namespace Autorization
             // WhiteThemeButton
             // 
             this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WhiteThemeButton.Location = new System.Drawing.Point(283, 408);
             this.WhiteThemeButton.Name = "WhiteThemeButton";
             this.WhiteThemeButton.Size = new System.Drawing.Size(130, 23);
@@ -94,7 +94,7 @@ namespace Autorization
             // DarkThemeButton
             // 
             this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DarkThemeButton.Location = new System.Drawing.Point(283, 437);
             this.DarkThemeButton.Name = "DarkThemeButton";
             this.DarkThemeButton.Size = new System.Drawing.Size(130, 23);
@@ -189,12 +189,12 @@ namespace Autorization
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(7, 40);
+            this.label1.Location = new System.Drawing.Point(37, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(399, 52);
+            this.label1.Size = new System.Drawing.Size(348, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "ИНТЭКС-СЕРВИС";
             // 
