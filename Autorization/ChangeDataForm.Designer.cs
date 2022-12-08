@@ -70,6 +70,7 @@ namespace Autorization
             this.DarkThemeButton = new System.Windows.Forms.Button();
             this.dataGridViewTransformData2 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.richTextBoxTime = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TransformDataLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -88,7 +89,6 @@ namespace Autorization
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.richTextBoxTime = new System.Windows.Forms.RichTextBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -606,6 +606,19 @@ namespace Autorization
             this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseDown);
             this.panel5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseMove);
             // 
+            // richTextBoxTime
+            // 
+            this.richTextBoxTime.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.richTextBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxTime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.richTextBoxTime.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.richTextBoxTime.Location = new System.Drawing.Point(12, 36);
+            this.richTextBoxTime.Name = "richTextBoxTime";
+            this.richTextBoxTime.Size = new System.Drawing.Size(163, 29);
+            this.richTextBoxTime.TabIndex = 32;
+            this.richTextBoxTime.Text = "";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -655,21 +668,21 @@ namespace Autorization
             // изПрограммыToolStripMenuItem
             // 
             this.изПрограммыToolStripMenuItem.Name = "изПрограммыToolStripMenuItem";
-            this.изПрограммыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.изПрограммыToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.изПрограммыToolStripMenuItem.Text = "Из программы";
             this.изПрограммыToolStripMenuItem.Click += new System.EventHandler(this.изПрограммыToolStripMenuItem_Click);
             // 
             // изАккаунтаToolStripMenuItem
             // 
             this.изАккаунтаToolStripMenuItem.Name = "изАккаунтаToolStripMenuItem";
-            this.изАккаунтаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.изАккаунтаToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.изАккаунтаToolStripMenuItem.Text = "Из аккаунта";
             this.изАккаунтаToolStripMenuItem.Click += new System.EventHandler(this.изАккаунтаToolStripMenuItem_Click);
             // 
             // вГлавноеМенюToolStripMenuItem
             // 
             this.вГлавноеМенюToolStripMenuItem.Name = "вГлавноеМенюToolStripMenuItem";
-            this.вГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.вГлавноеМенюToolStripMenuItem.Text = "В главное меню";
             this.вГлавноеМенюToolStripMenuItem.Click += new System.EventHandler(this.вГлавноеМенюToolStripMenuItem_Click);
             // 
@@ -738,19 +751,6 @@ namespace Autorization
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // richTextBoxTime
-            // 
-            this.richTextBoxTime.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.richTextBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxTime.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.richTextBoxTime.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBoxTime.Location = new System.Drawing.Point(12, 36);
-            this.richTextBoxTime.Name = "richTextBoxTime";
-            this.richTextBoxTime.Size = new System.Drawing.Size(163, 29);
-            this.richTextBoxTime.TabIndex = 32;
-            this.richTextBoxTime.Text = "";
-            // 
             // ChangeDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -760,6 +760,7 @@ namespace Autorization
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ChangeDataForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangeDataForm";
             this.Load += new System.EventHandler(this.ChangeDataForm_Load);
             this.panel4.ResumeLayout(false);
