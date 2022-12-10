@@ -525,7 +525,7 @@ namespace Autorization
             this.richTextBoxTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.richTextBoxTime.Location = new System.Drawing.Point(12, 36);
             this.richTextBoxTime.Name = "richTextBoxTime";
-            this.richTextBoxTime.Size = new System.Drawing.Size(163, 29);
+            this.richTextBoxTime.Size = new System.Drawing.Size(189, 29);
             this.richTextBoxTime.TabIndex = 32;
             this.richTextBoxTime.Text = "";
             // 
