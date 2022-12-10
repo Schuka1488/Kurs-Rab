@@ -295,7 +295,6 @@ namespace Autorization
             }
             catch
             {
-                //MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
@@ -395,7 +394,6 @@ namespace Autorization
             }
             catch
             {
-                //MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
@@ -496,7 +494,6 @@ namespace Autorization
             }
             catch
             {
-                //MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
@@ -593,7 +590,6 @@ namespace Autorization
             }
             catch
             {
-                //MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
@@ -691,7 +687,6 @@ namespace Autorization
             }
             catch
             {
-                //MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
