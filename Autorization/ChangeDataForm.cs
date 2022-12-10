@@ -130,11 +130,9 @@ namespace Autorization
 
                 label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1,
 
-                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton, DeleteLineButton, DeleteLineButton2, DeleteLineButton3,
+                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, DeleteLineButton, DeleteLineButton2, DeleteLineButton3,
                 
-                DeleteLineButton4, DeleteLineButton5, DeleteLineButton6,
-
-                richTextBoxTime);
+                DeleteLineButton4, DeleteLineButton5, DeleteLineButton6, richTextBoxTime);
 
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
@@ -154,11 +152,9 @@ namespace Autorization
 
                 label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1,
 
-                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, ResetButton, DeleteLineButton, DeleteLineButton2, DeleteLineButton3,
+                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, DeleteLineButton, DeleteLineButton2, DeleteLineButton3,
                 
-                DeleteLineButton4, DeleteLineButton5, DeleteLineButton6,
-
-                richTextBoxTime);
+                DeleteLineButton4, DeleteLineButton5, DeleteLineButton6, richTextBoxTime);
 
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
@@ -201,8 +197,7 @@ namespace Autorization
             richTextBoxTime.Text = dateandtime;
         }
         #endregion
-        
-        private void вТаблицеСотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EmployeesSelect()
         {
             string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
@@ -235,8 +230,8 @@ namespace Autorization
             Column5Label.Visible = true;
             Column6Label.Visible = true;
             Column7Label.Visible = true;
-            AddLineButton.Visible = true;
 
+            AddLineButton.Visible = true;
             AddLineButton2.Visible = false;
             AddLineButton3.Visible = false;
             AddLineButton4.Visible = false;
@@ -250,13 +245,17 @@ namespace Autorization
             DeleteLineButton5.Visible = false;
             DeleteLineButton6.Visible = false;
         }
+        private void вТаблицеСотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmployeesSelect();
+        }
         private void SupplemenEmloyee()
         {
             try
             {
                 db.openConnection();
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -271,7 +270,7 @@ namespace Autorization
             {
                 db.openConnection();
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM Employees WHERE EmployeesID = {id_selected_rows}", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -280,8 +279,7 @@ namespace Autorization
                 db.closeConnection();
             }
         }
-        
-        private void вТаблицеЗаказчикиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CustomerSelect()
         {
             string commandStr = "SELECT CustomerID AS 'Код клиента', customerCompanyName AS 'Название компании', customerAddress AS 'Адрес компании', PSRN AS 'ОГРН', ITN AS 'ИНН', TRRC AS 'КПП' FROM Customer"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
@@ -328,13 +326,17 @@ namespace Autorization
             DeleteLineButton5.Visible = false;
             DeleteLineButton6.Visible = false;
         }
+        private void вТаблицеЗаказчикиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerSelect();
+        }
         private void SupplemenEmloyee2()
         {
             try
             {
                 db.openConnection();
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO Customer(customerCompanyName, customerAddress, PSRN, ITN) VALUES( '{textBox2.Text}', '{textBox3.Text}',{textBox4.Text},{textBox5.Text},{textBox6.Text})", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -349,7 +351,7 @@ namespace Autorization
             {
                 db.openConnection();
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM Customer WHERE CustomerID = {id_selected_rows}", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -358,8 +360,7 @@ namespace Autorization
                 db.closeConnection();
             }
         }
-        
-        private void заказыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ProjectOrderSelect()
         {
             string commandStr = "SELECT ProjectOrderID AS 'Код заказа', projectName AS 'Название проекта', projectCategory AS 'Категория проекта' , projectPrice AS 'Цена в рублях',  ProjectID AS 'Код проекта', EmployeesID AS 'Код сотрудника', CustomerID AS 'Код клиента' FROM ProjectOrder"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
@@ -407,13 +408,17 @@ namespace Autorization
             DeleteLineButton5.Visible = false;
             DeleteLineButton6.Visible = false;
         }
+        private void заказыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProjectOrderSelect();
+        }
         private void SupplemenEmloyee3()
         {
             try
             {
                 db.openConnection();
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO ProjectOrder(projectName, projectCategory, projectPrice, ProjectID, EmployeesID, CustomerID) VALUES('{textBox2.Text}','{textBox3.Text}',{textBox4.Text}, '{textBox5.Text}', '{textBox6.Text}','{textBox7.Text}')", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -428,7 +433,7 @@ namespace Autorization
             {
                 db.openConnection();
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM ProjectOrder WHERE ProjectOrderID = {id_selected_rows}", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -437,8 +442,7 @@ namespace Autorization
                 db.closeConnection();
             }
         }
-       
-        private void продажиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ProjectSalesSelect()
         {
             string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
@@ -482,13 +486,17 @@ namespace Autorization
             DeleteLineButton5.Visible = false;
             DeleteLineButton6.Visible = false;
         }
+        private void продажиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProjectSalesSelect();
+        }
         private void SupplemenEmloyee4()
         {
             try
             {
                 db.openConnection();
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO ProjectSales(SaleID, datePurchase) VALUES('{textBox2.Text}', \"{textBox3.Text}\")", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -503,7 +511,7 @@ namespace Autorization
             {
                 db.openConnection();
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM ProjectSales WHERE ProjectID = {id_selected_rows}", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -512,8 +520,7 @@ namespace Autorization
                 db.closeConnection();
             }
         }
-        
-        private void ценаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SalesSelect()
         {
             string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц', saleCost AS 'Цена в рублях' FROM Sales"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
@@ -558,13 +565,17 @@ namespace Autorization
             DeleteLineButton5.Visible = true;
             DeleteLineButton6.Visible = false;
         }
+        private void ценаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalesSelect();
+        }
         private void SupplemenEmloyee5()
         {
             try
             {
                 db.openConnection();
-                MySqlCommand cmd = new MySqlCommand($"INSERT INTO Sales(saleDate, saleNotes) VALUES( \"{textBox2.Text}\", {textBox3.Text}, {textBox4.Text})", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+                MySqlCommand cmd = new MySqlCommand($"INSERT INTO Sales(saleDate, saleNotes, saleCost) VALUES( \"{textBox2.Text}\", {textBox3.Text}, {textBox4.Text})", db.getConnection());
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -579,7 +590,7 @@ namespace Autorization
             {
                 db.openConnection();
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM Sales WHERE SaleID = {id_selected_rows}", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -588,8 +599,7 @@ namespace Autorization
                 db.closeConnection();
             }
         }
-        
-        private void вТаблицеАвторизацииToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AutorizationSelect()
         {
             string commandStr = "SELECT AuthorizationID AS 'Код авторизации', EmployeesID AS 'Код сотрудника', employeesJobTitle AS 'Профессия', login AS 'Логин', password AS 'Пароль', roleTitle AS 'Название роли', levelRole AS 'Уровень роли' FROM authorization"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
@@ -637,13 +647,17 @@ namespace Autorization
             DeleteLineButton5.Visible = false;
             DeleteLineButton6.Visible = true;
         }
+        private void вТаблицеАвторизацииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AutorizationSelect();
+        }
         private void SupplemenEmloyee6()
         {
             try
             {
                 db.openConnection();
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO authorization(EmployeesID, employeesJobTitle, login, password, roleTitle, levelRole ) VALUES( '{textBox2.Text}', '{textBox3.Text}','{textBox4.Text}','{textBox5.Text}','{textBox6.Text}',{textBox7.Text})", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились!" : "Данные не добавились!");
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -658,7 +672,7 @@ namespace Autorization
             {
                 db.openConnection();
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM authorization WHERE AuthorizationID = {id_selected_rows}", db.getConnection());
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены!" : "Данные не удалены!");
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
             catch
@@ -670,55 +684,62 @@ namespace Autorization
         private void AddLineButton_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee();
+            EmployeesSelect();
         }
         private void AddLineButton2_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee2();
+            CustomerSelect();
         }
         private void AddLineButton3_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee3();
+            ProjectOrderSelect();
         }
         private void AddLineButton4_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee4();
+            SalesSelect();
         }
         private void AddLineButton5_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee5();
+            SalesSelect();
         }
         private void AddLineButton6_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee6();
+            AutorizationSelect();
         }
         private void DeleteLineButton_Click(object sender, EventArgs e)
         {
             DeleteTable();
+            EmployeesSelect();
         }
         private void DeleteLineButton2_Click(object sender, EventArgs e)
         {
             DeleteTable2();
+            CustomerSelect();
         }
         private void DeleteLineButton3_Click(object sender, EventArgs e)
         {
             DeleteTable3();
+            ProjectOrderSelect();
         }
         private void DeleteLineButton4_Click(object sender, EventArgs e)
         {
             DeleteTable4();
+            SalesSelect();
         }
         private void DeleteLineButton5_Click(object sender, EventArgs e)
         {
             DeleteTable5();
+            SalesSelect();
         }
         private void DeleteLineButton6_Click(object sender, EventArgs e)
         {
             DeleteTable6();
-        }
-
-        private void ResetButton_Click(object sender, EventArgs e)
-        {
-
+            AutorizationSelect();
         }
 
         private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -726,7 +747,7 @@ namespace Autorization
             if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Right))
             {
                 dataGridViewTransformData2.CurrentCell = dataGridViewTransformData2[e.ColumnIndex, e.RowIndex];
-                //dataGridView1.CurrentRow.Selected = true;
+                
                 dataGridViewTransformData2.CurrentCell.Selected = true;
                 //Метод получения ID выделенной строки в глобальную переменную
                 GetSelectedIDString();
@@ -741,7 +762,7 @@ namespace Autorization
         }
         public void GetSelectedIDString()
         {
-            //Переменная для индекс выбранной строки в гриде
+            //Переменная для индекса выбранной строки в гриде
             string index_selected_rows;
             //Индекс выбранной строки
             index_selected_rows = dataGridViewTransformData2.SelectedCells[0].RowIndex.ToString();

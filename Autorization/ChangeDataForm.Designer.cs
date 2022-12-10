@@ -36,7 +36,6 @@ namespace Autorization
             this.DeleteLineButton4 = new System.Windows.Forms.Button();
             this.DeleteLineButton3 = new System.Windows.Forms.Button();
             this.DeleteLineButton2 = new System.Windows.Forms.Button();
-            this.ResetButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.AddLineButton6 = new System.Windows.Forms.Button();
@@ -98,7 +97,6 @@ namespace Autorization
             this.panel4.Controls.Add(this.DeleteLineButton4);
             this.panel4.Controls.Add(this.DeleteLineButton3);
             this.panel4.Controls.Add(this.DeleteLineButton2);
-            this.panel4.Controls.Add(this.ResetButton);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.AddLineButton6);
@@ -199,19 +197,6 @@ namespace Autorization
             this.DeleteLineButton2.Text = "УДАЛИТЬ СТРОКУ";
             this.DeleteLineButton2.UseVisualStyleBackColor = false;
             this.DeleteLineButton2.Click += new System.EventHandler(this.DeleteLineButton2_Click);
-            // 
-            // ResetButton
-            // 
-            this.ResetButton.BackColor = System.Drawing.Color.Lavender;
-            this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton.Location = new System.Drawing.Point(1021, 203);
-            this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(220, 33);
-            this.ResetButton.TabIndex = 42;
-            this.ResetButton.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.ResetButton.UseVisualStyleBackColor = false;
-            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // label2
             // 
@@ -746,7 +731,6 @@ namespace Autorization
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip2;
-        private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.Button DeleteLineButton2;
         private System.Windows.Forms.Button DeleteLineButton3;
         private System.Windows.Forms.Button DeleteLineButton4;

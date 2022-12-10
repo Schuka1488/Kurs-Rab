@@ -23,7 +23,7 @@ namespace Autorization
 
             TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5, 
 
-            TextBox textBox6, TextBox textBox7, Button ResetButton, Button DeleteLineButton, Button DeleteLineButton2, 
+            TextBox textBox6, TextBox textBox7, Button DeleteLineButton, Button DeleteLineButton2, 
 
             Button DeleteLineButton3, Button DeleteLineButton4, Button DeleteLineButton5, Button DeleteLineButton6,
 
@@ -73,9 +73,6 @@ namespace Autorization
 
             richTextBoxTime.BackColor = SystemColors.GrayText;
 
-            ResetButton.ForeColor = SystemColors.ControlLightLight;
-            ResetButton.BackColor = SystemColors.WindowFrame;
-
             DeleteLineButton.ForeColor = SystemColors.ControlLightLight;
             DeleteLineButton.BackColor = SystemColors.WindowFrame;
             DeleteLineButton2.ForeColor = SystemColors.ControlLightLight;
@@ -99,7 +96,7 @@ namespace Autorization
 
             TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4, TextBox textBox5, 
 
-            TextBox textBox6, TextBox textBox7, Button ResetButton, Button DeleteLineButton, Button DeleteLineButton2, 
+            TextBox textBox6, TextBox textBox7, Button DeleteLineButton, Button DeleteLineButton2, 
 
             Button DeleteLineButton3, Button DeleteLineButton4, Button DeleteLineButton5, Button DeleteLineButton6,
 
@@ -148,9 +145,6 @@ namespace Autorization
             textBox7.BackColor = SystemColors.Window;
 
             richTextBoxTime.BackColor = Color.DeepSkyBlue;
-
-            ResetButton.ForeColor = SystemColors.ActiveCaptionText;
-            ResetButton.BackColor = Color.Lavender;
 
             DeleteLineButton.ForeColor = SystemColors.ActiveCaptionText;
             DeleteLineButton.BackColor = Color.Lavender;
