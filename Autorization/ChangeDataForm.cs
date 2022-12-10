@@ -39,7 +39,18 @@ namespace Autorization
             toolTip2.ShowAlways = true; // статус видимости
             toolTip2.SetToolTip(label2, "Коды (ID поля) не нужно заполнять, они заполняются автоматически! \n Даты пишутся в формате 2004-12-12\n Первое число - год, Второе - месяц, Третье - день.");
         }
-
+        static string sha256(string randomString)
+        {
+            //Тут происходит криптографическая магия. Смысл данного метода заключается в том, что строка залетает в метод
+            var crypt = new System.Security.Cryptography.SHA256Managed();
+            var hash = new StringBuilder();
+            byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(randomString));
+            foreach (byte theByte in crypto)
+            {
+                hash.Append(theByte.ToString("x2"));
+            }
+            return hash.ToString();
+        }
         private void panel5_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
@@ -656,7 +667,7 @@ namespace Autorization
             try
             {
                 db.openConnection();
-                MySqlCommand cmd = new MySqlCommand($"INSERT INTO authorization(EmployeesID, employeesJobTitle, login, password, roleTitle, levelRole ) VALUES( '{textBox2.Text}', '{textBox3.Text}','{textBox4.Text}','{textBox5.Text}','{textBox6.Text}',{textBox7.Text})", db.getConnection());
+                MySqlCommand cmd = new MySqlCommand($"INSERT INTO authorization(EmployeesID, employeesJobTitle, login, password, roleTitle, levelRole ) VALUES( '{textBox2.Text}', '{textBox3.Text}','{textBox4.Text}','{sha256(textBox5.Text)}','{textBox6.Text}',{textBox7.Text})", db.getConnection());
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
