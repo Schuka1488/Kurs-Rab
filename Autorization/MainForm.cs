@@ -276,7 +276,6 @@ namespace Autorization
             timer.Tick += timer1_Tick; // считываем нажатие
             timer.Start(); // таймер срабатывает 
         }
-        int dR, dG, dB, sign; // переменные для rgb и индекса таймера
         private void печатьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             try
@@ -287,7 +286,6 @@ namespace Autorization
                 Table t = doc.Tables.Add(r, dataGridView1.Rows.Count + 1, dataGridView1.Columns.Count); // добавляем в ворд файл строки и колонки
                 int bdRow = 0;
                 bool IsColumnReady = false;
-
                 t.Borders.Enable = 1;
                 foreach (Row row in t.Rows)
                 {
@@ -299,11 +297,9 @@ namespace Autorization
                             cell.Range.Text = table.Columns[tableCounter].ColumnName;
                             tableCounter++;
                         }
-
                         IsColumnReady = true;
                         continue;
                     }
-
                     object[] collection = table.Rows[bdRow].ItemArray;
                     int cellCount = 0;
                     foreach (Cell cell in row.Cells)
@@ -312,11 +308,9 @@ namespace Autorization
 
                         cellCount++;
                     }
-
                     bdRow++;
                 }
-
-                doc.Save(); // документ сохраняется 
+                doc.Save();  
                 doc.Close(); // документ закрывается программой и дальнейшее его использование программой прекращается
             }
             catch
@@ -328,25 +322,22 @@ namespace Autorization
         private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Excel.Application exApp = new Excel.Application(); // создаем переменную класса Excel
-
             exApp.Workbooks.Add(); // добавляем рабочую область
             Excel.Worksheet wsh = (Excel.Worksheet)exApp.ActiveSheet; // создаем переменную для работы с Excel.Worksheet
             wsh.Cells[1, 1] = dataGridView1.Columns.ToString(); // начинаем переносить данные в Excel с 1 строки 1 столбца
-            
             int i, j; // переменные для столбцов и строк
             for(i=0; i<=dataGridView1.RowCount-1;i++) // учитываем все строки
             {
-
                 for (j=0;j<=dataGridView1.ColumnCount-1;j++) // учитываем все стобцы
                 {
                     wsh.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText.ToString(); // учитываются наименования столбцов и переносятся в Excel 
                     wsh.Cells[i+2, j+1] = dataGridView1[j, i].Value.ToString();  // учитываются все столбцы и строки (включая первый столбец и последний, поэтому i+2), и переносятся в Excel
                 }
             }
-
             exApp.Visible = true; // показывается созданный excel документ
-            
         }
+
+
 
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -367,7 +358,7 @@ namespace Autorization
 
 
 
-
+        int dR, dG, dB, sign; // переменные для rgb и индекса таймера
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // использование математических функций 
@@ -393,7 +384,6 @@ namespace Autorization
             {
                 ((Timer)sender).Stop(); // таймер останавливается
             }
-
         }
         private void timer3_Tick(object sender, EventArgs e)
         {
