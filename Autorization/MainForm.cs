@@ -101,9 +101,18 @@ namespace Autorization
         }
         private void формуToolStripMenuItem_Click(object sender, EventArgs e) // выход из главной формы и возвращение к авторизации, без потери производительности
         {
-            this.Hide();
-            LoginForm1 auth = new LoginForm1();
-            auth.Show();
+            DialogResult res = new DialogResult(); // переменная для обработки выбранных кнопок в MessageBox
+            res = MessageBox.Show("Вы действительно хотите выйти из аккаунта?", "Выход из аккаунта", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //Настройка MessageBox
+            if (res == DialogResult.Yes) // если мы нажимаем кнопку Да
+            {
+                this.Hide();
+                LoginForm1 auth = new LoginForm1();
+                auth.Show();
+            }
+            else
+            {
+                return; // возвращаемся на форму
+            }
         }
         private void изменитьДанныеToolStripMenuItem_Click(object sender, EventArgs e)
         {

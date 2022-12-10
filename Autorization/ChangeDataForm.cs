@@ -121,16 +121,34 @@ namespace Autorization
 
         private void изАккаунтаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide(); // сокрытие открытой формы
-            LoginForm1 auth = new LoginForm1();
-            auth.Show(); // открытие формы аунтефикации 
+            DialogResult res = new DialogResult(); // переменная для обработки выбранных кнопок в MessageBox
+            res = MessageBox.Show("Вы действительно хотите выйти из аккаунта?", "Выход из аккаунта", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //Настройка MessageBox
+            if (res == DialogResult.Yes) // если мы нажимаем кнопку Да
+            {
+                this.Hide();
+                LoginForm1 auth = new LoginForm1();
+                auth.Show();
+            }
+            else
+            {
+                return; // возвращаемся на форму
+            }
         }
 
         private void вГлавноеМенюToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide(); // сокрытие открытой формы
-            MainForm main = new MainForm();
-            main.Show(); // открытие главной формы
+            DialogResult res = new DialogResult(); // переменная для обработки выбранных кнопок в MessageBox
+            res = MessageBox.Show("Вы действительно хотите выйти в главное меню?", "Выход в главное меню", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //Настройка MessageBox
+            if (res == DialogResult.Yes) // если мы нажимаем кнопку Да
+            {
+                this.Hide(); // сокрытие открытой формы
+                MainForm main = new MainForm();
+                main.Show(); // открытие главной формы
+            }
+            else
+            {
+                return; // возвращаемся на форму
+            }
         }
         #region [ Кнопки тем ]
         private void WhiteThemeButton_Click(object sender, EventArgs e)
