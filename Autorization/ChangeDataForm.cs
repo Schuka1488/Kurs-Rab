@@ -699,7 +699,7 @@ namespace Autorization
         private void AddLineButton4_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee4();
-            SalesSelect();
+            ProjectSalesSelect();
         }
         private void AddLineButton5_Click(object sender, EventArgs e)
         {
