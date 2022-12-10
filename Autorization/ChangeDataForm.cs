@@ -271,7 +271,16 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (res == DialogResult.Cancel)
+                {
+                    EmployeesSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
@@ -286,7 +295,17 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                //MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    EmployeesSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
@@ -352,7 +371,16 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (res == DialogResult.Cancel)
+                {
+                    CustomerSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
@@ -367,7 +395,17 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                //MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    CustomerSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
@@ -434,7 +472,16 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (res == DialogResult.Cancel)
+                {
+                    ProjectOrderSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
@@ -449,7 +496,17 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                //MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    ProjectOrderSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
@@ -512,7 +569,16 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (res == DialogResult.Cancel)
+                {
+                    ProjectSalesSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
@@ -527,7 +593,17 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                //MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    ProjectSalesSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
@@ -591,7 +667,16 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (res == DialogResult.Cancel)
+                {
+                    SalesSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
@@ -606,7 +691,17 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                //MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    SalesSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
@@ -673,7 +768,16 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (res == DialogResult.Cancel)
+                {
+                    AutorizationSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
@@ -688,7 +792,16 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    AutorizationSelect();
+                }
+                else
+                {
+                    return;
+                }
                 db.closeConnection();
             }
         }
