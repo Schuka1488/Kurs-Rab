@@ -729,7 +729,7 @@ namespace Autorization
         private void DeleteLineButton4_Click(object sender, EventArgs e)
         {
             DeleteTable4();
-            SalesSelect();
+            ProjectSalesSelect();
         }
         private void DeleteLineButton5_Click(object sender, EventArgs e)
         {
