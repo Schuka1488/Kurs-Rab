@@ -370,28 +370,44 @@ namespace Autorization
         int dR, dG, dB, sign; // переменные для rgb и индекса таймера
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // использование математических функций 
+            try
             {
-                sign *= -1;// знак таймера
-                labelTheme.Text = "Темная тема вкл."; // указваем какой текст хоти видеть в лейбле
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // использование математических функций 
+                {
+                    sign *= -1;// знак таймера
+                    labelTheme.Text = "Темная тема вкл."; // указваем какой текст хоти видеть в лейбле
+                }
+                labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
+                if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
+                {
+                    ((Timer)sender).Stop(); // таймер останавливается
+                }
             }
-            labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
-            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
+            catch
             {
-                ((Timer)sender).Stop(); // таймер останавливается
+                ((Timer)sender).Stop();
+                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
-            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // использование математических функций 
+            try
             {
-                sign *= -1; // знак таймера
-                labelTheme.Text = "Светлая тема вкл."; // указваем какой текст хоти видеть в лейбле
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // использование математических функций 
+                {
+                    sign *= -1; // знак таймера
+                    labelTheme.Text = "Светлая тема вкл."; // указваем какой текст хоти видеть в лейбле
+                }
+                labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
+                if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
+                {
+                    ((Timer)sender).Stop(); // таймер останавливается
+                }
             }
-            labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
-            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
+            catch
             {
-                ((Timer)sender).Stop(); // таймер останавливается
+                ((Timer)sender).Stop();
+                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void timer3_Tick(object sender, EventArgs e)

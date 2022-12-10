@@ -108,28 +108,44 @@ namespace Autorization
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+            try
             {
-                sign *= -1;
-                labelTheme.Text = "Темная тема вкл.";
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+                {
+                    sign *= -1;
+                    labelTheme.Text = "Темная тема вкл.";
+                }
+                labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
+                if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+                {
+                    ((Timer)sender).Stop();
+                }
             }
-            labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
-            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+            catch
             {
                 ((Timer)sender).Stop();
+                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
-            if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+            try
             {
-                sign *= -1;
-                labelTheme.Text = "Светлая тема вкл.";
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+                {
+                    sign *= -1;
+                    labelTheme.Text = "Светлая тема вкл.";
+                }
+                labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
+                if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+                {
+                    ((Timer)sender).Stop();
+                }
             }
-            labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
-            if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+            catch
             {
                 ((Timer)sender).Stop();
+                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void buttonLoginPass_Click(object sender, EventArgs e) // метод при помощи которого осуществляется авторизация и полноценные вход в приложение 
