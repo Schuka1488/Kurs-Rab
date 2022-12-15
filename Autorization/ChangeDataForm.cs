@@ -289,6 +289,13 @@ namespace Autorization
             DeleteLineButton4.Visible = false;
             DeleteLineButton5.Visible = false;
             DeleteLineButton6.Visible = false;
+
+            UpdateLineButton1.Visible = true;
+            UpdateLineButton2.Visible = false;
+            UpdateLineButton3.Visible = false;
+            UpdateLineButton4.Visible = false;
+            UpdateLineButton5.Visible = false;
+            UpdateLineButton6.Visible = false;
         }
         private void вТаблицеСотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -334,6 +341,30 @@ namespace Autorization
                 if (res == DialogResult.Cancel)
                 {
                     EmployeesSelect();
+                }
+                else
+                {
+                    return;
+                }
+                db.closeConnection();
+            }
+        }
+        private void UpdateTable()
+        {
+            try
+            {
+                db.openConnection();
+                MySqlCommand cmd = new MySqlCommand($"UPDATE Employees SET employeesBirthday = \"{textBox2.Text}\", employeesDateOfEmployed = \"{textBox3.Text}\", employeesName = '{textBox4.Text}', employeesSurname = '{textBox5.Text}', employeesPatronymic = '{textBox6.Text}', employeesJobTitle = '{textBox7.Text}' WHERE EmployeesID = {id_selected_rows}", db.getConnection());
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                db.closeConnection();
+            }
+            catch
+            {
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    SalesSelect();
                 }
                 else
                 {
@@ -388,6 +419,13 @@ namespace Autorization
             DeleteLineButton4.Visible = false;
             DeleteLineButton5.Visible = false;
             DeleteLineButton6.Visible = false;
+
+            UpdateLineButton1.Visible = false;
+            UpdateLineButton2.Visible = true;
+            UpdateLineButton3.Visible = false;
+            UpdateLineButton4.Visible = false;
+            UpdateLineButton5.Visible = false;
+            UpdateLineButton6.Visible = false;
         }
         private void вТаблицеЗаказчикиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -398,7 +436,7 @@ namespace Autorization
             try
             {
                 db.openConnection();
-                MySqlCommand cmd = new MySqlCommand($"INSERT INTO Customer(customerCompanyName, customerAddress, PSRN, ITN) VALUES( '{textBox2.Text}', '{textBox3.Text}',{textBox4.Text},{textBox5.Text},{textBox6.Text})", db.getConnection());
+                MySqlCommand cmd = new MySqlCommand($"INSERT INTO Customer(customerCompanyName, customerAddress, PSRN, ITN, TRRC) VALUES( '{textBox2.Text}', '{textBox3.Text}',{textBox4.Text},{textBox5.Text},{textBox6.Text})", db.getConnection());
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 db.closeConnection();
             }
@@ -433,6 +471,30 @@ namespace Autorization
                 if (res == DialogResult.Cancel)
                 {
                     CustomerSelect();
+                }
+                else
+                {
+                    return;
+                }
+                db.closeConnection();
+            }
+        }
+        private void UpdateTable2()
+        {
+            try
+            {
+                db.openConnection();
+                MySqlCommand cmd = new MySqlCommand($"UPDATE Customer SET customerCompanyName = '{textBox2.Text}', customerAddress = '{textBox3.Text}', PSRN = {textBox4.Text}, ITN = {textBox5.Text}, TRRC = {textBox6.Text} WHERE CustomerID = {id_selected_rows}", db.getConnection());
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                db.closeConnection();
+            }
+            catch
+            {
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    SalesSelect();
                 }
                 else
                 {
@@ -488,6 +550,13 @@ namespace Autorization
             DeleteLineButton4.Visible = false;
             DeleteLineButton5.Visible = false;
             DeleteLineButton6.Visible = false;
+
+            UpdateLineButton1.Visible = false;
+            UpdateLineButton2.Visible = false;
+            UpdateLineButton3.Visible = true;
+            UpdateLineButton4.Visible = false;
+            UpdateLineButton5.Visible = false;
+            UpdateLineButton6.Visible = false;
         }
         private void заказыToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -541,6 +610,30 @@ namespace Autorization
                 db.closeConnection();
             }
         }
+        private void UpdateTable3()
+        {
+            try
+            {
+                db.openConnection();
+                MySqlCommand cmd = new MySqlCommand($"UPDATE ProjectOrder SET projectName = '{textBox2.Text}', projectCategory = '{textBox3.Text}', projectPrice = {textBox4.Text}, ProjectID = '{textBox5.Text}', EmployeesID = '{textBox6.Text}', CustomerID = '{textBox7.Text}' WHERE ProjectOrderID = {id_selected_rows}", db.getConnection());
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                db.closeConnection();
+            }
+            catch
+            {
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    SalesSelect();
+                }
+                else
+                {
+                    return;
+                }
+                db.closeConnection();
+            }
+        }
         private void ProjectSalesSelect()
         {
             string commandStr = "SELECT ProjectID AS 'Код проекта', SaleID AS 'Код продажи', datePurchase AS 'Дата покупки' FROM ProjectSales"; // SQL запрос данных из БД
@@ -584,6 +677,13 @@ namespace Autorization
             DeleteLineButton4.Visible = true;
             DeleteLineButton5.Visible = false;
             DeleteLineButton6.Visible = false;
+
+            UpdateLineButton1.Visible = false;
+            UpdateLineButton2.Visible = false;
+            UpdateLineButton3.Visible = false;
+            UpdateLineButton4.Visible = true;
+            UpdateLineButton5.Visible = false;
+            UpdateLineButton6.Visible = false;
         }
         private void продажиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -637,6 +737,30 @@ namespace Autorization
                 db.closeConnection();
             }
         }
+        private void UpdateTable4()
+        {
+            try
+            {
+                db.openConnection();
+                MySqlCommand cmd = new MySqlCommand($"UPDATE ProjectSales SET SaleID = '{textBox2.Text}', datePurchase = \"{textBox3.Text}\" WHERE ProjectID = {id_selected_rows}", db.getConnection());
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                db.closeConnection();
+            }
+            catch
+            {
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    SalesSelect();
+                }
+                else
+                {
+                    return;
+                }
+                db.closeConnection();
+            }
+        }
         private void SalesSelect()
         {
             string commandStr = "SELECT SaleID AS 'Код продажи', saleDate AS 'Дата продажи', saleNotes AS 'Кол-во страниц', saleCost AS 'Цена в рублях' FROM Sales"; // SQL запрос данных из БД
@@ -681,6 +805,13 @@ namespace Autorization
             DeleteLineButton4.Visible = false;
             DeleteLineButton5.Visible = true;
             DeleteLineButton6.Visible = false;
+
+            UpdateLineButton1.Visible = false;
+            UpdateLineButton2.Visible = false;
+            UpdateLineButton3.Visible = false;
+            UpdateLineButton4.Visible = false;
+            UpdateLineButton5.Visible = true;
+            UpdateLineButton6.Visible = false;
         }
         private void ценаToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -723,6 +854,30 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    SalesSelect();
+                }
+                else
+                {
+                    return;
+                }
+                db.closeConnection();
+            }
+        }
+        private void UpdateTable5()
+        {
+            try
+            {
+                db.openConnection();
+                MySqlCommand cmd = new MySqlCommand($"UPDATE Sales SET saleDate = \"{textBox2.Text}\", saleNotes = {textBox3.Text}, saleCost = {textBox4.Text} WHERE SaleID = {id_selected_rows}", db.getConnection());
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                db.closeConnection();
+            }
+            catch
+            {
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
                 {
                     SalesSelect();
@@ -781,6 +936,13 @@ namespace Autorization
             DeleteLineButton4.Visible = false;
             DeleteLineButton5.Visible = false;
             DeleteLineButton6.Visible = true;
+
+            UpdateLineButton1.Visible = false;
+            UpdateLineButton2.Visible = false;
+            UpdateLineButton3.Visible = false;
+            UpdateLineButton4.Visible = false;
+            UpdateLineButton5.Visible = false;
+            UpdateLineButton6.Visible = true;
         }
         private void вТаблицеАвторизацииToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -834,6 +996,31 @@ namespace Autorization
                 db.closeConnection();
             }
         }
+        private void UpdateTable6()
+        {
+            try
+            {
+                db.openConnection();
+                MySqlCommand cmd = new MySqlCommand($"UPDATE authorization SET EmployeesID = '{textBox2.Text}', employeesJobTitle = '{textBox3.Text}', login = '{textBox4.Text}', password = '{sha256(textBox5.Text)}', roleTitle = '{textBox6.Text}', levelRole = {textBox7.Text} WHERE AuthorizationID = {id_selected_rows}", db.getConnection());
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                db.closeConnection();
+            }
+            catch
+            {
+                DialogResult res = new DialogResult();
+                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (res == DialogResult.Cancel)
+                {
+                    SalesSelect();
+                }
+                else
+                {
+                    return;
+                }
+                db.closeConnection();
+            }
+        }
+        // кнопки добавления данных в таблицу
         private void AddLineButton_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee();
@@ -864,6 +1051,7 @@ namespace Autorization
             SupplemenEmloyee6();
             AutorizationSelect();
         }
+        // кнопки удаления данных в таблице
         private void DeleteLineButton_Click(object sender, EventArgs e)
         {
             DeleteTable();
@@ -892,6 +1080,39 @@ namespace Autorization
         private void DeleteLineButton6_Click(object sender, EventArgs e)
         {
             DeleteTable6();
+            AutorizationSelect();
+        }
+        // кнопки изменения данных в таблице
+        private void UpdateLineButton1_Click(object sender, EventArgs e)
+        {
+            UpdateTable();
+            EmployeesSelect();
+        }
+        private void UpdateLineButton2_Click(object sender, EventArgs e)
+        {
+            UpdateTable2();
+            CustomerSelect();
+        }
+        private void UpdateLineButton3_Click(object sender, EventArgs e)
+        {
+            UpdateTable3();
+            ProjectOrderSelect();
+        }
+        private void UpdateLineButton4_Click(object sender, EventArgs e)
+        {
+            UpdateTable4();
+            ProjectSalesSelect();
+        }
+
+        private void UpdateLineButton5_Click(object sender, EventArgs e)
+        {
+            UpdateTable5();
+            SalesSelect();
+        }
+
+        private void UpdateLineButton6_Click(object sender, EventArgs e)
+        {
+            UpdateTable6();
             AutorizationSelect();
         }
 

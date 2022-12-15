@@ -83,6 +83,12 @@ namespace Autorization
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.UpdateLineButton5 = new System.Windows.Forms.Button();
+            this.UpdateLineButton1 = new System.Windows.Forms.Button();
+            this.UpdateLineButton2 = new System.Windows.Forms.Button();
+            this.UpdateLineButton3 = new System.Windows.Forms.Button();
+            this.UpdateLineButton4 = new System.Windows.Forms.Button();
+            this.UpdateLineButton6 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -92,6 +98,12 @@ namespace Autorization
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Lavender;
+            this.panel4.Controls.Add(this.UpdateLineButton6);
+            this.panel4.Controls.Add(this.UpdateLineButton4);
+            this.panel4.Controls.Add(this.UpdateLineButton3);
+            this.panel4.Controls.Add(this.UpdateLineButton2);
+            this.panel4.Controls.Add(this.UpdateLineButton1);
+            this.panel4.Controls.Add(this.UpdateLineButton5);
             this.panel4.Controls.Add(this.DeleteLineButton6);
             this.panel4.Controls.Add(this.DeleteLineButton5);
             this.panel4.Controls.Add(this.DeleteLineButton4);
@@ -661,6 +673,78 @@ namespace Autorization
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
+            // UpdateLineButton5
+            // 
+            this.UpdateLineButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateLineButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateLineButton5.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton5.Name = "UpdateLineButton5";
+            this.UpdateLineButton5.Size = new System.Drawing.Size(220, 34);
+            this.UpdateLineButton5.TabIndex = 53;
+            this.UpdateLineButton5.Text = "ИЗМЕНИТЬ СТРОКУ";
+            this.UpdateLineButton5.UseVisualStyleBackColor = true;
+            this.UpdateLineButton5.Click += new System.EventHandler(this.UpdateLineButton5_Click);
+            // 
+            // UpdateLineButton1
+            // 
+            this.UpdateLineButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateLineButton1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateLineButton1.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton1.Name = "UpdateLineButton1";
+            this.UpdateLineButton1.Size = new System.Drawing.Size(220, 34);
+            this.UpdateLineButton1.TabIndex = 54;
+            this.UpdateLineButton1.Text = "ИЗМЕНИТЬ СТРОКУ";
+            this.UpdateLineButton1.UseVisualStyleBackColor = true;
+            this.UpdateLineButton1.Click += new System.EventHandler(this.UpdateLineButton1_Click);
+            // 
+            // UpdateLineButton2
+            // 
+            this.UpdateLineButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateLineButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateLineButton2.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton2.Name = "UpdateLineButton2";
+            this.UpdateLineButton2.Size = new System.Drawing.Size(220, 34);
+            this.UpdateLineButton2.TabIndex = 55;
+            this.UpdateLineButton2.Text = "ИЗМЕНИТЬ СТРОКУ";
+            this.UpdateLineButton2.UseVisualStyleBackColor = true;
+            this.UpdateLineButton2.Click += new System.EventHandler(this.UpdateLineButton2_Click);
+            // 
+            // UpdateLineButton3
+            // 
+            this.UpdateLineButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateLineButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateLineButton3.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton3.Name = "UpdateLineButton3";
+            this.UpdateLineButton3.Size = new System.Drawing.Size(220, 34);
+            this.UpdateLineButton3.TabIndex = 56;
+            this.UpdateLineButton3.Text = "ИЗМЕНИТЬ СТРОКУ";
+            this.UpdateLineButton3.UseVisualStyleBackColor = true;
+            this.UpdateLineButton3.Click += new System.EventHandler(this.UpdateLineButton3_Click);
+            // 
+            // UpdateLineButton4
+            // 
+            this.UpdateLineButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateLineButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateLineButton4.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton4.Name = "UpdateLineButton4";
+            this.UpdateLineButton4.Size = new System.Drawing.Size(220, 34);
+            this.UpdateLineButton4.TabIndex = 57;
+            this.UpdateLineButton4.Text = "ИЗМЕНИТЬ СТРОКУ";
+            this.UpdateLineButton4.UseVisualStyleBackColor = true;
+            this.UpdateLineButton4.Click += new System.EventHandler(this.UpdateLineButton4_Click);
+            // 
+            // UpdateLineButton6
+            // 
+            this.UpdateLineButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateLineButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateLineButton6.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton6.Name = "UpdateLineButton6";
+            this.UpdateLineButton6.Size = new System.Drawing.Size(220, 34);
+            this.UpdateLineButton6.TabIndex = 58;
+            this.UpdateLineButton6.Text = "ИЗМЕНИТЬ СТРОКУ";
+            this.UpdateLineButton6.UseVisualStyleBackColor = true;
+            this.UpdateLineButton6.Click += new System.EventHandler(this.UpdateLineButton6_Click);
+            // 
             // ChangeDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -739,5 +823,11 @@ namespace Autorization
         private System.Windows.Forms.Button DeleteLineButton6;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.RichTextBox richTextBoxTime;
+        private System.Windows.Forms.Button UpdateLineButton5;
+        private System.Windows.Forms.Button UpdateLineButton2;
+        private System.Windows.Forms.Button UpdateLineButton1;
+        private System.Windows.Forms.Button UpdateLineButton3;
+        private System.Windows.Forms.Button UpdateLineButton4;
+        private System.Windows.Forms.Button UpdateLineButton6;
     }
 }
