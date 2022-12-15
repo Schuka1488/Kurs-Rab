@@ -1010,9 +1010,7 @@ namespace Autorization
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
-                {
-                    SalesSelect();
-                }
+                {SalesSelect();}
                 else
                 {
                     return;
@@ -1121,7 +1119,6 @@ namespace Autorization
             if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Right))
             {
                 dataGridViewTransformData2.CurrentCell = dataGridViewTransformData2[e.ColumnIndex, e.RowIndex];
-                
                 dataGridViewTransformData2.CurrentCell.Selected = true;
                 //Метод получения ID выделенной строки в глобальную переменную
                 GetSelectedIDString();
@@ -1141,8 +1138,7 @@ namespace Autorization
             //Индекс выбранной строки
             index_selected_rows = dataGridViewTransformData2.SelectedCells[0].RowIndex.ToString();
             //ID конкретной записи в Базе данных, на основании индекса строки
-            id_selected_rows = dataGridViewTransformData2.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();
-            //Указываем ID выделенной строки в метке
+            id_selected_rows = dataGridViewTransformData2.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();//Указываем ID выделенной строки в метке
         }
     }
 }
