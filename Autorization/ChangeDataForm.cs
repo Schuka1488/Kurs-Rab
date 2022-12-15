@@ -361,7 +361,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
                 {
                     SalesSelect();
@@ -491,7 +491,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
                 {
                     SalesSelect();
@@ -622,7 +622,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
                 {
                     SalesSelect();
@@ -749,7 +749,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
                 {
                     SalesSelect();
@@ -877,7 +877,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
                 {
                     SalesSelect();
@@ -1008,7 +1008,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (res == DialogResult.Cancel)
                 {
                     SalesSelect();
