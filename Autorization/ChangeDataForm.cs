@@ -1018,100 +1018,128 @@ namespace Autorization
                 db.closeConnection();
             }
         }
+        private void textboxNoVisibleText()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+        }
         // кнопки добавления данных в таблицу
         private void AddLineButton_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee();
             EmployeesSelect();
+            textboxNoVisibleText();
         }
         private void AddLineButton2_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee2();
             CustomerSelect();
+            textboxNoVisibleText();
         }
         private void AddLineButton3_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee3();
             ProjectOrderSelect();
+            textboxNoVisibleText();
         }
         private void AddLineButton4_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee4();
             ProjectSalesSelect();
+            textboxNoVisibleText();
         }
         private void AddLineButton5_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee5();
             SalesSelect();
+            textboxNoVisibleText();
         }
         private void AddLineButton6_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee6();
             AutorizationSelect();
+            textboxNoVisibleText();
         }
         // кнопки удаления данных в таблице
         private void DeleteLineButton_Click(object sender, EventArgs e)
         {
             DeleteTable();
             EmployeesSelect();
+            textboxNoVisibleText();
         }
         private void DeleteLineButton2_Click(object sender, EventArgs e)
         {
             DeleteTable2();
             CustomerSelect();
+            textboxNoVisibleText();
         }
         private void DeleteLineButton3_Click(object sender, EventArgs e)
         {
             DeleteTable3();
             ProjectOrderSelect();
+            textboxNoVisibleText();
         }
         private void DeleteLineButton4_Click(object sender, EventArgs e)
         {
             DeleteTable4();
             ProjectSalesSelect();
+            textboxNoVisibleText();
         }
         private void DeleteLineButton5_Click(object sender, EventArgs e)
         {
             DeleteTable5();
             SalesSelect();
+            textboxNoVisibleText();
         }
         private void DeleteLineButton6_Click(object sender, EventArgs e)
         {
             DeleteTable6();
             AutorizationSelect();
+            textboxNoVisibleText();
         }
         // кнопки изменения данных в таблице
         private void UpdateLineButton1_Click(object sender, EventArgs e)
         {
             UpdateTable();
             EmployeesSelect();
+            textboxNoVisibleText();
         }
         private void UpdateLineButton2_Click(object sender, EventArgs e)
         {
             UpdateTable2();
             CustomerSelect();
+            textboxNoVisibleText();
         }
         private void UpdateLineButton3_Click(object sender, EventArgs e)
         {
             UpdateTable3();
             ProjectOrderSelect();
+            textboxNoVisibleText();
         }
         private void UpdateLineButton4_Click(object sender, EventArgs e)
         {
             UpdateTable4();
             ProjectSalesSelect();
+            textboxNoVisibleText();
         }
 
         private void UpdateLineButton5_Click(object sender, EventArgs e)
         {
             UpdateTable5();
             SalesSelect();
+            textboxNoVisibleText();
         }
 
         private void UpdateLineButton6_Click(object sender, EventArgs e)
         {
             UpdateTable6();
             AutorizationSelect();
+            textboxNoVisibleText();
         }
 
         private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
