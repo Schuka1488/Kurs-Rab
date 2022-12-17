@@ -1018,6 +1018,7 @@ namespace Autorization
                 db.closeConnection();
             }
         }
+        // метод убирающий текст из текстбоксов (срабатывает принажатии кнопок добавления, удаления или изменения)
         private void textboxNoVisibleText()
         {
             textBox1.Text = "";
@@ -1140,6 +1141,36 @@ namespace Autorization
             UpdateTable6();
             AutorizationSelect();
             textboxNoVisibleText();
+        }
+        // кнопки обновления данных в выбранной таблице
+        private void RefreshButton1_Click(object sender, EventArgs e)
+        {
+            EmployeesSelect();
+        }
+
+        private void RefreshButton2_Click(object sender, EventArgs e)
+        {
+            CustomerSelect();
+        }
+
+        private void RefreshButton3_Click(object sender, EventArgs e)
+        {
+            ProjectOrderSelect();
+        }
+
+        private void RefreshButton4_Click(object sender, EventArgs e)
+        {
+            ProjectSalesSelect();
+        }
+
+        private void RefreshButton5_Click(object sender, EventArgs e)
+        {
+            SalesSelect();
+        }
+
+        private void RefreshButton6_Click(object sender, EventArgs e)
+        {
+            AutorizationSelect();
         }
 
         private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
