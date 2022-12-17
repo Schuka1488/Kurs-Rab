@@ -296,6 +296,13 @@ namespace Autorization
             UpdateLineButton4.Visible = false;
             UpdateLineButton5.Visible = false;
             UpdateLineButton6.Visible = false;
+
+            RefreshButton1.Visible = true;
+            RefreshButton2.Visible = false;
+            RefreshButton3.Visible = false;
+            RefreshButton4.Visible = false;
+            RefreshButton5.Visible = false;
+            RefreshButton6.Visible = false;
         }
         private void вТаблицеСотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -426,6 +433,13 @@ namespace Autorization
             UpdateLineButton4.Visible = false;
             UpdateLineButton5.Visible = false;
             UpdateLineButton6.Visible = false;
+
+            RefreshButton1.Visible = false;
+            RefreshButton2.Visible = true;
+            RefreshButton3.Visible = false;
+            RefreshButton4.Visible = false;
+            RefreshButton5.Visible = false;
+            RefreshButton6.Visible = false;
         }
         private void вТаблицеЗаказчикиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -557,6 +571,13 @@ namespace Autorization
             UpdateLineButton4.Visible = false;
             UpdateLineButton5.Visible = false;
             UpdateLineButton6.Visible = false;
+
+            RefreshButton1.Visible = false;
+            RefreshButton2.Visible = false;
+            RefreshButton3.Visible = true;
+            RefreshButton4.Visible = false;
+            RefreshButton5.Visible = false;
+            RefreshButton6.Visible = false;
         }
         private void заказыToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -684,6 +705,13 @@ namespace Autorization
             UpdateLineButton4.Visible = true;
             UpdateLineButton5.Visible = false;
             UpdateLineButton6.Visible = false;
+
+            RefreshButton1.Visible = false;
+            RefreshButton2.Visible = false;
+            RefreshButton3.Visible = false;
+            RefreshButton4.Visible = true;
+            RefreshButton5.Visible = false;
+            RefreshButton6.Visible = false;
         }
         private void продажиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -812,6 +840,13 @@ namespace Autorization
             UpdateLineButton4.Visible = false;
             UpdateLineButton5.Visible = true;
             UpdateLineButton6.Visible = false;
+
+            RefreshButton1.Visible = false;
+            RefreshButton2.Visible = false;
+            RefreshButton3.Visible = false;
+            RefreshButton4.Visible = false;
+            RefreshButton5.Visible = true;
+            RefreshButton6.Visible = false;
         }
         private void ценаToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -943,6 +978,13 @@ namespace Autorization
             UpdateLineButton4.Visible = false;
             UpdateLineButton5.Visible = false;
             UpdateLineButton6.Visible = true;
+
+            RefreshButton1.Visible = false;
+            RefreshButton2.Visible = false;
+            RefreshButton3.Visible = false;
+            RefreshButton4.Visible = false;
+            RefreshButton5.Visible = false;
+            RefreshButton6.Visible = true;
         }
         private void вТаблицеАвторизацииToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1146,31 +1188,37 @@ namespace Autorization
         private void RefreshButton1_Click(object sender, EventArgs e)
         {
             EmployeesSelect();
+            MessageBox.Show("Данные в таблице сотрудников обновлены", "Таблица сотрудников", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void RefreshButton2_Click(object sender, EventArgs e)
         {
             CustomerSelect();
+            MessageBox.Show("Данные в таблице заказчиков обновлены", "Таблица заказчиков", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void RefreshButton3_Click(object sender, EventArgs e)
         {
             ProjectOrderSelect();
+            MessageBox.Show("Данные в таблице заказов обновлены", "Таблица заказов", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void RefreshButton4_Click(object sender, EventArgs e)
         {
             ProjectSalesSelect();
+            MessageBox.Show("Данные в таблице покупок обновлены", "Таблица покупок", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void RefreshButton5_Click(object sender, EventArgs e)
         {
             SalesSelect();
+            MessageBox.Show("Данные в таблице продаж обновлены", "Таблица продаж", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void RefreshButton6_Click(object sender, EventArgs e)
         {
             AutorizationSelect();
+            MessageBox.Show("Данные в таблице авторзации обновлены", "Таблица авторзации", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
