@@ -287,9 +287,11 @@ namespace Autorization
         }
         private void печатьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            Application app = null;
+
             try
             {
-                Application app = new Application(); // новая переменная для application
+                app = new Application(); // новая переменная для application
                 Document doc = app.Documents.Add(Visible: true); // переменная для того чтобы появилась возможность отображения документа
                 Microsoft.Office.Interop.Word.Range r = doc.Range(); // задаем размер Word файлу
                 Table t = doc.Tables.Add(r, dataGridView1.Rows.Count + 1, dataGridView1.Columns.Count); // добавляем в ворд файл строки и колонки
@@ -326,24 +328,40 @@ namespace Autorization
             {
                 MessageBox.Show("Необходимо выбрать или сохранить таблицу", "Ошибка вывода", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
             }
+            finally
+            {
+                if (app !=null )
+                {
+                    app.Quit();
+                }
+            }
         }
 
         private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Excel.Application exApp = new Excel.Application(); // создаем переменную класса Excel
-            exApp.Workbooks.Add(); // добавляем рабочую область
-            Excel.Worksheet wsh = (Excel.Worksheet)exApp.ActiveSheet; // создаем переменную для работы с Excel.Worksheet
-            wsh.Cells[1, 1] = dataGridView1.Columns.ToString(); // начинаем переносить данные в Excel с 1 строки 1 столбца
-            int i, j; // переменные для столбцов и строк
-            for(i=0; i<=dataGridView1.RowCount-1;i++) // учитываем все строки
+            Excel.Application exApp = null;
+
+            try
             {
-                for (j=0;j<=dataGridView1.ColumnCount-1;j++) // учитываем все стобцы
+                exApp = new Excel.Application(); // создаем переменную класса Excel
+                exApp.Workbooks.Add(); // добавляем рабочую область
+                Excel.Worksheet wsh = (Excel.Worksheet)exApp.ActiveSheet; // создаем переменную для работы с Excel.Worksheet
+                wsh.Cells[1, 1] = dataGridView1.Columns.ToString(); // начинаем переносить данные в Excel с 1 строки 1 столбца
+                int i, j; // переменные для столбцов и строк
+                for (i = 0; i <= dataGridView1.RowCount - 1; i++) // учитываем все строки
                 {
-                    wsh.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText.ToString(); // учитываются наименования столбцов и переносятся в Excel 
-                    wsh.Cells[i+2, j+1] = dataGridView1[j, i].Value.ToString();  // учитываются все столбцы и строки (включая первый столбец и последний, поэтому i+2, это связано с нумерацией строк в DataGridView с 0 и Excel с 1), и переносятся в Excel
+                    for (j = 0; j <= dataGridView1.ColumnCount - 1; j++) // учитываем все стобцы
+                    {
+                        wsh.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText.ToString(); // учитываются наименования столбцов и переносятся в Excel 
+                        wsh.Cells[i + 2, j + 1] = dataGridView1[j, i].Value.ToString();  // учитываются все столбцы и строки (включая первый столбец и последний, поэтому i+2, это связано с нумерацией строк в DataGridView с 0 и Excel с 1), и переносятся в Excel
+                    }
                 }
+                exApp.Visible = true; // показывается созданный excel документ
             }
-            exApp.Visible = true; // показывается созданный excel документ
+            catch
+            {
+                MessageBox.Show("Необходимо выбрать или сохранить таблицу", "Ошибка вывода", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
+            }
         }
 
 
