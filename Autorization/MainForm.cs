@@ -340,7 +340,7 @@ namespace Autorization
                 for (j=0;j<=dataGridView1.ColumnCount-1;j++) // учитываем все стобцы
                 {
                     wsh.Cells[1, j + 1] = dataGridView1.Columns[j].HeaderText.ToString(); // учитываются наименования столбцов и переносятся в Excel 
-                    wsh.Cells[i+2, j+1] = dataGridView1[j, i].Value.ToString();  // учитываются все столбцы и строки (включая первый столбец и последний, поэтому i+2), и переносятся в Excel
+                    wsh.Cells[i+2, j+1] = dataGridView1[j, i].Value.ToString();  // учитываются все столбцы и строки (включая первый столбец и последний, поэтому i+2, это связано с нумерацией строк в DataGridView с 0 и Excel с 1), и переносятся в Excel
                 }
             }
             exApp.Visible = true; // показывается созданный excel документ
