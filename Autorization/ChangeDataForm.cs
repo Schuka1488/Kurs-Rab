@@ -153,6 +153,8 @@ namespace Autorization
         #region [ Кнопки тем ]
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
+            panel4.BackColor = ThemeMethodClass.Theme.LightColor2;
+            panel5.BackColor = ThemeMethodClass.Theme.LightColor;
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -165,6 +167,8 @@ namespace Autorization
 
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
+            panel4.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            panel5.BackColor = ThemeMethodClass.Theme.DarkColor;
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;

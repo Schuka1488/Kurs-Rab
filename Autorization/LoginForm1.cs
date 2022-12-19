@@ -83,6 +83,8 @@ namespace Autorization
         }
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
+            panel1.BackColor = ThemeMethodClass.Theme.LightColor2;
+            panel2.BackColor = ThemeMethodClass.Theme.LightColor;
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавное переливание текста в другой (при помощи rgb цвет фона не изменятся)
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -95,6 +97,8 @@ namespace Autorization
 
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
+            panel1.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            panel2.BackColor = ThemeMethodClass.Theme.DarkColor;
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавное переливание текста в другой (при помощи rgb цвет фона не изменятся)
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
