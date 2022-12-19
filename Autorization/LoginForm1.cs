@@ -45,17 +45,17 @@ namespace Autorization
         }
         private void label4_Click(object sender, EventArgs e)
         {
-            DialogResult res = new DialogResult();
-            res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
+            DialogResult res = new DialogResult(); // переменная для обработки выбранных кнопок в MessageBox
+            res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //Настройка MessageBox
+            if (res == DialogResult.Yes) // при нажатии на "Да" происходит выход из программы
             {
                 Application.Exit();
             }
             else
             {
-                return;
+                return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
             }
-            animateComponent1.CloseForm(750);
+            animateComponent1.CloseForm(750); //компонент для плавного закрытия формы
         }
         private void panel1_MouseMove(object sender, MouseEventArgs e)  //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
@@ -83,26 +83,26 @@ namespace Autorization
         }
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
-            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавное переливание текста в другой (при помощи rgb цвет фона не изменятся)
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 2;
             Timer timer = new Timer();
-            timer.Interval = 4;
-            timer.Tick += timer2_Tick;
-            timer.Start();
+            timer.Interval = 4; // интевал, после которого снова можно будет осуществить нажатие
+            timer.Tick += timer2_Tick; // при нажатии включается таймер
+            timer.Start(); // включается таймер
         }
 
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
-            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавное переливание текста в другой (при помощи rgb цвет фона не изменятся)
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 1;
             Timer timer = new Timer();
-            timer.Interval = 4;
-            timer.Tick += timer1_Tick;
-            timer.Start();
+            timer.Interval = 4; // интевал, после которого снова можно будет осуществить нажатие
+            timer.Tick += timer1_Tick; // при нажатии включается таймер
+            timer.Start(); // включается таймер
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -111,12 +111,12 @@ namespace Autorization
                 if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
                 {
                     sign *= -1;
-                    labelTheme.Text = "Темная тема вкл.";
+                    labelTheme.Text = "Темная тема вкл."; // указваем какой текст хотим видеть в лейбле
                 }
                 labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
-                if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+                if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
                 {
-                    ((Timer)sender).Stop();
+                    ((Timer)sender).Stop(); // таймер останавливается
                 }
             }
             catch
@@ -132,12 +132,12 @@ namespace Autorization
                 if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
                 {
                     sign *= -1;
-                    labelTheme.Text = "Светлая тема вкл.";
+                    labelTheme.Text = "Светлая тема вкл."; // указваем какой текст хотим видеть в лейбле
                 }
                 labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
-                if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR)
+                if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
                 {
-                    ((Timer)sender).Stop();
+                    ((Timer)sender).Stop(); // таймер останавливается
                 }
             }
             catch
@@ -151,11 +151,11 @@ namespace Autorization
             //Получаем данные о пользователе
             string Userlogin = loginName.Text; // данные о пользователе из текстбокса loginName
             string Userpassword = sha256(passwordName.Text); // кодируем пароль
-            //Создаем объекты
+            //Создаем переменные
             DBclass db = new DBclass();
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            //Указываем команду, которая должна выполниться в отношении базы данных
+            //Указываем команду, которая должна выполниться в отношении базы данных (SQL запрос)
             MySqlCommand command = new MySqlCommand("SELECT * FROM `authorization` WHERE `login` = @Login AND `password` = @Password", db.getConnection()); // конект к базе данных SQL осущесвляется при помощи метода getConnection, который описан в отдельном классе
             command.Parameters.Add("@Login", MySqlDbType.VarChar).Value = Userlogin;
             command.Parameters.Add("@Password", MySqlDbType.VarChar).Value = Userpassword;

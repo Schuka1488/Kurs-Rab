@@ -105,9 +105,9 @@ namespace Autorization
             res = MessageBox.Show("Вы действительно хотите выйти из аккаунта?", "Выход из аккаунта", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //Настройка MessageBox
             if (res == DialogResult.Yes) // если мы нажимаем кнопку Да
             {
-                this.Hide();
+                this.Hide(); // эта форма скрывается
                 LoginForm1 auth = new LoginForm1();
-                auth.Show();
+                auth.Show(); // метод для показа формы авторизации
             }
             else
             {
@@ -148,7 +148,7 @@ namespace Autorization
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
             dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
+            // указываем какие объекты будут видны на форме (разные текстбоксы для разной фильтрации)
             labelJob.Visible = true;
             textBoxJob.Visible = true;
 
@@ -170,7 +170,7 @@ namespace Autorization
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
+            // указываем какие объекты будут видны на форме (разные текстбоксы для разной фильтрации)
             labelJob.Visible = false;
             textBoxJob.Visible = false;
 
@@ -191,7 +191,7 @@ namespace Autorization
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
+            // указываем какие объекты будут видны на форме (разные текстбоксы для разной фильтрации)
             labelJob.Visible = false;
             textBoxJob.Visible = false;
 
@@ -214,7 +214,7 @@ namespace Autorization
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-
+            // указываем какие объекты будут видны на форме (разные текстбоксы для разной фильтрации)
             labelJob.Visible = false;
             textBoxJob.Visible = false;
 
@@ -238,7 +238,7 @@ namespace Autorization
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
+            // указываем какие объекты будут видны на форме (разные текстбоксы для разной фильтрации)
             labelJob.Visible = false;
             textBoxJob.Visible = false;
 
@@ -285,7 +285,7 @@ namespace Autorization
         }
         private void печатьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Application app = null;
+            Application app = null; 
 
             try
             {
@@ -295,31 +295,31 @@ namespace Autorization
                 Table t = doc.Tables.Add(r, dataGridView1.Rows.Count + 1, dataGridView1.Columns.Count); // добавляем в ворд файл строки и колонки
                 int bdRow = 0;
                 bool IsColumnReady = false;
-                t.Borders.Enable = 1;
+                t.Borders.Enable = 1; // создаем границы таблицы в вордовском документе
                 foreach (Row row in t.Rows)
                 {
                     if (!IsColumnReady && bdRow == 0)
                     {
                         int tableCounter = 0;
-                        foreach (Cell cell in row.Cells)
+                        foreach (Cell cell in row.Cells) //создаем ячейки в таблице
                         {
-                            cell.Range.Text = table.Columns[tableCounter].ColumnName;
-                            tableCounter++;
+                            cell.Range.Text = table.Columns[tableCounter].ColumnName; //создаем отступ текста от границ ячейки, чтобы текст не наползал на границы
+                            tableCounter++; // для каждой ячейки свой отступ текста от границ
                         }
-                        IsColumnReady = true;
+                        IsColumnReady = true; // ячейки созданы, продолжаем перебор данных при помощи циклов
                         continue;
                     }
-                    object[] collection = table.Rows[bdRow].ItemArray;
+                    object[] collection = table.Rows[bdRow].ItemArray; // преобразуем строки из таблицы в объекты
                     int cellCount = 0;
                     foreach (Cell cell in row.Cells)
                     {
-                        cell.Range.Text = collection[cellCount].ToString();
+                        cell.Range.Text = collection[cellCount].ToString(); // все данные в ячейки приобразуем в строки, текст с которым уже можно бдует работать
 
                         cellCount++;
                     }
-                    bdRow++;
+                    bdRow++; // выводим все данные
                 }
-                doc.Save();  
+                doc.Save();  // выводится окно, которое придлагает сохранить документ прежде чем в нем работать
                 doc.Close(); // документ закрывается программой и дальнейшее его использование программой прекращается
             }
             catch
@@ -328,12 +328,13 @@ namespace Autorization
             }
             finally
             {
-                if (app !=null )
+                if (app !=null ) // если мы не открыли документо то...
                 {
-                    app.Quit();
+                    app.Quit(); // насильно прекращаем процесс работы с вордом для экономии оперативной памяти
                 }
             }
         }
+
 
         private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -388,10 +389,10 @@ namespace Autorization
         {
             try
             {
-                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // использование математических функций 
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) 
                 {
                     sign *= -1;// знак таймера
-                    labelTheme.Text = "Темная тема вкл."; // указваем какой текст хоти видеть в лейбле
+                    labelTheme.Text = "Темная тема вкл."; // указваем какой текст хотим видеть в лейбле
                 }
                 labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
                 if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
@@ -401,7 +402,7 @@ namespace Autorization
             }
             catch
             {
-                ((Timer)sender).Stop();
+                ((Timer)sender).Stop(); // таймер останавливается
                 MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -409,10 +410,10 @@ namespace Autorization
         {
             try
             {
-                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // использование математических функций 
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))  
                 {
                     sign *= -1; // знак таймера
-                    labelTheme.Text = "Светлая тема вкл."; // указваем какой текст хоти видеть в лейбле
+                    labelTheme.Text = "Светлая тема вкл."; // указваем какой текст хотим видеть в лейбле
                 }
                 labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
                 if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
@@ -422,7 +423,7 @@ namespace Autorization
             }
             catch
             {
-                ((Timer)sender).Stop();
+                ((Timer)sender).Stop(); // таймер останавливается
                 MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
