@@ -92,38 +92,38 @@ namespace Autorization
             }
         }
 
-        private void изПрограммыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void изПрограммыToolStripMenuItem_Click(object sender, EventArgs e) // метод закрытия программы
         {
             DialogResult res = new DialogResult();
             res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
+            if (res == DialogResult.Yes) // при нажатии на "Да" происходит выход из программы
             {
                 Application.Exit();
             }
             else
             {
-                return;
+                return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
             }
         }
-        private void label4_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e) // метод закрытия программы
         {
             DialogResult res = new DialogResult();
             res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
+            if (res == DialogResult.Yes) // при нажатии на "Да" происходит выход из программы
             {
                 Application.Exit();
             }
             else
             {
-                return;
+                return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
             }
         }
 
-        private void изАккаунтаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void изАккаунтаToolStripMenuItem_Click(object sender, EventArgs e) // метод закрытия программы
         {
-            DialogResult res = new DialogResult(); // переменная для обработки выбранных кнопок в MessageBox
+            DialogResult res = new DialogResult(); 
             res = MessageBox.Show("Вы действительно хотите выйти из аккаунта?", "Выход из аккаунта", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //Настройка MessageBox
-            if (res == DialogResult.Yes) // если мы нажимаем кнопку Да
+            if (res == DialogResult.Yes) // при нажатии на "Да" происходит выход из программы
             {
                 this.Hide();
                 LoginForm1 auth = new LoginForm1();
@@ -131,7 +131,7 @@ namespace Autorization
             }
             else
             {
-                return; // возвращаемся на форму
+                return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
             }
         }
 
@@ -153,16 +153,6 @@ namespace Autorization
         #region [ Кнопки тем ]
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.LightThemeMethodChangeDataForm(panel4, panel5, dataGridViewTransformData2, DarkThemeButton, WhiteThemeButton,
-
-                labelTheme, AddLineButton, AddLineButton2, AddLineButton3, AddLineButton4, AddLineButton5, AddLineButton6, label1,
-
-                label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1,
-
-                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, DeleteLineButton, DeleteLineButton2, DeleteLineButton3,
-                
-                DeleteLineButton4, DeleteLineButton5, DeleteLineButton6, richTextBoxTime);
-
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -175,16 +165,6 @@ namespace Autorization
 
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.DarkThemeMethodChangeDataForm(panel4, panel5, dataGridViewTransformData2, DarkThemeButton, WhiteThemeButton,
-
-                labelTheme, AddLineButton, AddLineButton2, AddLineButton3, AddLineButton4, AddLineButton5, AddLineButton6, label1,
-
-                label2, Column1Label, Column2Label, Column3Label, Column4Label, Column5Label, Column6Label, Column7Label, textBox1,
-
-                textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, DeleteLineButton, DeleteLineButton2, DeleteLineButton3,
-                
-                DeleteLineButton4, DeleteLineButton5, DeleteLineButton6, richTextBoxTime);
-
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;

@@ -263,7 +263,6 @@ namespace Autorization
 
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.LightThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2, labelITN,labelNameProject,labelJob,textBoxITN,textBoxNameProject,textBoxJob, richTextBoxTime); //передаем все что хоти изменить
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -275,7 +274,6 @@ namespace Autorization
         }
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.DarkThemeMethodMainForm(panel1, panel2, dataGridView1, DarkThemeButton, WhiteThemeButton, labelTheme, label1, label2, labelITN, labelNameProject, labelJob, textBoxITN, textBoxNameProject, textBoxJob, richTextBoxTime); //передаем все что хоти изменить
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;

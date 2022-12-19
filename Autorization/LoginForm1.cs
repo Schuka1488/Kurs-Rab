@@ -83,7 +83,6 @@ namespace Autorization
         }
         private void WhiteThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.LightThemeMethodLoginForm(panel1, panel2, label2, label3, buttonLoginPass, loginName, passwordName, DarkThemeButton, WhiteThemeButton, labelTheme);
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -96,7 +95,6 @@ namespace Autorization
 
         private void DarkThemeButton_Click(object sender, EventArgs e)
         {
-            ThemeMethodClass.DarkThemeMethodLoginForm(panel1, panel2, label2, label3, buttonLoginPass, loginName, passwordName, DarkThemeButton, WhiteThemeButton, labelTheme);
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
