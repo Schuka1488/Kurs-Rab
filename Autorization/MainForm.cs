@@ -55,7 +55,7 @@ namespace Autorization
         }
         private void panel2_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
-            if (e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
             {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
@@ -67,7 +67,7 @@ namespace Autorization
         }
         private void panel1_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
-            if (e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
             {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
@@ -254,20 +254,20 @@ namespace Autorization
         }
         private void dataGridView1_MouseMove(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
-            if (e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
             {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
             }
         }
 
-        private void WhiteThemeButton_Click(object sender, EventArgs e)
+        private void WhiteThemeButton_Click(object sender, EventArgs e) // кнопка светлой темы
         {
-            panel1.BackColor = ThemeMethodClass.Theme.LightColor2;
+            panel1.BackColor = ThemeMethodClass.Theme.LightColor2; // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе
             panel2.BackColor = ThemeMethodClass.Theme.LightColor;
             dataGridView1.BackgroundColor = ThemeMethodClass.Theme.LightColor2;
             richTextBoxTime.BackColor = ThemeMethodClass.Theme.LightColor;
-            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавный переход текста из одного в другой, без потери цвета
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 2; // знак таймера
@@ -276,13 +276,13 @@ namespace Autorization
             timer.Tick += timer2_Tick; // считываем нажатие
             timer.Start(); // таймер срабатывает 
         }
-        private void DarkThemeButton_Click(object sender, EventArgs e)
+        private void DarkThemeButton_Click(object sender, EventArgs e) // кнопка темной темы
         {
-            panel1.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            panel1.BackColor = ThemeMethodClass.Theme.DarkColor2; // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе
             panel2.BackColor = ThemeMethodClass.Theme.DarkColor;
             dataGridView1.BackgroundColor = ThemeMethodClass.Theme.DarkColor2;
             richTextBoxTime.BackColor = ThemeMethodClass.Theme.DarkColor;
-            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавный переход текста из одного в другой, без потери цвета
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 1; // знак таймера
@@ -411,7 +411,7 @@ namespace Autorization
             catch
             {
                 ((Timer)sender).Stop(); // таймер останавливается
-                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
             }
         }
         private void timer2_Tick(object sender, EventArgs e)
@@ -432,7 +432,7 @@ namespace Autorization
             catch
             {
                 ((Timer)sender).Stop(); // таймер останавливается
-                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
             }
         }
         private void timer3_Tick(object sender, EventArgs e)

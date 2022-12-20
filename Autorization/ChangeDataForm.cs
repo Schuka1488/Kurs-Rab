@@ -58,7 +58,7 @@ namespace Autorization
 
         private void panel5_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
             {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
@@ -72,7 +72,7 @@ namespace Autorization
 
         private void panel4_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
             {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
@@ -85,7 +85,7 @@ namespace Autorization
 
         private void dataGridViewTransformData2_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
             {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
@@ -151,9 +151,9 @@ namespace Autorization
             }
         }
         #region [ Кнопки тем ]
-        private void WhiteThemeButton_Click(object sender, EventArgs e)
+        private void WhiteThemeButton_Click(object sender, EventArgs e) // кнопка светлой темы
         {
-            panel4.BackColor = ThemeMethodClass.Theme.LightColor2;
+            panel4.BackColor = ThemeMethodClass.Theme.LightColor2; // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе
             panel5.BackColor = ThemeMethodClass.Theme.LightColor;
             DeleteLineButton.BackColor = ThemeMethodClass.Theme.LightColor2;
             DeleteLineButton2.BackColor = ThemeMethodClass.Theme.LightColor2;
@@ -169,19 +169,20 @@ namespace Autorization
             AddLineButton6.BackColor = ThemeMethodClass.Theme.LightColor2;
             dataGridViewTransformData2.BackgroundColor = ThemeMethodClass.Theme.LightColor2;
             richTextBoxTime.BackColor = ThemeMethodClass.Theme.LightColor;
-            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
+
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавный переход текста из одного в другой, без потери цвета
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
-            sign = 2;
-            Timer timer = new Timer();
-            timer.Interval = 4;
+            sign = 2; // знак таймера
+            Timer timer = new Timer(); // создаем таймер
+            timer.Interval = 4; // интервал 4 доли секунды, до следующего нажатия на кнопку(и запуска таймера)
             timer.Tick += timer2_Tick;
-            timer.Start();
+            timer.Start(); // таймер включается
         }
 
-        private void DarkThemeButton_Click(object sender, EventArgs e)
+        private void DarkThemeButton_Click(object sender, EventArgs e) // кнопка темной темы
         {
-            panel4.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            panel4.BackColor = ThemeMethodClass.Theme.DarkColor2; // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе
             panel5.BackColor = ThemeMethodClass.Theme.DarkColor;
             DeleteLineButton.BackColor = ThemeMethodClass.Theme.DarkColor2;
             DeleteLineButton2.BackColor = ThemeMethodClass.Theme.DarkColor2;
@@ -197,14 +198,15 @@ namespace Autorization
             AddLineButton6.BackColor = ThemeMethodClass.Theme.DarkColor2;
             dataGridViewTransformData2.BackgroundColor = ThemeMethodClass.Theme.DarkColor2;
             richTextBoxTime.BackColor = ThemeMethodClass.Theme.DarkColor;
-            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
+
+            dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавный переход текста из одного в другой, без потери цвета
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
-            sign = 1;
-            Timer timer = new Timer();
-            timer.Interval = 4;
+            sign = 1; // знак таймера
+            Timer timer = new Timer(); // создаем таймер
+            timer.Interval = 4; // интервал 4 доли секунды, до следующего нажатия на кнопку(и запуска таймера)
             timer.Tick += timer1_Tick;
-            timer.Start();
+            timer.Start(); // таймер включается
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -224,7 +226,7 @@ namespace Autorization
             catch
             {
                 ((Timer)sender).Stop(); // таймер останавливается
-                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
             }
         }
         private void timer2_Tick(object sender, EventArgs e)
@@ -245,7 +247,7 @@ namespace Autorization
             catch
             {
                 ((Timer)sender).Stop(); // таймер останавливается
-                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
             }
         }
         private void timer3_Tick(object sender, EventArgs e)
@@ -1208,37 +1210,37 @@ namespace Autorization
         private void RefreshButton1_Click(object sender, EventArgs e)
         {
             EmployeesSelect();
-            MessageBox.Show("Данные в таблице сотрудников обновлены", "Таблица сотрудников", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Данные в таблице сотрудников обновлены", "Таблица сотрудников", MessageBoxButtons.OK, MessageBoxIcon.Information); // MessageBox показывает в какой таблице произошли изменения
         }
 
         private void RefreshButton2_Click(object sender, EventArgs e)
         {
             CustomerSelect();
-            MessageBox.Show("Данные в таблице заказчиков обновлены", "Таблица заказчиков", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Данные в таблице заказчиков обновлены", "Таблица заказчиков", MessageBoxButtons.OK, MessageBoxIcon.Information); // MessageBox показывает в какой таблице произошли изменения
         }
 
         private void RefreshButton3_Click(object sender, EventArgs e)
         {
             ProjectOrderSelect();
-            MessageBox.Show("Данные в таблице заказов обновлены", "Таблица заказов", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Данные в таблице заказов обновлены", "Таблица заказов", MessageBoxButtons.OK, MessageBoxIcon.Information); // MessageBox показывает в какой таблице произошли изменения
         }
 
         private void RefreshButton4_Click(object sender, EventArgs e)
         {
             ProjectSalesSelect();
-            MessageBox.Show("Данные в таблице покупок обновлены", "Таблица покупок", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Данные в таблице покупок обновлены", "Таблица покупок", MessageBoxButtons.OK, MessageBoxIcon.Information); // MessageBox показывает в какой таблице произошли изменения
         }
 
         private void RefreshButton5_Click(object sender, EventArgs e)
         {
             SalesSelect();
-            MessageBox.Show("Данные в таблице продаж обновлены", "Таблица продаж", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Данные в таблице продаж обновлены", "Таблица продаж", MessageBoxButtons.OK, MessageBoxIcon.Information); // MessageBox показывает в какой таблице произошли изменения
         }
 
         private void RefreshButton6_Click(object sender, EventArgs e)
         {
             AutorizationSelect();
-            MessageBox.Show("Данные в таблице авторзации обновлены", "Таблица авторзации", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Данные в таблице авторзации обновлены", "Таблица авторзации", MessageBoxButtons.OK, MessageBoxIcon.Information);// MessageBox показывает в какой таблице произошли изменения
         }
 
         private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)

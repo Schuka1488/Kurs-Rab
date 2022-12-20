@@ -16,10 +16,8 @@ namespace Autorization
         static void Main() // метод для входа в программу
         {
             System.Windows.Forms.Application.EnableVisualStyles();
-            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            //System.Windows.Forms.Application.Run(new MainForm()); 
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false); 
             System.Windows.Forms.Application.Run(new LoginForm1()); // сначала запускается форма авторизации
-            //System.Windows.Forms.Application.Run(new ChangeDataForm());
         }
     }
 }

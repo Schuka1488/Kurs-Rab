@@ -59,7 +59,7 @@ namespace Autorization
         }
         private void panel1_MouseMove(object sender, MouseEventArgs e)  //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
-            if (e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
             {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
@@ -71,7 +71,7 @@ namespace Autorization
         }
         private void panel2_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
-            if (e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
             {
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
@@ -81,29 +81,29 @@ namespace Autorization
         {
             lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
         }
-        private void WhiteThemeButton_Click(object sender, EventArgs e)
+        private void WhiteThemeButton_Click(object sender, EventArgs e) // кнопка светлой темы
         {
-            panel1.BackColor = ThemeMethodClass.Theme.LightColor2;
+            panel1.BackColor = ThemeMethodClass.Theme.LightColor2; // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе
             panel2.BackColor = ThemeMethodClass.Theme.LightColor;
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавное переливание текста в другой (при помощи rgb цвет фона не изменятся)
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
-            sign = 2;
-            Timer timer = new Timer();
+            sign = 2; // знак таймера
+            Timer timer = new Timer(); // создаем таймер
             timer.Interval = 4; // интевал, после которого снова можно будет осуществить нажатие
             timer.Tick += timer2_Tick; // при нажатии включается таймер
             timer.Start(); // включается таймер
         }
 
-        private void DarkThemeButton_Click(object sender, EventArgs e)
+        private void DarkThemeButton_Click(object sender, EventArgs e) // кнопка темной темы
         {
-            panel1.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            panel1.BackColor = ThemeMethodClass.Theme.DarkColor2; // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе
             panel2.BackColor = ThemeMethodClass.Theme.DarkColor;
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавное переливание текста в другой (при помощи rgb цвет фона не изменятся)
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
-            sign = 1;
-            Timer timer = new Timer();
+            sign = 1; // знак таймера
+            Timer timer = new Timer(); // создаем таймер
             timer.Interval = 4; // интевал, после которого снова можно будет осуществить нажатие
             timer.Tick += timer1_Tick; // при нажатии включается таймер
             timer.Start(); // включается таймер
@@ -126,7 +126,7 @@ namespace Autorization
             catch
             {
                 ((Timer)sender).Stop();
-                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
             }
         }
         private void timer2_Tick(object sender, EventArgs e)
@@ -147,7 +147,7 @@ namespace Autorization
             catch
             {
                 ((Timer)sender).Stop();
-                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
             }
         }
         private void buttonLoginPass_Click(object sender, EventArgs e) // метод при помощи которого осуществляется авторизация и полноценные вход в приложение 
