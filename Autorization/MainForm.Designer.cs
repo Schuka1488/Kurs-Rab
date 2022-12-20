@@ -378,8 +378,8 @@ namespace Autorization
             this.печатьToolStripMenuItem1,
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem});
             this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
-            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.печатьToolStripMenuItem.Text = "Настройки";
+            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
+            this.печатьToolStripMenuItem.Text = "Экспорт таблицы";
             // 
             // печатьToolStripMenuItem1
             // 
