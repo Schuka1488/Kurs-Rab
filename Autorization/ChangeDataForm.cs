@@ -208,11 +208,11 @@ namespace Autorization
             timer.Tick += timer1_Tick;
             timer.Start(); // таймер включается
         }
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) 
         {
             try
             {
-                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // создаем интервал для перехода цветов 
                 {
                     sign *= -1; // знак таймера
                     labelTheme.Text = "Темная тема вкл."; // указваем какой текст хотим видеть в лейбле
@@ -233,7 +233,7 @@ namespace Autorization
         {
             try
             {
-                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // создаем интервал для перехода цветов 
                 {
                     sign *= -1; // знак таймера
                     labelTheme.Text = "Светлая тема вкл."; // указваем какой текст хотим видеть в лейбле

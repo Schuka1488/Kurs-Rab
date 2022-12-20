@@ -112,7 +112,7 @@ namespace Autorization
         {
             try
             {
-                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // создаем интервал для перехода цветов 
                 {
                     sign *= -1;
                     labelTheme.Text = "Темная тема вкл."; // указваем какой текст хотим видеть в лейбле
@@ -133,7 +133,7 @@ namespace Autorization
         {
             try
             {
-                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // создаем интервал для перехода цветов 
                 {
                     sign *= -1;
                     labelTheme.Text = "Светлая тема вкл."; // указваем какой текст хотим видеть в лейбле

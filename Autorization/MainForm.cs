@@ -149,14 +149,14 @@ namespace Autorization
             dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             // указываем какие объекты будут видны на форме (разные текстбоксы для разной фильтрации)
-            labelJob.Visible = true;
-            textBoxJob.Visible = true;
+            labelJob.Visible = true; // видимость названия профессии
+            textBoxJob.Visible = true; // видимость текстбокса для фильтрации профессии
 
-            labelITN.Visible = false;
-            textBoxITN.Visible = false;
+            labelITN.Visible = false; // видимость ИНН компании
+            textBoxITN.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
 
-            labelNameProject.Visible = false;
-            textBoxNameProject.Visible = false;
+            labelNameProject.Visible = false; // видимость названия проекта
+            textBoxNameProject.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
         private void таблицаКлиентовToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
@@ -171,14 +171,14 @@ namespace Autorization
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             // указываем какие объекты будут видны на форме (разные текстбоксы для разной фильтрации)
-            labelJob.Visible = false;
-            textBoxJob.Visible = false;
+            labelJob.Visible = false; // видимость названия профессии
+            textBoxJob.Visible = false; // видимость текстбокса для фильтрации профессии
 
-            labelITN.Visible = true;
-            textBoxITN.Visible = true;
+            labelITN.Visible = true; // видимость ИНН компании
+            textBoxITN.Visible = true; // видимость тексбокса для фильтрации компаний по ИНН
 
-            labelNameProject.Visible = false;
-            textBoxNameProject.Visible = false;
+            labelNameProject.Visible = false; // видимость названия проекта
+            textBoxNameProject.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
         private void таблицаЗаказовToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
@@ -192,14 +192,14 @@ namespace Autorization
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             // указываем какие объекты будут видны на форме (разные текстбоксы для разной фильтрации)
-            labelJob.Visible = false;
-            textBoxJob.Visible = false;
+            labelJob.Visible = false; // видимость названия профессии
+            textBoxJob.Visible = false; // видимость текстбокса для фильтрации профессии
 
-            labelITN.Visible = false;
-            textBoxITN.Visible = false;
+            labelITN.Visible = false; // видимость ИНН компании
+            textBoxITN.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
 
-            labelNameProject.Visible = true;
-            textBoxNameProject.Visible = true;
+            labelNameProject.Visible = true; // видимость названия проекта
+            textBoxNameProject.Visible = true; // видимость тексбокса для фильтрации проектов по названию
         }
         private void таблицаПродажToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
@@ -215,14 +215,14 @@ namespace Autorization
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             // указываем какие объекты будут видны на форме (разные текстбоксы для разной фильтрации)
-            labelJob.Visible = false;
-            textBoxJob.Visible = false;
+            labelJob.Visible = false; // видимость названия профессии
+            textBoxJob.Visible = false; // видимость текстбокса для фильтрации профессии
 
-            labelITN.Visible = false;
-            textBoxITN.Visible = false;
+            labelITN.Visible = false; // видимость ИНН компании
+            textBoxITN.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
 
-            labelNameProject.Visible = false;
-            textBoxNameProject.Visible = false;
+            labelNameProject.Visible = false; // видимость названия проекта
+            textBoxNameProject.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
         private void таблицаЦенToolStripMenuItem_Click(object sender, EventArgs e) // метод при нажатии которого осуществяется SQL запрос с получением данных из таблицы БД
         {
@@ -239,14 +239,14 @@ namespace Autorization
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             // указываем какие объекты будут видны на форме (разные текстбоксы для разной фильтрации)
-            labelJob.Visible = false;
-            textBoxJob.Visible = false;
+            labelJob.Visible = false; // видимость названия профессии
+            textBoxJob.Visible = false; // видимость текстбокса для фильтрации профессии
 
-            labelITN.Visible = false;
-            textBoxITN.Visible = false;
+            labelITN.Visible = false; // видимость ИНН компании
+            textBoxITN.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
 
-            labelNameProject.Visible = false;
-            textBoxNameProject.Visible = false;
+            labelNameProject.Visible = false; // видимость названия проекта
+            textBoxNameProject.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
@@ -291,7 +291,7 @@ namespace Autorization
             timer.Tick += timer1_Tick; // считываем нажатие
             timer.Start(); // таймер срабатывает 
         }
-        private void печатьToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void печатьToolStripMenuItem1_Click(object sender, EventArgs e) // событие созданное для вывода таблицы из datagrid в Microsoft Word при нажатии по кнопке 
         {
             Application app = null; 
 
@@ -301,10 +301,10 @@ namespace Autorization
                 Document doc = app.Documents.Add(Visible: true); // переменная для того чтобы появилась возможность отображения документа
                 Microsoft.Office.Interop.Word.Range r = doc.Range(); // задаем размер Word файлу
                 Table t = doc.Tables.Add(r, dataGridView1.Rows.Count + 1, dataGridView1.Columns.Count); // добавляем в ворд файл строки и колонки
-                int bdRow = 0;
-                bool IsColumnReady = false;
+                int bdRow = 0; // указваем с какой строки начианется нумерация
+                bool IsColumnReady = false; // отключаем нумерацию строк
                 t.Borders.Enable = 1; // создаем границы таблицы в вордовском документе
-                foreach (Row row in t.Rows)
+                foreach (Row row in t.Rows) // перебор всех строк в таблице
                 {
                     if (!IsColumnReady && bdRow == 0)
                     {
@@ -323,7 +323,7 @@ namespace Autorization
                     {
                         cell.Range.Text = collection[cellCount].ToString(); // все данные в ячейки приобразуем в строки, текст с которым уже можно бдует работать
 
-                        cellCount++;
+                        cellCount++; // количество строк
                     }
                     bdRow++; // выводим все данные
                 }
@@ -344,7 +344,7 @@ namespace Autorization
         }
 
 
-        private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e) // событие созданное для вывода таблицы из datagrid в Microsoft Excel при нажатии по кнопке
         {
             Excel.Application exApp = null;
 
@@ -368,6 +368,13 @@ namespace Autorization
             catch
             {
                 MessageBox.Show("Необходимо выбрать или сохранить таблицу", "Ошибка вывода", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
+            }
+            finally
+            {
+                if (exApp != null) // если мы не открыли документо то...
+                {
+                    exApp.Quit(); // насильно прекращаем процесс работы с вордом для экономии оперативной памяти
+                }
             }
         }
 
@@ -397,7 +404,7 @@ namespace Autorization
         {
             try
             {
-                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) 
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10)) // создаем интервал для перехода цветов 
                 {
                     sign *= -1;// знак таймера
                     labelTheme.Text = "Темная тема вкл."; // указваем какой текст хотим видеть в лейбле
@@ -418,7 +425,7 @@ namespace Autorization
         {
             try
             {
-                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))  
+                if (Math.Abs(labelTheme.ForeColor.R - labelTheme.BackColor.R) < Math.Abs(dR / 10))  // создаем интервал для перехода цветов 
                 {
                     sign *= -1; // знак таймера
                     labelTheme.Text = "Светлая тема вкл."; // указваем какой текст хотим видеть в лейбле
