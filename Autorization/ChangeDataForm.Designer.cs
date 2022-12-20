@@ -31,6 +31,12 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.RefreshButton6 = new System.Windows.Forms.Button();
+            this.RefreshButton5 = new System.Windows.Forms.Button();
+            this.RefreshButton4 = new System.Windows.Forms.Button();
+            this.RefreshButton3 = new System.Windows.Forms.Button();
+            this.RefreshButton2 = new System.Windows.Forms.Button();
+            this.RefreshButton1 = new System.Windows.Forms.Button();
             this.UpdateLineButton6 = new System.Windows.Forms.Button();
             this.UpdateLineButton4 = new System.Windows.Forms.Button();
             this.UpdateLineButton3 = new System.Windows.Forms.Button();
@@ -89,12 +95,6 @@ namespace Autorization
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.RefreshButton1 = new System.Windows.Forms.Button();
-            this.RefreshButton2 = new System.Windows.Forms.Button();
-            this.RefreshButton3 = new System.Windows.Forms.Button();
-            this.RefreshButton4 = new System.Windows.Forms.Button();
-            this.RefreshButton5 = new System.Windows.Forms.Button();
-            this.RefreshButton6 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -156,6 +156,78 @@ namespace Autorization
             this.panel4.TabIndex = 2;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
+            // 
+            // RefreshButton6
+            // 
+            this.RefreshButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RefreshButton6.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton6.Name = "RefreshButton6";
+            this.RefreshButton6.Size = new System.Drawing.Size(220, 34);
+            this.RefreshButton6.TabIndex = 64;
+            this.RefreshButton6.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.RefreshButton6.UseVisualStyleBackColor = true;
+            this.RefreshButton6.Click += new System.EventHandler(this.RefreshButton6_Click);
+            // 
+            // RefreshButton5
+            // 
+            this.RefreshButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RefreshButton5.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton5.Name = "RefreshButton5";
+            this.RefreshButton5.Size = new System.Drawing.Size(220, 34);
+            this.RefreshButton5.TabIndex = 63;
+            this.RefreshButton5.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.RefreshButton5.UseVisualStyleBackColor = true;
+            this.RefreshButton5.Click += new System.EventHandler(this.RefreshButton5_Click);
+            // 
+            // RefreshButton4
+            // 
+            this.RefreshButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RefreshButton4.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton4.Name = "RefreshButton4";
+            this.RefreshButton4.Size = new System.Drawing.Size(220, 34);
+            this.RefreshButton4.TabIndex = 62;
+            this.RefreshButton4.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.RefreshButton4.UseVisualStyleBackColor = true;
+            this.RefreshButton4.Click += new System.EventHandler(this.RefreshButton4_Click);
+            // 
+            // RefreshButton3
+            // 
+            this.RefreshButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RefreshButton3.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton3.Name = "RefreshButton3";
+            this.RefreshButton3.Size = new System.Drawing.Size(220, 34);
+            this.RefreshButton3.TabIndex = 61;
+            this.RefreshButton3.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.RefreshButton3.UseVisualStyleBackColor = true;
+            this.RefreshButton3.Click += new System.EventHandler(this.RefreshButton3_Click);
+            // 
+            // RefreshButton2
+            // 
+            this.RefreshButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RefreshButton2.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton2.Name = "RefreshButton2";
+            this.RefreshButton2.Size = new System.Drawing.Size(220, 34);
+            this.RefreshButton2.TabIndex = 60;
+            this.RefreshButton2.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.RefreshButton2.UseVisualStyleBackColor = true;
+            this.RefreshButton2.Click += new System.EventHandler(this.RefreshButton2_Click);
+            // 
+            // RefreshButton1
+            // 
+            this.RefreshButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RefreshButton1.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton1.Name = "RefreshButton1";
+            this.RefreshButton1.Size = new System.Drawing.Size(220, 34);
+            this.RefreshButton1.TabIndex = 59;
+            this.RefreshButton1.Text = "ОБНОВИТЬ ДАННЫЕ";
+            this.RefreshButton1.UseVisualStyleBackColor = true;
+            this.RefreshButton1.Click += new System.EventHandler(this.RefreshButton1_Click);
             // 
             // UpdateLineButton6
             // 
@@ -239,7 +311,7 @@ namespace Autorization
             this.DeleteLineButton6.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton6.TabIndex = 52;
             this.DeleteLineButton6.Text = "УДАЛИТЬ СТРОКУ";
-            this.DeleteLineButton6.UseVisualStyleBackColor = false;
+            this.DeleteLineButton6.UseVisualStyleBackColor = true;
             this.DeleteLineButton6.Click += new System.EventHandler(this.DeleteLineButton6_Click);
             // 
             // DeleteLineButton5
@@ -252,7 +324,7 @@ namespace Autorization
             this.DeleteLineButton5.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton5.TabIndex = 51;
             this.DeleteLineButton5.Text = "УДАЛИТЬ СТРОКУ";
-            this.DeleteLineButton5.UseVisualStyleBackColor = false;
+            this.DeleteLineButton5.UseVisualStyleBackColor = true;
             this.DeleteLineButton5.Click += new System.EventHandler(this.DeleteLineButton5_Click);
             // 
             // DeleteLineButton4
@@ -265,7 +337,7 @@ namespace Autorization
             this.DeleteLineButton4.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton4.TabIndex = 50;
             this.DeleteLineButton4.Text = "УДАЛИТЬ СТРОКУ";
-            this.DeleteLineButton4.UseVisualStyleBackColor = false;
+            this.DeleteLineButton4.UseVisualStyleBackColor = true;
             this.DeleteLineButton4.Click += new System.EventHandler(this.DeleteLineButton4_Click);
             // 
             // DeleteLineButton3
@@ -278,7 +350,7 @@ namespace Autorization
             this.DeleteLineButton3.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton3.TabIndex = 49;
             this.DeleteLineButton3.Text = "УДАЛИТЬ СТРОКУ";
-            this.DeleteLineButton3.UseVisualStyleBackColor = false;
+            this.DeleteLineButton3.UseVisualStyleBackColor = true;
             this.DeleteLineButton3.Click += new System.EventHandler(this.DeleteLineButton3_Click);
             // 
             // DeleteLineButton2
@@ -291,7 +363,7 @@ namespace Autorization
             this.DeleteLineButton2.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton2.TabIndex = 48;
             this.DeleteLineButton2.Text = "УДАЛИТЬ СТРОКУ";
-            this.DeleteLineButton2.UseVisualStyleBackColor = false;
+            this.DeleteLineButton2.UseVisualStyleBackColor = true;
             this.DeleteLineButton2.Click += new System.EventHandler(this.DeleteLineButton2_Click);
             // 
             // label2
@@ -399,7 +471,7 @@ namespace Autorization
             this.DeleteLineButton.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton.TabIndex = 32;
             this.DeleteLineButton.Text = "УДАЛИТЬ СТРОКУ";
-            this.DeleteLineButton.UseVisualStyleBackColor = false;
+            this.DeleteLineButton.UseVisualStyleBackColor = true;
             this.DeleteLineButton.Click += new System.EventHandler(this.DeleteLineButton_Click);
             // 
             // AddLineButton
@@ -756,78 +828,6 @@ namespace Autorization
             this.timer3.Enabled = true;
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // RefreshButton1
-            // 
-            this.RefreshButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RefreshButton1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton1.Location = new System.Drawing.Point(1021, 243);
-            this.RefreshButton1.Name = "RefreshButton1";
-            this.RefreshButton1.Size = new System.Drawing.Size(220, 34);
-            this.RefreshButton1.TabIndex = 59;
-            this.RefreshButton1.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.RefreshButton1.UseVisualStyleBackColor = true;
-            this.RefreshButton1.Click += new System.EventHandler(this.RefreshButton1_Click);
-            // 
-            // RefreshButton2
-            // 
-            this.RefreshButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RefreshButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton2.Location = new System.Drawing.Point(1021, 243);
-            this.RefreshButton2.Name = "RefreshButton2";
-            this.RefreshButton2.Size = new System.Drawing.Size(220, 34);
-            this.RefreshButton2.TabIndex = 60;
-            this.RefreshButton2.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.RefreshButton2.UseVisualStyleBackColor = true;
-            this.RefreshButton2.Click += new System.EventHandler(this.RefreshButton2_Click);
-            // 
-            // RefreshButton3
-            // 
-            this.RefreshButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RefreshButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton3.Location = new System.Drawing.Point(1021, 243);
-            this.RefreshButton3.Name = "RefreshButton3";
-            this.RefreshButton3.Size = new System.Drawing.Size(220, 34);
-            this.RefreshButton3.TabIndex = 61;
-            this.RefreshButton3.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.RefreshButton3.UseVisualStyleBackColor = true;
-            this.RefreshButton3.Click += new System.EventHandler(this.RefreshButton3_Click);
-            // 
-            // RefreshButton4
-            // 
-            this.RefreshButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RefreshButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton4.Location = new System.Drawing.Point(1021, 243);
-            this.RefreshButton4.Name = "RefreshButton4";
-            this.RefreshButton4.Size = new System.Drawing.Size(220, 34);
-            this.RefreshButton4.TabIndex = 62;
-            this.RefreshButton4.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.RefreshButton4.UseVisualStyleBackColor = true;
-            this.RefreshButton4.Click += new System.EventHandler(this.RefreshButton4_Click);
-            // 
-            // RefreshButton5
-            // 
-            this.RefreshButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RefreshButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton5.Location = new System.Drawing.Point(1021, 243);
-            this.RefreshButton5.Name = "RefreshButton5";
-            this.RefreshButton5.Size = new System.Drawing.Size(220, 34);
-            this.RefreshButton5.TabIndex = 63;
-            this.RefreshButton5.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.RefreshButton5.UseVisualStyleBackColor = true;
-            this.RefreshButton5.Click += new System.EventHandler(this.RefreshButton5_Click);
-            // 
-            // RefreshButton6
-            // 
-            this.RefreshButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RefreshButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton6.Location = new System.Drawing.Point(1021, 243);
-            this.RefreshButton6.Name = "RefreshButton6";
-            this.RefreshButton6.Size = new System.Drawing.Size(220, 34);
-            this.RefreshButton6.TabIndex = 64;
-            this.RefreshButton6.Text = "ОБНОВИТЬ ДАННЫЕ";
-            this.RefreshButton6.UseVisualStyleBackColor = true;
-            this.RefreshButton6.Click += new System.EventHandler(this.RefreshButton6_Click);
             // 
             // ChangeDataForm
             // 

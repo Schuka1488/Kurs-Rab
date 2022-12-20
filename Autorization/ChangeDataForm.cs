@@ -155,6 +155,20 @@ namespace Autorization
         {
             panel4.BackColor = ThemeMethodClass.Theme.LightColor2;
             panel5.BackColor = ThemeMethodClass.Theme.LightColor;
+            DeleteLineButton.BackColor = ThemeMethodClass.Theme.LightColor2;
+            DeleteLineButton2.BackColor = ThemeMethodClass.Theme.LightColor2;
+            DeleteLineButton3.BackColor = ThemeMethodClass.Theme.LightColor2;
+            DeleteLineButton4.BackColor = ThemeMethodClass.Theme.LightColor2;
+            DeleteLineButton5.BackColor = ThemeMethodClass.Theme.LightColor2;
+            DeleteLineButton6.BackColor = ThemeMethodClass.Theme.LightColor2;
+            AddLineButton.BackColor = ThemeMethodClass.Theme.LightColor2;
+            AddLineButton2.BackColor = ThemeMethodClass.Theme.LightColor2;
+            AddLineButton3.BackColor = ThemeMethodClass.Theme.LightColor2;
+            AddLineButton4.BackColor = ThemeMethodClass.Theme.LightColor2;
+            AddLineButton5.BackColor = ThemeMethodClass.Theme.LightColor2;
+            AddLineButton6.BackColor = ThemeMethodClass.Theme.LightColor2;
+            dataGridViewTransformData2.BackgroundColor = ThemeMethodClass.Theme.LightColor2;
+            richTextBoxTime.BackColor = ThemeMethodClass.Theme.LightColor;
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -169,6 +183,20 @@ namespace Autorization
         {
             panel4.BackColor = ThemeMethodClass.Theme.DarkColor2;
             panel5.BackColor = ThemeMethodClass.Theme.DarkColor;
+            DeleteLineButton.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            DeleteLineButton2.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            DeleteLineButton3.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            DeleteLineButton4.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            DeleteLineButton5.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            DeleteLineButton6.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            AddLineButton.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            AddLineButton2.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            AddLineButton3.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            AddLineButton4.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            AddLineButton5.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            AddLineButton6.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            dataGridViewTransformData2.BackgroundColor = ThemeMethodClass.Theme.DarkColor2;
+            richTextBoxTime.BackColor = ThemeMethodClass.Theme.DarkColor;
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R;
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;

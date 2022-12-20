@@ -265,6 +265,8 @@ namespace Autorization
         {
             panel1.BackColor = ThemeMethodClass.Theme.LightColor2;
             panel2.BackColor = ThemeMethodClass.Theme.LightColor;
+            dataGridView1.BackgroundColor = ThemeMethodClass.Theme.LightColor2;
+            richTextBoxTime.BackColor = ThemeMethodClass.Theme.LightColor;
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -278,6 +280,8 @@ namespace Autorization
         {
             panel1.BackColor = ThemeMethodClass.Theme.DarkColor2;
             panel2.BackColor = ThemeMethodClass.Theme.DarkColor;
+            dataGridView1.BackgroundColor = ThemeMethodClass.Theme.DarkColor2;
+            richTextBoxTime.BackColor = ThemeMethodClass.Theme.DarkColor;
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // используем rgb
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
