@@ -63,6 +63,7 @@
     <Compile Include="ChangeDataForm.Designer.cs">
       <DependentUpon>ChangeDataForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassForTabel.cs" />
     <Compile Include="DBclass.cs" />
     <Compile Include="FormAnimatedEffects.cs" />
     <Compile Include="LoginForm1.cs">
