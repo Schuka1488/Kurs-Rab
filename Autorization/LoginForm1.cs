@@ -43,13 +43,13 @@ namespace Autorization
             toolTip1.ShowAlways = true; // статус видимости
             toolTip1.SetToolTip(label4, "Закрытие программы");
         }
-        private void label4_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e) // кнопка выхода из программы реализованная в качестве лейбла
         {
             DialogResult res = new DialogResult(); // переменная для обработки выбранных кнопок в MessageBox
             res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //Настройка MessageBox
             if (res == DialogResult.Yes) // при нажатии на "Да" происходит выход из программы
             {
-                Application.Exit();
+                Application.Exit(); // выход из программы
             }
             else
             {
@@ -125,7 +125,7 @@ namespace Autorization
             }
             catch
             {
-                ((Timer)sender).Stop();
+                ((Timer)sender).Stop(); // таймер останавливается
                 MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
             }
         }
@@ -146,7 +146,7 @@ namespace Autorization
             }
             catch
             {
-                ((Timer)sender).Stop();
+                ((Timer)sender).Stop(); // таймер останавливается
                 MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
             }
         }
@@ -187,9 +187,10 @@ namespace Autorization
                 PopupNotifier popup = new PopupNotifier(); //создание новой переменной класса PopupNotifier NuGet компонента Tulpep
                 popup.Image = Properties.Resources.pngres; // берем иконку из ресурсов проекта
                 popup.ImageSize = new Size(96, 96); // задаем размер
-                popup.HeaderColor = Color.DeepSkyBlue; // задаем цвета для элементов всплвающего окна 
-                popup.BodyColor = Color.Lavender;
-                popup.TitleColor = Color.LightSlateGray;
+                // задаем цвета для элементов всплвающего окна
+                popup.HeaderColor = Color.DeepSkyBlue; // цвет верхней рамки
+                popup.BodyColor = Color.Lavender; // цвет основной, для тела в рамке
+                popup.TitleColor = Color.LightSlateGray; // цвет заголовка
                 popup.ShowCloseButton = false; // убираем кнопку закрытия
                 popup.TitleText = "ИНТЭКС-СЕРВИС"; // задаем текст
                 popup.ContentText = $"Добро пожаловать {loginName.Text}!"; // выводим сообщение и логин вошедшего пользователя

@@ -31,13 +31,13 @@ namespace Autorization
             toolTip1.InitialDelay = 1000; // в течении какого кол-ва времени после наведения курсора будет показываться подсказка
             toolTip1.ReshowDelay = 500; // возвращает или задает интервал времени, который должен пройти перед появлением окна очередной всплывающей подсказки при перемещении указателя мыши с одного элемента управления на другой.
             toolTip1.ShowAlways = true; // статус видимости
-            toolTip1.SetToolTip(label4, "Закрытие программы");
+            toolTip1.SetToolTip(label4, "Закрытие программы"); // текст который виден при наведении на элемент формы
             ToolTip toolTip2 = new ToolTip(); // тул тип для подсказок
             toolTip2.AutoPopDelay = 5000; // параметры показа подсказки, в течении какого времени будет видна подсказка
             toolTip2.InitialDelay = 1000; // в течении какого кол-ва времени после наведения курсора будет показываться подсказка
             toolTip2.ReshowDelay = 500; // возвращает или задает интервал времени, который должен пройти перед появлением окна очередной всплывающей подсказки при перемещении указателя мыши с одного элемента управления на другой.
             toolTip2.ShowAlways = true; // статус видимости
-            toolTip2.SetToolTip(label2, "Коды (ID поля) не нужно заполнять, они заполняются автоматически! \n Даты пишутся в формате 2004-12-12\n Первое число - год, Второе - месяц, Третье - день.");
+            toolTip2.SetToolTip(label2, "Коды (ID поля) не нужно заполнять, они заполняются автоматически! \n Даты пишутся в формате 2004-12-12\n Первое число - год, Второе - месяц, Третье - день."); // текст который виден при наведении на элемент формы
         }
         static string sha256(string randomString)
         {
@@ -51,12 +51,12 @@ namespace Autorization
             }
             return hash.ToString();
         }
-        private void panel5_MouseDown(object sender, MouseEventArgs e)
+        private void panel5_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
             lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
         }
 
-        private void panel5_MouseMove(object sender, MouseEventArgs e)
+        private void panel5_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
             if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
             {
@@ -65,12 +65,12 @@ namespace Autorization
             }
         }
 
-        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        private void panel4_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
             lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
         }
 
-        private void panel4_MouseMove(object sender, MouseEventArgs e)
+        private void panel4_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
             if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
             {
@@ -78,12 +78,12 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-        private void dataGridViewTransformData2_MouseDown(object sender, MouseEventArgs e)
+        private void dataGridViewTransformData2_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
             lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
         }
 
-        private void dataGridViewTransformData2_MouseMove(object sender, MouseEventArgs e)
+        private void dataGridViewTransformData2_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
             if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
             {
@@ -98,7 +98,7 @@ namespace Autorization
             res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes) // при нажатии на "Да" происходит выход из программы
             {
-                Application.Exit();
+                Application.Exit(); // выход из программы
             }
             else
             {
@@ -110,8 +110,8 @@ namespace Autorization
             DialogResult res = new DialogResult();
             res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes) // при нажатии на "Да" происходит выход из программы
-            {
-                Application.Exit();
+            { 
+                Application.Exit(); // выход из программы
             }
             else
             {
@@ -125,9 +125,9 @@ namespace Autorization
             res = MessageBox.Show("Вы действительно хотите выйти из аккаунта?", "Выход из аккаунта", MessageBoxButtons.YesNo, MessageBoxIcon.Question); //Настройка MessageBox
             if (res == DialogResult.Yes) // при нажатии на "Да" происходит выход из программы
             {
-                this.Hide();
+                this.Hide(); // скрывается данная форма
                 LoginForm1 auth = new LoginForm1();
-                auth.Show();
+                auth.Show(); // открывается форма авторизации
             }
             else
             {
@@ -153,22 +153,23 @@ namespace Autorization
         #region [ Кнопки тем ]
         private void WhiteThemeButton_Click(object sender, EventArgs e) // кнопка светлой темы
         {
-            panel4.BackColor = ThemeMethodClass.Theme.LightColor2; // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе
+            // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе
+            panel4.BackColor = ThemeMethodClass.Theme.LightColor2; // панели
             panel5.BackColor = ThemeMethodClass.Theme.LightColor;
-            DeleteLineButton.BackColor = ThemeMethodClass.Theme.LightColor2;
+            DeleteLineButton.BackColor = ThemeMethodClass.Theme.LightColor2; // кнопки удаления данных из таблицы
             DeleteLineButton2.BackColor = ThemeMethodClass.Theme.LightColor2;
             DeleteLineButton3.BackColor = ThemeMethodClass.Theme.LightColor2;
             DeleteLineButton4.BackColor = ThemeMethodClass.Theme.LightColor2;
             DeleteLineButton5.BackColor = ThemeMethodClass.Theme.LightColor2;
             DeleteLineButton6.BackColor = ThemeMethodClass.Theme.LightColor2;
-            AddLineButton.BackColor = ThemeMethodClass.Theme.LightColor2;
+            AddLineButton.BackColor = ThemeMethodClass.Theme.LightColor2; // кнопки добавления новой строки в таблицу
             AddLineButton2.BackColor = ThemeMethodClass.Theme.LightColor2;
             AddLineButton3.BackColor = ThemeMethodClass.Theme.LightColor2;
             AddLineButton4.BackColor = ThemeMethodClass.Theme.LightColor2;
             AddLineButton5.BackColor = ThemeMethodClass.Theme.LightColor2;
             AddLineButton6.BackColor = ThemeMethodClass.Theme.LightColor2;
-            dataGridViewTransformData2.BackgroundColor = ThemeMethodClass.Theme.LightColor2;
-            richTextBoxTime.BackColor = ThemeMethodClass.Theme.LightColor;
+            dataGridViewTransformData2.BackgroundColor = ThemeMethodClass.Theme.LightColor2; // datagrid для вывода данных из БД 
+            richTextBoxTime.BackColor = ThemeMethodClass.Theme.LightColor; // фон ричтекстбокса для отображения времени и даты
 
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавный переход текста из одного в другой, без потери цвета
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
@@ -182,22 +183,23 @@ namespace Autorization
 
         private void DarkThemeButton_Click(object sender, EventArgs e) // кнопка темной темы
         {
-            panel4.BackColor = ThemeMethodClass.Theme.DarkColor2; // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе
+            // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе
+            panel4.BackColor = ThemeMethodClass.Theme.DarkColor2; // панели
             panel5.BackColor = ThemeMethodClass.Theme.DarkColor;
-            DeleteLineButton.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            DeleteLineButton.BackColor = ThemeMethodClass.Theme.DarkColor2; // кнопки удаления данных из таблицы
             DeleteLineButton2.BackColor = ThemeMethodClass.Theme.DarkColor2;
             DeleteLineButton3.BackColor = ThemeMethodClass.Theme.DarkColor2;
             DeleteLineButton4.BackColor = ThemeMethodClass.Theme.DarkColor2;
             DeleteLineButton5.BackColor = ThemeMethodClass.Theme.DarkColor2;
             DeleteLineButton6.BackColor = ThemeMethodClass.Theme.DarkColor2;
-            AddLineButton.BackColor = ThemeMethodClass.Theme.DarkColor2;
+            AddLineButton.BackColor = ThemeMethodClass.Theme.DarkColor2; // кнопки добавления новой строки в таблицу
             AddLineButton2.BackColor = ThemeMethodClass.Theme.DarkColor2;
             AddLineButton3.BackColor = ThemeMethodClass.Theme.DarkColor2;
             AddLineButton4.BackColor = ThemeMethodClass.Theme.DarkColor2;
             AddLineButton5.BackColor = ThemeMethodClass.Theme.DarkColor2;
             AddLineButton6.BackColor = ThemeMethodClass.Theme.DarkColor2;
-            dataGridViewTransformData2.BackgroundColor = ThemeMethodClass.Theme.DarkColor2;
-            richTextBoxTime.BackColor = ThemeMethodClass.Theme.DarkColor;
+            dataGridViewTransformData2.BackgroundColor = ThemeMethodClass.Theme.DarkColor2; // datagrid для вывода данных из БД 
+            richTextBoxTime.BackColor = ThemeMethodClass.Theme.DarkColor; // фон ричтекстбокса для отображения времени и даты
 
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавный переход текста из одного в другой, без потери цвета
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
@@ -329,13 +331,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     EmployeesSelect();
@@ -353,13 +355,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM Employees WHERE EmployeesID = {id_selected_rows}", db.getConnection()); // удаление выбранной строки из таблицы, и перенос обновленной таблицы в БД
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     EmployeesSelect();
@@ -377,13 +379,13 @@ namespace Autorization
             { 
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"UPDATE Employees SET employeesBirthday = \"{textBox2.Text}\", employeesDateOfEmployed = \"{textBox3.Text}\", employeesName = '{textBox4.Text}', employeesSurname = '{textBox5.Text}', employeesPatronymic = '{textBox6.Text}', employeesJobTitle = '{textBox7.Text}' WHERE EmployeesID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     EmployeesSelect();
@@ -467,13 +469,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO Customer(customerCompanyName, customerAddress, PSRN, ITN, TRRC) VALUES( '{textBox2.Text}', '{textBox3.Text}',{textBox4.Text},{textBox5.Text},{textBox6.Text})", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     CustomerSelect();
@@ -491,13 +493,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM Customer WHERE CustomerID = {id_selected_rows}", db.getConnection()); // удаление выбранной строки из таблицы, и перенос обновленной таблицы в БД
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     CustomerSelect();
@@ -515,13 +517,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"UPDATE Customer SET customerCompanyName = '{textBox2.Text}', customerAddress = '{textBox3.Text}', PSRN = {textBox4.Text}, ITN = {textBox5.Text}, TRRC = {textBox6.Text} WHERE CustomerID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     CustomerSelect();
@@ -606,13 +608,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO ProjectOrder(projectName, projectCategory, projectPrice, ProjectID, EmployeesID, CustomerID) VALUES('{textBox2.Text}','{textBox3.Text}',{textBox4.Text}, '{textBox5.Text}', '{textBox6.Text}','{textBox7.Text}')", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ProjectOrderSelect();
@@ -630,13 +632,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM ProjectOrder WHERE ProjectOrderID = {id_selected_rows}", db.getConnection()); // удаление выбранной строки из таблицы, и перенос обновленной таблицы в БД
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ProjectOrderSelect();
@@ -654,13 +656,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"UPDATE ProjectOrder SET projectName = '{textBox2.Text}', projectCategory = '{textBox3.Text}', projectPrice = {textBox4.Text}, ProjectID = '{textBox5.Text}', EmployeesID = '{textBox6.Text}', CustomerID = '{textBox7.Text}' WHERE ProjectOrderID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ProjectOrderSelect();
@@ -741,13 +743,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO ProjectSales(SaleID, datePurchase) VALUES('{textBox2.Text}', \"{textBox3.Text}\")", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ProjectSalesSelect();
@@ -765,13 +767,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM ProjectSales WHERE ProjectID = {id_selected_rows}", db.getConnection()); // удаление выбранной строки из таблицы, и перенос обновленной таблицы в БД
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ProjectSalesSelect();
@@ -789,13 +791,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"UPDATE ProjectSales SET SaleID = '{textBox2.Text}', datePurchase = \"{textBox3.Text}\" WHERE ProjectID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ProjectSalesSelect();
@@ -877,13 +879,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO Sales(saleDate, saleNotes, saleCost) VALUES( \"{textBox2.Text}\", {textBox3.Text}, {textBox4.Text})", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     SalesSelect();
@@ -901,13 +903,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM Sales WHERE SaleID = {id_selected_rows}", db.getConnection()); // удаление выбранной строки из таблицы, и перенос обновленной таблицы в БД
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     SalesSelect();
@@ -925,13 +927,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"UPDATE Sales SET saleDate = \"{textBox2.Text}\", saleNotes = {textBox3.Text}, saleCost = {textBox4.Text} WHERE SaleID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     SalesSelect();
@@ -1016,13 +1018,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO authorization(EmployeesID, employeesJobTitle, login, password, roleTitle, levelRole ) VALUES( '{textBox2.Text}', '{textBox3.Text}','{textBox4.Text}','{sha256(textBox5.Text)}','{textBox6.Text}',{textBox7.Text})", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     AutorizationSelect();
@@ -1040,13 +1042,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"DELETE FROM authorization WHERE AuthorizationID = {id_selected_rows}", db.getConnection()); // удаление выбранной строки из таблицы, и перенос обновленной таблицы в БД
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные удалены" : "Данные  удалены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     AutorizationSelect();
@@ -1064,13 +1066,13 @@ namespace Autorization
             {
                 db.openConnection(); // осуществляем подключение к БД
                 MySqlCommand cmd = new MySqlCommand($"UPDATE authorization SET EmployeesID = '{textBox2.Text}', employeesJobTitle = '{textBox3.Text}', login = '{textBox4.Text}', password = '{sha256(textBox5.Text)}', roleTitle = '{textBox6.Text}', levelRole = {textBox7.Text} WHERE AuthorizationID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
-                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
             }
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     AutorizationSelect();
