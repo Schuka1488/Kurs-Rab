@@ -333,6 +333,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -381,6 +382,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"UPDATE Employees SET employeesBirthday = \"{textBox2.Text}\", employeesDateOfEmployed = \"{textBox3.Text}\", employeesName = '{textBox4.Text}', employeesSurname = '{textBox5.Text}', employeesPatronymic = '{textBox6.Text}', employeesJobTitle = '{textBox7.Text}' WHERE EmployeesID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -471,6 +473,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO Customer(customerCompanyName, customerAddress, PSRN, ITN, TRRC) VALUES( '{textBox2.Text}', '{textBox3.Text}',{textBox4.Text},{textBox5.Text},{textBox6.Text})", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -519,6 +522,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"UPDATE Customer SET customerCompanyName = '{textBox2.Text}', customerAddress = '{textBox3.Text}', PSRN = {textBox4.Text}, ITN = {textBox5.Text}, TRRC = {textBox6.Text} WHERE CustomerID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -610,6 +614,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO ProjectOrder(projectName, projectCategory, projectPrice, ProjectID, EmployeesID, CustomerID) VALUES('{textBox2.Text}','{textBox3.Text}',{textBox4.Text}, '{textBox5.Text}', '{textBox6.Text}','{textBox7.Text}')", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -658,6 +663,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"UPDATE ProjectOrder SET projectName = '{textBox2.Text}', projectCategory = '{textBox3.Text}', projectPrice = {textBox4.Text}, ProjectID = '{textBox5.Text}', EmployeesID = '{textBox6.Text}', CustomerID = '{textBox7.Text}' WHERE ProjectOrderID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -745,6 +751,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO ProjectSales(SaleID, datePurchase) VALUES('{textBox2.Text}', \"{textBox3.Text}\")", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -793,6 +800,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"UPDATE ProjectSales SET SaleID = '{textBox2.Text}', datePurchase = \"{textBox3.Text}\" WHERE ProjectID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -881,6 +889,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO Sales(saleDate, saleNotes, saleCost) VALUES( \"{textBox2.Text}\", {textBox3.Text}, {textBox4.Text})", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -929,6 +938,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"UPDATE Sales SET saleDate = \"{textBox2.Text}\", saleNotes = {textBox3.Text}, saleCost = {textBox4.Text} WHERE SaleID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -1020,6 +1030,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"INSERT INTO authorization(EmployeesID, employeesJobTitle, login, password, roleTitle, levelRole ) VALUES( '{textBox2.Text}', '{textBox3.Text}','{textBox4.Text}','{sha256(textBox5.Text)}','{textBox6.Text}',{textBox7.Text})", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -1068,6 +1079,7 @@ namespace Autorization
                 MySqlCommand cmd = new MySqlCommand($"UPDATE authorization SET EmployeesID = '{textBox2.Text}', employeesJobTitle = '{textBox3.Text}', login = '{textBox4.Text}', password = '{sha256(textBox5.Text)}', roleTitle = '{textBox6.Text}', levelRole = {textBox7.Text} WHERE AuthorizationID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
+                textboxNoVisibleText();
             }
             catch
             {
@@ -1084,7 +1096,7 @@ namespace Autorization
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
-        // метод убирающий текст из текстбоксов (срабатывает принажатии кнопок добавления, удаления или изменения)
+        // метод убирающий текст из текстбоксов (срабатывает при успешном добавлении и изменении данных в таблице)
         private void textboxNoVisibleText()
         {
             textBox1.Text = "";
@@ -1100,113 +1112,95 @@ namespace Autorization
         {
             SupplemenEmloyee();
             EmployeesSelect();
-            textboxNoVisibleText();
         }
         private void AddLineButton2_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee2();
             CustomerSelect();
-            textboxNoVisibleText();
         }
         private void AddLineButton3_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee3();
             ProjectOrderSelect();
-            textboxNoVisibleText();
         }
         private void AddLineButton4_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee4();
             ProjectSalesSelect();
-            textboxNoVisibleText();
         }
         private void AddLineButton5_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee5();
             SalesSelect();
-            textboxNoVisibleText();
         }
         private void AddLineButton6_Click(object sender, EventArgs e)
         {
             SupplemenEmloyee6();
             AutorizationSelect();
-            textboxNoVisibleText();
         }
         // кнопки удаления данных в таблице
         private void DeleteLineButton_Click(object sender, EventArgs e)
         {
             DeleteTable();
             EmployeesSelect();
-            textboxNoVisibleText();
         }
         private void DeleteLineButton2_Click(object sender, EventArgs e)
         {
             DeleteTable2();
             CustomerSelect();
-            textboxNoVisibleText();
         }
         private void DeleteLineButton3_Click(object sender, EventArgs e)
         {
             DeleteTable3();
             ProjectOrderSelect();
-            textboxNoVisibleText();
         }
         private void DeleteLineButton4_Click(object sender, EventArgs e)
         {
             DeleteTable4();
             ProjectSalesSelect();
-            textboxNoVisibleText();
         }
         private void DeleteLineButton5_Click(object sender, EventArgs e)
         {
             DeleteTable5();
             SalesSelect();
-            textboxNoVisibleText();
         }
         private void DeleteLineButton6_Click(object sender, EventArgs e)
         {
             DeleteTable6();
             AutorizationSelect();
-            textboxNoVisibleText();
         }
         // кнопки изменения данных в таблице
         private void UpdateLineButton1_Click(object sender, EventArgs e)
         {
             UpdateTable();
             EmployeesSelect();
-            textboxNoVisibleText();
         }
         private void UpdateLineButton2_Click(object sender, EventArgs e)
         {
             UpdateTable2();
             CustomerSelect();
-            textboxNoVisibleText();
         }
         private void UpdateLineButton3_Click(object sender, EventArgs e)
         {
             UpdateTable3();
             ProjectOrderSelect();
-            textboxNoVisibleText();
         }
         private void UpdateLineButton4_Click(object sender, EventArgs e)
         {
             UpdateTable4();
             ProjectSalesSelect();
-            textboxNoVisibleText();
         }
 
         private void UpdateLineButton5_Click(object sender, EventArgs e)
         {
             UpdateTable5();
             SalesSelect();
-            textboxNoVisibleText();
         }
 
         private void UpdateLineButton6_Click(object sender, EventArgs e)
         {
             UpdateTable6();
             AutorizationSelect();
-            textboxNoVisibleText();
         }
         // кнопки обновления данных в выбранной таблице
         private void RefreshButton1_Click(object sender, EventArgs e)
