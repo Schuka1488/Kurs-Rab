@@ -16,7 +16,6 @@ namespace Autorization
 {
     public partial class MainForm : Form
     {
-
         System.Data.DataTable table; // глобальная переменная для простоты вывода в Microsoft Word
         string id_selected_rows = "0"; //Переменная для индекс выбранной строки в гриде, по умолчанию в гридере стоит индекс -1
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
