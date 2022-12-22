@@ -16,7 +16,6 @@ namespace Autorization
 {
     public partial class MainForm : Form
     {
-
         System.Data.DataTable table; // глобальная переменная для простоты вывода в Microsoft Word
         string id_selected_rows = "0"; //Переменная для индекс выбранной строки в гриде, по умолчанию в гридере стоит индекс -1
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
@@ -49,10 +48,7 @@ namespace Autorization
             dataGridView1.AllowUserToAddRows = false; // изначально дата грид не показывается, показывается только тогда, когда мы выбираем таблицу для просмотра
             // в ChangeDataForm я реализовал скрытие дата гридера на форме через свойства, то также это можно сделать и в коде при помощи параметра добавления строк AllowUserToAddRows
         }
-        private void panel2_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
-        {
-            lastPoint = new System.Drawing.Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
-        }
+        private void panel2_MouseDown(object sender, MouseEventArgs e) => lastPoint = new System.Drawing.Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         private void panel2_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
             if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
@@ -61,10 +57,7 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-        private void panel1_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
-        {
-            lastPoint = new System.Drawing.Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
-        }
+        private void panel1_MouseDown(object sender, MouseEventArgs e) => lastPoint = new System.Drawing.Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         private void panel1_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
             if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
@@ -81,10 +74,7 @@ namespace Autorization
             { 
                 System.Windows.Forms.Application.Exit(); // выход из программы
             }
-            else
-            { 
-                return;  // возвращаемся на форму
-            } 
+            else return;  // возвращаемся на форму
         }
         private void label4_Click(object sender, EventArgs e) // осуществил выход при помощи лейбла поставив X
         {
@@ -94,10 +84,7 @@ namespace Autorization
             {
                 System.Windows.Forms.Application.Exit(); // выход из программы 
             }
-            else
-            {
-                return; // возвращаемся на форму
-            }
+            else return; // возвращаемся на форму
         }
         private void формуToolStripMenuItem_Click(object sender, EventArgs e) // выход из главной формы и возвращение к авторизации, без потери производительности
         {
@@ -109,10 +96,7 @@ namespace Autorization
                 LoginForm1 auth = new LoginForm1();
                 auth.Show(); // метод для показа формы авторизации
             }
-            else
-            {
-                return; // возвращаемся на форму
-            }
+            else return; // возвращаемся на форму
         }
         private void изменитьДанныеToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -248,10 +232,7 @@ namespace Autorization
             labelNameProject.Visible = false; // видимость названия проекта
             textBoxNameProject.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
-        private void dataGridView1_MouseDown(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
-        {
-            lastPoint = new System.Drawing.Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
-        }
+        private void dataGridView1_MouseDown(object sender, MouseEventArgs e) => lastPoint = new System.Drawing.Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         private void dataGridView1_MouseMove(object sender, MouseEventArgs e)//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
             if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
@@ -294,7 +275,6 @@ namespace Autorization
         private void печатьToolStripMenuItem1_Click(object sender, EventArgs e) // событие созданное для вывода таблицы из datagrid в Microsoft Word при нажатии по кнопке 
         {
             Application app = null; 
-
             try
             {
                 app = new Application(); // новая переменная для application
@@ -347,7 +327,6 @@ namespace Autorization
         private void выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click(object sender, EventArgs e) // событие созданное для вывода таблицы из datagrid в Microsoft Excel при нажатии по кнопке
         {
             Excel.Application exApp = null;
-
             try
             {
                 exApp = new Excel.Application(); // создаем переменную класса Excel
@@ -381,21 +360,13 @@ namespace Autorization
 
 
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            table.DefaultView.RowFilter = $"Профессия LIKE '%{textBoxJob.Text}%'"; // фильтр сотрудникво по названию профессии
-        }
-
+        private void textBox1_TextChanged(object sender, EventArgs e) => table.DefaultView.RowFilter = $"Профессия LIKE '%{textBoxJob.Text}%'";
         private void textBoxITN_TextChanged(object sender, EventArgs e)
         {
             if (textBoxITN.Text.Length < 0) return; // данные не могут быть равны 0
             table.DefaultView.RowFilter = $"Convert(ИНН, System.String) LIKE '%{textBoxITN.Text}%'"; // фильтр компаний по ИНН
         }
-
-        private void textBoxNameProject_TextChanged(object sender, EventArgs e)
-        {
-            table.DefaultView.RowFilter = $"`Название проекта` LIKE '%{textBoxNameProject.Text}%'"; // фильтр проектов по названию проекта
-        }
+        private void textBoxNameProject_TextChanged(object sender, EventArgs e) => table.DefaultView.RowFilter = $"`Название проекта` LIKE '%{textBoxNameProject.Text}%'";
 
 
 

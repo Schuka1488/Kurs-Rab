@@ -65,10 +65,7 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-        private void panel1_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
-        {
-            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
-        }
+        private void panel1_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         private void panel2_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
             if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
@@ -77,10 +74,7 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-        private void panel2_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
-        {
-            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
-        }
+        private void panel2_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         private void WhiteThemeButton_Click(object sender, EventArgs e) // кнопка светлой темы
         {
             panel1.BackColor = ThemeMethodClass.Theme.LightColor2; // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе
@@ -196,10 +190,7 @@ namespace Autorization
                 popup.ContentText = $"Добро пожаловать {loginName.Text}!"; // выводим сообщение и логин вошедшего пользователя
                 popup.Popup(); // после нажатия на кнопку высвечивается уведомление
             }
-            else
-            {
-                MessageBox.Show("Логин или пароль указан неверно.", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
-            }
+            else MessageBox.Show("Логин или пароль указан неверно.", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
         }
     }
 }

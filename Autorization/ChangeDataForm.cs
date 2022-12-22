@@ -51,11 +51,7 @@ namespace Autorization
             }
             return hash.ToString();
         }
-        private void panel5_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
-        {
-            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
-        }
-
+        private void panel5_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         private void panel5_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
             if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
@@ -65,11 +61,7 @@ namespace Autorization
             }
         }
 
-        private void panel4_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
-        {
-            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
-        }
-
+        private void panel4_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         private void panel4_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
             if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
@@ -78,11 +70,7 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-        private void dataGridViewTransformData2_MouseDown(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
-        {
-            lastPoint = new Point(e.X, e.Y); // класс поинт создан для определении позиции в пространстве
-        }
-
+        private void dataGridViewTransformData2_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         private void dataGridViewTransformData2_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на гриде
         {
             if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
@@ -100,10 +88,7 @@ namespace Autorization
             {
                 Application.Exit(); // выход из программы
             }
-            else
-            {
-                return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
-            }
+            else return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
         }
         private void label4_Click(object sender, EventArgs e) // метод закрытия программы
         {
@@ -113,10 +98,7 @@ namespace Autorization
             { 
                 Application.Exit(); // выход из программы
             }
-            else
-            {
-                return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
-            }
+            else return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
         }
 
         private void изАккаунтаToolStripMenuItem_Click(object sender, EventArgs e) // метод закрытия программы
@@ -129,10 +111,7 @@ namespace Autorization
                 LoginForm1 auth = new LoginForm1();
                 auth.Show(); // открывается форма авторизации
             }
-            else
-            {
-                return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
-            }
+            else return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
         }
 
         private void вГлавноеМенюToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,10 +124,7 @@ namespace Autorization
                 MainForm main = new MainForm();
                 main.Show(); // открытие главной формы
             }
-            else
-            {
-                return; // возвращаемся на форму
-            }
+            else return; // возвращаемся на форму
         }
         #region [ Кнопки тем ]
         private void WhiteThemeButton_Click(object sender, EventArgs e) // кнопка светлой темы
