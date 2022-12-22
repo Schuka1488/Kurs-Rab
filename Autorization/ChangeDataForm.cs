@@ -23,6 +23,23 @@ namespace Autorization
         public ChangeDataForm()
         {
             InitializeComponent();
+            GridViewMethodLight();
+        }
+        private void GridViewMethodLight()
+        {
+            dataGridViewTransformData2.ForeColor = Color.DeepSkyBlue;
+            dataGridViewTransformData2.GridColor = Color.DarkGray;
+            dataGridViewTransformData2.AlternatingRowsDefaultCellStyle.BackColor = Color.Lavender;
+            dataGridViewTransformData2.EnableHeadersVisualStyles = false;
+            dataGridViewTransformData2.ColumnHeadersDefaultCellStyle.BackColor = Color.Lavender;
+        }
+        private void GridViewMethodDark()
+        {
+            dataGridViewTransformData2.ForeColor = Color.Black;
+            dataGridViewTransformData2.GridColor = Color.Black;
+            dataGridViewTransformData2.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkGray;
+            dataGridViewTransformData2.EnableHeadersVisualStyles = false;
+            dataGridViewTransformData2.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGray;
         }
         private void ChangeDataForm_Load(object sender, EventArgs e)
         {
@@ -146,6 +163,7 @@ namespace Autorization
             AddLineButton6.BackColor = ThemeMethodClass.Theme.LightColor2;
             dataGridViewTransformData2.BackgroundColor = ThemeMethodClass.Theme.LightColor2; // datagrid для вывода данных из БД 
             richTextBoxTime.BackColor = ThemeMethodClass.Theme.LightColor; // фон ричтекстбокса для отображения времени и даты
+            GridViewMethodLight();
 
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавный переход текста из одного в другой, без потери цвета
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
@@ -176,6 +194,7 @@ namespace Autorization
             AddLineButton6.BackColor = ThemeMethodClass.Theme.DarkColor2;
             dataGridViewTransformData2.BackgroundColor = ThemeMethodClass.Theme.DarkColor2; // datagrid для вывода данных из БД 
             richTextBoxTime.BackColor = ThemeMethodClass.Theme.DarkColor; // фон ричтекстбокса для отображения времени и даты
+            GridViewMethodDark();
 
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавный переход текста из одного в другой, без потери цвета
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;

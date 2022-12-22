@@ -16,6 +16,7 @@ namespace Autorization
 {
     public partial class MainForm : Form
     {
+
         System.Data.DataTable table; // глобальная переменная для простоты вывода в Microsoft Word
         string id_selected_rows = "0"; //Переменная для индекс выбранной строки в гриде, по умолчанию в гридере стоит индекс -1
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
@@ -24,6 +25,23 @@ namespace Autorization
         public MainForm()
         {
             InitializeComponent();
+            GridViewMethodLight();
+        }
+        private void GridViewMethodLight()
+        {
+            dataGridView1.ForeColor = Color.DeepSkyBlue;
+            dataGridView1.GridColor = Color.DarkGray;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Lavender;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Lavender;
+        }
+        private void GridViewMethodDark()
+        {
+            dataGridView1.ForeColor = Color.Black;
+            dataGridView1.GridColor = Color.Black;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkGray;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGray;
         }
         private void MainForm_Load(object sender, EventArgs e)  // краткое описание ролей и их возможностей
         { 
@@ -248,6 +266,7 @@ namespace Autorization
             panel2.BackColor = ThemeMethodClass.Theme.LightColor;
             dataGridView1.BackgroundColor = ThemeMethodClass.Theme.LightColor2;
             richTextBoxTime.BackColor = ThemeMethodClass.Theme.LightColor;
+            GridViewMethodLight();
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавный переход текста из одного в другой, без потери цвета
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
@@ -263,6 +282,7 @@ namespace Autorization
             panel2.BackColor = ThemeMethodClass.Theme.DarkColor;
             dataGridView1.BackgroundColor = ThemeMethodClass.Theme.DarkColor2;
             richTextBoxTime.BackColor = ThemeMethodClass.Theme.DarkColor;
+            GridViewMethodDark();
             dR = labelTheme.BackColor.R - labelTheme.ForeColor.R; // плавный переход текста из одного в другой, без потери цвета
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
