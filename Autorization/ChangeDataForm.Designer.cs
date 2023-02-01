@@ -95,6 +95,7 @@ namespace Autorization
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.табельToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -726,7 +727,8 @@ namespace Autorization
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.выходToolStripMenuItem,
-            this.изменитьДанныеToolStripMenuItem});
+            this.изменитьДанныеToolStripMenuItem,
+            this.табельToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1267, 24);
@@ -829,6 +831,13 @@ namespace Autorization
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
+            // табельToolStripMenuItem
+            // 
+            this.табельToolStripMenuItem.Name = "табельToolStripMenuItem";
+            this.табельToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.табельToolStripMenuItem.Text = "Табель";
+            this.табельToolStripMenuItem.Click += new System.EventHandler(this.табельToolStripMenuItem_Click);
+            // 
             // ChangeDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -919,5 +928,6 @@ namespace Autorization
         private System.Windows.Forms.Button RefreshButton4;
         private System.Windows.Forms.Button RefreshButton5;
         private System.Windows.Forms.Button RefreshButton6;
+        private System.Windows.Forms.ToolStripMenuItem табельToolStripMenuItem;
     }
 }

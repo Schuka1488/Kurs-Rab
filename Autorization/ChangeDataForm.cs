@@ -1234,6 +1234,13 @@ namespace Autorization
             MessageBox.Show("Данные в таблице авторзации обновлены", "Таблица авторзации", MessageBoxButtons.OK, MessageBoxIcon.Information);// MessageBox показывает в какой таблице произошли изменения
         }
 
+        private void табельToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TabelForm timessheetform = new TabelForm(); // после авторизации показывается ChangeDataForm
+            timessheetform.Show(); // метод для показа ChangeDataForm
+        }
+
         private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Right))
