@@ -333,7 +333,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
+                res = MessageBox.Show("Данные не добавились! (Код ошибки: 101)", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -359,7 +359,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не удалены! (Код ошибки: 102)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -386,7 +386,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не изменены! (Код ошибки: 103)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -479,7 +479,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
+                res = MessageBox.Show("Данные не добавились! (Код ошибки: 101)", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -505,7 +505,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не удалены! (Код ошибки: 102)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -532,7 +532,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не изменены! (Код ошибки: 103)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -626,7 +626,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
+                res = MessageBox.Show("Данные не добавились! (Код ошибки: 101)", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -652,7 +652,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не удалены! (Код ошибки: 102)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -679,7 +679,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не изменены! (Код ошибки: 103)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -769,7 +769,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
+                res = MessageBox.Show("Данные не добавились! (Код ошибки: 101)", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -795,7 +795,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не удалены! (Код ошибки: 102)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -805,7 +805,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -822,7 +821,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не изменены! (Код ошибки: 103)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -832,7 +831,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-               
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -913,7 +911,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
+                res = MessageBox.Show("Данные не добавились! (Код ошибки: 101)", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -923,7 +921,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -939,7 +936,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не удалены! (Код ошибки: 102)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -949,7 +946,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -966,7 +962,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не изменены! (Код ошибки: 103)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -976,7 +972,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -1060,7 +1055,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
+                res = MessageBox.Show("Данные не добавились! (Код ошибки: 101)", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -1070,7 +1065,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -1086,7 +1080,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не удалены! (Код ошибки: 102)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
                     ErrorForm.Show("Возникла ошибка!");
@@ -1096,7 +1090,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -1113,7 +1106,7 @@ namespace Autorization
             catch
             {
                 DialogResult res = new DialogResult();
-                res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
+                res = MessageBox.Show("Данные не изменены! (Код ошибки: 103)", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
 
                 if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
@@ -1124,8 +1117,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -1223,13 +1214,11 @@ namespace Autorization
             UpdateTable4();
             ProjectSalesSelect();
         }
-
         private void UpdateLineButton5_Click(object sender, EventArgs e)
         {
             UpdateTable5();
             SalesSelect();
         }
-
         private void UpdateLineButton6_Click(object sender, EventArgs e)
         {
             UpdateTable6();
@@ -1241,44 +1230,37 @@ namespace Autorization
             EmployeesSelect();
             MessageBox.Show("Данные в таблице сотрудников обновлены", "Таблица сотрудников", MessageBoxButtons.OK, MessageBoxIcon.Information); // MessageBox показывает в какой таблице произошли изменения
         }
-
         private void RefreshButton2_Click(object sender, EventArgs e)
         {
             CustomerSelect();
             MessageBox.Show("Данные в таблице заказчиков обновлены", "Таблица заказчиков", MessageBoxButtons.OK, MessageBoxIcon.Information); // MessageBox показывает в какой таблице произошли изменения
         }
-
         private void RefreshButton3_Click(object sender, EventArgs e)
         {
             ProjectOrderSelect();
             MessageBox.Show("Данные в таблице заказов обновлены", "Таблица заказов", MessageBoxButtons.OK, MessageBoxIcon.Information); // MessageBox показывает в какой таблице произошли изменения
         }
-
         private void RefreshButton4_Click(object sender, EventArgs e)
         {
             ProjectSalesSelect();
             MessageBox.Show("Данные в таблице покупок обновлены", "Таблица покупок", MessageBoxButtons.OK, MessageBoxIcon.Information); // MessageBox показывает в какой таблице произошли изменения
         }
-
         private void RefreshButton5_Click(object sender, EventArgs e)
         {
             SalesSelect();
             MessageBox.Show("Данные в таблице продаж обновлены", "Таблица продаж", MessageBoxButtons.OK, MessageBoxIcon.Information); // MessageBox показывает в какой таблице произошли изменения
         }
-
         private void RefreshButton6_Click(object sender, EventArgs e)
         {
             AutorizationSelect();
             MessageBox.Show("Данные в таблице авторзации обновлены", "Таблица авторзации", MessageBoxButtons.OK, MessageBoxIcon.Information);// MessageBox показывает в какой таблице произошли изменения
         }
-
         private void табельToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             TabelForm timessheetform = new TabelForm(); // после авторизации показывается ChangeDataForm
             timessheetform.Show(); // метод для показа ChangeDataForm
         }
-
         private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Right))

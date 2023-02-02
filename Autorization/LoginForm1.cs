@@ -190,7 +190,11 @@ namespace Autorization
                 popup.ContentText = $"Добро пожаловать {loginName.Text}!"; // выводим сообщение и логин вошедшего пользователя
                 popup.Popup(); // после нажатия на кнопку высвечивается уведомление
             }
-            else MessageBox.Show("Логин или пароль указан неверно.", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
+            else
+            {
+                MessageBox.Show("Логин или пароль указан неверно! (Код ошибки: 105)", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
+                ErrorForm.Show("Возникла ошибка!");
+            }
         }
     }
 }

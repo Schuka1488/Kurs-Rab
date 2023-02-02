@@ -32,12 +32,6 @@ namespace Autorization
              var windowSelection = (string)e.Message;
             ChangeTabelForm edit = new ChangeTabelForm(windowSelection, year, month);
             edit.ShowDialog();
-
-            //MessageBox.Show(windowSelection);
-            //DO SOMETHING WITH THIS MESSAGE
-            //This event is called on the threads pool, to access your UI thread
-            //You can cast sender to ChromiumWebBrowser
-            //use Control.BeginInvoke/Dispatcher.BeginInvoke
         }
         private void button1_Click(object sender, EventArgs e)
         {

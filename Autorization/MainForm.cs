@@ -331,7 +331,8 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Необходимо выбрать или сохранить таблицу", "Ошибка вывода", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
+                MessageBox.Show("Необходимо выбрать или сохранить таблицу!                      (Код ошибки: 104)", "Ошибка вывода", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
+                ErrorForm.Show("Возникла ошибка!");
             }
             finally
             {
@@ -365,7 +366,8 @@ namespace Autorization
             }
             catch
             {
-                MessageBox.Show("Необходимо выбрать или сохранить таблицу", "Ошибка вывода", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
+                MessageBox.Show("Необходимо выбрать или сохранить таблицу!                          (Код ошибки: 104)", "Ошибка вывода", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
+                ErrorForm.Show("Возникла ошибка!");
             }
             finally
             {
