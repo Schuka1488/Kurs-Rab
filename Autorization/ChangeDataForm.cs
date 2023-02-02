@@ -334,14 +334,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     EmployeesSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -358,14 +360,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     EmployeesSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -383,14 +387,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     EmployeesSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -474,14 +480,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     CustomerSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -498,14 +506,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     CustomerSelect();
                 }
                 else
                 {
                     return;
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -523,14 +533,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     CustomerSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -615,14 +627,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     ProjectOrderSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -639,14 +653,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     ProjectOrderSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -664,14 +680,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     ProjectOrderSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -752,14 +770,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     ProjectSalesSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -776,14 +796,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     ProjectSalesSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -801,14 +823,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     ProjectSalesSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+               
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -890,14 +914,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     SalesSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -914,14 +940,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     SalesSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -939,14 +967,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     SalesSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -1031,14 +1061,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не добавились!", "Ошибка ввода!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     AutorizationSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -1055,14 +1087,16 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не удалены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     AutorizationSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -1080,14 +1114,18 @@ namespace Autorization
             {
                 DialogResult res = new DialogResult();
                 res = MessageBox.Show("Данные не изменены!", "Строка не выбрана!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error); // обработка исключения
-                if (res == DialogResult.Cancel) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
+
+                if (res == DialogResult.OK) //если нажимаем кнопку отмена, то у нас высвечивается уже отрытая таблица
                 {
+                    ErrorForm.Show("Возникла ошибка!");
                     AutorizationSelect();
                 }
                 else
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
+
+                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }

@@ -71,6 +71,12 @@
     </Compile>
     <Compile Include="ClassForTabel.cs" />
     <Compile Include="DBclass.cs" />
+    <Compile Include="ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAnimatedEffects.cs" />
     <Compile Include="LoginForm1.cs">
       <SubType>Form</SubType>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeTabelForm.resx">
       <DependentUpon>ChangeTabelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm1.resx">
       <DependentUpon>LoginForm1.cs</DependentUpon>
