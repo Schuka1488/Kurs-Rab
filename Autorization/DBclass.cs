@@ -25,34 +25,25 @@ namespace Autorization
         {
             return connection; // возвращаем соединение 
         }
-
         public void UpdateTable(string tableID, string mark, bool OpenConnection = true)
         {
             if (OpenConnection)
                 connection.Open();
             string sql = $"UPDATE `TimesSheet` SET timessheet_mark='{mark}' WHERE timessheet_id ={tableID}";
-
             MySqlCommand cmd = new MySqlCommand(sql, connection);
-
             cmd.ExecuteNonQuery();
-
             if (OpenConnection)
                 connection.Close();
         }
-
         public void CreateTable(string mark, string employeeID, string date, bool OpenConnection = true)
         {
             if (OpenConnection)
                 connection.Open();
             string sql = $"INSERT INTO `TimesSheet` (timessheet_mark, timessheet_EmployeesID, 	timessheet_date) VALUES ('{mark}', {employeeID}, '{date}')";
-
             MySqlCommand cmd = new MySqlCommand(sql, connection);
-
             cmd.ExecuteNonQuery();
-
             if (OpenConnection)
                 connection.Close();
         }
-
     }
 }

@@ -177,7 +177,6 @@ namespace Autorization
                 mainForm.Show(); // метод для показа MainForm
                 db.closeConnection(); // Полсе обрубается соединение
                 this.Hide(); // происходит сокрытие
-
                 PopupNotifier popup = new PopupNotifier(); //создание новой переменной класса PopupNotifier NuGet компонента Tulpep
                 popup.Image = Properties.Resources.pngres; // берем иконку из ресурсов проекта
                 popup.ImageSize = new Size(96, 96); // задаем размер
