@@ -17,24 +17,18 @@ namespace Autorization
         Point lastPoint; // специальный класс для задачи координат
         public static void Show(string desc)
         {
-            ErrorForm error = new ErrorForm("errors", desc);
+            ErrorForm error = new ErrorForm(desc);
             error.ShowDialog();
         }
-        string errorFileName;
         string desc;
-        public ErrorForm(string errorFileName, string desc)
+        public ErrorForm(string desc)
         {
             InitializeComponent();
-            this.errorFileName = errorFileName;
             this.desc = desc;
         }
         private void ErrorForm_Load(object sender, EventArgs e)
         {
-            string formater = Directory.GetCurrentDirectory();
-
-            formater = formater.Replace('\\', '/');
-
-            chromiumWebBrowser1.Load($"file://{formater}/{errorFileName}.html");
+            chromiumWebBrowser1.LoadHtml(Properties.Resources.errors);
             Desc.Text = desc;
         }
         private void ExitButtonErrorForm_Click(object sender, EventArgs e)

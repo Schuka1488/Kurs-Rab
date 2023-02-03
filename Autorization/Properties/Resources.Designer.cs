@@ -61,6 +61,30 @@ namespace Autorization.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;ru&quot;&gt;
+        ///    &lt;head&gt;
+        ///        &lt;title&gt;Классификация ошибок&lt;/title&gt;
+        ///    &lt;/head&gt;
+        ///    &lt;body&gt;
+        ///        &lt;table border=&quot;3&quot; width=&quot;900&quot;&gt;
+        ///            &lt;thead&gt;
+        ///                &lt;tr&gt;
+        ///                    &lt;th colspan=&quot;3&quot;&gt;&lt;font size = &quot;5&quot; face =&quot;Palatino Linotype&quot;&gt;Классификация ошибок&lt;/font&gt;&lt;/th&gt;
+        ///                &lt;/tr&gt;
+        ///            &lt;/thead&gt;
+        ///            &lt;thead&gt;
+        ///                &lt;tr&gt;
+        ///                    &lt;th&gt;&lt;font size = &quot;4&quot; face =&quot;Palatino Linotype&quot;&gt;Код ошибки&lt;/font&gt;&lt;/th&gt;
+        ///                     [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string errors {
+            get {
+                return ResourceManager.GetString("errors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap pngres {
