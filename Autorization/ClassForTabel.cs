@@ -72,8 +72,6 @@ namespace Autorization
                 workers.Add(data);
             }
 
-            //connection.SqlConnection.Open();
-
             foreach (EmployeeData worker in workers)
             {
                 tabelEmployee emp = new tabelEmployee();
@@ -92,7 +90,7 @@ namespace Autorization
                 adapter.Fill(table);
 
                 long hoursCount = 0;
-                bool fillEmpty = false;
+                //bool fillEmpty = false;
                 int count = 0;
 
                 List<TabelDate> dates = new List<TabelDate>();
@@ -127,7 +125,6 @@ namespace Autorization
                 emp.Hours = hoursCount;
                 general.Add(emp);
             }
-            //Connection.SqlConnection.Close();
         }
 
         public void LoadAllIntoBuilder(TimeSheetGenerator generator)

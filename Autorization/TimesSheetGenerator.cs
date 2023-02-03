@@ -63,7 +63,7 @@ namespace Autorization
 
             int dateCounter = 0;
             int day = 1;
-            bool state = false;
+            //bool state = false;
 
             for (int i = 0; i < maxDays; i++)
             {
