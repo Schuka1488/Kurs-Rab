@@ -187,10 +187,10 @@ namespace Autorization
                 this.Hide(); // происходит сокрытие
                 PopupNotifier popup = new PopupNotifier(); //создание новой переменной класса PopupNotifier NuGet компонента Tulpep
                 popup.Image = Properties.Resources.pngres; // берем иконку из ресурсов проекта
-                popup.ImageSize = new Size(96, 96); // задаем размер
+                popup.ImageSize = new Size(80, 80); // задаем размер
                 // задаем цвета для элементов всплвающего окна
                 popup.HeaderColor = Color.DeepSkyBlue; // цвет верхней рамки
-                popup.BodyColor = Color.Lavender; // цвет основной, для тела в рамке
+                popup.BodyColor = SystemColors.MenuBar; // цвет основной, для тела в рамке
                 popup.TitleColor = Color.LightSlateGray; // цвет заголовка
                 popup.ShowCloseButton = false; // убираем кнопку закрытия
                 popup.TitleText = "ИНТЭКС-СЕРВИС"; // задаем текст
