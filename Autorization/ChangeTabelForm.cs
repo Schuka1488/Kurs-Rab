@@ -22,13 +22,10 @@ namespace Autorization
             this.year = year;
             this.month = month;
         }
-
         string tableID;
         string workerID;
         string date;
-
         int year, month;
-
         private void SplitStr(string browserOutput, int year, int month)
         {
             string[] words = browserOutput.Split('|');
@@ -38,8 +35,6 @@ namespace Autorization
             day += 1;
             date = $"{day}.{month}.{year}";
         }
-
-
         private void ChangeTabelForm_Load(object sender, EventArgs e)
         {
             db.openConnection();
@@ -58,7 +53,6 @@ namespace Autorization
         {
             return time.ToString("yyyy-MM-dd HH:mm:ss.fff");
         }
-
         private void ChangeTabelForm_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
 
         private void ChangeTabelForm_MouseMove(object sender, MouseEventArgs e)
@@ -69,12 +63,10 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-
         private void buttonCloseChangeTabelForm_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void buttonSaveTabel_Click(object sender, EventArgs e)
         {
             if (Markcombobox.SelectedItem == null)
@@ -82,7 +74,6 @@ namespace Autorization
                 MessageBox.Show("Выберите отметку и списка!", "Табель не изменен", MessageBoxButtons.OK, MessageBoxIcon.Information);// MessageBox показывает в какой таблице произошли изменения
                 return;
             }
-
             if(tableID == "NULL")
             {
                 db.CreateTable(Markcombobox.SelectedItem.ToString(), workerID, FormatDateToSql(DateTime.Parse(date)));
@@ -91,7 +82,6 @@ namespace Autorization
             {
                 db.UpdateTable(tableID, Markcombobox.SelectedItem.ToString());
             }
-
             this.Close();
         }
     }

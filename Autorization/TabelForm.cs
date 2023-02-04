@@ -49,7 +49,6 @@ namespace Autorization
             button1.Visible = false;
             buttonRefresh.Visible = true;
         }
-
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             month = DateTime.Now.Month;

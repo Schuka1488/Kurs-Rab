@@ -88,7 +88,6 @@ namespace Autorization
             timer.Tick += timer2_Tick; // при нажатии включается таймер
             timer.Start(); // включается таймер
         }
-
         private void DarkThemeButton_Click(object sender, EventArgs e) // кнопка темной темы
         {
             panel1.BackColor = ThemeMethodClass.Theme.DarkColor2; // все элементы которые меняют свой цвет, который заявлен в специально созданном для этого классе

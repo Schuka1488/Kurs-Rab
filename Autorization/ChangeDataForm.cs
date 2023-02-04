@@ -19,7 +19,6 @@ namespace Autorization
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
         Point lastPoint; // специальный класс для задачи координат
         string id_selected_rows; // переменная для определения целой строки, по нажатию на поле id в dataGrid
-
         public ChangeDataForm()
         {
             InitializeComponent();
@@ -77,7 +76,6 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-
         private void panel4_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         private void panel4_MouseMove(object sender, MouseEventArgs e) //метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         {
@@ -117,7 +115,6 @@ namespace Autorization
             }
             else return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
         }
-
         private void изАккаунтаToolStripMenuItem_Click(object sender, EventArgs e) // метод закрытия программы
         {
             DialogResult res = new DialogResult(); 
@@ -130,7 +127,6 @@ namespace Autorization
             }
             else return; // при нажатии на "Нет" MessageBox убирается(возвращается всё то, что было до нажатия на кнопку при помощи return)
         }
-
         private void вГлавноеМенюToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult res = new DialogResult(); // переменная для обработки выбранных кнопок в MessageBox
@@ -315,13 +311,11 @@ namespace Autorization
             RefreshButton4.Visible = false;
             RefreshButton5.Visible = false;
             RefreshButton6.Visible = false;
-
+            // фильтры данных в таблице
             labelJobChange.Visible = true; // видимость названия профессии
             textBoxJobChange.Visible = true; // видимость текстбокса для фильтрации профессии
-
             labelITNChange.Visible = false; // видимость ИНН компании
             textBoxITNChange.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
-
             labelNameProjectChange.Visible = false; // видимость названия проекта
             textBoxNameProjectChange.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
@@ -352,7 +346,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -378,7 +371,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -405,7 +397,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -470,13 +461,11 @@ namespace Autorization
             RefreshButton4.Visible = false;
             RefreshButton5.Visible = false;
             RefreshButton6.Visible = false;
-
+            // фильтры данных в таблице
             labelJobChange.Visible = false; // видимость названия профессии
             textBoxJobChange.Visible = false; // видимость текстбокса для фильтрации профессии
-
             labelITNChange.Visible = true; // видимость ИНН компании
             textBoxITNChange.Visible = true; // видимость тексбокса для фильтрации компаний по ИНН
-
             labelNameProjectChange.Visible = false; // видимость названия проекта
             textBoxNameProjectChange.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
@@ -507,7 +496,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -533,7 +521,6 @@ namespace Autorization
                 {
                     return;
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -560,7 +547,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -626,13 +612,11 @@ namespace Autorization
             RefreshButton4.Visible = false;
             RefreshButton5.Visible = false;
             RefreshButton6.Visible = false;
-
+            // фильтры данных в таблице
             labelJobChange.Visible = false; // видимость названия профессии
             textBoxJobChange.Visible = false; // видимость текстбокса для фильтрации профессии
-
             labelITNChange.Visible = false; // видимость ИНН компании
             textBoxITNChange.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
-
             labelNameProjectChange.Visible = true; // видимость названия проекта
             textBoxNameProjectChange.Visible = true; // видимость тексбокса для фильтрации проектов по названию
         }
@@ -663,7 +647,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -689,7 +672,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -716,7 +698,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -778,13 +759,11 @@ namespace Autorization
             RefreshButton4.Visible = true;
             RefreshButton5.Visible = false;
             RefreshButton6.Visible = false;
-
+            // фильтры данных в таблице
             labelJobChange.Visible = false; // видимость названия профессии
             textBoxJobChange.Visible = false; // видимость текстбокса для фильтрации профессии
-
             labelITNChange.Visible = false; // видимость ИНН компании
             textBoxITNChange.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
-
             labelNameProjectChange.Visible = false; // видимость названия проекта
             textBoxNameProjectChange.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
@@ -815,7 +794,6 @@ namespace Autorization
                 {
                     return; // возвращаем всё то, что было до нажатия кнопку (данные в таблице высвечиваются, при этом никак не измененные)
                 }
-                
                 db.closeConnection(); // отключаем подключение к БД
             }
         }
@@ -929,13 +907,11 @@ namespace Autorization
             RefreshButton4.Visible = false;
             RefreshButton5.Visible = true;
             RefreshButton6.Visible = false;
-
+            // фильтры данных в таблице
             labelJobChange.Visible = false; // видимость названия профессии
             textBoxJobChange.Visible = false; // видимость текстбокса для фильтрации профессии
-
             labelITNChange.Visible = false; // видимость ИНН компании
             textBoxITNChange.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
-
             labelNameProjectChange.Visible = false; // видимость названия проекта
             textBoxNameProjectChange.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
@@ -1082,13 +1058,11 @@ namespace Autorization
             RefreshButton4.Visible = false;
             RefreshButton5.Visible = false;
             RefreshButton6.Visible = true;
-
+            // фильтры данных в таблице
             labelJobChange.Visible = false; // видимость названия профессии
             textBoxJobChange.Visible = false; // видимость текстбокса для фильтрации профессии
-
             labelITNChange.Visible = false; // видимость ИНН компании
             textBoxITNChange.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
-
             labelNameProjectChange.Visible = false; // видимость названия проекта
             textBoxNameProjectChange.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
@@ -1314,7 +1288,6 @@ namespace Autorization
             TabelForm timessheetform = new TabelForm(); // после авторизации показывается ChangeDataForm
             timessheetform.Show(); // метод для показа ChangeDataForm
         }
-
         private void textBoxNameProjectChange_TextChanged(object sender, EventArgs e) => table.DefaultView.RowFilter = $"`Название проекта` LIKE '%{textBoxNameProjectChange.Text}%'";
         private void textBoxITNChange_TextChanged(object sender, EventArgs e)
         {
