@@ -101,6 +101,15 @@ namespace Autorization
             timer.Tick += timer1_Tick; // при нажатии включается таймер
             timer.Start(); // включается таймер
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.интэкс-сервис.рф");
+            this.linkLabel1.Name = "CompanyLinks";
+            this.linkLabel1.LinkColor = Color.Purple;
+            this.linkLabel1.ActiveLinkColor = Color.Blue;
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             try

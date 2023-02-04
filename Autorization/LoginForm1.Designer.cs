@@ -44,6 +44,7 @@ namespace Autorization
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.animateComponent1 = new Autorization.AnimateComponent(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -162,6 +163,7 @@ namespace Autorization
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -197,6 +199,17 @@ namespace Autorization
             this.label1.Size = new System.Drawing.Size(348, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "ИНТЭКС-СЕРВИС";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(17, 26);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(156, 13);
+            this.linkLabel1.TabIndex = 2;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "http://www.интэкс-сервис.рф";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // animateComponent1
             // 
@@ -239,5 +252,6 @@ namespace Autorization
         private System.Windows.Forms.Label labelTheme;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
