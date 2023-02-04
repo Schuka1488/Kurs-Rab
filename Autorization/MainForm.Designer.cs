@@ -119,7 +119,7 @@ namespace Autorization
             // 
             this.labelNameProject.AutoSize = true;
             this.labelNameProject.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameProject.Location = new System.Drawing.Point(12, 451);
+            this.labelNameProject.Location = new System.Drawing.Point(65, 449);
             this.labelNameProject.Name = "labelNameProject";
             this.labelNameProject.Size = new System.Drawing.Size(220, 20);
             this.labelNameProject.TabIndex = 46;
@@ -141,7 +141,7 @@ namespace Autorization
             // 
             this.labelJob.AutoSize = true;
             this.labelJob.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJob.Location = new System.Drawing.Point(8, 449);
+            this.labelJob.Location = new System.Drawing.Point(46, 449);
             this.labelJob.Name = "labelJob";
             this.labelJob.Size = new System.Drawing.Size(239, 20);
             this.labelJob.TabIndex = 44;

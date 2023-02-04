@@ -14,7 +14,7 @@ namespace Autorization
     public partial class ChangeDataForm : Form
     {
         int dR, dG, dB, sign; // переменные для rgb и индекса таймера
-        DataTable table; // глобальная переменная для простоты вывода в Microsoft Word
+        System.Data.DataTable table; // глобальная переменная для простоты вывода в Microsoft Word
         DBclass db = new DBclass(); // переменная класса для БД, и последующей работе с ними
         private BindingSource bSource = new BindingSource(); // обьявлен для связи с источником соединения
         Point lastPoint; // специальный класс для задачи координат
@@ -315,6 +315,15 @@ namespace Autorization
             RefreshButton4.Visible = false;
             RefreshButton5.Visible = false;
             RefreshButton6.Visible = false;
+
+            labelJobChange.Visible = true; // видимость названия профессии
+            textBoxJobChange.Visible = true; // видимость текстбокса для фильтрации профессии
+
+            labelITNChange.Visible = false; // видимость ИНН компании
+            textBoxITNChange.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
+
+            labelNameProjectChange.Visible = false; // видимость названия проекта
+            textBoxNameProjectChange.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
         private void вТаблицеСотрудникиToolStripMenuItem_Click(object sender, EventArgs e) // кнопка вывода данных из БД в datagrid в виде таблицы
         {
@@ -461,6 +470,15 @@ namespace Autorization
             RefreshButton4.Visible = false;
             RefreshButton5.Visible = false;
             RefreshButton6.Visible = false;
+
+            labelJobChange.Visible = false; // видимость названия профессии
+            textBoxJobChange.Visible = false; // видимость текстбокса для фильтрации профессии
+
+            labelITNChange.Visible = true; // видимость ИНН компании
+            textBoxITNChange.Visible = true; // видимость тексбокса для фильтрации компаний по ИНН
+
+            labelNameProjectChange.Visible = false; // видимость названия проекта
+            textBoxNameProjectChange.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
         private void вТаблицеЗаказчикиToolStripMenuItem_Click(object sender, EventArgs e) // кнопка вывода данных из БД в datagrid в виде таблицы
         {
@@ -608,6 +626,15 @@ namespace Autorization
             RefreshButton4.Visible = false;
             RefreshButton5.Visible = false;
             RefreshButton6.Visible = false;
+
+            labelJobChange.Visible = false; // видимость названия профессии
+            textBoxJobChange.Visible = false; // видимость текстбокса для фильтрации профессии
+
+            labelITNChange.Visible = false; // видимость ИНН компании
+            textBoxITNChange.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
+
+            labelNameProjectChange.Visible = true; // видимость названия проекта
+            textBoxNameProjectChange.Visible = true; // видимость тексбокса для фильтрации проектов по названию
         }
         private void заказыToolStripMenuItem_Click(object sender, EventArgs e) // кнопка вывода данных из БД в datagrid в виде таблицы
         {
@@ -751,6 +778,15 @@ namespace Autorization
             RefreshButton4.Visible = true;
             RefreshButton5.Visible = false;
             RefreshButton6.Visible = false;
+
+            labelJobChange.Visible = false; // видимость названия профессии
+            textBoxJobChange.Visible = false; // видимость текстбокса для фильтрации профессии
+
+            labelITNChange.Visible = false; // видимость ИНН компании
+            textBoxITNChange.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
+
+            labelNameProjectChange.Visible = false; // видимость названия проекта
+            textBoxNameProjectChange.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
         private void продажиToolStripMenuItem_Click(object sender, EventArgs e) // кнопка вывода данных из БД в datagrid в виде таблицы
         {
@@ -893,6 +929,15 @@ namespace Autorization
             RefreshButton4.Visible = false;
             RefreshButton5.Visible = true;
             RefreshButton6.Visible = false;
+
+            labelJobChange.Visible = false; // видимость названия профессии
+            textBoxJobChange.Visible = false; // видимость текстбокса для фильтрации профессии
+
+            labelITNChange.Visible = false; // видимость ИНН компании
+            textBoxITNChange.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
+
+            labelNameProjectChange.Visible = false; // видимость названия проекта
+            textBoxNameProjectChange.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
         private void ценаToolStripMenuItem_Click(object sender, EventArgs e) // кнопка вывода данных из БД в datagrid в виде таблицы
         {
@@ -1037,6 +1082,15 @@ namespace Autorization
             RefreshButton4.Visible = false;
             RefreshButton5.Visible = false;
             RefreshButton6.Visible = true;
+
+            labelJobChange.Visible = false; // видимость названия профессии
+            textBoxJobChange.Visible = false; // видимость текстбокса для фильтрации профессии
+
+            labelITNChange.Visible = false; // видимость ИНН компании
+            textBoxITNChange.Visible = false; // видимость тексбокса для фильтрации компаний по ИНН
+
+            labelNameProjectChange.Visible = false; // видимость названия проекта
+            textBoxNameProjectChange.Visible = false; // видимость тексбокса для фильтрации проектов по названию
         }
         private void вТаблицеАвторизацииToolStripMenuItem_Click(object sender, EventArgs e) // кнопка вывода данных из БД в datagrid в виде таблицы
         {
@@ -1261,6 +1315,17 @@ namespace Autorization
             TabelForm timessheetform = new TabelForm(); // после авторизации показывается ChangeDataForm
             timessheetform.Show(); // метод для показа ChangeDataForm
         }
+
+        private void textBoxNameProjectChange_TextChanged(object sender, EventArgs e) => table.DefaultView.RowFilter = $"`Название проекта` LIKE '%{textBoxNameProjectChange.Text}%'";
+
+        private void textBoxITNChange_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxITNChange.Text.Length < 0) return; // данные не могут быть равны 0
+            table.DefaultView.RowFilter = $"Convert(ИНН, System.String) LIKE '%{textBoxITNChange.Text}%'"; // фильтр компаний по ИНН
+        }
+
+        private void textBoxJobChange_TextChanged_1(object sender, EventArgs e) => table.DefaultView.RowFilter = $"Профессия LIKE '%{textBoxJobChange.Text}%'";
+
         private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Right))

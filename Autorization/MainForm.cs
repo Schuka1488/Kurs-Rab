@@ -379,8 +379,6 @@ namespace Autorization
         }
 
 
-
-
         private void textBox1_TextChanged(object sender, EventArgs e) => table.DefaultView.RowFilter = $"Профессия LIKE '%{textBoxJob.Text}%'";
         private void textBoxITN_TextChanged(object sender, EventArgs e)
         {
