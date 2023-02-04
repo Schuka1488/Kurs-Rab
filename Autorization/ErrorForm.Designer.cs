@@ -50,7 +50,8 @@ namespace Autorization
             // 
             this.Desc.AutoSize = true;
             this.Desc.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Desc.Location = new System.Drawing.Point(34, 539);
+            this.Desc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Desc.Location = new System.Drawing.Point(22, 549);
             this.Desc.Name = "Desc";
             this.Desc.Size = new System.Drawing.Size(54, 22);
             this.Desc.TabIndex = 1;
@@ -60,13 +61,13 @@ namespace Autorization
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel1.Controls.Add(this.ExitButtonErrorForm);
             this.panel1.Controls.Add(this.Desc);
             this.panel1.Controls.Add(this.chromiumWebBrowser1);
             this.panel1.Location = new System.Drawing.Point(-10, -9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(963, 591);
+            this.panel1.Size = new System.Drawing.Size(963, 595);
             this.panel1.TabIndex = 2;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -75,7 +76,8 @@ namespace Autorization
             // 
             this.ExitButtonErrorForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButtonErrorForm.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButtonErrorForm.Location = new System.Drawing.Point(818, 529);
+            this.ExitButtonErrorForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ExitButtonErrorForm.Location = new System.Drawing.Point(818, 539);
             this.ExitButtonErrorForm.Name = "ExitButtonErrorForm";
             this.ExitButtonErrorForm.Size = new System.Drawing.Size(123, 38);
             this.ExitButtonErrorForm.TabIndex = 2;
@@ -89,7 +91,7 @@ namespace Autorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 570);
+            this.ClientSize = new System.Drawing.Size(943, 579);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ErrorForm";
