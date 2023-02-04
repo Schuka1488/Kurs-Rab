@@ -95,6 +95,7 @@ namespace Autorization
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ErrorForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ErrorForm";
             this.Load += new System.EventHandler(this.ErrorForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ErrorForm_MouseDown);

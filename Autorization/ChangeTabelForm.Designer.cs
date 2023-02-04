@@ -132,6 +132,7 @@ namespace Autorization
             this.Controls.Add(this.Markcombobox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangeTabelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangeTabelForm";
             this.Load += new System.EventHandler(this.ChangeTabelForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ChangeTabelForm_MouseDown);

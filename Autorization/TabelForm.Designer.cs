@@ -92,6 +92,7 @@ namespace Autorization
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TabelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TabelForm";
             this.Load += new System.EventHandler(this.TabelForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TabelForm_MouseDown);
