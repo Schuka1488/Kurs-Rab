@@ -14,6 +14,7 @@ namespace Autorization
     public partial class ChangeTabelForm : Form
     {
         DBclass db = new DBclass(); // переменная класса для БД, и последующей работе с ними
+        Point lastPoint; // специальный класс для задачи координат
         public ChangeTabelForm(string browserOutput, int year, int month)
         {
             InitializeComponent();
@@ -47,7 +48,7 @@ namespace Autorization
             string Fullname = "";
             MySqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
-            Fullname = $"{reader[2].ToString()} {reader[3].ToString()} {reader[4].ToString()}";
+            Fullname = $"{reader[3].ToString()} {reader[2].ToString()} {reader[4].ToString()}";
             reader.Close();
             db.closeConnection();
             Surnamelabel.Text = Fullname;
@@ -58,11 +59,27 @@ namespace Autorization
             return time.ToString("yyyy-MM-dd HH:mm:ss.fff");
         }
 
+        private void ChangeTabelForm_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
+
+        private void ChangeTabelForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left) //определяет координату панели по оси X и Y, считывает ее перемещение при нажатии на ЛКМ
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void buttonCloseChangeTabelForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void buttonSaveTabel_Click(object sender, EventArgs e)
         {
             if (Markcombobox.SelectedItem == null)
             {
-                MessageBox.Show("Выберите отметку!");
+                MessageBox.Show("Выберите отметку и списка!", "Табель не изменен", MessageBoxButtons.OK, MessageBoxIcon.Information);// MessageBox показывает в какой таблице произошли изменения
                 return;
             }
 

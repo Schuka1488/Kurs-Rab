@@ -1311,19 +1311,16 @@ namespace Autorization
         }
         private void табельToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             TabelForm timessheetform = new TabelForm(); // после авторизации показывается ChangeDataForm
             timessheetform.Show(); // метод для показа ChangeDataForm
         }
 
         private void textBoxNameProjectChange_TextChanged(object sender, EventArgs e) => table.DefaultView.RowFilter = $"`Название проекта` LIKE '%{textBoxNameProjectChange.Text}%'";
-
         private void textBoxITNChange_TextChanged(object sender, EventArgs e)
         {
             if (textBoxITNChange.Text.Length < 0) return; // данные не могут быть равны 0
             table.DefaultView.RowFilter = $"Convert(ИНН, System.String) LIKE '%{textBoxITNChange.Text}%'"; // фильтр компаний по ИНН
         }
-
         private void textBoxJobChange_TextChanged_1(object sender, EventArgs e) => table.DefaultView.RowFilter = $"Профессия LIKE '%{textBoxJobChange.Text}%'";
 
         private void dataGridViewTransformData2_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)

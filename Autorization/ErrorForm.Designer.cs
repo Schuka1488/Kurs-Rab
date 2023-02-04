@@ -41,7 +41,7 @@ namespace Autorization
             this.chromiumWebBrowser1.ActivateBrowserOnCreation = false;
             this.chromiumWebBrowser1.Location = new System.Drawing.Point(22, 21);
             this.chromiumWebBrowser1.Name = "chromiumWebBrowser1";
-            this.chromiumWebBrowser1.Size = new System.Drawing.Size(919, 547);
+            this.chromiumWebBrowser1.Size = new System.Drawing.Size(919, 505);
             this.chromiumWebBrowser1.TabIndex = 0;
             this.chromiumWebBrowser1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chromiumWebBrowser1_MouseDown);
             this.chromiumWebBrowser1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chromiumWebBrowser1_MouseMove);
@@ -50,7 +50,7 @@ namespace Autorization
             // 
             this.Desc.AutoSize = true;
             this.Desc.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Desc.Location = new System.Drawing.Point(31, 529);
+            this.Desc.Location = new System.Drawing.Point(34, 539);
             this.Desc.Name = "Desc";
             this.Desc.Size = new System.Drawing.Size(54, 22);
             this.Desc.TabIndex = 1;
@@ -95,6 +95,8 @@ namespace Autorization
             this.Name = "ErrorForm";
             this.Text = "ErrorForm";
             this.Load += new System.EventHandler(this.ErrorForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ErrorForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ErrorForm_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
