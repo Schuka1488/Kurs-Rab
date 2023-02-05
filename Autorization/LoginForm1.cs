@@ -42,6 +42,16 @@ namespace Autorization
             toolTip1.ReshowDelay = 500; // возвращает или задает интервал времени, который должен пройти перед появлением окна очередной всплывающей подсказки при перемещении указателя мыши с одного элемента управления на другой.
             toolTip1.ShowAlways = true; // статус видимости
             toolTip1.SetToolTip(label4, "Закрытие программы");
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            Panel pnlTop = new Panel() { Height = 4, Dock = DockStyle.Top, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlTop);
+            Panel pnlRight = new Panel() { Width = 4, Dock = DockStyle.Right, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlRight);
+            Panel pnlBottom = new Panel() { Height = 4, Dock = DockStyle.Bottom, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlBottom);
+            Panel pnlLeft = new Panel() { Width = 4, Dock = DockStyle.Left, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlLeft);
         }
         private void label4_Click(object sender, EventArgs e) // кнопка выхода из программы реализованная в качестве лейбла
         {

@@ -49,6 +49,16 @@ namespace Autorization
             else
                 изменитьДанныеToolStripMenuItem.Visible = false; // иначе, изменить данные нельзя, эти вкладки будут не доступны
 
+            this.FormBorderStyle = FormBorderStyle.None;
+            Panel pnlTop = new Panel() { Height = 4, Dock = DockStyle.Top, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlTop);
+            Panel pnlRight = new Panel() { Width = 4, Dock = DockStyle.Right, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlRight);
+            Panel pnlBottom = new Panel() { Height = 4, Dock = DockStyle.Bottom, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlBottom);
+            Panel pnlLeft = new Panel() { Width = 4, Dock = DockStyle.Left, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlLeft);
+
             ToolTip toolTip1 = new ToolTip(); // тул тип для подсказок
             toolTip1.AutoPopDelay = 5000; // параметры показа подсказки, в течении какого времени будет видна подсказка
             toolTip1.InitialDelay = 100; // в течении какого кол-ва времени после наведения курсора будет показываться подсказка

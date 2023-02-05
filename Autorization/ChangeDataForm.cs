@@ -54,6 +54,16 @@ namespace Autorization
             toolTip2.ReshowDelay = 500; // возвращает или задает интервал времени, который должен пройти перед появлением окна очередной всплывающей подсказки при перемещении указателя мыши с одного элемента управления на другой.
             toolTip2.ShowAlways = true; // статус видимости
             toolTip2.SetToolTip(label2, "Коды (ID поля) не нужно заполнять, они заполняются автоматически! \n Даты пишутся в формате 2004-12-12\n Первое число - год, Второе - месяц, Третье - день."); // текст который виден при наведении на элемент формы
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            Panel pnlTop = new Panel() { Height = 4, Dock = DockStyle.Top, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlTop);
+            Panel pnlRight = new Panel() { Width = 4, Dock = DockStyle.Right, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlRight);
+            Panel pnlBottom = new Panel() { Height = 4, Dock = DockStyle.Bottom, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlBottom);
+            Panel pnlLeft = new Panel() { Width = 4, Dock = DockStyle.Left, BackColor = SystemColors.ActiveBorder };
+            this.Controls.Add(pnlLeft);
         }
         static string sha256(string randomString)
         {

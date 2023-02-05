@@ -31,6 +31,12 @@ namespace Autorization
         {
             this.components = new System.ComponentModel.Container();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBoxNameProjectChange = new System.Windows.Forms.TextBox();
+            this.textBoxITNChange = new System.Windows.Forms.TextBox();
+            this.textBoxJobChange = new System.Windows.Forms.TextBox();
+            this.labelNameProjectChange = new System.Windows.Forms.Label();
+            this.labelITNChange = new System.Windows.Forms.Label();
+            this.labelJobChange = new System.Windows.Forms.Label();
             this.RefreshButton6 = new System.Windows.Forms.Button();
             this.RefreshButton5 = new System.Windows.Forms.Button();
             this.RefreshButton4 = new System.Windows.Forms.Button();
@@ -96,12 +102,6 @@ namespace Autorization
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.labelJobChange = new System.Windows.Forms.Label();
-            this.labelITNChange = new System.Windows.Forms.Label();
-            this.labelNameProjectChange = new System.Windows.Forms.Label();
-            this.textBoxJobChange = new System.Windows.Forms.TextBox();
-            this.textBoxITNChange = new System.Windows.Forms.TextBox();
-            this.textBoxNameProjectChange = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -169,6 +169,66 @@ namespace Autorization
             this.panel4.TabIndex = 2;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
+            // 
+            // textBoxNameProjectChange
+            // 
+            this.textBoxNameProjectChange.Location = new System.Drawing.Point(508, 537);
+            this.textBoxNameProjectChange.Name = "textBoxNameProjectChange";
+            this.textBoxNameProjectChange.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNameProjectChange.TabIndex = 70;
+            this.textBoxNameProjectChange.Visible = false;
+            this.textBoxNameProjectChange.TextChanged += new System.EventHandler(this.textBoxNameProjectChange_TextChanged);
+            // 
+            // textBoxITNChange
+            // 
+            this.textBoxITNChange.Location = new System.Drawing.Point(508, 537);
+            this.textBoxITNChange.Name = "textBoxITNChange";
+            this.textBoxITNChange.Size = new System.Drawing.Size(100, 20);
+            this.textBoxITNChange.TabIndex = 69;
+            this.textBoxITNChange.Visible = false;
+            this.textBoxITNChange.TextChanged += new System.EventHandler(this.textBoxITNChange_TextChanged);
+            // 
+            // textBoxJobChange
+            // 
+            this.textBoxJobChange.Location = new System.Drawing.Point(508, 537);
+            this.textBoxJobChange.Name = "textBoxJobChange";
+            this.textBoxJobChange.Size = new System.Drawing.Size(100, 20);
+            this.textBoxJobChange.TabIndex = 68;
+            this.textBoxJobChange.Visible = false;
+            this.textBoxJobChange.TextChanged += new System.EventHandler(this.textBoxJobChange_TextChanged_1);
+            // 
+            // labelNameProjectChange
+            // 
+            this.labelNameProjectChange.AutoSize = true;
+            this.labelNameProjectChange.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNameProjectChange.Location = new System.Drawing.Point(282, 537);
+            this.labelNameProjectChange.Name = "labelNameProjectChange";
+            this.labelNameProjectChange.Size = new System.Drawing.Size(220, 20);
+            this.labelNameProjectChange.TabIndex = 67;
+            this.labelNameProjectChange.Text = "Введите название проекта:";
+            this.labelNameProjectChange.Visible = false;
+            // 
+            // labelITNChange
+            // 
+            this.labelITNChange.AutoSize = true;
+            this.labelITNChange.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelITNChange.Location = new System.Drawing.Point(225, 539);
+            this.labelITNChange.Name = "labelITNChange";
+            this.labelITNChange.Size = new System.Drawing.Size(277, 20);
+            this.labelITNChange.TabIndex = 66;
+            this.labelITNChange.Text = "Введите ИНН компании заказчика:";
+            this.labelITNChange.Visible = false;
+            // 
+            // labelJobChange
+            // 
+            this.labelJobChange.AutoSize = true;
+            this.labelJobChange.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJobChange.Location = new System.Drawing.Point(263, 537);
+            this.labelJobChange.Name = "labelJobChange";
+            this.labelJobChange.Size = new System.Drawing.Size(239, 20);
+            this.labelJobChange.TabIndex = 65;
+            this.labelJobChange.Text = "Введите название должности:";
+            this.labelJobChange.Visible = false;
             // 
             // RefreshButton6
             // 
@@ -717,7 +777,7 @@ namespace Autorization
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(1232, 24);
+            this.label4.Location = new System.Drawing.Point(1223, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 31);
             this.label4.TabIndex = 31;
@@ -849,66 +909,6 @@ namespace Autorization
             this.timer3.Enabled = true;
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // labelJobChange
-            // 
-            this.labelJobChange.AutoSize = true;
-            this.labelJobChange.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJobChange.Location = new System.Drawing.Point(263, 537);
-            this.labelJobChange.Name = "labelJobChange";
-            this.labelJobChange.Size = new System.Drawing.Size(239, 20);
-            this.labelJobChange.TabIndex = 65;
-            this.labelJobChange.Text = "Введите название должности:";
-            this.labelJobChange.Visible = false;
-            // 
-            // labelITNChange
-            // 
-            this.labelITNChange.AutoSize = true;
-            this.labelITNChange.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelITNChange.Location = new System.Drawing.Point(225, 539);
-            this.labelITNChange.Name = "labelITNChange";
-            this.labelITNChange.Size = new System.Drawing.Size(277, 20);
-            this.labelITNChange.TabIndex = 66;
-            this.labelITNChange.Text = "Введите ИНН компании заказчика:";
-            this.labelITNChange.Visible = false;
-            // 
-            // labelNameProjectChange
-            // 
-            this.labelNameProjectChange.AutoSize = true;
-            this.labelNameProjectChange.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameProjectChange.Location = new System.Drawing.Point(282, 537);
-            this.labelNameProjectChange.Name = "labelNameProjectChange";
-            this.labelNameProjectChange.Size = new System.Drawing.Size(220, 20);
-            this.labelNameProjectChange.TabIndex = 67;
-            this.labelNameProjectChange.Text = "Введите название проекта:";
-            this.labelNameProjectChange.Visible = false;
-            // 
-            // textBoxJobChange
-            // 
-            this.textBoxJobChange.Location = new System.Drawing.Point(508, 537);
-            this.textBoxJobChange.Name = "textBoxJobChange";
-            this.textBoxJobChange.Size = new System.Drawing.Size(100, 20);
-            this.textBoxJobChange.TabIndex = 68;
-            this.textBoxJobChange.Visible = false;
-            this.textBoxJobChange.TextChanged += new System.EventHandler(this.textBoxJobChange_TextChanged_1);
-            // 
-            // textBoxITNChange
-            // 
-            this.textBoxITNChange.Location = new System.Drawing.Point(508, 537);
-            this.textBoxITNChange.Name = "textBoxITNChange";
-            this.textBoxITNChange.Size = new System.Drawing.Size(100, 20);
-            this.textBoxITNChange.TabIndex = 69;
-            this.textBoxITNChange.Visible = false;
-            this.textBoxITNChange.TextChanged += new System.EventHandler(this.textBoxITNChange_TextChanged);
-            // 
-            // textBoxNameProjectChange
-            // 
-            this.textBoxNameProjectChange.Location = new System.Drawing.Point(508, 537);
-            this.textBoxNameProjectChange.Name = "textBoxNameProjectChange";
-            this.textBoxNameProjectChange.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNameProjectChange.TabIndex = 70;
-            this.textBoxNameProjectChange.Visible = false;
-            this.textBoxNameProjectChange.TextChanged += new System.EventHandler(this.textBoxNameProjectChange_TextChanged);
             // 
             // ChangeDataForm
             // 
