@@ -41,7 +41,7 @@ namespace Autorization
             this.chromiumWebBrowser1.ActivateBrowserOnCreation = false;
             this.chromiumWebBrowser1.Location = new System.Drawing.Point(22, 21);
             this.chromiumWebBrowser1.Name = "chromiumWebBrowser1";
-            this.chromiumWebBrowser1.Size = new System.Drawing.Size(932, 505);
+            this.chromiumWebBrowser1.Size = new System.Drawing.Size(916, 505);
             this.chromiumWebBrowser1.TabIndex = 0;
             this.chromiumWebBrowser1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chromiumWebBrowser1_MouseDown);
             this.chromiumWebBrowser1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chromiumWebBrowser1_MouseMove);
@@ -77,7 +77,7 @@ namespace Autorization
             this.ExitButtonErrorForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButtonErrorForm.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButtonErrorForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ExitButtonErrorForm.Location = new System.Drawing.Point(835, 538);
+            this.ExitButtonErrorForm.Location = new System.Drawing.Point(815, 538);
             this.ExitButtonErrorForm.Name = "ExitButtonErrorForm";
             this.ExitButtonErrorForm.Size = new System.Drawing.Size(123, 38);
             this.ExitButtonErrorForm.TabIndex = 2;
@@ -91,7 +91,7 @@ namespace Autorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 579);
+            this.ClientSize = new System.Drawing.Size(938, 579);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ErrorForm";

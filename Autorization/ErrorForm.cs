@@ -29,6 +29,7 @@ namespace Autorization
         private void ErrorForm_Load(object sender, EventArgs e)
         {
             chromiumWebBrowser1.LoadHtml(Properties.Resources.errors);
+            
             Desc.Text = desc;
 
             this.FormBorderStyle = FormBorderStyle.None;

@@ -64,19 +64,21 @@ namespace Autorization.Properties {
         ///   Ищет локализованную строку, похожую на &lt;!DOCTYPE html&gt;
         ///&lt;html lang=&quot;ru&quot;&gt;
         ///    &lt;head&gt;
+        ///        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        ///    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+        ///    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
         ///        &lt;title&gt;Классификация ошибок&lt;/title&gt;
         ///    &lt;/head&gt;
         ///    &lt;body&gt;
-        ///        &lt;table border=&quot;3&quot; width=&quot;900&quot;&gt;
-        ///            &lt;thead&gt;
-        ///                &lt;tr&gt;
-        ///                    &lt;th colspan=&quot;3&quot;&gt;&lt;font size = &quot;5&quot; face =&quot;Palatino Linotype&quot;&gt;Классификация ошибок&lt;/font&gt;&lt;/th&gt;
-        ///                &lt;/tr&gt;
-        ///            &lt;/thead&gt;
-        ///            &lt;thead&gt;
-        ///                &lt;tr&gt;
-        ///                    &lt;th&gt;&lt;font size = &quot;4&quot; face =&quot;Palatino Linotype&quot;&gt;Код ошибки&lt;/font&gt;&lt;/th&gt;
-        ///                     [остаток строки не уместился]&quot;;.
+        ///        &lt;style&gt;
+        ///            table {
+        ///              border-style: ridge;
+        ///              border-width: 10px;
+        ///              border-color: #1c87c9;
+        ///              background-color: #d9d9d9;
+        ///            }
+        ///            th {
+        ///       [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string errors {
             get {

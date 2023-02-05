@@ -20,11 +20,53 @@
             td {
               border: 20px groove #1c87c9;
             }
+            body {
+	display: flex;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+thead {
+	font-family: 'Palatino Linotype';
+	font-weight: 10;
+	font-size: 10px;
+	color: #fff;
+	text-shadow: 
+	0 0 10px rgba(12, 6, 6, 0.8),
+	0 0 20px rgba(48, 35, 35, 0.8),
+	0 0 22px rgba(105, 86, 86, 0.8),
+	0 0 40px rgba(126, 108, 125, 0.8),
+	0 0 60px rgba(136, 123, 136, 0.8),
+	0 0 80px rgba(175, 156, 175, 0.8),
+	0 0 100px rgba(209, 192, 209, 0.5),
+	0 0 140px rgba(223, 203, 222, 0.5),
+	0 0 200px rgba(68, 0, 255, 0.5);
+	animation: neon 3s infinite;
+	animation-timing-function: linear;
+}
+td {
+	font-family: 'Palatino Linotype';
+	font-weight: 10;
+	font-size: 10px;
+	color: #fff;
+	text-shadow: 
+	0 0 10px rgba(12, 6, 6, 0.8),
+	0 0 20px rgba(39, 29, 29, 0.8),
+	0 0 22px rgba(44, 38, 38, 0.8),
+	0 0 40px rgba(46, 42, 46, 0.8),
+	0 0 60px rgba(71, 64, 71, 0.8),
+	0 0 80px rgba(94, 86, 94, 0.8),
+	0 0 100px rgba(110, 104, 110, 0.5),
+	0 0 140px rgba(223, 203, 222, 0.5),
+	0 0 200px rgba(253, 253, 255, 0.5);
+	animation: neon 3s infinite;
+	animation-timing-function: linear;
+}
           </style>
         <table border="3" width="900">
             <thead>
                 <tr>
-                    <th colspan="3"><font size = "5" face ="Palatino Linotype">Классификация ошибок</font></th>
+                    <th colspan="3"><font size = "5" face ="Palatino Linotype" >Классификация ошибок</font></th>
                 </tr>
             </thead>
             <thead>
@@ -63,7 +105,7 @@
             </tbody>
             <tfoot>
                 <tr bgcolor ="DeepSkyBlue" style="color:rgb(255, 255, 255)">
-                    <td colspan="3">*Возможно таблица будет пополняться новыми записями</td>
+                    <td colspan="3"><font size = "3" face ="Palatino Linotype">*Возможно таблица будет пополняться новыми записями</font></td>
                 </tr>
             </tfoot>
         </table>
