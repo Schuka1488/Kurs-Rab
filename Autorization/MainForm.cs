@@ -387,7 +387,11 @@ namespace Autorization
                 }
             }
         }
-
+        private void табельToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TabelForm timessheetform = new TabelForm(); // после авторизации показывается ChangeDataForm
+            timessheetform.Show(); // метод для показа ChangeDataForm
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e) => table.DefaultView.RowFilter = $"Профессия LIKE '%{textBoxJob.Text}%'";
         private void textBoxITN_TextChanged(object sender, EventArgs e)

@@ -29,18 +29,7 @@ namespace Autorization
         private void ErrorForm_Load(object sender, EventArgs e)
         {
             chromiumWebBrowser1.LoadHtml(Properties.Resources.errors);
-            
             Desc.Text = desc;
-
-            this.FormBorderStyle = FormBorderStyle.None;
-            Panel pnlTop = new Panel() { Height = 4, Dock = DockStyle.Top, BackColor = SystemColors.ActiveBorder };
-            this.Controls.Add(pnlTop);
-            Panel pnlRight = new Panel() { Width = 4, Dock = DockStyle.Right, BackColor = SystemColors.ActiveBorder };
-            this.Controls.Add(pnlRight);
-            Panel pnlBottom = new Panel() { Height = 4, Dock = DockStyle.Bottom, BackColor = SystemColors.ActiveBorder };
-            this.Controls.Add(pnlBottom);
-            Panel pnlLeft = new Panel() { Width = 4, Dock = DockStyle.Left, BackColor = SystemColors.ActiveBorder };
-            this.Controls.Add(pnlLeft);
         }
         private void ExitButtonErrorForm_Click(object sender, EventArgs e)
         {
