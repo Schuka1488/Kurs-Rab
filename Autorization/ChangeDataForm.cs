@@ -1298,6 +1298,11 @@ namespace Autorization
             TabelForm timessheetform = new TabelForm(); // после авторизации показывается ChangeDataForm
             timessheetform.Show(); // метод для показа ChangeDataForm
         }
+        private void аналитикаВыручкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GrafForm grafForm = new GrafForm();
+            grafForm.Show();
+        }
         private void textBoxNameProjectChange_TextChanged(object sender, EventArgs e) => table.DefaultView.RowFilter = $"`Название проекта` LIKE '%{textBoxNameProjectChange.Text}%'";
         private void textBoxITNChange_TextChanged(object sender, EventArgs e)
         {

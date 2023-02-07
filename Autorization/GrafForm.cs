@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 using MySql.Data.MySqlClient;
 using ScottPlot;
 
@@ -42,19 +37,6 @@ namespace Autorization
             this.Hide(); // эта форма скрывается
         }
 
-        class Pair<T, Y>
-        {
-            public readonly T f;
-            public readonly Y s;
-
-            public Pair(T f, Y s)
-            {
-                this.f = f;
-                this.s = s;
-            }
-
-        }
-
         private void BuildGrafButton_Click(object sender, EventArgs e)
         {
             string commandStr = "SELECT saleDate AS 'sd', saleCost AS 'sc' FROM Sales ORDER BY saleDate ASC"; // SQL запрос данных из БД
@@ -64,8 +46,6 @@ namespace Autorization
             adapter.SelectCommand = cmd; // адаптер берет соединение
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
-            //chart1.DataSource = bSource;
-            //formsPlot1.Plot.DataSource = table;
             List<double> Xa = new List<double>();
             List<double> Ya = new List<double>();
 
@@ -89,8 +69,6 @@ namespace Autorization
             formsPlot1.plt.Legend();
 
             formsPlot1.plt.AddHorizontalLine(.85);
-
-            // add it to the plot
 
             formsPlot1.plt.XAxis.Label("Дата");
             formsPlot1.plt.YAxis.Label("Руб");
