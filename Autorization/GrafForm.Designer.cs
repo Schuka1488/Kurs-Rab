@@ -36,21 +36,25 @@ namespace Autorization
             // 
             // BuildGrafButton
             // 
-            this.BuildGrafButton.Location = new System.Drawing.Point(657, 482);
+            this.BuildGrafButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BuildGrafButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuildGrafButton.Location = new System.Drawing.Point(12, 664);
             this.BuildGrafButton.Name = "BuildGrafButton";
-            this.BuildGrafButton.Size = new System.Drawing.Size(110, 23);
+            this.BuildGrafButton.Size = new System.Drawing.Size(319, 58);
             this.BuildGrafButton.TabIndex = 1;
-            this.BuildGrafButton.Text = "Построить граф";
+            this.BuildGrafButton.Text = "Построить график выручки";
             this.BuildGrafButton.UseVisualStyleBackColor = true;
             this.BuildGrafButton.Click += new System.EventHandler(this.BuildGrafButton_Click);
             // 
             // CloseGrafFormbutton
             // 
-            this.CloseGrafFormbutton.Location = new System.Drawing.Point(1220, 611);
+            this.CloseGrafFormbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseGrafFormbutton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseGrafFormbutton.Location = new System.Drawing.Point(1118, 664);
             this.CloseGrafFormbutton.Name = "CloseGrafFormbutton";
-            this.CloseGrafFormbutton.Size = new System.Drawing.Size(75, 23);
+            this.CloseGrafFormbutton.Size = new System.Drawing.Size(319, 58);
             this.CloseGrafFormbutton.TabIndex = 2;
-            this.CloseGrafFormbutton.Text = "Закрыть";
+            this.CloseGrafFormbutton.Text = "Закрыть построитель графиков";
             this.CloseGrafFormbutton.UseVisualStyleBackColor = true;
             this.CloseGrafFormbutton.Click += new System.EventHandler(this.CloseGrafFormbutton_Click);
             // 
@@ -58,7 +62,7 @@ namespace Autorization
             // 
             this.formsPlot1.Location = new System.Drawing.Point(12, 12);
             this.formsPlot1.Name = "formsPlot1";
-            this.formsPlot1.Size = new System.Drawing.Size(1425, 455);
+            this.formsPlot1.Size = new System.Drawing.Size(1425, 632);
             this.formsPlot1.TabIndex = 3;
             // 
             // GrafForm

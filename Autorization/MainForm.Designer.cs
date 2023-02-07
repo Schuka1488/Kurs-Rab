@@ -62,13 +62,13 @@ namespace Autorization
             this.печатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.табельToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.графикПрибылиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.графикПрибылиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -406,6 +406,13 @@ namespace Autorization
             this.табельToolStripMenuItem.Text = "Табель";
             this.табельToolStripMenuItem.Click += new System.EventHandler(this.табельToolStripMenuItem_Click);
             // 
+            // графикПрибылиToolStripMenuItem
+            // 
+            this.графикПрибылиToolStripMenuItem.Name = "графикПрибылиToolStripMenuItem";
+            this.графикПрибылиToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
+            this.графикПрибылиToolStripMenuItem.Text = "Аналитика выручки";
+            this.графикПрибылиToolStripMenuItem.Click += new System.EventHandler(this.графикПрибылиToolStripMenuItem_Click);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -416,13 +423,6 @@ namespace Autorization
             this.timer3.Enabled = true;
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // графикПрибылиToolStripMenuItem
-            // 
-            this.графикПрибылиToolStripMenuItem.Name = "графикПрибылиToolStripMenuItem";
-            this.графикПрибылиToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
-            this.графикПрибылиToolStripMenuItem.Text = "График прибыли";
-            this.графикПрибылиToolStripMenuItem.Click += new System.EventHandler(this.графикПрибылиToolStripMenuItem_Click);
             // 
             // MainForm
             // 
