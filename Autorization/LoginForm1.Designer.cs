@@ -225,6 +225,7 @@ namespace Autorization
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm1";
             this.Load += new System.EventHandler(this.LoginForm1_Load);
             this.panel1.ResumeLayout(false);

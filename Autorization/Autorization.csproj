@@ -69,6 +69,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -107,6 +108,12 @@
       <DependentUpon>ErrorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAnimatedEffects.cs" />
+    <Compile Include="GrafForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrafForm.Designer.cs">
+      <DependentUpon>GrafForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ErrorForm.resx">
       <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrafForm.resx">
+      <DependentUpon>GrafForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm1.resx">
       <DependentUpon>LoginForm1.cs</DependentUpon>
@@ -187,6 +197,9 @@
     </PackageReference>
     <PackageReference Include="MySql.Data">
       <Version>8.0.31</Version>
+    </PackageReference>
+    <PackageReference Include="ScottPlot.WinForms">
+      <Version>4.1.60</Version>
     </PackageReference>
     <PackageReference Include="Tulpep.NotificationWindow">
       <Version>1.1.38</Version>

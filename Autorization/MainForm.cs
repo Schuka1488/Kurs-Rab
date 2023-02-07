@@ -401,7 +401,11 @@ namespace Autorization
         }
         private void textBoxNameProject_TextChanged(object sender, EventArgs e) => table.DefaultView.RowFilter = $"`Название проекта` LIKE '%{textBoxNameProject.Text}%'";
 
-
+        private void графикПрибылиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GrafForm grafForm = new GrafForm();
+            grafForm.Show();
+        }
 
         int dR, dG, dB, sign; // переменные для rgb и индекса таймера
         private void timer1_Tick(object sender, EventArgs e)

@@ -61,13 +61,14 @@ namespace Autorization
             this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.табельToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.табельToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.графикПрибылиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -290,7 +291,8 @@ namespace Autorization
             this.изменитьДанныеToolStripMenuItem,
             this.показатьДанныеToolStripMenuItem,
             this.печатьToolStripMenuItem,
-            this.табельToolStripMenuItem});
+            this.табельToolStripMenuItem,
+            this.графикПрибылиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(956, 24);
@@ -397,6 +399,13 @@ namespace Autorization
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem.Text = "Вывод в Microsoft Excel выбранной таблицы";
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem.Click += new System.EventHandler(this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem_Click);
             // 
+            // табельToolStripMenuItem
+            // 
+            this.табельToolStripMenuItem.Name = "табельToolStripMenuItem";
+            this.табельToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.табельToolStripMenuItem.Text = "Табель";
+            this.табельToolStripMenuItem.Click += new System.EventHandler(this.табельToolStripMenuItem_Click);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -408,12 +417,12 @@ namespace Autorization
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // табельToolStripMenuItem
+            // графикПрибылиToolStripMenuItem
             // 
-            this.табельToolStripMenuItem.Name = "табельToolStripMenuItem";
-            this.табельToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.табельToolStripMenuItem.Text = "Табель";
-            this.табельToolStripMenuItem.Click += new System.EventHandler(this.табельToolStripMenuItem_Click);
+            this.графикПрибылиToolStripMenuItem.Name = "графикПрибылиToolStripMenuItem";
+            this.графикПрибылиToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.графикПрибылиToolStripMenuItem.Text = "График прибыли";
+            this.графикПрибылиToolStripMenuItem.Click += new System.EventHandler(this.графикПрибылиToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -477,5 +486,6 @@ namespace Autorization
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripMenuItem табельToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem графикПрибылиToolStripMenuItem;
     }
 }
