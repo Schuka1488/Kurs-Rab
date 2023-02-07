@@ -38,7 +38,7 @@ namespace Autorization
             // 
             this.BuildGrafButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BuildGrafButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuildGrafButton.Location = new System.Drawing.Point(12, 664);
+            this.BuildGrafButton.Location = new System.Drawing.Point(1118, 664);
             this.BuildGrafButton.Name = "BuildGrafButton";
             this.BuildGrafButton.Size = new System.Drawing.Size(319, 58);
             this.BuildGrafButton.TabIndex = 1;
@@ -50,7 +50,7 @@ namespace Autorization
             // 
             this.CloseGrafFormbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseGrafFormbutton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseGrafFormbutton.Location = new System.Drawing.Point(1118, 664);
+            this.CloseGrafFormbutton.Location = new System.Drawing.Point(12, 664);
             this.CloseGrafFormbutton.Name = "CloseGrafFormbutton";
             this.CloseGrafFormbutton.Size = new System.Drawing.Size(319, 58);
             this.CloseGrafFormbutton.TabIndex = 2;
