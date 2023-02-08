@@ -98,11 +98,12 @@ namespace Autorization
             this.ценаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вТаблицеАвторизацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.табельToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.аналитикаВыручкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.аналитикаВыручкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.историяИзмененийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -802,7 +803,8 @@ namespace Autorization
             this.выходToolStripMenuItem,
             this.изменитьДанныеToolStripMenuItem,
             this.табельToolStripMenuItem,
-            this.аналитикаВыручкиToolStripMenuItem});
+            this.аналитикаВыручкиToolStripMenuItem,
+            this.историяИзмененийToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1267, 24);
@@ -902,6 +904,13 @@ namespace Autorization
             this.табельToolStripMenuItem.Text = "Табель";
             this.табельToolStripMenuItem.Click += new System.EventHandler(this.табельToolStripMenuItem_Click);
             // 
+            // аналитикаВыручкиToolStripMenuItem
+            // 
+            this.аналитикаВыручкиToolStripMenuItem.Name = "аналитикаВыручкиToolStripMenuItem";
+            this.аналитикаВыручкиToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
+            this.аналитикаВыручкиToolStripMenuItem.Text = "Аналитика выручки";
+            this.аналитикаВыручкиToolStripMenuItem.Click += new System.EventHandler(this.аналитикаВыручкиToolStripMenuItem_Click);
+            // 
             // toolTip2
             // 
             this.toolTip2.ShowAlways = true;
@@ -912,12 +921,12 @@ namespace Autorization
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // аналитикаВыручкиToolStripMenuItem
+            // историяИзмененийToolStripMenuItem
             // 
-            this.аналитикаВыручкиToolStripMenuItem.Name = "аналитикаВыручкиToolStripMenuItem";
-            this.аналитикаВыручкиToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
-            this.аналитикаВыручкиToolStripMenuItem.Text = "Аналитика выручки";
-            this.аналитикаВыручкиToolStripMenuItem.Click += new System.EventHandler(this.аналитикаВыручкиToolStripMenuItem_Click);
+            this.историяИзмененийToolStripMenuItem.Name = "историяИзмененийToolStripMenuItem";
+            this.историяИзмененийToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
+            this.историяИзмененийToolStripMenuItem.Text = "История изменений";
+            this.историяИзмененийToolStripMenuItem.Click += new System.EventHandler(this.историяИзмененийToolStripMenuItem_Click);
             // 
             // ChangeDataForm
             // 
@@ -1017,5 +1026,6 @@ namespace Autorization
         private System.Windows.Forms.TextBox textBoxITNChange;
         private System.Windows.Forms.TextBox textBoxJobChange;
         private System.Windows.Forms.ToolStripMenuItem аналитикаВыручкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem историяИзмененийToolStripMenuItem;
     }
 }

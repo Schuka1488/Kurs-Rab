@@ -38,11 +38,11 @@ namespace Autorization
             // 
             this.BuildGrafButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BuildGrafButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuildGrafButton.Location = new System.Drawing.Point(1118, 664);
+            this.BuildGrafButton.Location = new System.Drawing.Point(1045, 664);
             this.BuildGrafButton.Name = "BuildGrafButton";
-            this.BuildGrafButton.Size = new System.Drawing.Size(319, 58);
+            this.BuildGrafButton.Size = new System.Drawing.Size(392, 58);
             this.BuildGrafButton.TabIndex = 1;
-            this.BuildGrafButton.Text = "Построить график выручки";
+            this.BuildGrafButton.Text = "ПОСТРОИТЬ ГРАФИК ВЫРУЧКИ";
             this.BuildGrafButton.UseVisualStyleBackColor = true;
             this.BuildGrafButton.Click += new System.EventHandler(this.BuildGrafButton_Click);
             // 
@@ -52,9 +52,9 @@ namespace Autorization
             this.CloseGrafFormbutton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CloseGrafFormbutton.Location = new System.Drawing.Point(12, 664);
             this.CloseGrafFormbutton.Name = "CloseGrafFormbutton";
-            this.CloseGrafFormbutton.Size = new System.Drawing.Size(319, 58);
+            this.CloseGrafFormbutton.Size = new System.Drawing.Size(392, 58);
             this.CloseGrafFormbutton.TabIndex = 2;
-            this.CloseGrafFormbutton.Text = "Закрыть построитель графиков";
+            this.CloseGrafFormbutton.Text = "ЗАКРЫТЬ ПОСТРОИТЕЛЬ ГРАФИКОВ";
             this.CloseGrafFormbutton.UseVisualStyleBackColor = true;
             this.CloseGrafFormbutton.Click += new System.EventHandler(this.CloseGrafFormbutton_Click);
             // 

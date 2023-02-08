@@ -406,7 +406,11 @@ namespace Autorization
             GrafForm grafForm = new GrafForm();
             grafForm.Show();
         }
-
+        private void историяИзмененийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HistoryForm historyForm = new HistoryForm();
+            historyForm.Show();
+        }
         int dR, dG, dB, sign; // переменные для rgb и индекса таймера
         private void timer1_Tick(object sender, EventArgs e)
         {

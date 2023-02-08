@@ -1303,6 +1303,12 @@ namespace Autorization
             GrafForm grafForm = new GrafForm();
             grafForm.Show();
         }
+        private void историяИзмененийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HistoryForm historyForm = new HistoryForm();
+            historyForm.Show();
+        }
+
         private void textBoxNameProjectChange_TextChanged(object sender, EventArgs e) => table.DefaultView.RowFilter = $"`Название проекта` LIKE '%{textBoxNameProjectChange.Text}%'";
         private void textBoxITNChange_TextChanged(object sender, EventArgs e)
         {

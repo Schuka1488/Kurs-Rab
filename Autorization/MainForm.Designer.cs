@@ -69,6 +69,7 @@ namespace Autorization
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.историяИзмененийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -292,7 +293,8 @@ namespace Autorization
             this.показатьДанныеToolStripMenuItem,
             this.печатьToolStripMenuItem,
             this.табельToolStripMenuItem,
-            this.графикПрибылиToolStripMenuItem});
+            this.графикПрибылиToolStripMenuItem,
+            this.историяИзмененийToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(956, 24);
@@ -424,6 +426,13 @@ namespace Autorization
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
+            // историяИзмененийToolStripMenuItem
+            // 
+            this.историяИзмененийToolStripMenuItem.Name = "историяИзмененийToolStripMenuItem";
+            this.историяИзмененийToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
+            this.историяИзмененийToolStripMenuItem.Text = "История изменений";
+            this.историяИзмененийToolStripMenuItem.Click += new System.EventHandler(this.историяИзмененийToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,5 +496,6 @@ namespace Autorization
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripMenuItem табельToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem графикПрибылиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem историяИзмененийToolStripMenuItem;
     }
 }
