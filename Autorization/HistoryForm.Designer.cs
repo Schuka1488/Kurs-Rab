@@ -41,7 +41,7 @@ namespace Autorization
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 13);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(775, 289);
+            this.dataGridView1.Size = new System.Drawing.Size(775, 381);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
             this.dataGridView1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseMove);
@@ -51,11 +51,11 @@ namespace Autorization
             this.ExitButtonErrorForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButtonErrorForm.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButtonErrorForm.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ExitButtonErrorForm.Location = new System.Drawing.Point(665, 400);
+            this.ExitButtonErrorForm.Location = new System.Drawing.Point(537, 400);
             this.ExitButtonErrorForm.Name = "ExitButtonErrorForm";
-            this.ExitButtonErrorForm.Size = new System.Drawing.Size(123, 38);
+            this.ExitButtonErrorForm.Size = new System.Drawing.Size(251, 38);
             this.ExitButtonErrorForm.TabIndex = 3;
-            this.ExitButtonErrorForm.Text = "ЗАКРЫТЬ";
+            this.ExitButtonErrorForm.Text = "ЗАКРЫТЬ ИСТОРИЮ";
             this.ExitButtonErrorForm.UseVisualStyleBackColor = true;
             this.ExitButtonErrorForm.Click += new System.EventHandler(this.ExitButtonErrorForm_Click);
             // 
