@@ -216,7 +216,10 @@ namespace Autorization
         {
             this.Hide(); // эта форма скрывается
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
 
+        }
         private void NoWorkingInfoForm_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
 
         private void NoWorkingInfoForm_MouseMove(object sender, MouseEventArgs e)
