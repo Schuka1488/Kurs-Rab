@@ -33,6 +33,7 @@ namespace Autorization
             this.chromiumWebBrowser1 = new CefSharp.WinForms.ChromiumWebBrowser();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonCloseTabel = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -80,12 +81,26 @@ namespace Autorization
             this.buttonCloseTabel.UseVisualStyleBackColor = true;
             this.buttonCloseTabel.Click += new System.EventHandler(this.buttonCloseTabel_Click);
             // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(529, 587);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(353, 34);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "ДОБАВЛЕНИЕ ПРОПУСКА";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // TabelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1360, 633);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonCloseTabel);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.chromiumWebBrowser1);
@@ -107,5 +122,6 @@ namespace Autorization
         private CefSharp.WinForms.ChromiumWebBrowser chromiumWebBrowser1;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonCloseTabel;
+        private System.Windows.Forms.Button button2;
     }
 }

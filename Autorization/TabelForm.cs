@@ -82,6 +82,10 @@ namespace Autorization
         {
             this.Hide();
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
         private void TabelForm_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
         private void TabelForm_MouseMove(object sender, MouseEventArgs e)
         {

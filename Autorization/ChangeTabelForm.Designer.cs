@@ -43,7 +43,6 @@ namespace Autorization
             this.Markcombobox.Items.AddRange(new object[] {
             "Н",
             "Б",
-            "Д",
             "О",
             "УВ",
             "1",
