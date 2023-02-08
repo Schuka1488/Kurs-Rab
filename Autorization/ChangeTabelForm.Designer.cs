@@ -126,7 +126,6 @@ namespace Autorization
             this.label4.Size = new System.Drawing.Size(118, 20);
             this.label4.TabIndex = 62;
             this.label4.Text = "ПРОПУСК ПО:";
-            this.label4.Visible = false;
             // 
             // label3
             // 
@@ -137,7 +136,6 @@ namespace Autorization
             this.label3.Size = new System.Drawing.Size(105, 20);
             this.label3.TabIndex = 61;
             this.label3.Text = "ПРОПУСК С:";
-            this.label3.Visible = false;
             // 
             // label2
             // 
@@ -148,7 +146,6 @@ namespace Autorization
             this.label2.Size = new System.Drawing.Size(180, 20);
             this.label2.TabIndex = 60;
             this.label2.Text = "ПРИЧИНА ПРОПУСКА:";
-            this.label2.Visible = false;
             // 
             // label5
             // 
@@ -159,7 +156,6 @@ namespace Autorization
             this.label5.Size = new System.Drawing.Size(191, 20);
             this.label5.TabIndex = 59;
             this.label5.Text = "ОПИСАНИЕ ПРОПУСКА:";
-            this.label5.Visible = false;
             // 
             // labelNameProject
             // 
@@ -170,7 +166,6 @@ namespace Autorization
             this.labelNameProject.Size = new System.Drawing.Size(336, 29);
             this.labelNameProject.TabIndex = 58;
             this.labelNameProject.Text = "ДОБАВЛЕНИЕ ПРОПУСКА";
-            this.labelNameProject.Visible = false;
             // 
             // textBox1
             // 
@@ -183,6 +178,10 @@ namespace Autorization
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "О",
+            "Б",
+            "УВ"});
             this.comboBox1.Location = new System.Drawing.Point(487, 145);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
