@@ -73,10 +73,11 @@ namespace Autorization
                 this.Top += e.Y - lastPoint.Y;
             }
         }
-        private void buttonCloseChangeTabelForm_Click(object sender, EventArgs e)
+        private void ExitButtonErrorForm_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
         private void buttonSaveTabel_Click(object sender, EventArgs e)
         {
             if (Markcombobox.SelectedItem == null)

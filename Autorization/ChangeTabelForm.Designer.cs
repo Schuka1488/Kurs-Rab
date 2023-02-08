@@ -34,7 +34,18 @@ namespace Autorization
             this.Datalable = new System.Windows.Forms.Label();
             this.buttonSaveTabel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonCloseChangeTabelForm = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelNameProject = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ExitButtonErrorForm = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Markcombobox
@@ -57,7 +68,7 @@ namespace Autorization
             "10",
             "11",
             "12"});
-            this.Markcombobox.Location = new System.Drawing.Point(18, 166);
+            this.Markcombobox.Location = new System.Drawing.Point(12, 200);
             this.Markcombobox.Name = "Markcombobox";
             this.Markcombobox.Size = new System.Drawing.Size(121, 21);
             this.Markcombobox.TabIndex = 0;
@@ -67,7 +78,7 @@ namespace Autorization
             this.Surnamelabel.AutoSize = true;
             this.Surnamelabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Surnamelabel.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Surnamelabel.Location = new System.Drawing.Point(12, 9);
+            this.Surnamelabel.Location = new System.Drawing.Point(11, 58);
             this.Surnamelabel.Name = "Surnamelabel";
             this.Surnamelabel.Size = new System.Drawing.Size(48, 22);
             this.Surnamelabel.TabIndex = 1;
@@ -78,7 +89,7 @@ namespace Autorization
             this.Datalable.AutoSize = true;
             this.Datalable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Datalable.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Datalable.Location = new System.Drawing.Point(14, 44);
+            this.Datalable.Location = new System.Drawing.Point(11, 91);
             this.Datalable.Name = "Datalable";
             this.Datalable.Size = new System.Drawing.Size(49, 22);
             this.Datalable.TabIndex = 2;
@@ -87,10 +98,10 @@ namespace Autorization
             // buttonSaveTabel
             // 
             this.buttonSaveTabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSaveTabel.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveTabel.Location = new System.Drawing.Point(223, 154);
+            this.buttonSaveTabel.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveTabel.Location = new System.Drawing.Point(14, 236);
             this.buttonSaveTabel.Name = "buttonSaveTabel";
-            this.buttonSaveTabel.Size = new System.Drawing.Size(135, 40);
+            this.buttonSaveTabel.Size = new System.Drawing.Size(155, 40);
             this.buttonSaveTabel.TabIndex = 3;
             this.buttonSaveTabel.Text = "СОХРАНИТЬ";
             this.buttonSaveTabel.UseVisualStyleBackColor = true;
@@ -100,31 +111,151 @@ namespace Autorization
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 143);
+            this.label1.Location = new System.Drawing.Point(10, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Выбор:";
             // 
-            // buttonCloseChangeTabelForm
+            // label4
             // 
-            this.buttonCloseChangeTabelForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCloseChangeTabelForm.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCloseChangeTabelForm.Location = new System.Drawing.Point(223, 108);
-            this.buttonCloseChangeTabelForm.Name = "buttonCloseChangeTabelForm";
-            this.buttonCloseChangeTabelForm.Size = new System.Drawing.Size(135, 40);
-            this.buttonCloseChangeTabelForm.TabIndex = 5;
-            this.buttonCloseChangeTabelForm.Text = "ЗАКРЫТЬ";
-            this.buttonCloseChangeTabelForm.UseVisualStyleBackColor = true;
-            this.buttonCloseChangeTabelForm.Click += new System.EventHandler(this.buttonCloseChangeTabelForm_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(822, 123);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 20);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "ПРОПУСК ПО:";
+            this.label4.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(835, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 20);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "ПРОПУСК С:";
+            this.label3.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(483, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(180, 20);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "ПРИЧИНА ПРОПУСКА:";
+            this.label2.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(483, 169);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(191, 20);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "ОПИСАНИЕ ПРОПУСКА:";
+            this.label5.Visible = false;
+            // 
+            // labelNameProject
+            // 
+            this.labelNameProject.AutoSize = true;
+            this.labelNameProject.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNameProject.Location = new System.Drawing.Point(604, 19);
+            this.labelNameProject.Name = "labelNameProject";
+            this.labelNameProject.Size = new System.Drawing.Size(336, 29);
+            this.labelNameProject.TabIndex = 58;
+            this.labelNameProject.Text = "ДОБАВЛЕНИЕ ПРОПУСКА";
+            this.labelNameProject.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(487, 192);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(453, 103);
+            this.textBox1.TabIndex = 57;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(487, 145);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 56;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(740, 146);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 55;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(740, 100);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 54;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(487, 311);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(453, 38);
+            this.button1.TabIndex = 53;
+            this.button1.Text = "СОХРАНИТЬ ИНФОРМАЦИЮ О ПРОПУСКЕ";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // ExitButtonErrorForm
+            // 
+            this.ExitButtonErrorForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButtonErrorForm.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButtonErrorForm.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ExitButtonErrorForm.Location = new System.Drawing.Point(487, 355);
+            this.ExitButtonErrorForm.Name = "ExitButtonErrorForm";
+            this.ExitButtonErrorForm.Size = new System.Drawing.Size(453, 38);
+            this.ExitButtonErrorForm.TabIndex = 52;
+            this.ExitButtonErrorForm.Text = "ЗАКРЫТЬ ИНФОРМАЦИЮ О ПРОПУСКАХ";
+            this.ExitButtonErrorForm.UseVisualStyleBackColor = true;
+            this.ExitButtonErrorForm.Click += new System.EventHandler(this.ExitButtonErrorForm_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(285, 29);
+            this.label6.TabIndex = 63;
+            this.label6.Text = "ДОБАВЛЕНИЕ МЕТКИ";
+            this.label6.Visible = false;
             // 
             // ChangeTabelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(370, 206);
-            this.Controls.Add(this.buttonCloseChangeTabelForm);
+            this.ClientSize = new System.Drawing.Size(952, 417);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelNameProject);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ExitButtonErrorForm);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSaveTabel);
             this.Controls.Add(this.Datalable);
@@ -149,6 +280,17 @@ namespace Autorization
         private System.Windows.Forms.Label Datalable;
         private System.Windows.Forms.Button buttonSaveTabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonCloseChangeTabelForm;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelNameProject;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ExitButtonErrorForm;
+        private System.Windows.Forms.Label label6;
     }
 }

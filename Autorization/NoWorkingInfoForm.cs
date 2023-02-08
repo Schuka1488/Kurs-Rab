@@ -27,8 +27,8 @@ namespace Autorization
 
         private void NoWorkingInfoForm_Load(object sender, EventArgs e)
         {
-            employeeData = LoadEmployee(int.Parse(employeeId));
-            this.employeeId = employeeId;
+           // employeeData = LoadEmployee(int.Parse(employeeId));
+           // this.employeeId = employeeId;
         }
         public static void AddFillTable(string desc, string logid, int employeeId, DateTime firstDate, DateTime endDateTime, FillTableType type)
         {
@@ -42,12 +42,12 @@ namespace Autorization
                     historyMessage = $"Внесен отпуск с {firstDate.ToString()} по {endDateTime.ToString()} по причине {desc}";
                     break;
 
-                case FillTableType.Medical:
+                case FillTableType.medical:
                     placeHolder = "Б";
                     historyMessage = $"Внесен больничный с {firstDate.ToString()} по {endDateTime.ToString()} по причине {desc}";
                     break;
 
-                case FillTableType.decree:
+                case FillTableType.goodreason:
                     placeHolder = "УВ";
                     historyMessage = $"Внесена уважительная причина с {firstDate.ToString()} по {endDateTime.ToString()} по причине {desc}";
                     break;
@@ -111,9 +111,9 @@ namespace Autorization
             // отпуск
             vacation,
             // больничный
-            Medical,
+            medical,
             // дикрет
-            decree
+            goodreason
         }
 
         public static void HistoryCreate(string logid, string id, DateTime date, string desc, bool openConnection = true)
@@ -218,7 +218,21 @@ namespace Autorization
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            FillTableType type = FillTableType.vacation;
 
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    type = FillTableType.vacation;
+                    break;
+                case 1:
+                    type = FillTableType.medical;
+                    break;
+                case 2:
+                    type = FillTableType.goodreason;
+                    break;
+            }
+            AddFillTable(textBox1.Text,$"{employeeData.employeesName} {employeeData.employeesSurname}", int.Parse(employeeId), dateTimePicker1.Value, dateTimePicker2.Value, type);
         }
         private void NoWorkingInfoForm_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
 
