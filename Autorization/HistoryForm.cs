@@ -45,6 +45,12 @@ namespace Autorization
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+
+            dataGridView1.ForeColor = Color.DeepSkyBlue;
+            dataGridView1.GridColor = Color.DarkGray;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Lavender;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Lavender;
         }
 
         private void ExitButtonErrorForm_Click(object sender, EventArgs e)
