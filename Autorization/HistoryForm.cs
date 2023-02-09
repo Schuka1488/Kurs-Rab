@@ -44,10 +44,7 @@ namespace Autorization
             adapter.Fill(table); // адаптер передает значение для того чтобы показать таблицу
             bSource.DataSource = table;  // принимается таблица для последующего показа таблицы
             dataGridView1.DataSource = bSource; // показывается таблица при выборе вкладки
-            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
-            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
         }
 
         private void ExitButtonErrorForm_Click(object sender, EventArgs e)

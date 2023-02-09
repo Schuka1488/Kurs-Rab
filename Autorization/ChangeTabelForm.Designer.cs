@@ -212,6 +212,7 @@ namespace Autorization
             this.button1.TabIndex = 53;
             this.button1.Text = "СОХРАНИТЬ ИНФОРМАЦИЮ О ПРОПУСКЕ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // ExitButtonErrorForm
             // 

@@ -13,16 +13,14 @@ namespace Autorization
 {
     public partial class ChangeTabelForm : Form
     {
-        public string employeeId;
         EmployeeData employeeData;
         static DBclass db = new DBclass(); // переменная класса для БД, и последующей работе с ними
         Point lastPoint; // специальный класс для задачи координат
         public ChangeTabelForm(string browserOutput, int year, int month)
         {
-            //employeeData = LoadEmployee(int.Parse(employeeId));
-            //this.employeeId = employeeId;
             InitializeComponent();
             SplitStr(browserOutput, year, month);
+            employeeData = LoadEmployee(int.Parse(workerID));
             this.year = year;
             this.month = month;
         }
@@ -103,11 +101,16 @@ namespace Autorization
             }
             if(tableID == "NULL")
             {
-                db.CreateTable(comboBox1.SelectedItem.ToString(), workerID, FormatDateToSql(DateTime.Parse(date)));
+               if(Markcombobox.SelectedItem == null)
+                {
+                    MessageBox.Show("выбери");
+                    return;
+                }
+                db.CreateTable(Markcombobox.SelectedItem.ToString(), workerID, FormatDateToSql(DateTime.Parse(date)));
             }
             else
             {
-                db.UpdateTable(tableID, comboBox1.SelectedItem.ToString());
+                db.UpdateTable(tableID, Markcombobox.SelectedItem.ToString());
             }
             this.Close();
         }
@@ -158,7 +161,7 @@ namespace Autorization
                 }
             }
 
-            HistoryCreate(logid, employeeId.ToString(), DateTime.Now, historyMessage, false);
+            HistoryCreate(employeeId.ToString(), DateTime.Now, historyMessage, false);
             db.closeConnection();
         }
         public static void UpdateTable(string tableid, string mark, bool OpenConnection = true)
@@ -197,13 +200,13 @@ namespace Autorization
             goodreason
         }
 
-        public static void HistoryCreate(string logid, string id, DateTime date, string desc, bool openConnection = true)
+        public static void HistoryCreate(string id, DateTime date, string desc, bool openConnection = true)
         {
             if (openConnection)
                 db.openConnection();
             MySqlCommand cmd;
 
-            string sql = $"INSERT INTO Log (Log_ID, Log_EmployeesID, Log_Desc, log_date) VALUES ('{logid}', {id}, '{desc}', '{date.ToString()}')";
+            string sql = $"INSERT INTO LogTable (Log_EmployeesID, Log_Desc, log_date) VALUES ({id}, '{desc}', '{date.ToString("yyyy-MM-dd")}')";
             cmd = new MySqlCommand(sql, db.getConnection());
 
             cmd.ExecuteNonQuery();
@@ -278,7 +281,16 @@ namespace Autorization
 
             db.closeConnection();
         }
-        private void button1_Click(object sender, EventArgs e)
+        public struct EmployeeData // список информации об отдельном работнике
+        {
+            public int EmployeeId;
+            public string employeesName;
+            public string employeesSurname;
+            public string employeesPatronymic;
+            public string employeesJobTitle;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             FillTableType type = FillTableType.vacation;
 
@@ -294,21 +306,13 @@ namespace Autorization
                     type = FillTableType.goodreason;
                     break;
             }
-            AddFillTable(textBox1.Text, $"{employeeData.employeesName} {employeeData.employeesSurname}", int.Parse(employeeId), dateTimePicker1.Value, dateTimePicker2.Value, type);
+            AddFillTable(textBox1.Text, $"{employeeData.employeesName} {employeeData.employeesSurname}", int.Parse(workerID), dateTimePicker1.Value, dateTimePicker2.Value, type);
         }
-        public struct EmployeeData // список информации об отдельном работнике
-        {
-            public int EmployeeId;
-            public string employeesName;
-            public string employeesSurname;
-            public string employeesPatronymic;
-            public string employeesJobTitle;
-        }
+
         internal struct HistroyInfo // список информации о том, что должно отправляться в таблицу с историей изменений данных в табеле
         {
             public string id;
             public string owner;
-            public string employee_target_ID;
             public string date;
             public string desc;
         }
