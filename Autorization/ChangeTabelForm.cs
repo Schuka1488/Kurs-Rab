@@ -13,7 +13,7 @@ namespace Autorization
 {
     public partial class ChangeTabelForm : Form
     {
-        string employeeId;
+        public string employeeId;
         EmployeeData employeeData;
         static DBclass db = new DBclass(); // переменная класса для БД, и последующей работе с ними
         Point lastPoint; // специальный класс для задачи координат
@@ -53,7 +53,8 @@ namespace Autorization
             Surnamelabel.Text = Fullname;
             Datalable.Text = date;
 
-            this.FormBorderStyle = FormBorderStyle.None;
+            this.FormBorderStyle = FormBorderStyle.None; // убрал все стили границ форму
+            // добавил свои границы
             Panel pnlTop = new Panel() { Height = 4, Dock = DockStyle.Top, BackColor = SystemColors.ActiveBorder };
             this.Controls.Add(pnlTop);
             Panel pnlRight = new Panel() { Width = 4, Dock = DockStyle.Right, BackColor = SystemColors.ActiveBorder };
@@ -63,6 +64,7 @@ namespace Autorization
             Panel pnlLeft = new Panel() { Width = 4, Dock = DockStyle.Left, BackColor = SystemColors.ActiveBorder };
             this.Controls.Add(pnlLeft);
         }
+        // форматы для правильного отображения даты и времени (на основе предпочтений культуры)
         public static string FormatDateToSql(DateTime time)
         {
             return time.ToString("yyyy-MM-dd HH:mm:ss.fff");
@@ -76,6 +78,7 @@ namespace Autorization
         {
             return time.ToString("yyyy-MM-dd");
         }
+
         private void ChangeTabelForm_MouseDown(object sender, MouseEventArgs e) => lastPoint = new Point(e.X, e.Y);//метод который создан для того, чтобы можно было перетаксивать форму, зажимая лкм на панели
 
         private void ChangeTabelForm_MouseMove(object sender, MouseEventArgs e)
@@ -100,11 +103,11 @@ namespace Autorization
             }
             if(tableID == "NULL")
             {
-                db.CreateTable(Markcombobox.SelectedItem.ToString(), workerID, FormatDateToSql(DateTime.Parse(date)));
+                db.CreateTable(comboBox1.SelectedItem.ToString(), workerID, FormatDateToSql(DateTime.Parse(date)));
             }
             else
             {
-                db.UpdateTable(tableID, Markcombobox.SelectedItem.ToString());
+                db.UpdateTable(tableID, comboBox1.SelectedItem.ToString());
             }
             this.Close();
         }
@@ -225,10 +228,10 @@ namespace Autorization
             {
                 EmployeeData newRow = new EmployeeData();
                 newRow.EmployeeId = Convert.ToInt32(row.ItemArray[0]);
-                newRow.employeesName = row.ItemArray[2].ToString();
-                newRow.employeesSurname = row.ItemArray[3].ToString();
-                newRow.employeesPatronymic = row.ItemArray[4].ToString();
-                newRow.employeesJobTitle = row.ItemArray[5].ToString();
+                newRow.employeesName = row.ItemArray[1].ToString();
+                newRow.employeesSurname = row.ItemArray[2].ToString();
+                newRow.employeesPatronymic = row.ItemArray[3].ToString();
+                newRow.employeesJobTitle = row.ItemArray[4].ToString();
                 res.Add(newRow);
             }
         }
@@ -241,10 +244,10 @@ namespace Autorization
             var row = Employees.Rows[0];
 
             res.EmployeeId = Convert.ToInt32(row.ItemArray[0]);
-            res.employeesName = row.ItemArray[2].ToString();
-            res.employeesSurname = row.ItemArray[3].ToString();
-            res.employeesPatronymic = row.ItemArray[4].ToString();
-            res.employeesJobTitle = row.ItemArray[5].ToString();
+            res.employeesName = row.ItemArray[1].ToString();
+            res.employeesSurname = row.ItemArray[2].ToString();
+            res.employeesPatronymic = row.ItemArray[3].ToString();
+            res.employeesJobTitle = row.ItemArray[4].ToString();
 
             return res;
         }
@@ -253,7 +256,7 @@ namespace Autorization
             MySqlCommand cmd;
             db.openConnection();
 
-            string sql = $"SELECT Log_ID , 	Log_EmployeesID, log_date, Log_Desc FROM log_date";
+            string sql = $"SELECT Log_ID , 	Log_EmployeesID, log_date, Log_Desc FROM LogTable";
             cmd = new MySqlCommand(sql, db.getConnection());
 
             DataTable table = new DataTable();
@@ -267,9 +270,8 @@ namespace Autorization
                 HistroyInfo inf = new HistroyInfo();
                 inf.id = row.ItemArray[0].ToString();
                 inf.owner = row.ItemArray[1].ToString();
-                inf.employee_target_ID = row.ItemArray[2].ToString();
-                inf.date = row.ItemArray[4].ToString();
-                inf.desc = row.ItemArray[5].ToString();
+                inf.date = row.ItemArray[2].ToString();
+                inf.desc = row.ItemArray[3].ToString();
 
                 res.Add(inf);
             }
@@ -294,7 +296,7 @@ namespace Autorization
             }
             AddFillTable(textBox1.Text, $"{employeeData.employeesName} {employeeData.employeesSurname}", int.Parse(employeeId), dateTimePicker1.Value, dateTimePicker2.Value, type);
         }
-        public struct EmployeeData
+        public struct EmployeeData // список информации об отдельном работнике
         {
             public int EmployeeId;
             public string employeesName;
@@ -302,7 +304,7 @@ namespace Autorization
             public string employeesPatronymic;
             public string employeesJobTitle;
         }
-        internal struct HistroyInfo
+        internal struct HistroyInfo // список информации о том, что должно отправляться в таблицу с историей изменений данных в табеле
         {
             public string id;
             public string owner;

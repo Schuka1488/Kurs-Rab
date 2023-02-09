@@ -25,7 +25,8 @@ namespace Autorization
 
         private void HistoryForm_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.None;
+            this.FormBorderStyle = FormBorderStyle.None; // убрал все стили границ форму
+            // добавил свои границы
             Panel pnlTop = new Panel() { Height = 4, Dock = DockStyle.Top, BackColor = SystemColors.ActiveBorder };
             this.Controls.Add(pnlTop);
             Panel pnlRight = new Panel() { Width = 4, Dock = DockStyle.Right, BackColor = SystemColors.ActiveBorder };
@@ -96,7 +97,7 @@ namespace Autorization
             //Индекс выбранной строки
             index_selected_rows = dataGridView1.SelectedCells[0].RowIndex.ToString();
             //ID конкретной записи в Базе данных, на основании индекса строки
-            id_selected_rows = dataGridView1.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();//Указываем ID выделенной строки в метке
+            id_selected_rows = dataGridView1.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();//Указываем ID выделенной строки при выборе и делаем из нее полноценную строку string
         }
     }
 }
