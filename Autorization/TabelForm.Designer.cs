@@ -35,6 +35,7 @@ namespace Autorization
             this.buttonCloseTabel = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
+            this.labelNameProject = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -84,7 +85,7 @@ namespace Autorization
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(621, 587);
+            this.dateTimePicker1.Location = new System.Drawing.Point(634, 601);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(194, 20);
             this.dateTimePicker1.TabIndex = 4;
@@ -101,12 +102,23 @@ namespace Autorization
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // labelNameProject
+            // 
+            this.labelNameProject.AutoSize = true;
+            this.labelNameProject.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNameProject.Location = new System.Drawing.Point(546, 573);
+            this.labelNameProject.Name = "labelNameProject";
+            this.labelNameProject.Size = new System.Drawing.Size(377, 25);
+            this.labelNameProject.TabIndex = 59;
+            this.labelNameProject.Text = "ВЫБОР МЕСЯЦА ДЛЯ ОТОБРАЖЕНИЯ:";
+            // 
             // TabelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1549, 633);
+            this.Controls.Add(this.labelNameProject);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.buttonCloseTabel);
@@ -121,6 +133,7 @@ namespace Autorization
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TabelForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TabelForm_MouseMove);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,5 +145,6 @@ namespace Autorization
         private System.Windows.Forms.Button buttonCloseTabel;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label labelNameProject;
     }
 }

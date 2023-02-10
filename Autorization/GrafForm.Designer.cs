@@ -32,6 +32,7 @@ namespace Autorization
             this.BuildGrafButton = new System.Windows.Forms.Button();
             this.CloseGrafFormbutton = new System.Windows.Forms.Button();
             this.formsPlot1 = new ScottPlot.FormsPlot();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BuildGrafButton
@@ -65,12 +66,25 @@ namespace Autorization
             this.formsPlot1.Size = new System.Drawing.Size(1425, 632);
             this.formsPlot1.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(534, 664);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(392, 58);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "ПЕЧАТЬ ГРАФИКА ВЫРУЧКИ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // GrafForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1449, 734);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.formsPlot1);
             this.Controls.Add(this.CloseGrafFormbutton);
             this.Controls.Add(this.BuildGrafButton);
@@ -89,5 +103,6 @@ namespace Autorization
         private System.Windows.Forms.Button BuildGrafButton;
         private System.Windows.Forms.Button CloseGrafFormbutton;
         private ScottPlot.FormsPlot formsPlot1;
+        private System.Windows.Forms.Button button1;
     }
 }

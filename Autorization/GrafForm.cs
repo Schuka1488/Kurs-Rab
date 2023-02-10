@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using ScottPlot;
@@ -93,6 +94,29 @@ namespace Autorization
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
             }
+        }
+        private void PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Determine how large you want the plot to be on the page and resize accordingly
+            int width = e.MarginBounds.Width;
+            int height = (int)(e.MarginBounds.Width * .5);
+            formsPlot1.Plot.Resize(width, height);
+
+            // Give the plot a white background so it looks good on white paper
+            formsPlot1.Plot.Style(figureBackground: Color.White);
+
+            // Render the plot as a Bitmap and draw it onto the page
+            Bitmap bmp = formsPlot1.Plot.Render();
+            e.Graphics.DrawImage(bmp, e.MarginBounds.Left, e.MarginBounds.Top);
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var printDocument = new System.Drawing.Printing.PrintDocument();
+            printDocument.PrintPage += new PrintPageEventHandler(PrintPage);
+            var printDialog = new PrintDialog { Document = printDocument };
+            var printDiagResult = printDialog.ShowDialog();
+            if (printDiagResult == DialogResult.OK)
+                printDocument.Print();
         }
     }
 }
