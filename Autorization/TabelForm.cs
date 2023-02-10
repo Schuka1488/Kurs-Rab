@@ -44,11 +44,11 @@ namespace Autorization
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            month = DateTime.Now.Month;
-            year = DateTime.Now.Year;
+            month = dateTimePicker1.Value.Month;
+            year = dateTimePicker1.Value.Year;
             TimeSheetGenerator generator = new TimeSheetGenerator(year, month);
             ClassForTabel loader = new ClassForTabel();
-            loader.LoadDataFromBD(DateTime.Now);
+            loader.LoadDataFromBD(dateTimePicker1.Value);
             loader.LoadAllIntoBuilder(generator);
             string html  = generator.GenCode();
             File.WriteAllText("tmp.html", html);
@@ -62,11 +62,11 @@ namespace Autorization
         }
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
-            month = DateTime.Now.Month;
-            year = DateTime.Now.Year;
+            month = dateTimePicker1.Value.Month;
+            year = dateTimePicker1.Value.Year;
             TimeSheetGenerator generator = new TimeSheetGenerator(year, month);
             ClassForTabel loader = new ClassForTabel();
-            loader.LoadDataFromBD(DateTime.Now);
+            loader.LoadDataFromBD(dateTimePicker1.Value);
             loader.LoadAllIntoBuilder(generator);
             string html = generator.GenCode();
             File.WriteAllText("tmp.html", html);
@@ -90,6 +90,11 @@ namespace Autorization
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            chromiumWebBrowser1.Print();
         }
     }
 }

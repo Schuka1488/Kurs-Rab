@@ -114,7 +114,7 @@ namespace Autorization
             }
             this.Close();
         }
-        public static void AddFillTable(string desc, string logid, int employeeId, DateTime firstDate, DateTime endDateTime, FillTableType type)
+        public void AddFillTable(string desc, string logid, int employeeId, DateTime firstDate, DateTime endDateTime, FillTableType type)
         {
             string placeHolder;
             string historyMessage;
