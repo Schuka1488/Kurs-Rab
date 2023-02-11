@@ -99,11 +99,15 @@ namespace Autorization
             this.вТаблицеАвторизацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.табельToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аналитикаВыручкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.историяИзмененийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.историяИзмененийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.Column8Label = new System.Windows.Forms.Label();
+            this.Column9Label = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransformData2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -113,6 +117,10 @@ namespace Autorization
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Lavender;
+            this.panel4.Controls.Add(this.Column9Label);
+            this.panel4.Controls.Add(this.Column8Label);
+            this.panel4.Controls.Add(this.textBox9);
+            this.panel4.Controls.Add(this.textBox8);
             this.panel4.Controls.Add(this.textBoxNameProjectChange);
             this.panel4.Controls.Add(this.textBoxITNChange);
             this.panel4.Controls.Add(this.textBoxJobChange);
@@ -167,14 +175,14 @@ namespace Autorization
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1267, 573);
+            this.panel4.Size = new System.Drawing.Size(1375, 606);
             this.panel4.TabIndex = 2;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
             // 
             // textBoxNameProjectChange
             // 
-            this.textBoxNameProjectChange.Location = new System.Drawing.Point(508, 537);
+            this.textBoxNameProjectChange.Location = new System.Drawing.Point(508, 569);
             this.textBoxNameProjectChange.Name = "textBoxNameProjectChange";
             this.textBoxNameProjectChange.Size = new System.Drawing.Size(100, 20);
             this.textBoxNameProjectChange.TabIndex = 70;
@@ -183,7 +191,7 @@ namespace Autorization
             // 
             // textBoxITNChange
             // 
-            this.textBoxITNChange.Location = new System.Drawing.Point(508, 537);
+            this.textBoxITNChange.Location = new System.Drawing.Point(508, 569);
             this.textBoxITNChange.Name = "textBoxITNChange";
             this.textBoxITNChange.Size = new System.Drawing.Size(100, 20);
             this.textBoxITNChange.TabIndex = 69;
@@ -192,7 +200,7 @@ namespace Autorization
             // 
             // textBoxJobChange
             // 
-            this.textBoxJobChange.Location = new System.Drawing.Point(508, 537);
+            this.textBoxJobChange.Location = new System.Drawing.Point(508, 569);
             this.textBoxJobChange.Name = "textBoxJobChange";
             this.textBoxJobChange.Size = new System.Drawing.Size(100, 20);
             this.textBoxJobChange.TabIndex = 68;
@@ -203,7 +211,7 @@ namespace Autorization
             // 
             this.labelNameProjectChange.AutoSize = true;
             this.labelNameProjectChange.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameProjectChange.Location = new System.Drawing.Point(282, 537);
+            this.labelNameProjectChange.Location = new System.Drawing.Point(282, 569);
             this.labelNameProjectChange.Name = "labelNameProjectChange";
             this.labelNameProjectChange.Size = new System.Drawing.Size(220, 20);
             this.labelNameProjectChange.TabIndex = 67;
@@ -214,7 +222,7 @@ namespace Autorization
             // 
             this.labelITNChange.AutoSize = true;
             this.labelITNChange.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelITNChange.Location = new System.Drawing.Point(225, 539);
+            this.labelITNChange.Location = new System.Drawing.Point(225, 569);
             this.labelITNChange.Name = "labelITNChange";
             this.labelITNChange.Size = new System.Drawing.Size(277, 20);
             this.labelITNChange.TabIndex = 66;
@@ -225,7 +233,7 @@ namespace Autorization
             // 
             this.labelJobChange.AutoSize = true;
             this.labelJobChange.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJobChange.Location = new System.Drawing.Point(263, 537);
+            this.labelJobChange.Location = new System.Drawing.Point(263, 569);
             this.labelJobChange.Name = "labelJobChange";
             this.labelJobChange.Size = new System.Drawing.Size(239, 20);
             this.labelJobChange.TabIndex = 65;
@@ -236,7 +244,7 @@ namespace Autorization
             // 
             this.RefreshButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton6.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton6.Location = new System.Drawing.Point(1143, 243);
             this.RefreshButton6.Name = "RefreshButton6";
             this.RefreshButton6.Size = new System.Drawing.Size(220, 34);
             this.RefreshButton6.TabIndex = 64;
@@ -248,7 +256,7 @@ namespace Autorization
             // 
             this.RefreshButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton5.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton5.Location = new System.Drawing.Point(1143, 243);
             this.RefreshButton5.Name = "RefreshButton5";
             this.RefreshButton5.Size = new System.Drawing.Size(220, 34);
             this.RefreshButton5.TabIndex = 63;
@@ -260,7 +268,7 @@ namespace Autorization
             // 
             this.RefreshButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton4.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton4.Location = new System.Drawing.Point(1143, 243);
             this.RefreshButton4.Name = "RefreshButton4";
             this.RefreshButton4.Size = new System.Drawing.Size(220, 34);
             this.RefreshButton4.TabIndex = 62;
@@ -272,7 +280,7 @@ namespace Autorization
             // 
             this.RefreshButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton3.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton3.Location = new System.Drawing.Point(1143, 243);
             this.RefreshButton3.Name = "RefreshButton3";
             this.RefreshButton3.Size = new System.Drawing.Size(220, 34);
             this.RefreshButton3.TabIndex = 61;
@@ -284,7 +292,7 @@ namespace Autorization
             // 
             this.RefreshButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton2.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton2.Location = new System.Drawing.Point(1143, 243);
             this.RefreshButton2.Name = "RefreshButton2";
             this.RefreshButton2.Size = new System.Drawing.Size(220, 34);
             this.RefreshButton2.TabIndex = 60;
@@ -296,7 +304,7 @@ namespace Autorization
             // 
             this.RefreshButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshButton1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton1.Location = new System.Drawing.Point(1021, 243);
+            this.RefreshButton1.Location = new System.Drawing.Point(1143, 243);
             this.RefreshButton1.Name = "RefreshButton1";
             this.RefreshButton1.Size = new System.Drawing.Size(220, 34);
             this.RefreshButton1.TabIndex = 59;
@@ -308,7 +316,7 @@ namespace Autorization
             // 
             this.UpdateLineButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateLineButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateLineButton6.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton6.Location = new System.Drawing.Point(1143, 203);
             this.UpdateLineButton6.Name = "UpdateLineButton6";
             this.UpdateLineButton6.Size = new System.Drawing.Size(220, 34);
             this.UpdateLineButton6.TabIndex = 58;
@@ -320,7 +328,7 @@ namespace Autorization
             // 
             this.UpdateLineButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateLineButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateLineButton4.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton4.Location = new System.Drawing.Point(1143, 203);
             this.UpdateLineButton4.Name = "UpdateLineButton4";
             this.UpdateLineButton4.Size = new System.Drawing.Size(220, 34);
             this.UpdateLineButton4.TabIndex = 57;
@@ -332,7 +340,7 @@ namespace Autorization
             // 
             this.UpdateLineButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateLineButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateLineButton3.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton3.Location = new System.Drawing.Point(1143, 203);
             this.UpdateLineButton3.Name = "UpdateLineButton3";
             this.UpdateLineButton3.Size = new System.Drawing.Size(220, 34);
             this.UpdateLineButton3.TabIndex = 56;
@@ -344,7 +352,7 @@ namespace Autorization
             // 
             this.UpdateLineButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateLineButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateLineButton2.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton2.Location = new System.Drawing.Point(1143, 203);
             this.UpdateLineButton2.Name = "UpdateLineButton2";
             this.UpdateLineButton2.Size = new System.Drawing.Size(220, 34);
             this.UpdateLineButton2.TabIndex = 55;
@@ -356,7 +364,7 @@ namespace Autorization
             // 
             this.UpdateLineButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateLineButton1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateLineButton1.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton1.Location = new System.Drawing.Point(1143, 203);
             this.UpdateLineButton1.Name = "UpdateLineButton1";
             this.UpdateLineButton1.Size = new System.Drawing.Size(220, 34);
             this.UpdateLineButton1.TabIndex = 54;
@@ -368,7 +376,7 @@ namespace Autorization
             // 
             this.UpdateLineButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateLineButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateLineButton5.Location = new System.Drawing.Point(1021, 203);
+            this.UpdateLineButton5.Location = new System.Drawing.Point(1143, 203);
             this.UpdateLineButton5.Name = "UpdateLineButton5";
             this.UpdateLineButton5.Size = new System.Drawing.Size(220, 34);
             this.UpdateLineButton5.TabIndex = 53;
@@ -381,7 +389,7 @@ namespace Autorization
             this.DeleteLineButton6.BackColor = System.Drawing.Color.Lavender;
             this.DeleteLineButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteLineButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLineButton6.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton6.Location = new System.Drawing.Point(1143, 164);
             this.DeleteLineButton6.Name = "DeleteLineButton6";
             this.DeleteLineButton6.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton6.TabIndex = 52;
@@ -394,7 +402,7 @@ namespace Autorization
             this.DeleteLineButton5.BackColor = System.Drawing.Color.Lavender;
             this.DeleteLineButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteLineButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLineButton5.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton5.Location = new System.Drawing.Point(1143, 164);
             this.DeleteLineButton5.Name = "DeleteLineButton5";
             this.DeleteLineButton5.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton5.TabIndex = 51;
@@ -407,7 +415,7 @@ namespace Autorization
             this.DeleteLineButton4.BackColor = System.Drawing.Color.Lavender;
             this.DeleteLineButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteLineButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLineButton4.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton4.Location = new System.Drawing.Point(1143, 164);
             this.DeleteLineButton4.Name = "DeleteLineButton4";
             this.DeleteLineButton4.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton4.TabIndex = 50;
@@ -420,7 +428,7 @@ namespace Autorization
             this.DeleteLineButton3.BackColor = System.Drawing.Color.Lavender;
             this.DeleteLineButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteLineButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLineButton3.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton3.Location = new System.Drawing.Point(1143, 164);
             this.DeleteLineButton3.Name = "DeleteLineButton3";
             this.DeleteLineButton3.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton3.TabIndex = 49;
@@ -433,7 +441,7 @@ namespace Autorization
             this.DeleteLineButton2.BackColor = System.Drawing.Color.Lavender;
             this.DeleteLineButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteLineButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLineButton2.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton2.Location = new System.Drawing.Point(1143, 164);
             this.DeleteLineButton2.Name = "DeleteLineButton2";
             this.DeleteLineButton2.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton2.TabIndex = 48;
@@ -445,7 +453,7 @@ namespace Autorization
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(171, 527);
+            this.label2.Location = new System.Drawing.Point(171, 559);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 32);
             this.label2.TabIndex = 41;
@@ -455,7 +463,7 @@ namespace Autorization
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(16, 539);
+            this.label1.Location = new System.Drawing.Point(12, 572);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 19);
             this.label1.TabIndex = 40;
@@ -466,7 +474,7 @@ namespace Autorization
             this.AddLineButton6.BackColor = System.Drawing.Color.Lavender;
             this.AddLineButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddLineButton6.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddLineButton6.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton6.Location = new System.Drawing.Point(1143, 125);
             this.AddLineButton6.Name = "AddLineButton6";
             this.AddLineButton6.Size = new System.Drawing.Size(220, 33);
             this.AddLineButton6.TabIndex = 38;
@@ -479,7 +487,7 @@ namespace Autorization
             this.AddLineButton5.BackColor = System.Drawing.Color.Lavender;
             this.AddLineButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddLineButton5.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddLineButton5.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton5.Location = new System.Drawing.Point(1143, 125);
             this.AddLineButton5.Name = "AddLineButton5";
             this.AddLineButton5.Size = new System.Drawing.Size(220, 33);
             this.AddLineButton5.TabIndex = 37;
@@ -492,7 +500,7 @@ namespace Autorization
             this.AddLineButton4.BackColor = System.Drawing.Color.Lavender;
             this.AddLineButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddLineButton4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddLineButton4.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton4.Location = new System.Drawing.Point(1143, 125);
             this.AddLineButton4.Name = "AddLineButton4";
             this.AddLineButton4.Size = new System.Drawing.Size(220, 33);
             this.AddLineButton4.TabIndex = 36;
@@ -505,7 +513,7 @@ namespace Autorization
             this.AddLineButton3.BackColor = System.Drawing.Color.Lavender;
             this.AddLineButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddLineButton3.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddLineButton3.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton3.Location = new System.Drawing.Point(1143, 125);
             this.AddLineButton3.Name = "AddLineButton3";
             this.AddLineButton3.Size = new System.Drawing.Size(220, 33);
             this.AddLineButton3.TabIndex = 35;
@@ -518,7 +526,7 @@ namespace Autorization
             this.AddLineButton2.BackColor = System.Drawing.Color.Lavender;
             this.AddLineButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddLineButton2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddLineButton2.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton2.Location = new System.Drawing.Point(1143, 125);
             this.AddLineButton2.Name = "AddLineButton2";
             this.AddLineButton2.Size = new System.Drawing.Size(220, 33);
             this.AddLineButton2.TabIndex = 34;
@@ -530,7 +538,7 @@ namespace Autorization
             // 
             this.labelTheme.AutoSize = true;
             this.labelTheme.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTheme.Location = new System.Drawing.Point(979, 540);
+            this.labelTheme.Location = new System.Drawing.Point(1087, 571);
             this.labelTheme.Name = "labelTheme";
             this.labelTheme.Size = new System.Drawing.Size(144, 21);
             this.labelTheme.TabIndex = 33;
@@ -541,7 +549,7 @@ namespace Autorization
             this.DeleteLineButton.BackColor = System.Drawing.Color.Lavender;
             this.DeleteLineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteLineButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteLineButton.Location = new System.Drawing.Point(1021, 164);
+            this.DeleteLineButton.Location = new System.Drawing.Point(1143, 164);
             this.DeleteLineButton.Name = "DeleteLineButton";
             this.DeleteLineButton.Size = new System.Drawing.Size(220, 33);
             this.DeleteLineButton.TabIndex = 32;
@@ -554,7 +562,7 @@ namespace Autorization
             this.AddLineButton.BackColor = System.Drawing.Color.Lavender;
             this.AddLineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddLineButton.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddLineButton.Location = new System.Drawing.Point(1021, 125);
+            this.AddLineButton.Location = new System.Drawing.Point(1143, 125);
             this.AddLineButton.Name = "AddLineButton";
             this.AddLineButton.Size = new System.Drawing.Size(220, 33);
             this.AddLineButton.TabIndex = 31;
@@ -707,7 +715,7 @@ namespace Autorization
             this.WhiteThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WhiteThemeButton.Location = new System.Drawing.Point(1129, 509);
+            this.WhiteThemeButton.Location = new System.Drawing.Point(1237, 542);
             this.WhiteThemeButton.Name = "WhiteThemeButton";
             this.WhiteThemeButton.Size = new System.Drawing.Size(126, 23);
             this.WhiteThemeButton.TabIndex = 12;
@@ -720,7 +728,7 @@ namespace Autorization
             this.DarkThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DarkThemeButton.Location = new System.Drawing.Point(1129, 538);
+            this.DarkThemeButton.Location = new System.Drawing.Point(1237, 571);
             this.DarkThemeButton.Name = "DarkThemeButton";
             this.DarkThemeButton.Size = new System.Drawing.Size(126, 23);
             this.DarkThemeButton.TabIndex = 11;
@@ -736,7 +744,7 @@ namespace Autorization
             this.dataGridViewTransformData2.Location = new System.Drawing.Point(20, 106);
             this.dataGridViewTransformData2.Name = "dataGridViewTransformData2";
             this.dataGridViewTransformData2.RowHeadersVisible = false;
-            this.dataGridViewTransformData2.Size = new System.Drawing.Size(995, 312);
+            this.dataGridViewTransformData2.Size = new System.Drawing.Size(1117, 312);
             this.dataGridViewTransformData2.TabIndex = 6;
             this.dataGridViewTransformData2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTransformData2_CellMouseClick);
             this.dataGridViewTransformData2.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTransformData2_CellMouseDown);
@@ -754,7 +762,7 @@ namespace Autorization
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1267, 100);
+            this.panel5.Size = new System.Drawing.Size(1375, 100);
             this.panel5.TabIndex = 0;
             this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseDown);
             this.panel5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseMove);
@@ -779,7 +787,7 @@ namespace Autorization
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(1223, 24);
+            this.label4.Location = new System.Drawing.Point(1331, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 31);
             this.label4.TabIndex = 31;
@@ -791,7 +799,7 @@ namespace Autorization
             this.TransformDataLabel.AutoSize = true;
             this.TransformDataLabel.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransformDataLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TransformDataLabel.Location = new System.Drawing.Point(267, 24);
+            this.TransformDataLabel.Location = new System.Drawing.Point(275, 24);
             this.TransformDataLabel.Name = "TransformDataLabel";
             this.TransformDataLabel.Size = new System.Drawing.Size(769, 64);
             this.TransformDataLabel.TabIndex = 4;
@@ -807,7 +815,7 @@ namespace Autorization
             this.историяИзмененийToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1267, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1375, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -911,6 +919,13 @@ namespace Autorization
             this.аналитикаВыручкиToolStripMenuItem.Text = "Аналитика выручки";
             this.аналитикаВыручкиToolStripMenuItem.Click += new System.EventHandler(this.аналитикаВыручкиToolStripMenuItem_Click);
             // 
+            // историяИзмененийToolStripMenuItem
+            // 
+            this.историяИзмененийToolStripMenuItem.Name = "историяИзмененийToolStripMenuItem";
+            this.историяИзмененийToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
+            this.историяИзмененийToolStripMenuItem.Text = "История изменений";
+            this.историяИзмененийToolStripMenuItem.Click += new System.EventHandler(this.историяИзмененийToolStripMenuItem_Click);
+            // 
             // toolTip2
             // 
             this.toolTip2.ShowAlways = true;
@@ -921,18 +936,51 @@ namespace Autorization
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // историяИзмененийToolStripMenuItem
+            // textBox8
             // 
-            this.историяИзмененийToolStripMenuItem.Name = "историяИзмененийToolStripMenuItem";
-            this.историяИзмененийToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
-            this.историяИзмененийToolStripMenuItem.Text = "История изменений";
-            this.историяИзмененийToolStripMenuItem.Click += new System.EventHandler(this.историяИзмененийToolStripMenuItem_Click);
+            this.textBox8.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(1059, 431);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 26);
+            this.textBox8.TabIndex = 71;
+            this.textBox8.Visible = false;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(1205, 431);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 26);
+            this.textBox9.TabIndex = 72;
+            this.textBox9.Visible = false;
+            // 
+            // Column8Label
+            // 
+            this.Column8Label.AutoSize = true;
+            this.Column8Label.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Column8Label.Location = new System.Drawing.Point(1055, 482);
+            this.Column8Label.Name = "Column8Label";
+            this.Column8Label.Size = new System.Drawing.Size(123, 22);
+            this.Column8Label.TabIndex = 73;
+            this.Column8Label.Text = "СТОЛБЕЦ №8";
+            this.Column8Label.Visible = false;
+            // 
+            // Column9Label
+            // 
+            this.Column9Label.AutoSize = true;
+            this.Column9Label.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Column9Label.Location = new System.Drawing.Point(1201, 483);
+            this.Column9Label.Name = "Column9Label";
+            this.Column9Label.Size = new System.Drawing.Size(123, 22);
+            this.Column9Label.TabIndex = 74;
+            this.Column9Label.Text = "СТОЛБЕЦ №9";
+            this.Column9Label.Visible = false;
             // 
             // ChangeDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1267, 573);
+            this.ClientSize = new System.Drawing.Size(1375, 606);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
@@ -1027,5 +1075,9 @@ namespace Autorization
         private System.Windows.Forms.TextBox textBoxJobChange;
         private System.Windows.Forms.ToolStripMenuItem аналитикаВыручкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem историяИзмененийToolStripMenuItem;
+        private System.Windows.Forms.Label Column9Label;
+        private System.Windows.Forms.Label Column8Label;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
     }
 }

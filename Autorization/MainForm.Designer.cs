@@ -63,13 +63,13 @@ namespace Autorization
             this.выводВMicrosoftExcelВыбраннойТаблицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.табельToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.графикПрибылиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.историяИзмененийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.историяИзмененийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -95,7 +95,7 @@ namespace Autorization
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(958, 561);
+            this.panel1.Size = new System.Drawing.Size(1379, 561);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -184,7 +184,7 @@ namespace Autorization
             // 
             this.labelTheme.AutoSize = true;
             this.labelTheme.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTheme.Location = new System.Drawing.Point(666, 522);
+            this.labelTheme.Location = new System.Drawing.Point(1087, 526);
             this.labelTheme.Name = "labelTheme";
             this.labelTheme.Size = new System.Drawing.Size(144, 21);
             this.labelTheme.TabIndex = 14;
@@ -195,7 +195,7 @@ namespace Autorization
             this.WhiteThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.WhiteThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.WhiteThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WhiteThemeButton.Location = new System.Drawing.Point(816, 493);
+            this.WhiteThemeButton.Location = new System.Drawing.Point(1237, 497);
             this.WhiteThemeButton.Name = "WhiteThemeButton";
             this.WhiteThemeButton.Size = new System.Drawing.Size(130, 23);
             this.WhiteThemeButton.TabIndex = 10;
@@ -208,7 +208,7 @@ namespace Autorization
             this.DarkThemeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DarkThemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DarkThemeButton.Font = new System.Drawing.Font("Mongolian Baiti", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DarkThemeButton.Location = new System.Drawing.Point(816, 522);
+            this.DarkThemeButton.Location = new System.Drawing.Point(1237, 526);
             this.DarkThemeButton.Name = "DarkThemeButton";
             this.DarkThemeButton.Size = new System.Drawing.Size(130, 23);
             this.DarkThemeButton.TabIndex = 9;
@@ -224,7 +224,7 @@ namespace Autorization
             this.dataGridView1.Location = new System.Drawing.Point(12, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(934, 329);
+            this.dataGridView1.Size = new System.Drawing.Size(1355, 329);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
@@ -242,7 +242,7 @@ namespace Autorization
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(958, 100);
+            this.panel2.Size = new System.Drawing.Size(1379, 100);
             this.panel2.TabIndex = 0;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -267,7 +267,7 @@ namespace Autorization
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(913, 24);
+            this.label4.Location = new System.Drawing.Point(1334, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 31);
             this.label4.TabIndex = 4;
@@ -279,7 +279,7 @@ namespace Autorization
             this.MainMenuLabel.AutoSize = true;
             this.MainMenuLabel.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MainMenuLabel.Location = new System.Drawing.Point(279, 34);
+            this.MainMenuLabel.Location = new System.Drawing.Point(467, 35);
             this.MainMenuLabel.Name = "MainMenuLabel";
             this.MainMenuLabel.Size = new System.Drawing.Size(440, 64);
             this.MainMenuLabel.TabIndex = 3;
@@ -297,7 +297,7 @@ namespace Autorization
             this.историяИзмененийToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(956, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1377, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -415,6 +415,13 @@ namespace Autorization
             this.графикПрибылиToolStripMenuItem.Text = "Аналитика выручки";
             this.графикПрибылиToolStripMenuItem.Click += new System.EventHandler(this.графикПрибылиToolStripMenuItem_Click);
             // 
+            // историяИзмененийToolStripMenuItem
+            // 
+            this.историяИзмененийToolStripMenuItem.Name = "историяИзмененийToolStripMenuItem";
+            this.историяИзмененийToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
+            this.историяИзмененийToolStripMenuItem.Text = "История изменений";
+            this.историяИзмененийToolStripMenuItem.Click += new System.EventHandler(this.историяИзмененийToolStripMenuItem_Click);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -426,18 +433,11 @@ namespace Autorization
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // историяИзмененийToolStripMenuItem
-            // 
-            this.историяИзмененийToolStripMenuItem.Name = "историяИзмененийToolStripMenuItem";
-            this.историяИзмененийToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
-            this.историяИзмененийToolStripMenuItem.Text = "История изменений";
-            this.историяИзмененийToolStripMenuItem.Click += new System.EventHandler(this.историяИзмененийToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 561);
+            this.ClientSize = new System.Drawing.Size(1379, 561);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;

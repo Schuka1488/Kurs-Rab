@@ -261,7 +261,7 @@ namespace Autorization
         #endregion
         private void EmployeesSelect()
         {
-            string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees"; // SQL запрос данных из БД
+            string commandStr = "SELECT EmployeesID AS 'Код сотрудника', employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия', employeesAddress AS 'Адрес', employeesStatus AS 'Статус' FROM Employees"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БД
             MySqlDataAdapter adapter = new MySqlDataAdapter(); // используется адаптер для получения таблицы 
             table = new DataTable(); // класс для таблиц
@@ -276,6 +276,7 @@ namespace Autorization
             dataGridViewTransformData2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
+            dataGridViewTransformData2.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             // сокрытие и показ всех необходимых элементов формы
             // текстбоксы куда мы вводим данные в таблицу, для дальнейшей работы с ними
             textBox1.Visible = false; 
@@ -285,6 +286,8 @@ namespace Autorization
             textBox5.Visible = true;
             textBox6.Visible = true;
             textBox7.Visible = true;
+            textBox8.Visible = true;
+            textBox9.Visible = true;
             // номера столбцов
             Column1Label.Visible = false;
             Column2Label.Visible = true;
@@ -293,6 +296,8 @@ namespace Autorization
             Column5Label.Visible = true;
             Column6Label.Visible = true;
             Column7Label.Visible = true;
+            Column8Label.Visible = true;
+            Column9Label.Visible = true;
             // кнопки добавления новой строки в таблицу
             AddLineButton.Visible = true;
             AddLineButton2.Visible = false;
@@ -338,7 +343,7 @@ namespace Autorization
             try
             {
                 db.openConnection(); // осуществляем подключение к БД
-                MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}')", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
+                MySqlCommand cmd = new MySqlCommand($"INSERT INTO Employees(employeesBirthday, employeesDateOfEmployed, employeesName, employeesSurname, employeesPatronymic, employeesJobTitle, employeesAddress, employeesStatus ) VALUES( \"{textBox2.Text}\", \"{textBox3.Text}\",'{textBox4.Text}','{textBox5.Text}','{textBox6.Text}','{textBox7.Text}','{textBox8.Text}','{textBox9.Text}')", db.getConnection()); // запрос к БД на добавление новой строки в таблицу (данные введены через текстбоксы)
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные добавились" : "Данные  добавились", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
                 textboxNoVisibleText();
@@ -389,7 +394,7 @@ namespace Autorization
             try
             { 
                 db.openConnection(); // осуществляем подключение к БД
-                MySqlCommand cmd = new MySqlCommand($"UPDATE Employees SET employeesBirthday = \"{textBox2.Text}\", employeesDateOfEmployed = \"{textBox3.Text}\", employeesName = '{textBox4.Text}', employeesSurname = '{textBox5.Text}', employeesPatronymic = '{textBox6.Text}', employeesJobTitle = '{textBox7.Text}' WHERE EmployeesID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
+                MySqlCommand cmd = new MySqlCommand($"UPDATE Employees SET employeesBirthday = \"{textBox2.Text}\", employeesDateOfEmployed = \"{textBox3.Text}\", employeesName = '{textBox4.Text}', employeesSurname = '{textBox5.Text}', employeesPatronymic = '{textBox6.Text}', employeesJobTitle = '{textBox7.Text}', employeesAddress = '{textBox8.Text}', employeesStatus = '{textBox9.Text}' WHERE EmployeesID = {id_selected_rows}", db.getConnection()); // запрос на изменения данных в выбранной строки, и присвоение ей новых данных, вписаных в текстбоксы
                 MessageBox.Show(cmd.ExecuteNonQuery() > 0 ? "Данные изменены" : "Данные изменены", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); // что выводится на экран при успешном выполнении
                 db.closeConnection(); // отключаем подключение к БД
                 textboxNoVisibleText();
@@ -435,6 +440,8 @@ namespace Autorization
             textBox5.Visible = true;
             textBox6.Visible = true;
             textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
             // номера столбцов
             Column1Label.Visible = false;
             Column2Label.Visible = true;
@@ -443,6 +450,8 @@ namespace Autorization
             Column5Label.Visible = true;
             Column6Label.Visible = true;
             Column7Label.Visible = false;
+            Column8Label.Visible = false;
+            Column9Label.Visible = false;
             // кнопки добавления новой строки в таблицу
             AddLineButton.Visible = false;
             AddLineButton2.Visible = true;
@@ -579,13 +588,15 @@ namespace Autorization
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             // сокрытие и показ всех необходимых элементов формы
             // текстбоксы куда мы вводим данные в таблицу, для дальнейшей работы с ними
-            textBox1.Visible = false; 
+            textBox1.Visible = false;
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
             textBox5.Visible = true;
             textBox6.Visible = true;
-            textBox7.Visible = true;
+            textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
             // номера столбцов
             Column1Label.Visible = false;
             Column2Label.Visible = true;
@@ -593,7 +604,9 @@ namespace Autorization
             Column4Label.Visible = true;
             Column5Label.Visible = true;
             Column6Label.Visible = true;
-            Column7Label.Visible = true;
+            Column7Label.Visible = false;
+            Column8Label.Visible = false;
+            Column9Label.Visible = false;
             // кнопки добавления новой строки в таблицу
             AddLineButton.Visible = false;
             AddLineButton2.Visible = false;
@@ -726,21 +739,25 @@ namespace Autorization
             dataGridViewTransformData2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             // сокрытие и показ всех необходимых элементов формы
             // текстбоксы куда мы вводим данные в таблицу, для дальнейшей работы с ними
-            textBox1.Visible = false; 
+            textBox1.Visible = false;
             textBox2.Visible = true;
             textBox3.Visible = true;
-            textBox4.Visible = false;
-            textBox5.Visible = false;
-            textBox6.Visible = false;
+            textBox4.Visible = true;
+            textBox5.Visible = true;
+            textBox6.Visible = true;
             textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
             // номера столбцов
             Column1Label.Visible = false;
             Column2Label.Visible = true;
             Column3Label.Visible = true;
-            Column4Label.Visible = false;
-            Column5Label.Visible = false;
-            Column6Label.Visible = false;
+            Column4Label.Visible = true;
+            Column5Label.Visible = true;
+            Column6Label.Visible = true;
             Column7Label.Visible = false;
+            Column8Label.Visible = false;
+            Column9Label.Visible = false;
             // кнопки добавления новой строки в таблицу
             AddLineButton.Visible = false;
             AddLineButton2.Visible = false;
@@ -874,21 +891,25 @@ namespace Autorization
             dataGridViewTransformData2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             // сокрытие и показ всех необходимых элементов формы
             // текстбоксы куда мы вводим данные в таблицу, для дальнейшей работы с ними
-            textBox1.Visible = false; 
+            textBox1.Visible = false;
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
-            textBox5.Visible = false;
-            textBox6.Visible = false;
+            textBox5.Visible = true;
+            textBox6.Visible = true;
             textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
             // номера столбцов
             Column1Label.Visible = false;
             Column2Label.Visible = true;
             Column3Label.Visible = true;
             Column4Label.Visible = true;
-            Column5Label.Visible = false;
-            Column6Label.Visible = false;
+            Column5Label.Visible = true;
+            Column6Label.Visible = true;
             Column7Label.Visible = false;
+            Column8Label.Visible = false;
+            Column9Label.Visible = false;
             // кнопки добавления новой строки в таблицу
             AddLineButton.Visible = false;
             AddLineButton2.Visible = false;
@@ -1025,13 +1046,15 @@ namespace Autorization
             dataGridViewTransformData2.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // автосайз для столбца для гридера (растягивает столбец по ширине)
             // сокрытие и показ всех необходимых элементов формы
             // текстбоксы куда мы вводим данные в таблицу, для дальнейшей работы с ними
-            textBox1.Visible = false; 
+            textBox1.Visible = false;
             textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
             textBox5.Visible = true;
             textBox6.Visible = true;
-            textBox7.Visible = true;
+            textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
             // номера столбцов
             Column1Label.Visible = false;
             Column2Label.Visible = true;
@@ -1039,7 +1062,9 @@ namespace Autorization
             Column4Label.Visible = true;
             Column5Label.Visible = true;
             Column6Label.Visible = true;
-            Column7Label.Visible = true;
+            Column7Label.Visible = false;
+            Column8Label.Visible = false;
+            Column9Label.Visible = false;
             // кнопки добавления новой строки в таблицу
             AddLineButton.Visible = false;
             AddLineButton2.Visible = false;
@@ -1168,6 +1193,8 @@ namespace Autorization
             textBox5.Text = "";
             textBox6.Text = "";
             textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
         }
         // кнопки добавления данных в таблицу
         private void AddLineButton_Click(object sender, EventArgs e)
