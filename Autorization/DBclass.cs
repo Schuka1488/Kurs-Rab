@@ -25,7 +25,7 @@ namespace Autorization
         {
             return connection; // возвращаем соединение 
         }
-        public void UpdateTable(string tableID, string mark, bool OpenConnection = true)
+        public void UpdateTable(string tableID, string mark, bool OpenConnection = true) // метод для удаления таблицы
         {
             if (OpenConnection)
                 connection.Open();
@@ -35,7 +35,7 @@ namespace Autorization
             if (OpenConnection)
                 connection.Close();
         }
-        public void CreateTable(string mark, string employeeID, string date, bool OpenConnection = true)
+        public void CreateTable(string mark, string employeeID, string date, bool OpenConnection = true) // метод для создания таблицы
         {
             if (OpenConnection)
                 connection.Open();

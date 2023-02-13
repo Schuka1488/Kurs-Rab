@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace Autorization
 {
-    public struct WorkTimeEmployee
+    public struct WorkTimeEmployee // структуры для информации о сотруднике
     {
         public int Id;
         public long Hours;
         public string FullName;
         public string Role;
     }
-    public struct TabelDate
+    public struct TabelDate // структура для информации о времени
     {
         public DateTime time;
         public string mark;
         public string id;
     }
-    public struct TabelMark
+    public struct TabelMark // структура для выбранной в табеле метки
     {
         public string mark;
         public string id;
     }
-    public class TimeSheetGenerator
+    public class TimeSheetGenerator // генератор генерирует html файл
     {
-        static string GetRuDayOfWeek(DateTime time)
+        static string GetRuDayOfWeek(DateTime time) // генерирует дни недели сверху табеля
         {
             string res = "NULL";
             switch (time.DayOfWeek)
@@ -50,7 +50,7 @@ namespace Autorization
         }
         public static TabelMark[] ConvertMarksToTabelFormat(int year, int month, TabelDate[] dates)
         {
-            int maxDays = DateTime.DaysInMonth(year, month);
+            int maxDays = DateTime.DaysInMonth(year, month); // ограничение по кол-ву максимальных дней в месяцу
             TabelMark[] marks = new TabelMark[maxDays];
             int dateCounter = 0;
             int day = 1;
@@ -66,7 +66,7 @@ namespace Autorization
                     d = dates[dateCounter];
                 }
                 DateTime current = DateTime.Parse($"{year}-{month}-{day}");
-                if (d.time.ToString("yyyy-MM-dd") == current.ToString("yyyy-MM-dd"))
+                if (d.time.ToString("yyyy-MM-dd") == current.ToString("yyyy-MM-dd")) // формат даты 
                 {
                     marks[i].mark = d.mark;
                     marks[i].id = d.id;
@@ -74,7 +74,7 @@ namespace Autorization
                     dateCounter++;
                     continue;
                 }
-                if (current.DayOfWeek == DayOfWeek.Saturday || current.DayOfWeek == DayOfWeek.Sunday)
+                if (current.DayOfWeek == DayOfWeek.Saturday || current.DayOfWeek == DayOfWeek.Sunday) // задает отметки по умолчанию
                 {
                     marks[i].mark = "В";
                     marks[i].id = "NULL";
@@ -90,7 +90,7 @@ namespace Autorization
         static string GenerateHtmlDaysOfWeek(int year, int month)
         {
             int days = DateTime.DaysInMonth(year, month);
-            string style = "table, th, td {border: 2px solid; text-align: center;}";
+            string style = "table, th, td {border: 2px solid; text-align: center;}"; // создаем html таблицу и указываем её стили
             string res = $"<html><head><meta charset=\"UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><style>{style}</style></head><body><table><th colspan=\"33\" align=\"center\">Табель учёта рабочего времени</th><tr><td rowspan=\"2\">ФИО</td><td rowspan=\"2\">Должность</td>";
             for (int i = 0; i < days; i++)
             {
@@ -105,7 +105,7 @@ namespace Autorization
             res += "</tr>";
             return res;
         }
-        public void PushHTMLContent(WorkTimeEmployee data, TabelMark[] days)
+        public void PushHTMLContent(WorkTimeEmployee data, TabelMark[] days) // передача значений из бд в табель и наоборот
         {
             string res = "<tr>";
             string jsRes = "";
@@ -133,12 +133,12 @@ namespace Autorization
         }
         string html;
         string js;
-        public TimeSheetGenerator(int year, int month)
+        public TimeSheetGenerator(int year, int month) // генерирует месяц и год
         {
             html += GenerateHtmlDaysOfWeek(year, month);
             js = "";
         }
-        public string GenCode()
+        public string GenCode() // передача скрипта в html файл
         {
             string res = html += $"</table><script>{js}</script></body></html>";
             return res;

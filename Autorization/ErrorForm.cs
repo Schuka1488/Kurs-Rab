@@ -17,7 +17,7 @@ namespace Autorization
         Point lastPoint; // специальный класс для задачи координат
         public static void Show(string desc)
         {
-            ErrorForm error = new ErrorForm(desc);
+            ErrorForm error = new ErrorForm(desc); // отображаем html файл
             error.ShowDialog();
         }
         string desc;
@@ -28,7 +28,7 @@ namespace Autorization
         }
         private void ErrorForm_Load(object sender, EventArgs e)
         {
-            chromiumWebBrowser1.LoadHtml(Properties.Resources.errors);
+            chromiumWebBrowser1.LoadHtml(Properties.Resources.errors); // загружаем html файл
             Desc.Text = desc;
         }
         private void ExitButtonErrorForm_Click(object sender, EventArgs e)

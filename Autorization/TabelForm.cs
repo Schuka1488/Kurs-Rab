@@ -23,7 +23,7 @@ namespace Autorization
         }
         private void TabelForm_Load(object sender, EventArgs e)
         {
-            chromiumWebBrowser1.JavascriptMessageReceived += OnBrowserJavascriptMessageReceived;
+            chromiumWebBrowser1.JavascriptMessageReceived += OnBrowserJavascriptMessageReceived; // показ табеля при помощи js скрипта
 
             this.FormBorderStyle = FormBorderStyle.None;
             Panel pnlTop = new Panel() { Height = 4, Dock = DockStyle.Top, BackColor = SystemColors.ActiveBorder};
@@ -39,12 +39,12 @@ namespace Autorization
         private void OnBrowserJavascriptMessageReceived(object sender, JavascriptMessageReceivedEventArgs e)
         {
              var windowSelection = (string)e.Message;
-            ChangeTabelForm edit = new ChangeTabelForm(windowSelection, year, month);
+            ChangeTabelForm edit = new ChangeTabelForm(windowSelection, year, month); // создается окно при помощи скрипта с правильным форматом даты
             edit.ShowDialog();
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            month = dateTimePicker1.Value.Month;
+            month = dateTimePicker1.Value.Month; // передача данных из таймпикера в табель
             year = dateTimePicker1.Value.Year;
             TimeSheetGenerator generator = new TimeSheetGenerator(year, month);
             ClassForTabel loader = new ClassForTabel();
@@ -57,8 +57,8 @@ namespace Autorization
             formater = formater.Replace('\\', '/');
             chromiumWebBrowser1.Load($"file://{formater}/tmp.html");
 
-            button1.Visible = false;
-            buttonRefresh.Visible = true;
+            button1.Visible = false; // отображение кнопки отображения табеля
+            buttonRefresh.Visible = true; // отображение кнопки обновления табеля
         }
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
@@ -75,8 +75,8 @@ namespace Autorization
             formater = formater.Replace('\\', '/');
             chromiumWebBrowser1.Load($"file://{formater}/tmp.html");
 
-            button1.Visible = false;
-            buttonRefresh.Visible = true;
+            button1.Visible = false; // отображение кнопки отображения табеля
+            buttonRefresh.Visible = true; // отображение кнопки обновления табеля
         }
         private void buttonCloseTabel_Click(object sender, EventArgs e)
         {
@@ -92,7 +92,7 @@ namespace Autorization
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // печать табеля
         {
             chromiumWebBrowser1.Print();
         }

@@ -112,7 +112,7 @@ namespace Autorization
             timer.Start(); // включается таймер
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) // ссылка на сайт организации, на которую можно нажать
         {
             System.Diagnostics.Process.Start("http://www.интэкс-сервис.рф");
             this.linkLabel1.Name = "CompanyLinks";

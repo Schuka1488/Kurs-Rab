@@ -19,7 +19,7 @@ namespace Autorization
         public ChangeTabelForm(string browserOutput, int year, int month)
         {
             InitializeComponent();
-            SplitStr(browserOutput, year, month);
+            SplitStr(browserOutput, year, month); // берем данные из табеля, а так же форматы даты для последующей работы с ними
             employeeData = LoadEmployee(int.Parse(workerID));
             this.year = year;
             this.month = month;
@@ -28,7 +28,7 @@ namespace Autorization
         string workerID;
         string date;
         int year, month;
-        private void SplitStr(string browserOutput, int year, int month)
+        private void SplitStr(string browserOutput, int year, int month) // передаем различные форматы для значений
         {
             string[] words = browserOutput.Split('|');
             tableID = words[0];
@@ -39,7 +39,7 @@ namespace Autorization
         }
         private void ChangeTabelForm_Load(object sender, EventArgs e)
         {
-            db.openConnection();
+            db.openConnection(); // сразу же подгружаем таблицу с сотрудниками для последующей работы с ней
             string commandStr = $"SELECT employeesBirthday AS 'Дата рождения сотрудника', employeesDateOfEmployed AS 'Дата приема на работу', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Профессия' FROM Employees WHERE EmployeesID={workerID}"; // SQL запрос данных из БД
             MySqlCommand cmd = new MySqlCommand(commandStr, db.getConnection()); // осуществяется подключение к БДMySql
             string Fullname = "";
@@ -92,7 +92,7 @@ namespace Autorization
             this.Close();
         }
 
-        private void buttonSaveTabel_Click(object sender, EventArgs e)
+        private void buttonSaveTabel_Click(object sender, EventArgs e) // сохранение табеля после внесения в него изменений с передачей в него параметров из других таблиц
         {
             if (Markcombobox.SelectedItem == null)
             {
@@ -114,7 +114,7 @@ namespace Autorization
             }
             this.Close();
         }
-        public void AddFillTable(string desc, string logid, int employeeId, DateTime firstDate, DateTime endDateTime, FillTableType type)
+        public void AddFillTable(string desc, string logid, int employeeId, DateTime firstDate, DateTime endDateTime, FillTableType type) // выбираем етки которые так же будут передаваться таблице для табеля, так же как и в таблицу с историей изменений
         {
             string placeHolder;
             string historyMessage;
@@ -164,7 +164,7 @@ namespace Autorization
             HistoryCreate(employeeId.ToString(), DateTime.Now, historyMessage, false);
             db.closeConnection();
         }
-        public static void UpdateTable(string tableid, string mark, bool OpenConnection = true)
+        public static void UpdateTable(string tableid, string mark, bool OpenConnection = true) // обновление таблицы
         {
             if (OpenConnection)
                 db.openConnection();
@@ -177,7 +177,7 @@ namespace Autorization
             if (OpenConnection)
                 db.closeConnection();
         }
-        public static void CreateTable(string mark, string employeeID, string date, bool OpenConnection = true)
+        public static void CreateTable(string mark, string employeeID, string date, bool OpenConnection = true) // передаются выбранные значения в таблицу для табеля
         {
             if (OpenConnection)
                 db.openConnection();
@@ -196,11 +196,11 @@ namespace Autorization
             vacation,
             // больничный
             medical,
-            // дикрет
+            // уважительная причина
             goodreason
         }
 
-        public static void HistoryCreate(string id, DateTime date, string desc, bool openConnection = true)
+        public static void HistoryCreate(string id, DateTime date, string desc, bool openConnection = true) // передаются значение для полей таблицы истории изменений для последующей отправки в таблицу истории
         {
             if (openConnection)
                 db.openConnection();
@@ -223,7 +223,7 @@ namespace Autorization
             adapter.Fill(table);
             return table;
         }
-        public static void LoadEmployees(List<EmployeeData> res)
+        public static void LoadEmployees(List<EmployeeData> res) // подгружается таблица с сотрудниками предприятия
         {
             string commandStr = "SELECT EmployeesID  AS 'Код сотрудника', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Должность' FROM Employees";
             DataTable Employees = LoadTable(commandStr);
@@ -238,7 +238,7 @@ namespace Autorization
                 res.Add(newRow);
             }
         }
-        public static EmployeeData LoadEmployee(int employeeId)
+        public static EmployeeData LoadEmployee(int employeeId) // подгружается таблица с сотрудниками предприятия
         {
             string commandStr = $"SELECT EmployeesID  AS 'Код сотрудника', employeesName AS 'Имя', employeesSurname AS 'Фамилия', employeesPatronymic AS 'Отчество', employeesJobTitle AS 'Должность' FROM Employees WHERE EmployeesID={employeeId}";
 
@@ -254,7 +254,7 @@ namespace Autorization
 
             return res;
         }
-        static void LoadHistroy(List<HistroyInfo> res)
+        static void LoadHistroy(List<HistroyInfo> res) // вызывается таблица с историей изменений и она становится доступной для последующей передачи в нее данных
         {
             MySqlCommand cmd;
             db.openConnection();
@@ -290,7 +290,7 @@ namespace Autorization
             public string employeesJobTitle;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e) // учитываються выбранные марки из комбобокса
         {
             FillTableType type = FillTableType.vacation;
 

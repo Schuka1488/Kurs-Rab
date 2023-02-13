@@ -58,7 +58,7 @@ namespace Autorization
                 Xa.Add(date.ToOADate());
                 Ya.Add(value);
             }
-
+            // задаем параметры для обоих осей графика, цвет графика, вид, размер, поля и отображаем его
             var splt = new ScottPlot.Plottable.ScatterPlot(Xa.ToArray(), Ya.ToArray());
             splt.Color = Color.Navy;
             splt.MarkerSize = 10;
@@ -78,19 +78,19 @@ namespace Autorization
         }
         private void PrintPage(object sender, PrintPageEventArgs e)
         {
-            // Determine how large you want the plot to be on the page and resize accordingly
+            // Определил, насколько большим вы хотите видеть график на странице, и измените его размер соответствующим образом
             int width = e.MarginBounds.Width;
             int height = (int)(e.MarginBounds.Width * .5);
             formsPlot1.Plot.Resize(width, height);
 
-            // Give the plot a white background so it looks good on white paper
+            // Придал сюжету белый фон, чтобы он хорошо смотрелся на белой бумаге
             formsPlot1.Plot.Style(figureBackground: Color.White);
 
-            // Render the plot as a Bitmap and draw it onto the page
+            // Визуализирую график в виде растрового изображения и нарисую его на странице
             Bitmap bmp = formsPlot1.Plot.Render();
             e.Graphics.DrawImage(bmp, e.MarginBounds.Left, e.MarginBounds.Top);
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // отображение графика при помощи нажатия кнопки
         {
             var printDocument = new System.Drawing.Printing.PrintDocument();
             printDocument.PrintPage += new PrintPageEventHandler(PrintPage);

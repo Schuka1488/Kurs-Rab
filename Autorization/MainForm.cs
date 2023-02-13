@@ -26,7 +26,7 @@ namespace Autorization
             InitializeComponent();
             GridViewMethodLight();
         }
-        private void GridViewMethodLight()
+        private void GridViewMethodLight() // изменение стиля датагрида
         {
             dataGridView1.ForeColor = Color.DeepSkyBlue;
             dataGridView1.GridColor = Color.DarkGray;
@@ -34,7 +34,7 @@ namespace Autorization
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Lavender;
         }
-        private void GridViewMethodDark()
+        private void GridViewMethodDark() // изменение стиля датагрида
         {
             dataGridView1.ForeColor = Color.Black;
             dataGridView1.GridColor = Color.Black;
@@ -49,7 +49,7 @@ namespace Autorization
             else
                 изменитьДанныеToolStripMenuItem.Visible = false; // иначе, изменить данные нельзя, эти вкладки будут не доступны
 
-            this.FormBorderStyle = FormBorderStyle.None;
+            this.FormBorderStyle = FormBorderStyle.None; // Создание панелей по бокам формы
             Panel pnlTop = new Panel() { Height = 4, Dock = DockStyle.Top, BackColor = SystemColors.ActiveBorder };
             this.Controls.Add(pnlTop);
             Panel pnlRight = new Panel() { Width = 4, Dock = DockStyle.Right, BackColor = SystemColors.ActiveBorder };

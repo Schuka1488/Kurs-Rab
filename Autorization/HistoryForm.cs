@@ -95,7 +95,7 @@ namespace Autorization
         }
         public void GetSelectedIDString()
         {
-            //Переменная для индекса выбранной строки в гриде
+            //Переменная для индекса выбранной строки в датагриде
             string index_selected_rows;
             //Индекс выбранной строки
             index_selected_rows = dataGridView1.SelectedCells[0].RowIndex.ToString();

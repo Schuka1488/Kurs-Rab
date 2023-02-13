@@ -48,7 +48,7 @@ namespace Autorization
             DataTable tableGlob = new System.Data.DataTable(); // создание элемента таблицы
             adapterGlob.SelectCommand = cmdGlob; // адаптер берет соединение
             adapterGlob.Fill(tableGlob); // адаптер передает значение для того чтобы показать таблицу
-            foreach(DataRow row in tableGlob.Rows)
+            foreach(DataRow row in tableGlob.Rows) // колонкам из таблицы задается переменная и отправляется в табель
             {
                 EmployeeData data = new EmployeeData();
                 data.EmployeeId = int.Parse(row.ItemArray[0].ToString());
@@ -60,7 +60,7 @@ namespace Autorization
             }
             foreach (EmployeeData worker in workers)
             {
-                tabelEmployee emp = new tabelEmployee();
+                tabelEmployee emp = new tabelEmployee(); // переопределение переменных из таблицы сотрудников в таблицу для отправки в табель
                 emp.FullName = $"{worker.employeesSurname} {worker.employeesName} {worker.employeesPatronymic}";
                 emp.marks = new List<TabelMark>();
                 emp.Id = worker.EmployeeId.ToString();
@@ -73,8 +73,8 @@ namespace Autorization
                 adapter.Fill(table);
                 long hoursCount = 0;
                 int count = 0;
-                List<TabelDate> dates = new List<TabelDate>();
-                foreach (DataRow row in table.Rows)
+                List<TabelDate> dates = new List<TabelDate>(); 
+                foreach (DataRow row in table.Rows) // так же передаем переменные колонкам из таблицы
                 {
                     string id = row.ItemArray[0].ToString();
                     string mark = row.ItemArray[1].ToString();
@@ -93,21 +93,21 @@ namespace Autorization
                 }
                 int SystemCount = DateTime.DaysInMonth(month.Year, month.Month);
                 int ResCount = SystemCount - count;
-                emp.marks = new List<TabelMark>(TimeSheetGenerator.ConvertMarksToTabelFormat(month.Year, month.Month, dates.ToArray()));
+                emp.marks = new List<TabelMark>(TimeSheetGenerator.ConvertMarksToTabelFormat(month.Year, month.Month, dates.ToArray())); // при помощи генератора передаем все значение и форматируем в таблицу
                 emp.Hours = hoursCount;
                 general.Add(emp);
             }
         }
         public void LoadAllIntoBuilder(TimeSheetGenerator generator)
         {
-            foreach (tabelEmployee emp0 in general)
+            foreach (tabelEmployee emp0 in general) // сборка табеля
             {
                 LoadIntoBuilder(emp0, generator);
             }
         }
         private void LoadIntoBuilder(tabelEmployee d, TimeSheetGenerator generator)
         {
-            WorkTimeEmployee emp2 = new WorkTimeEmployee();
+            WorkTimeEmployee emp2 = new WorkTimeEmployee(); // окончательная передача переменных для табеля и его сборка
             emp2.FullName = d.FullName;
             emp2.Id = int.Parse(d.Id);
             emp2.Hours = d.Hours;
@@ -115,7 +115,7 @@ namespace Autorization
             generator.PushHTMLContent(emp2, d.marks.ToArray());
         }
     }
-    public struct EmployeeData
+    public struct EmployeeData // поля для табеля
     {
         public int EmployeeId;
         public string employeesName;
