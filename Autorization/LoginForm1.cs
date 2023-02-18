@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using Tulpep.NotificationWindow;
+using System.Threading;
 
 namespace Autorization
 {
@@ -93,7 +94,7 @@ namespace Autorization
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 2; // знак таймера
-            Timer timer = new Timer(); // создаем таймер
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer(); // создаем таймер
             timer.Interval = 4; // интевал, после которого снова можно будет осуществить нажатие
             timer.Tick += timer2_Tick; // при нажатии включается таймер
             timer.Start(); // включается таймер
@@ -106,7 +107,7 @@ namespace Autorization
             dG = labelTheme.BackColor.G - labelTheme.ForeColor.G;
             dB = labelTheme.BackColor.B - labelTheme.ForeColor.B;
             sign = 1; // знак таймера
-            Timer timer = new Timer(); // создаем таймер
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer(); // создаем таймер
             timer.Interval = 4; // интевал, после которого снова можно будет осуществить нажатие
             timer.Tick += timer1_Tick; // при нажатии включается таймер
             timer.Start(); // включается таймер
@@ -132,12 +133,12 @@ namespace Autorization
                 labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
                 if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
                 {
-                    ((Timer)sender).Stop(); // таймер останавливается
+                    ((System.Windows.Forms.Timer)sender).Stop(); // таймер останавливается
                 }
             }
             catch
             {
-                ((Timer)sender).Stop(); // таймер останавливается
+                ((System.Windows.Forms.Timer)sender).Stop(); // таймер останавливается
                 MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
             }
         }
@@ -153,17 +154,21 @@ namespace Autorization
                 labelTheme.ForeColor = Color.FromArgb(255, labelTheme.ForeColor.R + sign * dR / 10, labelTheme.ForeColor.G + sign * dG / 10, labelTheme.ForeColor.B + sign * dB / 10);
                 if (labelTheme.BackColor.R == labelTheme.ForeColor.R + dR) // параметры для плавного перехода без потери цвета
                 {
-                    ((Timer)sender).Stop(); // таймер останавливается
+                    ((System.Windows.Forms.Timer)sender).Stop(); // таймер останавливается
                 }
             }
             catch
             {
-                ((Timer)sender).Stop(); // таймер останавливается
+                ((System.Windows.Forms.Timer)sender).Stop(); // таймер останавливается
                 MessageBox.Show("Не спеши! А то успеешь.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
             }
         }
+        Thread thread1;
+        MainForm mainForm = new MainForm();
         private void buttonLoginPass_Click(object sender, EventArgs e) // метод при помощи которого осуществляется авторизация и полноценные вход в приложение 
         {
+            thread1 = new Thread(() => 
+           { 
             //Получаем данные о пользователе
             string Userlogin = loginName.Text; // данные о пользователе из текстбокса loginName
             string Userpassword = sha256(passwordName.Text); // кодируем пароль
@@ -191,10 +196,10 @@ namespace Autorization
                 cmd2 = new MySqlCommand(_Role, db.getConnection()); // осуществляется подключение к БД
                 string title = cmd2.ExecuteScalar().ToString(); // берутся значения из БД
                 Username user = new Username(loginName.Text, Level); // Запоминаем логин из текстбокса loginName
-                MainForm mainForm = new MainForm(); // после авторизации показывается MainForm
-                mainForm.Show(); // метод для показа MainForm
+                //MainForm mainForm = new MainForm(); // после авторизации показывается MainForm
+                this.Invoke(new Action (() => mainForm.Show())); // метод для показа MainForm
                 db.closeConnection(); // Полсе обрубается соединение
-                this.Hide(); // происходит сокрытие
+                this.Invoke(new Action(() => Hide()));
                 PopupNotifier popup = new PopupNotifier(); //создание новой переменной класса PopupNotifier NuGet компонента Tulpep
                 popup.Image = Properties.Resources.pngres; // берем иконку из ресурсов проекта
                 popup.ImageSize = new Size(80, 80); // задаем размер
@@ -212,6 +217,8 @@ namespace Autorization
                 MessageBox.Show("Логин или пароль указан неверно! (Код ошибки: 105)", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
                 ErrorForm.Show("Возникла ошибка!");
             }
+         });
+        thread1.Start();
         }
     }
 }
