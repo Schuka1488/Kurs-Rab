@@ -168,7 +168,7 @@ namespace Autorization
         private void buttonLoginPass_Click(object sender, EventArgs e) // метод при помощи которого осуществляется авторизация и полноценные вход в приложение 
         {
             thread1 = new Thread(() => 
-           { 
+            { 
             //Получаем данные о пользователе
             string Userlogin = loginName.Text; // данные о пользователе из текстбокса loginName
             string Userpassword = sha256(passwordName.Text); // кодируем пароль
@@ -217,8 +217,8 @@ namespace Autorization
                 MessageBox.Show("Логин или пароль указан неверно! (Код ошибки: 105)", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error); // обработка исключения
                 ErrorForm.Show("Возникла ошибка!");
             }
-         });
-        thread1.Start();
+            });
+            thread1.Start();
         }
     }
 }
